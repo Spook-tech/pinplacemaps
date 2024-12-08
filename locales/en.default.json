@@ -275,7 +275,8 @@
 
     "header": {
       "announcement": "Announcement",
-      "menu": "Menu",
+      "main_label": "Main text",
+      "reviews_label": "Reviews Text",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"

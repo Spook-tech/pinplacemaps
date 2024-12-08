@@ -1,0 +1,61 @@
+<div class="seen">
+  <h2>{{ section.settings.title }}</h2>
+  <ul class="seen__list">
+    {% for block in section.blocks %}
+      <li>
+        <img src="{{ block.settings.image | img_url: 'master' | default: 'default-image.jpg' }}" alt="{{ block.settings.alt_text | escape }}">
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Images",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "As seen on"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Logo Image"
+          },
+          {
+            "type": "text",
+            "id": "alt_text",
+            "label": "Alt Text",
+            "default": "Brand Logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Images",
+        "category": "Custom",
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,14 @@
+input,
+select,
+textarea {
+    outline: none;
+
+    &::placeholder {
+        color: var(--color-gray);
+    }
+
+    &:focus-visible {
+        border-color:  var(--color-green);
+    }
+
+}

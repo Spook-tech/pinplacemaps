@@ -1,0 +1,51 @@
+//width main container
+$container: 1170;
+
+:root {
+
+    /*colors*/
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray: #858585;
+    --color-gray-light: #F7F7F7;
+    --color-green: #146F60;
+    --color-green-light: #0D947D;
+    --color-red: #E55250;
+    --color-red-dark: #9A180B;
+    --color-yellow: #FFC34F;
+
+    --color-pink: #FDAFBC;
+    --color-gold: #D3BE7B;
+    --color-broun: #956C5A;
+    --color-purple: #A76CCA;
+    --color-gray-dark: #615C57;
+    --color-blue-light: #5FB0E0;
+
+    --color-transparent: transparent;
+    --shadow: 0px 1px 8px 0px #00000026;
+    /*colors*/
+
+    /*border*/
+    --border: 1px solid #0000001A;
+    --border-radius: 20px;
+    --border-radius-small: 10px;
+    --border-radius-large: 30px;
+    /*border*/
+
+    /*body*/
+    --font-family-base: "Gilroy", serif;
+
+    --container-width: #{$container}px;
+    --container-padding-x: 25px;
+
+    --section-padding-y: clamp(3rem, 1.195rem + 7.7vw, 8.125rem);
+    /*body*/
+
+    /*button*/
+    --input-height: 46px;
+    --button-height: 46px;
+    --icon-button-height: 30px;
+
+    --transition-duration: 0.3s;
+    /*button*/
+}

@@ -447,70 +447,6 @@
         "info": "Standard-styled cards have no borders when an image shape is active."
       }
     },
-    "announcement-bar": {
-      "name": "Announcement bar",
-      "settings": {
-        "auto_rotate": {
-          "label": "Auto-rotate announcements"
-        },
-        "change_slides_speed": {
-          "label": "Change every"
-        },
-        "header__1": {
-          "content": "Social media icons",
-          "info": "To display your social media accounts, link them in your [theme settings](/editor?context=theme&category=social%20media)."
-        },
-        "header__2": {
-          "content": "Announcements"
-        },
-        "show_social": {
-          "label": "Show icons on desktop"
-        },
-        "header__3": {
-          "content": "Country/region selector",
-          "info": "To add a country/region, go to your [market settings.](/admin/settings/markets)"
-        },
-        "enable_country_selector": {
-          "label": "Enable country/region selector"
-        },
-        "header__4": {
-          "content": "Language selector",
-          "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
-        },
-        "enable_language_selector": {
-          "label": "Enable language selector"
-        }
-      },
-      "blocks": {
-        "announcement": {
-          "name": "Announcement",
-          "settings": {
-            "text": {
-              "label": "Text",
-              "default": "Welcome to our store"
-            },
-            "text_alignment": {
-              "label": "Text alignment",
-              "options__1": {
-                "label": "Left"
-              },
-              "options__2": {
-                "label": "Center"
-              },
-              "options__3": {
-                "label": "Right"
-              }
-            },
-            "link": {
-              "label": "Link"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Announcement bar"
-      }
-    },
     "apps": {
       "name": "Apps",
       "settings": {
@@ -1088,102 +1024,13 @@
         "logo_help": {
           "content": "Edit your logo in [theme settings](/editor?context=theme&category=logo)."
         },
-        "logo_position": {
-          "label": "Desktop logo position",
-          "options__1": {
-            "label": "Middle left"
-          },
-          "options__2": {
-            "label": "Top left"
-          },
-          "options__3": {
-            "label": "Top center"
-          },
-          "options__4": {
-            "label": "Middle center"
-          }
-        },
         "menu": {
           "label": "Menu"
         },
-        "menu_type_desktop": {
-          "label": "Desktop menu type",
-          "info": "Menu type is automatically optimized for mobile.",
-          "options__1": {
-            "label": "Dropdown"
-          },
-          "options__2": {
-            "label": "Mega menu"
-          },
-          "options__3": {
-            "label": "Drawer"
-          }
-        },
-        "show_line_separator": {
-          "label": "Show separator line"
-        },
-        "header__1": {
-          "content": "Color"
-        },
-        "menu_color_scheme": {
-          "label": "Menu color scheme"
-        },
-        "sticky_header_type": {
-          "label": "Sticky header",
-          "options__1": {
-            "label": "None"
-          },
-          "options__2": {
-            "label": "On scroll up"
-          },
-          "options__3": {
-            "label": "Always"
-          },
-          "options__4": {
-            "label": "Always, reduce logo size"
-          }
-        },
-        "header__3": {
-          "content": "Country/region selector"
-        },
-        "header__4": {
-          "info": "To add a country/region, go to your [market settings.](/admin/settings/markets)"
-        },
-        "enable_country_selector": {
-          "label": "Enable country/region selector"
-        },
-        "header__5": {
-          "content": "Language selector"
-        },
-        "header__6": {
-          "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
-        },
-        "enable_language_selector": {
-          "label": "Enable language selector"
-        },
-        "margin_bottom": {
-          "label": "Bottom margin"
-        },
-        "mobile_layout": {
-          "content": "Mobile layout"
-        },
-        "mobile_logo_position": {
-          "label": "Mobile logo position",
-          "options__1": {
-            "label": "Center"
-          },
-          "options__2": {
-            "label": "Left"
-          }
-        },
-        "header__7": {
-          "content": "Customer accounts log in",
-          "info": "To manage customer accounts, go to your [customer accounts settings](/admin/settings/customer_accounts)."
-        },
-        "enable_customer_avatar": {
-          "label": "Show avatar",
-          "info": "Customers will only see their avatar when they're signed in with Shop"
-        }
+        "announcement": "Announcement bar",
+        "show_bar": "Show Announcement bar",
+        "reviews_label": "Reviews text",
+        "main_label": "Main label"
       }
     },
     "image-banner": {
