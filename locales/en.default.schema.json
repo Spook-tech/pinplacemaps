@@ -914,9 +914,41 @@
     "footer": {
       "name": "Footer",
       "blocks": {
+        "info": {
+          "name": "Info",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Quick links"
+            },
+            "menu": {
+              "label": "Menu",
+              "info": "Displays only top-level menu items."
+            },
+            "show_social": {
+              "label": "Show social media icons",
+              "info": "To display your social media accounts, link them in your [theme settings](/editor?context=theme&category=social%20media)."
+            }
+          }
+        },
+        "newsletter": {
+          "name": "Newsletter",
+          "settings": {
+            "newsletter_enable": "Show newsletter block",
+            "disclaimer": {
+              "label": "Disclaimer text",
+              "default": "Disclaimer: Results can vary from person to person. Our service is in no way designed to diagnose, treat, cure or prevent any disease and is not a substitute for medical advice."
+            },
+            "newsletter_heading": {
+              "label": "Heading",
+              "default": "Subscribe to our emails"
+            }
+          }
+        },
         "link_list": {
           "name": "Menu",
           "settings": {
+            "select_menu": "Select Menu",
             "heading": {
               "label": "Heading",
               "default": "Quick links"
@@ -959,6 +991,10 @@
       "settings": {
         "newsletter_enable": {
           "label": "Show email signup"
+        },
+        "copyright": {
+          "label": "Copyright text",
+          "default": "© Moerie. All rights reserved"
         },
         "newsletter_heading": {
           "label": "Heading",

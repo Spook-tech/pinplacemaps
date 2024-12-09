@@ -1,46 +1,72 @@
 <section class="explore">
   <h2>{{ section.settings.title }}</h2>
-  <div class="swiper" id="explore">
-    <div class="swiper-wrapper">
-      {% for block in section.blocks %}
-        <div class="swiper-slide">
-          {{ block.settings.video_url | video_tag }}
-          {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
-          <div class="buttons">
-            <button class="icon play-pause">
-              <img src="{{ 'play.svg' | asset_url }}" alt="Play" class="play">
-              <img src="{{ 'pause.svg' | asset_url }}" alt="Pause" class="pause">
-            </button>
-            <button class="icon sound">
-              <img src="{{ 'sound.svg' | asset_url }}" alt="Sound On" class="sound-on">
-              <img src="{{ 'sound-off.svg' | asset_url }}" alt="Sound Off" class="sound-off">
-            </button>
+  
+  <div class="reels">
+    <div class="swiper" id="explore">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            {{ block.settings.video_url | video_tag }}
+            {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+            <div class="buttons">
+              <button class="icon play-pause">
+                <img
+                  src="{{ 'play.svg' | asset_url }}"
+                  alt="Play"
+                  class="play">
+                <img
+                  src="{{ 'pause.svg' | asset_url }}"
+                  alt="Pause"
+                  class="pause">
+              </button>
+              <button class="icon sound">
+                <img
+                  src="{{ 'sound.svg' | asset_url }}"
+                  alt="Sound On"
+                  class="sound-on">
+                <img
+                  src="{{ 'sound-off.svg' | asset_url }}"
+                  alt="Sound Off"
+                  class="sound-off">
+              </button>
+            </div>
           </div>
-        </div>
-      {% endfor %}
-      {% for block in section.blocks %}
-        <div class="swiper-slide">
-          {{ block.settings.video_url | video_tag }}
-          {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
-          <div class="buttons">
-            <button class="icon play-pause">
-              <img src="{{ 'play.svg' | asset_url }}" alt="Play" class="play">
-              <img src="{{ 'pause.svg' | asset_url }}" alt="Pause" class="pause">
-            </button>
-            <button class="icon sound">
-              <img src="{{ 'sound.svg' | asset_url }}" alt="Sound On" class="sound-on">
-              <img src="{{ 'sound-off.svg' | asset_url }}" alt="Sound Off" class="sound-off">
-            </button>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            {{ block.settings.video_url | video_tag }}
+            {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+            <div class="buttons">
+              <button class="icon play-pause">
+                <img
+                  src="{{ 'play.svg' | asset_url }}"
+                  alt="Play"
+                  class="play">
+                <img
+                  src="{{ 'pause.svg' | asset_url }}"
+                  alt="Pause"
+                  class="pause">
+              </button>
+              <button class="icon sound">
+                <img
+                  src="{{ 'sound.svg' | asset_url }}"
+                  alt="Sound On"
+                  class="sound-on">
+                <img
+                  src="{{ 'sound-off.svg' | asset_url }}"
+                  alt="Sound Off"
+                  class="sound-off">
+              </button>
+            </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
 
-    <div class="swiper-button-next explore-button-next"></div>
-    <div class="swiper-button-prev explore-button-prev"></div>
+      <div class="swiper-button-next explore-button-next"></div>
+      <div class="swiper-button-prev explore-button-prev"></div>
+    </div>
   </div>
 </section>
-
 
 
 {% schema %}
@@ -69,21 +95,8 @@
     ],
     "presets": [
       {
-        "name": "Short Videos",
-        "category": "Custom",
-        "blocks": [
-          {
-            "type": "video"
-          },
-          {
-            "type": "video"
-          },
-          {
-            "type": "video"
-          }
-        ]
+        "name": "Short Videos"
       }
     ]
   }
-  {% endschema %}
-  
+{% endschema %}

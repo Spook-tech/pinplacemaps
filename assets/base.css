@@ -4120,11 +4120,11 @@ body {
 /**
   Приводим к единому цвету svg-элементы
   */
-svg *[fill] {
+svg:not(.placeholder-svg) *[fill] {
   fill: currentColor;
 }
 
-svg *[stroke] {
+svg:not(.placeholder-svg) *[stroke] {
   stroke: currentColor;
 }
 
@@ -8705,4 +8705,8 @@ textarea:focus-visible {
 
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb
+}
+
+.explore h3:empty{
+  display: none;
 }

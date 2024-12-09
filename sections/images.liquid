@@ -3,7 +3,11 @@
   <ul class="seen__list">
     {% for block in section.blocks %}
       <li>
-        <img src="{{ block.settings.image | img_url: 'master' | default: 'default-image.jpg' }}" alt="{{ block.settings.alt_text | escape }}">
+        {%- if block.settings.image != blank -%}
+          {{ block.settings.image | image_url: height: 100 | image_tag}}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
       </li>
     {% endfor %}
   </ul>
@@ -43,7 +47,6 @@
     "presets": [
       {
         "name": "Images",
-        "category": "Custom",
         "blocks": [
           {
             "type": "image"

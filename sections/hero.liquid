@@ -1,10 +1,17 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
 <section class="hero">
   <div class="container">
     <div class="wrapper">
       <div class="col">
         {% for block in section.blocks %}
           {% if block.type == "title" %}
-           {{ block.settings.title }}
+            {{ block.settings.title }}
           {% elsif block.type == "description" %}
             <p class="hero__text">{{ block.settings.description }}</p>
           {% elsif block.type == "reviews" %}
@@ -12,7 +19,12 @@
               {% assign stars = block.settings.stars_number | round %}
               <div class="rating__stars">
                 {% for i in (1..stars) %}
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60" />
                   </svg>
                 {% endfor %}
@@ -28,7 +40,11 @@
         {% endfor %}
       </div>
       <div class="col">
-        <img src="{{ section.settings.image | img_url: 'master' | default: 'default-image.jpg' }}">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: height: 425 | image_tag}}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
       </div>
     </div>
   </div>
