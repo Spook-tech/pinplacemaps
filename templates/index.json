@@ -49,6 +49,56 @@
         "image": "shopify://shop_images/hero.png"
       }
     },
+    "images_NPeqrD": {
+      "type": "images",
+      "blocks": {
+        "image_7QQg4f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/newyorkpost.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_Tf9nQp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/today.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_aib6fU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/abc.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_h6Vhry": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/theoprahmagazine.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_m7gK8H": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/nbc.svg",
+            "alt_text": "Brand Logo"
+          }
+        }
+      },
+      "block_order": [
+        "image_7QQg4f",
+        "image_Tf9nQp",
+        "image_aib6fU",
+        "image_h6Vhry",
+        "image_m7gK8H"
+      ],
+      "settings": {
+        "title": "As seen on"
+      }
+    },
     "short_videos_cD7YV4": {
       "type": "short-videos",
       "blocks": {
@@ -145,6 +195,7 @@
   },
   "order": [
     "hero_hzJtJh",
+    "images_NPeqrD",
     "short_videos_cD7YV4",
     "multirow_BQ87tz",
     "image_with_text_6q4qk4"
