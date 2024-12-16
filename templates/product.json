@@ -98,9 +98,49 @@
         "info_block_zdM8zM"
       ],
       "settings": {}
+    },
+    "product_info_NJzQCA": {
+      "type": "product-info",
+      "blocks": {
+        "block_PGB8Td": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/perfect.svg",
+            "title": "Perfect Gift Idea",
+            "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travelmap is a thoughtful gift that celebrates adventure and new beginnings.</p><p>Give the gift of wanderlust, encouraging loved ones to document their journeys anddream of destinations yet to come. It's a unique, meaningful present that growsricher with every journey marked.</p>"
+          }
+        },
+        "block_9XLxMX": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/handcrafted.svg",
+            "title": "Premium Craftsmanship",
+            "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensuredurability, elegance, and longevity.</p><p>This isn’t just a map; it’s a legacy piece, designed by skilled artisans toaccompany you on your life’s journey and inspire a lifetime of exploration.</p>"
+          }
+        },
+        "block_PcXMV8": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/madeineu.svg",
+            "title": "Made in EU",
+            "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry.</p><p>Created with care and passion, our maps reflect a European heritage of quality,ensuring they’ll be cherished additions to any space.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_PGB8Td",
+        "block_9XLxMX",
+        "block_PcXMV8"
+      ],
+      "settings": {
+        "title_top": "Map size",
+        "image": "shopify://shop_images/size.png",
+        "title_bottom": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "product_info_NJzQCA"
   ]
 }
