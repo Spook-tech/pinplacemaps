@@ -554,7 +554,7 @@
         }
       },
       "presets": {
-        "name": "Collage"
+      "name": "Collage"
       }
     },
     "collection-list": {
@@ -2256,6 +2256,40 @@
             "heading_3": {
               "label": "Third heading",
               "default": "Heading"
+            }
+          }
+        },
+        "info-block": {
+          "name": "Info Block",
+          "settings": {
+            "icon": "Icon",
+            "text": {
+              "label": "Text",
+              "default": "Some text"
+            }
+          }
+        },
+        "personalization": {
+          "name": "Personalization",
+          "settings": {
+            "title": {
+              "label": "Title",
+              "default": "<p>Personalization</p> <p>+20 €</p>"
+            },
+            "style": {
+              "header": "Style customization",
+              "style_1": "Style 1",
+              "style_2": "Style 2",
+              "style_3": "Style 3",
+              "style_4": "Style 4",
+              "style_5": "Style 5",
+            },
+            "name": {
+              "header": "Name customization",
+              "description": {
+                "label": "Description",
+                "default": "<p>You can enter a name, multiple names, or quotes.</p> <p>Minimum 3 characters, maximum 300 characters.</p>"
+              },
             }
           }
         }

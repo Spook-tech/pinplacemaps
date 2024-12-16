@@ -14,10 +14,10 @@
             {{ block.settings.title }}
           {% elsif block.type == "description" %}
             <p class="hero__text">{{ block.settings.description }}</p>
-          {% elsif block.type == "reviews" %}
+          {% elsif block.type == "rating" %}
             <div class="rating">
               {% assign stars = block.settings.stars_number | round %}
-              <div class="rating__stars">
+              <div class="rating__star">
                 {% for i in (1..stars) %}
                   <svg
                     width="18"
@@ -88,8 +88,8 @@
         ]
       },
       {
-        "type": "reviews",
-        "name": "Reviews",
+        "type": "rating",
+        "name": "Rating",
         "limit": 1,
         "settings": [
           {
@@ -131,7 +131,6 @@
     "presets": [
       {
         "name": "Hero Section",
-        "category": "Sections",
         "blocks": [
           {
             "type": "title"
@@ -140,7 +139,7 @@
             "type": "description"
           },
           {
-            "type": "reviews"
+            "type": "rating"
           },
           {
             "type": "button"

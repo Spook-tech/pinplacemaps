@@ -10,6 +10,7 @@
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
   <variant-selects
+    class="size-selector"
     id="variant-selects-{{ section.id }}"
     data-section="{{ section.id }}"
     {{ block.shopify_attributes }}
@@ -28,30 +29,55 @@
         endif
       -%}
       {%- if picker_type == 'swatch' -%}
-        <fieldset class="js product-form__input product-form__input--swatch">
-          <legend class="form__label">
-            {{ option.name }}:
-            <span data-selected-value>
+        <fieldset class="js product-form__input color-selector">
+          <div class="color-label">
+            <b>{{ option.name }}:</b>
+            <span id="selected-color-name" data-selected-value>
               {{- option.selected_value -}}
             </span>
-          </legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
+          </div>
+
+          <p>1 box - 100 pins</p>
+          <div class="color-actions">
+            <div class="color-options">
+              {% render 'product-variant-options',
+                product: product,
+                option: option,
+                block: block,
+                picker_type: picker_type
+              %}
+            </div>
+            <div class="icon" id="color-palette">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black"
+                      stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
-        </fieldset>
+        {% if option.name == "Size" %}
+          <fieldset class="js product-form__input bottom">
+            <legend class="form__label">{{ option.name }}</legend>
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          </fieldset>
+        {% else %}
+          <fieldset class="js product-form__input product-form__input--pill">
+            <legend class="form__label">{{ option.name }}</legend>
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          </fieldset>
+        {% endif %}
       {%- else -%}
         <div class="product-form__input product-form__input--dropdown">
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
