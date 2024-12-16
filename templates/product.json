@@ -38,16 +38,6 @@
             "swatch_shape": "circle"
           }
         },
-        "personalization_KPHCa8": {
-          "type": "personalization",
-          "settings": {
-            "title": "<p>Personalization</p><p>+20 €</p>",
-            "style_1": "shopify://shop_images/img1.png",
-            "style_2": "shopify://shop_images/img2.png",
-            "style_3": "shopify://shop_images/img3_e508471e-b244-456b-bf6e-64fea0a07749.png",
-            "name_description": "<p>You can enter a name, multiple names, or quotes.</p><p>Minimum 3 characters, maximum 300 characters.</p>"
-          }
-        },
         "buy_buttons_dkX8LF": {
           "type": "buy_buttons",
           "settings": {
@@ -90,7 +80,6 @@
         "price_MXbhHC",
         "description_gDrQVA",
         "variant_picker_3bpktT",
-        "personalization_KPHCa8",
         "buy_buttons_dkX8LF",
         "info_block_jQPdgA",
         "info_block_MWYLaq",
