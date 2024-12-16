@@ -38,6 +38,13 @@
             "swatch_shape": "circle"
           }
         },
+        "personalization_fizMKy": {
+          "type": "personalization",
+          "settings": {
+            "title": "<p>Personalization</p><p>+20 €</p>",
+            "name_description": "<p>You can enter a name, multiple names, or quotes.</p><p>Minimum 3 characters, maximum 300 characters.</p>"
+          }
+        },
         "buy_buttons_dkX8LF": {
           "type": "buy_buttons",
           "settings": {
@@ -80,6 +87,7 @@
         "price_MXbhHC",
         "description_gDrQVA",
         "variant_picker_3bpktT",
+        "personalization_fizMKy",
         "buy_buttons_dkX8LF",
         "info_block_jQPdgA",
         "info_block_MWYLaq",
