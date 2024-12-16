@@ -9,187 +9,61 @@
  */
 {
   "sections": {
-    "hero_hzJtJh": {
-      "type": "hero",
+    "multicolumn": {
+      "type": "multicolumn",
       "blocks": {
-        "title_APBizt": {
-          "type": "title",
+        "column1": {
+          "type": "column",
           "settings": {
-            "title": "<h1>For explorers and dreamers, our pin travel map turns your journeys into lasting memories.</h1>"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "description_7WcbXq": {
-          "type": "description",
+        "column2": {
+          "type": "column",
           "settings": {
-            "description": "Every map is crafted with precision, bringing the world’s details into your home decor."
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "button_hUywyC": {
-          "type": "button",
+        "column3": {
+          "type": "column",
           "settings": {
-            "link": "",
-            "text": "Shop now"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "title_APBizt",
-        "description_7WcbXq",
-        "button_hUywyC"
+        "column1",
+        "column2",
+        "column3"
       ],
       "settings": {
-        "image": "shopify://shop_images/hero.png"
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
-    },
-    "images_NPeqrD": {
-      "type": "images",
-      "blocks": {
-        "image_7QQg4f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/newyorkpost.svg",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "image_Tf9nQp": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/today.svg",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "image_aib6fU": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/abc.svg",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "image_h6Vhry": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/theoprahmagazine.svg",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "image_m7gK8H": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/nbc.svg",
-            "alt_text": "Brand Logo"
-          }
-        }
-      },
-      "block_order": [
-        "image_7QQg4f",
-        "image_Tf9nQp",
-        "image_aib6fU",
-        "image_h6Vhry",
-        "image_m7gK8H"
-      ],
-      "settings": {
-        "title": "As seen on"
-      }
-    },
-    "short_videos_cD7YV4": {
-      "type": "short-videos",
-      "blocks": {
-        "video_TPjzLJ": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels.mp4"
-          }
-        },
-        "video_LWyAPt": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels2.mp4"
-          }
-        },
-        "video_36kcH4": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels3.mp4"
-          }
-        },
-        "video_4cAX9g": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels4.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "video_TPjzLJ",
-        "video_LWyAPt",
-        "video_36kcH4",
-        "video_4cAX9g"
-      ],
-      "settings": {
-        "title": "Explore map types"
-      }
-    },
-    "multirow_BQ87tz": {
-      "type": "multirow",
-      "blocks": {
-        "block_8TVCU3": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/img3.png",
-            "text": "<h3>Capital, capture every moment, pin every place</h3><p>Mark your favorite destinations and relive every adventure by pinning special places. From iconic landmarks to quiet corners, let each pin tell a story. Whether it’s a dream trip or a cherished memory, our map is the perfect way to bring your travels to life and celebrate every journey.</p>"
-          }
-        },
-        "block_F9TNhe": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/img4.png",
-            "text": "<h3>Discover New Destinations, Plan Your Journey</h3><p>Find new destinations and spark your wanderlust with our pin maps. From bucket-list landmarks to off-the-beaten-path locales, this map helps you visualize where you want to go next. Pinning new destinations motivates you to travel further and explore more, turning your dream trips into exciting future plans.</p>"
-          }
-        },
-        "block_rJdVcW": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/img5.png",
-            "text": "<h3>Add Personal Touch with Traveler Names</h3><p>Personalize your pin map with names, making it uniquely yours. Add your name or the names of travel companions to create a one-of-a-kind keepsake. Whether marking journeys with family, friends, or solo adventures, our map becomes a cherished reflection of your travels and shared experiences.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "block_8TVCU3",
-        "block_F9TNhe",
-        "block_rJdVcW"
-      ],
-      "settings": {}
-    },
-    "image_with_text_6q4qk4": {
-      "type": "image-with-text",
-      "blocks": {
-        "image_t7cRDM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/image.png"
-          }
-        },
-        "text_RbC9m3": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>About us</h2><p>Our journey began seven years ago with a simple idea: to create something that would help travelers keep their memories alive. It all started when we, a group of avid explorers, realized that while our travels brought us incredible experiences, we didn’t have a way to truly commemorate them. We wanted something that could bring together the beauty of the world and the personal touch of each unique adventure.</p><p>And so, our pin travel maps were born. We envisioned a map that wasn’t just a decoration but a reflection of every journey—past, present, and future. Crafted with care and precision, each map is designed to help you capture the essence of your travels. From the moment you pin your first destination, it becomes a visual story of your adventures. Today, after seven years, we are proud to offer more than just a map. We offer a way for you to relive your travels, dream of new ones, and create lasting memories—one pin at a time.</p>",
-            "image": "shopify://shop_images/signature.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_t7cRDM",
-        "text_RbC9m3"
-      ],
-      "settings": {}
     }
   },
   "order": [
-    "hero_hzJtJh",
-    "images_NPeqrD",
-    "short_videos_cD7YV4",
-    "multirow_BQ87tz",
-    "image_with_text_6q4qk4"
+    "multicolumn"
   ]
 }
