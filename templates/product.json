@@ -11,6 +11,92 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "title_BVKV4P": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating_cpCjgj": {
+          "type": "rating",
+          "settings": {
+            "stars_number": 4.8,
+            "text": "1,320 trusted reviews"
+          }
+        },
+        "price_MXbhHC": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_gDrQVA": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker_3bpktT": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "personalization_KPHCa8": {
+          "type": "personalization",
+          "settings": {
+            "title": "<p>Personalization</p><p>+20 €</p>",
+            "style_1": "shopify://shop_images/img1.png",
+            "style_2": "shopify://shop_images/img2.png",
+            "style_3": "shopify://shop_images/img3_e508471e-b244-456b-bf6e-64fea0a07749.png",
+            "name_description": "<p>You can enter a name, multiple names, or quotes.</p><p>Minimum 3 characters, maximum 300 characters.</p>"
+          }
+        },
+        "buy_buttons_dkX8LF": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "info_block_jQPdgA": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/time.svg",
+            "text": "Delivery in 3-6 business days"
+          }
+        },
+        "info_block_MWYLaq": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/shipping.svg",
+            "text": "Free shipping"
+          }
+        },
+        "info_block_WpepzR": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/guard.svg",
+            "text": "Guaranted safe checkout"
+          }
+        },
+        "info_block_zdM8zM": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/calendar.svg",
+            "text": "30 Days free return"
+          }
+        }
+      },
+      "block_order": [
+        "title_BVKV4P",
+        "rating_cpCjgj",
+        "price_MXbhHC",
+        "description_gDrQVA",
+        "variant_picker_3bpktT",
+        "personalization_KPHCa8",
+        "buy_buttons_dkX8LF",
+        "info_block_jQPdgA",
+        "info_block_MWYLaq",
+        "info_block_WpepzR",
+        "info_block_zdM8zM"
+      ],
       "settings": {}
     }
   },
