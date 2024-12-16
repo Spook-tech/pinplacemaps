@@ -104,7 +104,7 @@
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
-        "collection": "",
+        "collection": "frontpage",
         "products_to_show": 4
       }
     },
