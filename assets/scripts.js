@@ -676,9 +676,9 @@ let isPersonalized = false;
 
 function updatePersonalization() {
   if (isPersonalized) {
-    document.querySelector('[data-option-value-id="4569827541273"]').click();
+    document.querySelector('[data-option-value-id="4536501272840"]').click();
   } else{
-    document.querySelector('[data-option-value-id="4569827574041"]').click();
+    document.querySelector('[data-option-value-id="4536501240072"]').click();
   }
 }
 
