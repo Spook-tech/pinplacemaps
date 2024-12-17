@@ -209,16 +209,7 @@
                       Minimum 3 characters, maximum 300 characters.
                     </p>
 
-                    <input
-                      type="text"
-                      placeholder="Enter text"
-                      minlength="3"
-                      id="name-input"
-                      maxlength="300"
-                      required
-                      class="required"
-                      name="properties[Name]"
-                    >
+                    <input class="field__input" form="{{ 'product-form-' | append: section.id }}" type="text" id="name" name="properties[Name]">
                   </div>
                 </div>
 
