@@ -134,8 +134,19 @@
         "title_bottom": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
       }
     },
-    "1734444600fa5f9b17": {
+    "1734445428071efc76": {
       "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_dXQLdR": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_dXQLdR"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -144,6 +155,6 @@
   "order": [
     "main",
     "product_info_NJzQCA",
-    "1734444600fa5f9b17"
+    "1734445428071efc76"
   ]
 }
