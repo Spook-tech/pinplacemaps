@@ -4210,6 +4210,13 @@ table {
   padding-inline: var(--container-padding-x);
 }
 
+.jdgm-rev-widg.jdgm-rev-widg{
+  width: 100%;
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
 @media (max-width: 767px) {
   .container {
     padding-inline: 16px;
