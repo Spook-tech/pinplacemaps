@@ -671,7 +671,7 @@ const personalizationOpen = document.getElementById('personalizationButton');
 const personalizationClose = document.getElementById('personalizationClose');
 const personalizationSelector = document.querySelector('.personalization-selector');
 const personalization = document.querySelectorAll('.personalization-option');
-const nameInput = document.querySelector("#name-input");
+const nameInput = document.querySelector("#name");
 let isPersonalized = false;
 
 function updatePersonalization() {
