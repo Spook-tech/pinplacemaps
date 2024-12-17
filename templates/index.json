@@ -104,7 +104,7 @@
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
-        "collection": "frontpage",
+        "collection": "world-map",
         "products_to_show": 4
       }
     },
