@@ -44,7 +44,6 @@
             "title": "<p>Personalization</p><p>+20 €</p>",
             "style_1": "shopify://shop_images/img1.png",
             "style_2": "shopify://shop_images/img2.png",
-            "style_3": "shopify://shop_images/img3_e508471e-b244-456b-bf6e-64fea0a07749.png",
             "name_description": "<p>You can enter a name, multiple names, or quotes.</p><p>Minimum 3 characters, maximum 300 characters.</p>"
           }
         },
@@ -105,7 +104,6 @@
         "block_PGB8Td": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/perfect.svg",
             "title": "Perfect Gift Idea",
             "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travelmap is a thoughtful gift that celebrates adventure and new beginnings.</p><p>Give the gift of wanderlust, encouraging loved ones to document their journeys anddream of destinations yet to come. It's a unique, meaningful present that growsricher with every journey marked.</p>"
           }
@@ -113,7 +111,6 @@
         "block_9XLxMX": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/handcrafted.svg",
             "title": "Premium Craftsmanship",
             "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensuredurability, elegance, and longevity.</p><p>This isn’t just a map; it’s a legacy piece, designed by skilled artisans toaccompany you on your life’s journey and inspire a lifetime of exploration.</p>"
           }
@@ -121,7 +118,6 @@
         "block_PcXMV8": {
           "type": "block",
           "settings": {
-            "icon": "shopify://shop_images/madeineu.svg",
             "title": "Made in EU",
             "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry.</p><p>Created with care and passion, our maps reflect a European heritage of quality,ensuring they’ll be cherished additions to any space.</p>"
           }
@@ -137,10 +133,26 @@
         "image": "shopify://shop_images/size.png",
         "title_bottom": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
       }
+    },
+    "1734444600fa5f9b17": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_WPRTGr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_WPRTGr"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "product_info_NJzQCA"
+    "product_info_NJzQCA",
+    "1734444600fa5f9b17"
   ]
 }
