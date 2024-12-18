@@ -41,6 +41,48 @@
         "image": "shopify://shop_images/hero.png"
       }
     },
+    "featured_collection_t4iY9B": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "world-map",
+        "products_to_show": 4
+      }
+    },
+    "info_9rTPci": {
+      "type": "info",
+      "blocks": {
+        "block_amHeLt": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        },
+        "block_JLJTkJ": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        },
+        "block_arG49Y": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_amHeLt",
+        "block_JLJTkJ",
+        "block_arG49Y"
+      ],
+      "settings": {
+        "title": "Women in our research reported noticeable hair growth within 90 days"
+      }
+    },
     "images_NPeqrD": {
       "type": "images",
       "blocks": {
@@ -187,6 +229,8 @@
   },
   "order": [
     "hero_hzJtJh",
+    "featured_collection_t4iY9B",
+    "info_9rTPci",
     "images_NPeqrD",
     "short_videos_cD7YV4",
     "multirow_BQ87tz",
