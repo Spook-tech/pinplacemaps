@@ -24,6 +24,13 @@
             "description": "Every map is crafted with precision, bringing the world’s details into your home decor."
           }
         },
+        "rating_tffcQQ": {
+          "type": "rating",
+          "settings": {
+            "stars_number": 4.8,
+            "text": "1,320 trusted reviews"
+          }
+        },
         "button_hUywyC": {
           "type": "button",
           "settings": {
@@ -35,6 +42,7 @@
       "block_order": [
         "title_APBizt",
         "description_7WcbXq",
+        "rating_tffcQQ",
         "button_hUywyC"
       ],
       "settings": {
