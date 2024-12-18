@@ -83,6 +83,43 @@
         "title": "Women in our research reported noticeable hair growth within 90 days"
       }
     },
+    "product_info_RYV7UY": {
+      "type": "product-info",
+      "blocks": {
+        "slider_image_jwMTYE": {
+          "type": "slider_image",
+          "settings": {}
+        },
+        "slider_image_UYELPR": {
+          "type": "slider_image",
+          "settings": {}
+        },
+        "slider_image_RafJnY": {
+          "type": "slider_image",
+          "settings": {}
+        },
+        "text_EYTh3X": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore the world in striking detail with our Premium Travel Map. It’s crafted for adventurers, dreamers, and those who love to capture memories from around the globe. Each map is meticulously designed to include precise geographic details, showcasing states, capitals, major cities, and iconic National Parks.</p><ul><li>197 (UN) Countries</li><li>642 beautiful islands</li><li>2,500 major cities</li><li>54 vast seas</li><li>186 significant rivers</li><li>154 notable lakes</li></ul><p><strong>Crafted for explorers and dreamers, it’s meticulously designed to showcase the beauty and detail of the world, making each journey unforgettable. From vibrant cities to remote islands, every element on this map invites you to relive past adventures and dream of new ones, turning your space into a tribute to the wonders of travel.</strong></p>"
+          }
+        },
+        "icons_weJLGW": {
+          "type": "icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "slider_image_jwMTYE",
+        "slider_image_UYELPR",
+        "slider_image_RafJnY",
+        "text_EYTh3X",
+        "icons_weJLGW"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
     "images_NPeqrD": {
       "type": "images",
       "blocks": {
@@ -231,6 +268,7 @@
     "hero_hzJtJh",
     "featured_collection_t4iY9B",
     "info_9rTPci",
+    "product_info_RYV7UY",
     "images_NPeqrD",
     "short_videos_cD7YV4",
     "multirow_BQ87tz",
