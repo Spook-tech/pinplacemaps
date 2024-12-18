@@ -671,14 +671,14 @@ const personalizationOpen = document.getElementById('personalizationButton');
 const personalizationClose = document.getElementById('personalizationClose');
 const personalizationSelector = document.querySelector('.personalization-selector');
 const personalization = document.querySelectorAll('.personalization-option');
-const nameInput = document.querySelector("#name");
+const nameInput = document.querySelector("#name-input");
 let isPersonalized = false;
 
 function updatePersonalization() {
   if (isPersonalized) {
-    document.querySelector('[data-option-value-id="4536501272840"]').click();
+    document.querySelector('[data-option-value-id="4569827541273"]').click();
   } else{
-    document.querySelector('[data-option-value-id="4536501240072"]').click();
+    document.querySelector('[data-option-value-id="4569827574041"]').click();
   }
 }
 
@@ -722,83 +722,83 @@ personalization.forEach(style => {
 
 
 //gallery 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const galleries = document.querySelectorAll(".gallery__container");
-//   const modal = document.getElementById("modal");
-//   const modalImg = document.getElementById("modalImage");
-//   const closeBtn = modal.querySelector(".close");
-//   const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+  const galleries = document.querySelectorAll(".gallery__container");
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = modal.querySelector(".close");
+  const body = document.body;
 
-//   galleries.forEach((galleryContainer) => {
-//     const galleryList = galleryContainer.querySelector(".gallery__list");
-//     const clonedList = galleryContainer.querySelector(".gallery__list--clone"); // Находим второй список вручную
+  galleries.forEach((galleryContainer) => {
+    const galleryList = galleryContainer.querySelector(".gallery__list");
+    const clonedList = galleryContainer.querySelector(".gallery__list--clone"); // Находим второй список вручную
 
-//     // Функция для обновления ширины элементов списка
-//     const updateGalleryLayout = () => {
-//       const containerWidth = galleryContainer.offsetWidth; // Ширина контейнера
-//       let itemWidth = 100;
+    // Функция для обновления ширины элементов списка
+    const updateGalleryLayout = () => {
+      const containerWidth = galleryContainer.offsetWidth; // Ширина контейнера
+      let itemWidth = 100;
 
-//       if (window.innerWidth >= 1024) {
-//         itemWidth = containerWidth / 7; // 7 слайдов на экранах более 1024px
-//       } else if (window.innerWidth >= 768) {
-//         itemWidth = containerWidth / 5; // 5 слайдов на экранах от 768px до 1024px
-//       } else if (window.innerWidth >= 480) {
-//         itemWidth = containerWidth / 3; // 3 слайда на экранах от 480px до 768px
-//       } else {
-//         itemWidth = containerWidth / 2; // 2 слайда на экранах до 480px
-//       }
+      if (window.innerWidth >= 1024) {
+        itemWidth = containerWidth / 7; // 7 слайдов на экранах более 1024px
+      } else if (window.innerWidth >= 768) {
+        itemWidth = containerWidth / 5; // 5 слайдов на экранах от 768px до 1024px
+      } else if (window.innerWidth >= 480) {
+        itemWidth = containerWidth / 3; // 3 слайда на экранах от 480px до 768px
+      } else {
+        itemWidth = containerWidth / 2; // 2 слайда на экранах до 480px
+      }
 
-//       // Обновляем ширину и позицию обоих списков
-//       galleryList.style.width = `${itemWidth * galleryList.children.length}px`;
-//       clonedList.style.width = `${itemWidth * clonedList.children.length}px`;
+      // Обновляем ширину и позицию обоих списков
+      galleryList.style.width = `${itemWidth * galleryList.children.length}px`;
+      clonedList.style.width = `${itemWidth * clonedList.children.length}px`;
 
-//       [...galleryList.children, ...clonedList.children].forEach((li) => {
-//         li.style.width = `${itemWidth}px`;
-//       });
+      [...galleryList.children, ...clonedList.children].forEach((li) => {
+        li.style.width = `${itemWidth}px`;
+      });
 
-//       // Перемещаем второй список, чтобы он был рядом с первым
-//       clonedList.style.transform = `translateX(${containerWidth}px)`;
-//     };
+      // Перемещаем второй список, чтобы он был рядом с первым
+      clonedList.style.transform = `translateX(${containerWidth}px)`;
+    };
 
-//     // Запуск обновления при загрузке и изменении размера экрана
-//     updateGalleryLayout();
-//     window.addEventListener("resize", updateGalleryLayout);
+    // Запуск обновления при загрузке и изменении размера экрана
+    updateGalleryLayout();
+    window.addEventListener("resize", updateGalleryLayout);
 
-//     // Открытие модального окна при клике на изображение
-//     galleryContainer.querySelectorAll("img").forEach((img) => {
-//       img.addEventListener("click", () => {
-//         modal.style.display = "flex"; // Показать модальное окно
-//         modalImg.src = img.src; // Установить источник изображения
-//         body.classList.add("lock"); // Останавливаем анимацию
-//         galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
-//           list.style.animationPlayState = "paused"; // Остановить анимацию
-//         });
-//       });
-//     });
-//   });
+    // Открытие модального окна при клике на изображение
+    galleryContainer.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex"; // Показать модальное окно
+        modalImg.src = img.src; // Установить источник изображения
+        body.classList.add("lock"); // Останавливаем анимацию
+        galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
+          list.style.animationPlayState = "paused"; // Остановить анимацию
+        });
+      });
+    });
+  });
 
-//   // Закрытие модального окна
-//   closeBtn.addEventListener("click", () => {
-//     modal.style.display = "none";
-//     body.classList.remove("lock"); // Возобновляем анимацию
-//     galleries.forEach((galleryContainer) => {
-//       galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
-//         list.style.animationPlayState = "running"; // Возобновить анимацию
-//       });
-//     });
-//   });
+  // Закрытие модального окна
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    body.classList.remove("lock"); // Возобновляем анимацию
+    galleries.forEach((galleryContainer) => {
+      galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
+        list.style.animationPlayState = "running"; // Возобновить анимацию
+      });
+    });
+  });
 
-//   // Закрытие модального окна при клике вне изображения
-//   modal.addEventListener("click", (e) => {
-//     if (e.target === modal) {
-//       modal.style.display = "none";
-//       body.classList.remove("lock"); // Возобновляем анимацию
-//       galleries.forEach((galleryContainer) => {
-//         galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
-//           list.style.animationPlayState = "running"; // Возобновить анимацию
-//         });
-//       });
-//     }
-//   });
-// });
+  // Закрытие модального окна при клике вне изображения
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      body.classList.remove("lock"); // Возобновляем анимацию
+      galleries.forEach((galleryContainer) => {
+        galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
+          list.style.animationPlayState = "running"; // Возобновить анимацию
+        });
+      });
+    }
+  });
+});
 //gallery 

@@ -1,0 +1,100 @@
+<section class="customer">
+  <div class="container">
+    <div class="size">
+      <h2>{{ section.settings.title_top }}</h2>
+
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: height: 1170 | image_tag }}
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+    <div class="reported">
+      <h2>{{ section.settings.title_bottom }}</h2>
+      <ul class="reported__list">
+        {% for block in section.blocks %}
+          {% if block.type == 'block' %}
+            <li>
+              <div class="top">
+                {%- if block.settings.icon != blank -%}
+                  {{ block.settings.icon | image_url: height: 70 | image_tag }}
+                {%- endif -%}
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="bottom">
+                {{ block.settings.text }}
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product info",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top"
+    },
+    {
+      "type": "text",
+      "id": "title_top",
+      "label": "Title",
+      "default": "Map size"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Bottom"
+    },
+    {
+      "type": "text",
+      "id": "title_bottom",
+      "label": "Title",
+      "default": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Some text"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Some text</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product info",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

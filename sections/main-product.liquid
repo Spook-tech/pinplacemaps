@@ -209,7 +209,16 @@
                       Minimum 3 characters, maximum 300 characters.
                     </p>
 
-                    <input class="field__input" form="{{ 'product-form-' | append: section.id }}" type="text" id="name" name="properties[Name]">
+                    <input
+                      type="text"
+                      placeholder="Enter text"
+                      minlength="3"
+                      id="name-input"
+                      maxlength="300"
+                      required
+                      class="required"
+                      name="properties[Name]"
+                    >
                   </div>
                 </div>
 
@@ -244,7 +253,6 @@
   </section>
 </product-info>
 
-                          <!-- Start of Judge.me code --><div style='clear:both'></div><div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>{{ product.metafields.judgeme.widget }}</div><!-- End of Judge.me code -->
 <script>
   window.productJson = {{ product | json }};
   console.log(productJson)
