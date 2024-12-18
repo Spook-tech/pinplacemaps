@@ -11,10 +11,174 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "title_VjEcfC": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating_qhK89W": {
+          "type": "rating",
+          "settings": {
+            "stars_number": 4.8,
+            "text": "1,320 trusted reviews"
+          }
+        },
+        "description_6K9x7f": {
+          "type": "description",
+          "settings": {}
+        },
+        "price_N3gXt7": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_CXxieW": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "personalization_pjE3Yh": {
+          "type": "personalization",
+          "settings": {
+            "title": "<p>Personalization</p><p>+20 €</p>",
+            "name_description": "<p>You can enter a name, multiple names, or quotes.</p><p>Minimum 3 characters, maximum 300 characters.</p>"
+          }
+        },
+        "buy_buttons_VPENnQ": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "info_block_PrMyJC": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/time.svg",
+            "text": "Delivery in 3-6 business days"
+          }
+        },
+        "info_block_8RdNJ7": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/shipping.svg",
+            "text": "Free shipping"
+          }
+        },
+        "info_block_HBHg6X": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/guard.svg",
+            "text": "Guaranted safe checkout"
+          }
+        },
+        "info_block_8PQaPe": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/calendar.svg",
+            "text": "30 Days free return"
+          }
+        }
+      },
+      "block_order": [
+        "title_VjEcfC",
+        "rating_qhK89W",
+        "description_6K9x7f",
+        "price_N3gXt7",
+        "variant_picker_CXxieW",
+        "personalization_pjE3Yh",
+        "buy_buttons_VPENnQ",
+        "info_block_PrMyJC",
+        "info_block_8RdNJ7",
+        "info_block_HBHg6X",
+        "info_block_8PQaPe"
+      ],
       "settings": {}
+    },
+    "product_page_info_kqVkQ6": {
+      "type": "product_page-info",
+      "blocks": {
+        "block_NjKb3W": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        },
+        "block_xYd7DX": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        },
+        "block_E8bPTc": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_NjKb3W",
+        "block_xYd7DX",
+        "block_E8bPTc"
+      ],
+      "settings": {
+        "title_top": "Map size",
+        "image": "shopify://shop_images/size.png",
+        "title_bottom": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
+      }
+    },
+    "product_info_fXeLxb": {
+      "type": "product-info",
+      "blocks": {
+        "slider_image_AEXkg7": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/hero.png"
+          }
+        },
+        "slider_image_bHigJR": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/hero.png"
+          }
+        },
+        "slider_image_6h7NMU": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/hero.png"
+          }
+        },
+        "text_arH9TW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore the world in striking detail with our Premium Travel Map. It’s crafted for adventurers, dreamers, and those who love to capture memories from around the globe. Each map is meticulously designed to include precise geographic details, showcasing states, capitals, major cities, and iconic National Parks.</p><ul><li>197 (UN) Countries</li><li>642 beautiful islands</li><li>2,500 major cities</li><li>54 vast seas</li><li>186 significant rivers</li><li>154 notable lakes</li></ul><p><strong>Crafted for explorers and dreamers, it’s meticulously designed to showcase the beauty and detail of the world, making each journey unforgettable. From vibrant cities to remote islands, every element on this map invites you to relive past adventures and dream of new ones, turning your space into a tribute to the wonders of travel.</strong></p>"
+          }
+        },
+        "icons_x6NEDK": {
+          "type": "icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "slider_image_AEXkg7",
+        "slider_image_bHigJR",
+        "slider_image_6h7NMU",
+        "text_arH9TW",
+        "icons_x6NEDK"
+      ],
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "product_page_info_kqVkQ6",
+    "product_info_fXeLxb"
   ]
 }
