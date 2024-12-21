@@ -100,6 +100,141 @@
         "products_to_show": 4
       }
     },
+    "info_eGCXfy": {
+      "type": "info",
+      "blocks": {
+        "block_XyH3yp": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/perfect.svg",
+            "title": "Perfect Gift Idea",
+            "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travel map is a thoughtful gift that celebrates adventure and new beginnings.</p><p>Give the gift of wanderlust, encouraging loved ones to document their journeys and dream of destinations yet to come. It's a unique, meaningful present that grows richer with every journey marked.</p>"
+          }
+        },
+        "block_WtBBtM": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/handcrafted.svg",
+            "title": "Premium Craftsmanship",
+            "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensure durability, elegance, and longevity.</p><p>This isn’t just a map; it’s a legacy piece, designed by skilled artisans to accompany you on your life’s journey and inspire a lifetime of exploration.</p>"
+          }
+        },
+        "block_kmfHYj": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/madeineu.svg",
+            "title": "Made in EU",
+            "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry.</p><p>Created with care and passion, our maps reflect a European heritage of quality, ensuring they’ll be cherished additions to any space.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_XyH3yp",
+        "block_WtBBtM",
+        "block_kmfHYj"
+      ],
+      "settings": {
+        "title": "Women in our research reported noticeable hair growth within 90 days"
+      }
+    },
+    "product_info_hAC8Uc": {
+      "type": "product-info",
+      "blocks": {
+        "slider_image_HRENLj": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/product.png"
+          }
+        },
+        "slider_image_eNnmGP": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/product.png"
+          }
+        },
+        "slider_image_9nmKgg": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/product.png"
+          }
+        },
+        "text_mLazJn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore the world in striking detail with our Premium Travel Map. It’s crafted for adventurers, dreamers, and those who love to capture memories from around the globe. Each map is meticulously designed to include precise geographic details, showcasing states, capitals, major cities, and iconic National Parks.</p><ul><li>197 (UN) Countries</li><li>642 beautiful islands</li><li>2,500 major cities</li><li>54 vast seas</li><li>186 significant rivers</li><li>154 notable lakes</li></ul><p><strong>Crafted for explorers and dreamers, it’s meticulously designed to showcase the beauty and detail of the world, making each journey unforgettable. From vibrant cities to remote islands, every element on this map invites you to relive past adventures and dream of new ones, turning your space into a tribute to the wonders of travel.</strong></p>"
+          }
+        },
+        "icons_Rfxcib": {
+          "type": "icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "slider_image_HRENLj",
+        "slider_image_eNnmGP",
+        "slider_image_9nmKgg",
+        "text_mLazJn",
+        "icons_Rfxcib"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "multirow_a68Y7m": {
+      "type": "multirow",
+      "blocks": {
+        "block_36zGea": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/img3.png",
+            "text": "<h3>Capital, capture every moment, pin every place</h3><p>Mark your favorite destinations and relive every adventure by pinning special places. From iconic landmarks to quiet corners, let each pin tell a story. Whether it’s a dream trip or a cherished memory, our map is the perfect way to bring your travels to life and celebrate every journey.</p>"
+          }
+        },
+        "block_VnqM3e": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/img4.png",
+            "text": "<h3>Discover New Destinations, Plan Your Journey</h3><p>Find new destinations and spark your wanderlust with our pin maps. From bucket-list landmarks to off-the-beaten-path locales, this map helps you visualize where you want to go next. Pinning new destinations motivates you to travel further and explore more, turning your dream trips into exciting future plans.</p>"
+          }
+        },
+        "block_DpgCKU": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/img5.png",
+            "text": "<h3>Add Personal Touch with Traveler Names</h3><p>Personalize your pin map with names, making it uniquely yours. Add your name or the names of travel companions to create a one-of-a-kind keepsake. Whether marking journeys with family, friends, or solo adventures, our map becomes a cherished reflection of your travels and shared experiences.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_36zGea",
+        "block_VnqM3e",
+        "block_DpgCKU"
+      ],
+      "settings": {}
+    },
+    "image_with_text_BdjDEY": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_xezpUB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image.png"
+          }
+        },
+        "text_8YG6dn": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>About us</h2><p>Our journey began seven years ago with a simple idea: to create something that would help travelers keep their memories alive. It all started when we, a group of avid explorers, realized that while our travels brought us incredible experiences, we didn’t have a way to truly commemorate them. We wanted something that could bring together the beauty of the world and the personal touch of each unique adventure.</p><p>And so, our pin travel maps were born. We envisioned a map that wasn’t just a decoration but a reflection of every journey—past, present, and future. Crafted with care and precision, each map is designed to help you capture the essence of your travels. From the moment you pin your first destination, it becomes a visual story of your adventures. Today, after seven years, we are proud to offer more than just a map. We offer a way for you to relive your travels, dream of new ones, and create lasting memories—one pin at a time.</p>",
+            "image": "shopify://shop_images/signature.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_xezpUB",
+        "text_8YG6dn"
+      ],
+      "settings": {}
+    },
     "reviews_A689Tf": {
       "type": "reviews",
       "blocks": {
@@ -128,6 +263,10 @@
     "hero_hzJtJh",
     "images_3Bx3mE",
     "featured_collection_KrJFrU",
+    "info_eGCXfy",
+    "product_info_hAC8Uc",
+    "multirow_a68Y7m",
+    "image_with_text_BdjDEY",
     "reviews_A689Tf"
   ]
 }
