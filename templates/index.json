@@ -92,6 +92,14 @@
         "title": "As seen on"
       }
     },
+    "featured_collection_KrJFrU": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Our Featured Collection",
+        "collection": "frontpage",
+        "products_to_show": 4
+      }
+    },
     "reviews_A689Tf": {
       "type": "reviews",
       "blocks": {
@@ -119,6 +127,7 @@
   "order": [
     "hero_hzJtJh",
     "images_3Bx3mE",
+    "featured_collection_KrJFrU",
     "reviews_A689Tf"
   ]
 }
