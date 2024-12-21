@@ -20,36 +20,36 @@
 </section>
 
 {% schema %}
-  {
-    "name": "Multirow",
-    "blocks": [
-      {
-        "type": "block",
-        "name": "Block",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "richtext",
-            "id": "text",
-            "label": "Text",
-            "default": "<h3>Title </h3><p>Description</p>"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Multirow",
-        "blocks": [
-          {
-            "type": "block"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "t:sections.multirow.name",
+  "blocks": [
+    {
+      "type": "block",
+      "name": "t:sections.multirow.blocks.block.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.multirow.blocks.block.settings.image.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.multirow.blocks.block.settings.text.label",
+          "default": "t:sections.multirow.blocks.block.settings.text.default"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.multirow.presets.name",
+      "blocks": [
+        {
+          "type": "block"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

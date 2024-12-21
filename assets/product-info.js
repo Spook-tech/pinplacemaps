@@ -123,6 +123,7 @@ if (!customElements.get('product-info')) {
             this.pendingRequestUrl = null;
             const html = new DOMParser().parseFromString(responseText, 'text/html');
             callback(html);
+
           })
           .then(() => {
             // set focus to last clicked option value
@@ -132,7 +133,7 @@ if (!customElements.get('product-info')) {
             if (error.name === 'AbortError') {
               console.log('Fetch aborted by user');
             } else {
-              console.error(error);
+              // console.error(error);
             }
           });
       }

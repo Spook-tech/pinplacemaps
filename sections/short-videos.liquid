@@ -1,61 +1,95 @@
 <section class="explore">
   <h2>{{ section.settings.title }}</h2>
-  
+
   <div class="reels">
     <div class="swiper" id="explore">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           <div class="swiper-slide">
-            {{ block.settings.video_url | video_tag }}
-            {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+            {%- if block.settings.video_url != blank -%}
+              {{ block.settings.video_url | video_tag }}
+              {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+            {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+
             <div class="buttons">
               <button class="icon play-pause">
                 <img
                   src="{{ 'play.svg' | asset_url }}"
                   alt="Play"
-                  class="play">
+                  class="play"
+                  height="20px"
+                  width="20px"
+                >
                 <img
                   src="{{ 'pause.svg' | asset_url }}"
                   alt="Pause"
-                  class="pause">
+                  class="pause"
+                  height="20px"
+                  width="20px"
+                >
               </button>
               <button class="icon sound">
                 <img
                   src="{{ 'sound.svg' | asset_url }}"
                   alt="Sound On"
-                  class="sound-on">
+                  class="sound-on"
+                  height="20px"
+                  width="20px"
+                >
                 <img
                   src="{{ 'sound-off.svg' | asset_url }}"
                   alt="Sound Off"
-                  class="sound-off">
+                  class="sound-off"
+                  height="20px"
+                  width="20px"
+                >
               </button>
             </div>
           </div>
         {% endfor %}
         {% for block in section.blocks %}
           <div class="swiper-slide">
-            {{ block.settings.video_url | video_tag }}
-            {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+            {%- if block.settings.video_url != blank -%}
+              {{ block.settings.video_url | video_tag }}
+              {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
+            {%- else -%}
+              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+
             <div class="buttons">
               <button class="icon play-pause">
                 <img
                   src="{{ 'play.svg' | asset_url }}"
                   alt="Play"
-                  class="play">
+                  class="play"
+                  height="20px"
+                  width="20px"
+                >
                 <img
                   src="{{ 'pause.svg' | asset_url }}"
                   alt="Pause"
-                  class="pause">
+                  class="pause"
+                  height="20px"
+                  width="20px"
+                >
               </button>
               <button class="icon sound">
                 <img
                   src="{{ 'sound.svg' | asset_url }}"
                   alt="Sound On"
-                  class="sound-on">
+                  class="sound-on"
+                  height="20px"
+                  width="20px"
+                >
                 <img
                   src="{{ 'sound-off.svg' | asset_url }}"
                   alt="Sound Off"
-                  class="sound-off">
+                  class="sound-off"
+                  height="20px"
+                  width="20px"
+                >
               </button>
             </div>
           </div>
@@ -68,35 +102,51 @@
   </div>
 </section>
 
-
 {% schema %}
-  {
-    "name": "Short Videos",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Section Title",
-        "default": "Explore map types"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "video",
-        "name": "Video",
-        "settings": [
-          {
-            "type": "video",
-            "id": "video_url",
-            "label": "Video File"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Short Videos"
-      }
-    ]
-  }
+{
+  "name": "t:sections.images.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.images.settings.title.label",
+      "default": "t:sections.images.settings.title.default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "t:sections.images.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.images.blocks.image.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "t:sections.images.blocks.image.settings.alt_text.label",
+          "default": "t:sections.images.blocks.image.settings.alt_text.default"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.images.presets.name",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

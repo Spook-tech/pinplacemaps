@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
     new Swiper("#reported", {
       observer: true,
       observeParents: true,
-      loop: true,
+      // loop: true,
       // autoplay: {
       //   delay: 3000,
       //   disableOnInteraction: false,
@@ -574,9 +574,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // mark
 function updateStars() {
+  if (!document.querySelector('.count')) {
+    return;
+  }
+
   const count = parseFloat(document.querySelector('.count').innerText); // Получаем значение count
   const stars = document.querySelectorAll('.mark .filled'); // Находим внутренние блоки для заполнения
 
+  
   stars.forEach((star, index) => {
     if (index < Math.floor(count)) {
       // Полностью закрашенные звёзды
@@ -632,130 +637,126 @@ options.forEach(option => {
 
 //color selector
 // Логика выбора цвета
-const buttonPalette = document.getElementById('color-palette');
-const colorPalette = document.querySelector('.color-options');
-const colorOptions = document.querySelectorAll('.color-option');
-const selectedColorName = document.getElementById('selected-color-name');
-const selectedColorCircle = document.getElementById('selected-color-circle');
 
-buttonPalette.addEventListener('click', function () {
-  this.classList.toggle('active'); // Работает корректно, так как используется обычная функция
-  colorPalette.classList.toggle('show');
-});
-
-
-colorOptions.forEach(option => {
-  option.addEventListener('click', () => {
-    // Удаляем класс active со всех опций
-    colorOptions.forEach(opt => opt.classList.remove('active'));
-
-    // Добавляем active к выбранной
-    option.classList.add('active');
-
-    // Обновляем текст и круг выбранного цвета
-    const colorName = option.getAttribute('data-color');
-    selectedColorName.textContent = colorName;
-    selectedColorCircle.style.backgroundColor = option.style.backgroundColor;
-  });
-});
 
 
 //color selector
 
 // personalization
-const personalizationOpen = document.getElementById('personalizationButton');
-const personalizationClose = document.getElementById('personalizationClose');
-const personalizationSelector = document.querySelector('.personalization-selector');
-const personalization = document.querySelectorAll('.personalization-option');
-
-
-personalizationOpen.addEventListener('click', function () {
-  personalizationSelector.classList.add('active');
-});
-personalizationClose.addEventListener('click', function () {
-  personalizationSelector.classList.remove('active');
-});
-
-personalization.forEach(style => {
-  style.addEventListener('click', () => {
-    personalization.forEach(opt => opt.classList.remove('active'));
-    style.classList.add('active');
+if (document.getElementById('personalizationButton')) {
+  const personalizationOpen = document.getElementById('personalizationButton');
+  const personalizationClose = document.getElementById('personalizationClose');
+  const personalizationSelector = document.querySelector('.personalization-selector');
+  const personalization = document.querySelectorAll('.personalization-option');
+  const nameInput = document.querySelector("#name");
+  let isPersonalized = false;
+  
+  function updatePersonalization() {
+    if (isPersonalized) {
+      document.querySelector('[data-option-value-id="4569827541273"]').click();
+    } else{
+      document.querySelector('[data-option-value-id="4569827574041"]').click();
+    }
+  }
+  
+  personalizationOpen.addEventListener('click', function () {
+    personalizationSelector.classList.add('active');
   });
-});
-
+  personalizationClose.addEventListener('click', function () {
+    personalizationSelector.classList.remove('active');
+    isPersonalized = false;
+  
+    nameInput.value = "";
+    personalization.forEach(opt => opt.classList.remove('active'));
+  
+    updatePersonalization()
+  });
+  
+  nameInput.addEventListener('input', (e) => {
+    const value = nameInput.value;
+    console.log(value)
+    
+    if (value.length > 0) {
+      isPersonalized = true;
+    } else{
+      isPersonalized = false;
+    }
+  
+    updatePersonalization()
+  })
+  
+  personalization.forEach(style => {
+    style.addEventListener('click', () => {
+      personalization.forEach(opt => opt.classList.remove('active'));
+      style.classList.add('active');
+  
+      isPersonalized = true;
+      updatePersonalization();
+    });
+  });
+}
 // personalization
 
 
 //gallery 
 document.addEventListener("DOMContentLoaded", () => {
-  const galleries = document.querySelectorAll(".gallery__container");
-  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = modal.querySelector(".close");
-  const body = document.body;
-
-  galleries.forEach((galleryContainer) => {
-    const galleryList = galleryContainer.querySelector(".gallery__list");
-    const clonedList = galleryContainer.querySelector(".gallery__list--clone"); // Находим второй список вручную
-
-    // Функция для обновления ширины элементов списка
-    const updateGalleryLayout = () => {
-      const containerWidth = galleryContainer.offsetWidth; // Ширина контейнера
-      let itemWidth = 100;
-
-      if (window.innerWidth >= 1024) {
-        itemWidth = containerWidth / 7; // 7 слайдов на экранах более 1024px
-      } else if (window.innerWidth >= 768) {
-        itemWidth = containerWidth / 5; // 5 слайдов на экранах от 768px до 1024px
-      } else if (window.innerWidth >= 480) {
-        itemWidth = containerWidth / 3; // 3 слайда на экранах от 480px до 768px
-      } else {
-        itemWidth = containerWidth / 2; // 2 слайда на экранах до 480px
-      }
-
-      // Обновляем ширину и позицию обоих списков
-      galleryList.style.width = `${itemWidth * galleryList.children.length}px`;
-      clonedList.style.width = `${itemWidth * clonedList.children.length}px`;
-
-      [...galleryList.children, ...clonedList.children].forEach((li) => {
-        li.style.width = `${itemWidth}px`;
-      });
-
-      // Перемещаем второй список, чтобы он был рядом с первым
-      clonedList.style.transform = `translateX(${containerWidth}px)`;
-    };
-
-    // Запуск обновления при загрузке и изменении размера экрана
-    updateGalleryLayout();
-    window.addEventListener("resize", updateGalleryLayout);
-
-    // Открытие модального окна при клике на изображение
-    galleryContainer.querySelectorAll("img").forEach((img) => {
-      img.addEventListener("click", () => {
-        modal.style.display = "flex"; // Показать модальное окно
-        modalImg.src = img.src; // Установить источник изображения
-        body.classList.add("lock"); // Останавливаем анимацию
-        galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
-          list.style.animationPlayState = "paused"; // Остановить анимацию
+  if (document.querySelector('.gallery__container')) {
+    const galleries = document.querySelectorAll(".gallery__container");
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = modal.querySelector(".close");
+    const body = document.body;
+  
+    galleries.forEach((galleryContainer) => {
+      const galleryList = galleryContainer.querySelector(".gallery__list");
+      const clonedList = galleryContainer.querySelector(".gallery__list--clone"); // Находим второй список вручную
+  
+      // Функция для обновления ширины элементов списка
+      const updateGalleryLayout = () => {
+        const containerWidth = galleryContainer.offsetWidth; // Ширина контейнера
+        let itemWidth = 100;
+  
+        if (window.innerWidth >= 1024) {
+          itemWidth = containerWidth / 7; // 7 слайдов на экранах более 1024px
+        } else if (window.innerWidth >= 768) {
+          itemWidth = containerWidth / 5; // 5 слайдов на экранах от 768px до 1024px
+        } else if (window.innerWidth >= 480) {
+          itemWidth = containerWidth / 3; // 3 слайда на экранах от 480px до 768px
+        } else {
+          itemWidth = containerWidth / 2; // 2 слайда на экранах до 480px
+        }
+  
+        // Обновляем ширину и позицию обоих списков
+        galleryList.style.width = `${itemWidth * galleryList.children.length}px`;
+        clonedList.style.width = `${itemWidth * clonedList.children.length}px`;
+  
+        [...galleryList.children, ...clonedList.children].forEach((li) => {
+          li.style.width = `${itemWidth}px`;
+        });
+  
+        // Перемещаем второй список, чтобы он был рядом с первым
+        clonedList.style.transform = `translateX(${containerWidth}px)`;
+      };
+  
+      // Запуск обновления при загрузке и изменении размера экрана
+      updateGalleryLayout();
+      window.addEventListener("resize", updateGalleryLayout);
+  
+      // Открытие модального окна при клике на изображение
+      galleryContainer.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex"; // Показать модальное окно
+          modalImg.src = img.src; // Установить источник изображения
+          body.classList.add("lock"); // Останавливаем анимацию
+          galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
+            list.style.animationPlayState = "paused"; // Остановить анимацию
+          });
         });
       });
     });
-  });
-
-  // Закрытие модального окна
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    body.classList.remove("lock"); // Возобновляем анимацию
-    galleries.forEach((galleryContainer) => {
-      galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
-        list.style.animationPlayState = "running"; // Возобновить анимацию
-      });
-    });
-  });
-
-  // Закрытие модального окна при клике вне изображения
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
+  
+    // Закрытие модального окна
+    closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
       body.classList.remove("lock"); // Возобновляем анимацию
       galleries.forEach((galleryContainer) => {
@@ -763,9 +764,203 @@ document.addEventListener("DOMContentLoaded", () => {
           list.style.animationPlayState = "running"; // Возобновить анимацию
         });
       });
-    }
-  });
+    });
+  
+    // Закрытие модального окна при клике вне изображения
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        body.classList.remove("lock"); // Возобновляем анимацию
+        galleries.forEach((galleryContainer) => {
+          galleryContainer.querySelectorAll(".gallery__list").forEach((list) => {
+            list.style.animationPlayState = "running"; // Возобновить анимацию
+          });
+        });
+      }
+    });
+  }
 });
-
-
 //gallery 
+
+
+//filters
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.reviews')) {
+
+    const reviewsList = document.querySelector('.reviews__list');
+    const reviews = Array.from(reviewsList.children); // Сохраняем отзывы в массив
+  
+    const ratingButtons = document.querySelectorAll('[data-reviews-rating]')
+    const sortDropdown = document.getElementById('sort-reviews');
+    const paginationContainer = document.querySelector('.pagination__list');
+    const prevButton = document.getElementById('prev-page');
+    const nextButton = document.getElementById('next-page');
+  
+    const REVIEWS_PER_PAGE = reviewsList.dataset.reviewsPerPage; // Максимальное количество отзывов на одной странице
+    let currentPage = 1; // Текущая страница
+  
+    let selectedRating = "all";
+    let selectedSort = "newest";
+  
+    // Функция для отображения отзывов на текущей странице
+    const showPage = (filteredReviews) => {
+      const startIndex = (currentPage - 1) * REVIEWS_PER_PAGE;
+      const endIndex = startIndex + REVIEWS_PER_PAGE;
+  
+      // Показываем только отзывы на текущей странице
+      const reviewsToShow = filteredReviews.slice(startIndex, endIndex);
+      reviewsList.innerHTML = '';
+      reviewsToShow.forEach(review => reviewsList.appendChild(review));
+  
+      // Обновление активной страницы и видимости кнопок
+      updatePagination(filteredReviews);
+    };
+  
+    // Функция для обновления кнопок пагинации
+    const updatePagination = (filteredReviews) => {
+      const totalPages = Math.ceil(filteredReviews.length / REVIEWS_PER_PAGE);
+
+      // Если отзывов меньше или равно REVIEWS_PER_PAGE, скрыть пагинацию
+      if (filteredReviews.length <= REVIEWS_PER_PAGE) {
+        paginationContainer.innerHTML = '';
+        return; // Выход из функции
+      }
+
+      // Очистить текущие кнопки пагинации
+      paginationContainer.innerHTML = '';
+
+      // Добавление кнопки "Назад"
+      const prevPageButton = document.createElement('li');
+      prevPageButton.innerHTML = `
+        <button class="prev page-numbers" ${currentPage === 1 ? 'disabled' : ''}>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>`;
+      prevPageButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          showPage(filteredReviews);
+        }
+      });
+      paginationContainer.appendChild(prevPageButton);
+
+      // Добавление кнопок для страниц
+      for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement('li');
+        pageButton.innerHTML = `<a class="page-numbers" href="#">${i}</a>`;
+        if (i === currentPage) {
+          pageButton.innerHTML = `<span class="page-numbers current" aria-current="page">${i}</span>`;
+        }
+        pageButton.querySelector('a')?.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentPage = i;
+          showPage(filteredReviews);
+        });
+        paginationContainer.appendChild(pageButton);
+      }
+
+      // Добавление кнопки "Вперед"
+      const nextPageButton = document.createElement('li');
+      nextPageButton.innerHTML = `
+        <button class="next page-numbers" ${currentPage === totalPages ? 'disabled' : ''}>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>`;
+      nextPageButton.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          showPage(filteredReviews);
+        }
+      });
+      paginationContainer.appendChild(nextPageButton);
+    };
+
+    
+  
+    // Функция для обновления отзывов (с учетом фильтров, сортировки и пагинации)
+    const updateReviews = () => {
+  
+      // Фильтрация
+      const filteredReviews = reviews.filter(review => {
+        if (selectedRating === 'all') return true;
+        const ratingElement = review.querySelector('.rating__star');
+        const rating = ratingElement ? ratingElement.children.length : 0;
+        return rating === parseInt(selectedRating, 10);
+      });
+  
+      // Сортировка
+      if (selectedSort === 'newest') {
+        filteredReviews.sort((a, b) => {
+          const dateA = new Date(a.querySelector('.date').textContent);
+          const dateB = new Date(b.querySelector('.date').textContent);
+          return dateB - dateA; // Новейшие идут первыми
+        });
+      } else if (selectedSort === 'featured') {
+        filteredReviews.sort((a, b) => {
+          const ratingA = a.dataset.rating;
+          const ratingB = b.dataset.rating;
+          return ratingB - ratingA; // Новейшие идут первыми
+        });
+      }
+  
+      // Сброс страницы на первую после фильтрации/сортировки
+      currentPage = 1;
+  
+      // Обновление отображения
+      showPage(filteredReviews);
+    };
+  
+    // События на изменение фильтров и сортировки
+    ratingButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const newValue = button.dataset.reviewsRating;
+        
+        if (button.classList.contains('green')) {
+          button.classList.remove('green');
+          selectedRating = "all";
+          updateReviews();
+          return;
+        }
+  
+        ratingButtons.forEach(button => {
+          button.classList.remove('green');
+        })
+        
+        selectedRating = newValue;
+        button.classList.add('green');
+  
+  
+        updateReviews();
+      })
+    })
+  
+    const filterButtons = document.querySelectorAll('.filters__button');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const title = button.querySelector('.filters__button-value');
+        const optionButtons = button.querySelectorAll('.filters__button-variants button');
+    
+        button.classList.toggle('active');
+    
+        optionButtons.forEach(subbutton => {
+          subbutton.addEventListener('click', () => {
+            const newText = subbutton.dataset.selectedText;
+            const sortType = subbutton.dataset.filter
+            if (newText) {
+              title.textContent = newText;
+            }
+            if (sortType) {
+              selectedSort = sortType;
+              updateReviews();
+            }
+          })
+        });
+      });
+    });
+  
+    // Первоначальное обновление
+    updateReviews();
+  }
+});

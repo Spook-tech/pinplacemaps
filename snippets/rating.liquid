@@ -1,0 +1,54 @@
+{% comment %}
+  Renders a rating block
+
+  Accepts:
+  - stars_number
+  - reviews_number
+  - use_small_text
+
+  Usage:
+  {% render 'rating', stars_number: 4.8 %}
+{% endcomment %}
+
+
+{% if stars_number >= 4.5 %}
+  {% assign rating_text = "Excellent" %}
+{% elsif stars_number >= 3.5 %}
+  {% assign rating_text = "Great" %}
+{% elsif stars_number >= 2.5 %}
+  {% assign rating_text = "Good" %}
+{% elsif stars_number >= 1.5 %}
+  {% assign rating_text = "Average" %}
+{% else %}
+  {% assign rating_text = "Bad" %}
+{% endif %}
+
+<div class="rating">
+  {% assign stars = stars_number | round %}
+  <div class="rating__star">
+    {% for i in (1..stars) %}
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60" />
+      </svg>
+    {% endfor %}
+  </div>
+  {% if use_small_text %}
+    <span>{{ rating_text }}</span>
+
+  {% else %}
+    <p>
+      {{ rating_text }} {{ stars_number | round: 1 }}
+
+      {% if reviews_number != blank %}
+        <span>|</span>
+        <b>{{ reviews_number}} trusted reviews</b>
+      {% endif %}
+    </p>
+  {% endif %}
+</div>

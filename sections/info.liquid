@@ -1,0 +1,80 @@
+<section class="info">
+  <div class="container">
+    <div class="reported">
+      <h2>Women in our research reported noticeable hair growth within 90 days</h2>
+      <ul class="reported__list">
+        {% for block in section.blocks %}
+          {% if block.type == 'block' %}
+            <li>
+              <div class="top">
+                {%- if block.settings.icon != blank -%}
+                  {{ block.settings.icon | image_url: height: 70 | image_tag }}
+                {%- endif -%}
+                <h5>{{ block.settings.title }}</h5>
+              </div>
+              <div class="bottom">
+                {{ block.settings.text }}
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.info_section.name",
+  "class": "info_section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.info_section.settings.title.label",
+      "default": "t:sections.info_section.settings.title.default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "t:sections.info_section.blocks.block.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "t:sections.info_section.blocks.block.settings.icon.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.info_section.blocks.block.settings.title.label",
+          "default": "t:sections.info_section.blocks.block.settings.title.default"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.info_section.blocks.block.settings.text.label",
+          "default": "t:sections.info_section.blocks.block.settings.text.default"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.info_section.presets.name",
+      "blocks": [
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

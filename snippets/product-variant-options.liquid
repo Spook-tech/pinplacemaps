@@ -91,10 +91,50 @@
       {% endif %}
       {{ input_dataset }}
     >
-    <label for="{{ input_id }}">
-      {{ value -}}
-      {{ label_unavailable }}
-    </label>
+  
+    {%- case value -%}
+      {%- when 'Medium' -%}
+        {% for variant in product.variants %}
+          {% if value == variant.title %}
+            {% assign price = variant.price %}
+          {% endif %}
+        {% endfor %}
+  
+        <label for="{{ input_id }}" class="size-option">
+          <img src="{{ 'medium.svg' | asset_url }}" width="42" height="100px" alt="Medium Size">
+          <h3>Medium – {{ price | money_with_currency }}</h3>
+          <p>100cm x 70cm</p>
+        </label>
+      {%- when 'Large' -%}
+        {% for variant in product.variants %}
+          {% if value == variant.title %}
+            {% assign price = variant.price %}
+          {% endif %}
+        {% endfor %}
+  
+        <label for="{{ input_id }}" class="size-option">
+          <img src="{{ 'large.svg' | asset_url }}" width="42" height="100px" alt="Medium Size">
+          <h3>Large – {{ price | money_without_trailing_zeros }}</h3>
+          <p>120cm x 80cm</p>
+        </label>
+      {%- when 'XLarge' -%}
+        {% for variant in product.variants %}
+          {% if value == variant.title %}
+            {% assign price = variant.price %}
+          {% endif %}
+        {% endfor %}
+        
+        <label for="{{ input_id }}" class="size-option">
+          <img src="{{ 'xlarge.svg' | asset_url }}" width="42" height="100px" alt="Medium Size">
+          <h3>XLarge – {{ price | money_without_trailing_zeros }}</h3>
+          <p>150cm x 100cm</p>
+        </label>
+      {% else %}
+        <label for="{{ input_id }}">
+          {{ value -}}
+          {{ label_unavailable }}
+        </label>
+    {%- endcase -%}
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       id="{{ input_id }}"

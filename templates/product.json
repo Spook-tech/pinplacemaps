@@ -12,218 +12,233 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title": {
+        "title_VjEcfC": {
           "type": "title",
           "settings": {}
         },
-        "caption": {
-          "type": "text",
+        "rating_qhK89W": {
+          "type": "rating",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "stars_number": 4.8,
+            "text": "1,320 trusted reviews"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "description": {
+        "description_6K9x7f": {
           "type": "description",
           "settings": {}
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
+        "price_N3gXt7": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_CXxieW": {
+          "type": "variant_picker",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
+            "picker_type": "button",
+            "swatch_shape": "circle"
           }
         },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
+        "personalization_pjE3Yh": {
+          "type": "personalization",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
+            "title": "<p>Personalization</p><p>+20 €</p>",
+            "name_description": "<p>You can enter a name, multiple names, or quotes.</p><p>Minimum 3 characters, maximum 300 characters.</p>"
           }
         },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
+        "buy_buttons_VPENnQ": {
+          "type": "buy_buttons",
           "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
           }
         },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
+        "info_block_PrMyJC": {
+          "type": "info-block",
           "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
+            "icon": "shopify://shop_images/time.svg",
+            "text": "Delivery in 3-6 business days"
           }
         },
-        "share": {
-          "type": "share",
+        "info_block_8RdNJ7": {
+          "type": "info-block",
           "settings": {
-            "share_label": "Share"
+            "icon": "shopify://shop_images/shipping.svg",
+            "text": "Free shipping"
+          }
+        },
+        "info_block_HBHg6X": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/guard.svg",
+            "text": "Guaranted safe checkout"
+          }
+        },
+        "info_block_8PQaPe": {
+          "type": "info-block",
+          "settings": {
+            "icon": "shopify://shop_images/calendar.svg",
+            "text": "30 Days free return"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "caption",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "title_VjEcfC",
+        "rating_qhK89W",
+        "description_6K9x7f",
+        "price_N3gXt7",
+        "variant_picker_CXxieW",
+        "personalization_pjE3Yh",
+        "buy_buttons_VPENnQ",
+        "info_block_PrMyJC",
+        "info_block_8RdNJ7",
+        "info_block_HBHg6X",
+        "info_block_8PQaPe"
       ],
-      "settings": {
-        "enable_sticky_info": true,
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "gallery_layout": "stacked",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
-      }
+      "settings": {}
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "product_page_info_kqVkQ6": {
+      "type": "product_page-info",
       "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
+        "block_NjKb3W": {
+          "type": "block",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
+            "title": "Some text",
+            "text": "<p>Some text</p>"
           }
         },
-        "image-with-text-1": {
+        "block_xYd7DX": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        },
+        "block_E8bPTc": {
+          "type": "block",
+          "settings": {
+            "title": "Some text",
+            "text": "<p>Some text</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_NjKb3W",
+        "block_xYd7DX",
+        "block_E8bPTc"
+      ],
+      "settings": {
+        "title_top": "Map size",
+        "image": "shopify://shop_images/size.png",
+        "title_bottom": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
+      }
+    },
+    "product_info_fXeLxb": {
+      "type": "product-info",
+      "blocks": {
+        "slider_image_AEXkg7": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/hero.png"
+          }
+        },
+        "slider_image_bHigJR": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/hero.png"
+          }
+        },
+        "slider_image_6h7NMU": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/hero.png"
+          }
+        },
+        "text_arH9TW": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>Explore the world in striking detail with our Premium Travel Map. It’s crafted for adventurers, dreamers, and those who love to capture memories from around the globe. Each map is meticulously designed to include precise geographic details, showcasing states, capitals, major cities, and iconic National Parks.</p><ul><li>197 (UN) Countries</li><li>642 beautiful islands</li><li>2,500 major cities</li><li>54 vast seas</li><li>186 significant rivers</li><li>154 notable lakes</li></ul><p><strong>Crafted for explorers and dreamers, it’s meticulously designed to showcase the beauty and detail of the world, making each journey unforgettable. From vibrant cities to remote islands, every element on this map invites you to relive past adventures and dream of new ones, turning your space into a tribute to the wonders of travel.</strong></p>"
           }
         },
-        "column-1": {
-          "type": "column",
+        "icons_x6NEDK": {
+          "type": "icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "slider_image_AEXkg7",
+        "slider_image_bHigJR",
+        "slider_image_6h7NMU",
+        "text_arH9TW",
+        "icons_x6NEDK"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "image_gallery_FpxzXh": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_UQB4h6": {
+          "type": "image",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+          }
+        },
+        "image_NGW8kP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+          }
+        },
+        "image_4N4bJH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+          }
+        },
+        "image_NiP9aN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+          }
+        },
+        "image_BE4JEk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+          }
+        },
+        "image_zKRFXQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+          }
+        },
+        "image_wajE7X": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
           }
         }
       },
       "block_order": [
-        "column-0",
-        "column-1"
+        "image_UQB4h6",
+        "image_NGW8kP",
+        "image_4N4bJH",
+        "image_NiP9aN",
+        "image_BE4JEk",
+        "image_zKRFXQ",
+        "image_wajE7X"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "title": "Gallery"
       }
     }
   },
   "order": [
     "main",
-    "image-with-text",
-    "multicolumn",
-    "related-products"
+    "product_page_info_kqVkQ6",
+    "product_info_fXeLxb",
+    "image_gallery_FpxzXh"
   ]
 }

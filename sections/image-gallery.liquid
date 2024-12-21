@@ -1,0 +1,122 @@
+<section class="gallery">
+  {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title }}</h2>
+  {% endif %}
+  
+  <div class="gallery__slider">
+    <div class="gallery__container to-right">
+      <ul class="gallery__list">
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+      </ul>
+      <ul class="gallery__list gallery__list--clone">
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+          <li class="">
+              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
+          </li>
+      </ul>
+  </div>
+
+    <div class="gallery__container to-left">
+      <ul class="gallery__list">
+        {% for block in section.blocks %}
+          {% if block.settings.image != blank %}
+            <li>
+              {{ block.settings.image | image_url: height: 200 | image_tag}}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul class="gallery__list gallery__list--clone">
+        {% for block in section.blocks %}
+          {% if block.settings.image != blank %}
+            <li>
+              {{ block.settings.image | image_url: height: 200 | image_tag}}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div id="modal" class="modal">
+      <button class="icon close">&times;</button>
+      <img class="modal-content" width="0" height="0" id="modalImage">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.gallery-section.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.gallery-section.settings.title.label",
+      "default": "t:sections.gallery-section.settings.title.default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "t:sections.gallery-section.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.gallery-section.blocks.image.settings.image.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.gallery-section.presets.name",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

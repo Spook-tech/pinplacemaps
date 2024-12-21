@@ -948,6 +948,10 @@
               "label": "Disclaimer text",
               "default": "Disclaimer: Results can vary from person to person. Our service is in no way designed to diagnose, treat, cure or prevent any disease and is not a substitute for medical advice."
             },
+            "title": {
+              "label": "Title",
+              "default": "Newsletter"
+            },
             "newsletter_heading": {
               "label": "Heading",
               "default": "Subscribe to our emails"
@@ -1236,312 +1240,18 @@
         "name": "Image banner"
       }
     },
-    "image-with-text": {
-      "name": "Image with text",
-      "settings": {
-        "image": {
-          "label": "Image"
-        },
-        "height": {
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          },
-          "label": "Image height"
-        },
-        "desktop_image_width": {
-          "options__1": {
-            "label": "Small"
-          },
-          "options__2": {
-            "label": "Medium"
-          },
-          "options__3": {
-            "label": "Large"
-          },
-          "label": "Desktop image width",
-          "info": "Image is automatically optimized for mobile."
-        },
-        "layout": {
-          "options__1": {
-            "label": "Image first"
-          },
-          "options__2": {
-            "label": "Image second"
-          },
-          "label": "Desktop image placement",
-          "info": "Image first is the default mobile layout."
-        },
-        "desktop_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Desktop content alignment"
-        },
-        "desktop_content_position": {
-          "options__1": {
-            "label": "Top"
-          },
-          "options__2": {
-            "label": "Middle"
-          },
-          "options__3": {
-            "label": "Bottom"
-          },
-          "label": "Desktop content position"
-        },
-        "content_layout": {
-          "options__1": {
-            "label": "No overlap"
-          },
-          "options__2": {
-            "label": "Overlap"
-          },
-          "label": "Content layout"
-        },
-        "mobile_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Mobile content alignment"
-        }
-      },
-      "blocks": {
-        "heading": {
-          "name": "Heading",
-          "settings": {
-            "heading": {
-              "label": "Heading",
-              "default": "Image with text"
-            }
-          }
-        },
-        "caption": {
-          "name": "Caption",
-          "settings": {
-            "text": {
-              "label": "Text",
-              "default": "Add a tagline"
-            },
-            "text_style": {
-              "label": "Text style",
-              "options__1": {
-                "label": "Subtitle"
-              },
-              "options__2": {
-                "label": "Uppercase"
-              }
-            },
-            "caption_size": {
-              "label": "Text size",
-              "options__1": {
-                "label": "Small"
-              },
-              "options__2": {
-                "label": "Medium"
-              },
-              "options__3": {
-                "label": "Large"
-              }
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "text": {
-              "label": "Content",
-              "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-            },
-            "text_style": {
-              "label": "Text style",
-              "options__1": {
-                "label": "Body"
-              },
-              "options__2": {
-                "label": "Subtitle"
-              }
-            }
-          }
-        },
-        "button": {
-          "name": "Button",
-          "settings": {
-            "button_label": {
-              "label": "Button label",
-              "info": "Leave the label blank to hide the button.",
-              "default": "Button label"
-            },
-            "button_link": {
-              "label": "Button link"
-            },
-            "outline_button": {
-              "label": "Use outline button style"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Image with text"
-      }
-    },
     "multirow": {
       "name": "Multirow",
-      "settings": {
-        "image": {
-          "label": "Image"
-        },
-        "image_height": {
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          },
-          "label": "Image height"
-        },
-        "desktop_image_width": {
-          "options__1": {
-            "label": "Small"
-          },
-          "options__2": {
-            "label": "Medium"
-          },
-          "options__3": {
-            "label": "Large"
-          },
-          "label": "Desktop image width",
-          "info": "Image is automatically optimized for mobile."
-        },
-        "text_style": {
-          "options__1": {
-            "label": "Body"
-          },
-          "options__2": {
-            "label": "Subtitle"
-          },
-          "label": "Text style"
-        },
-        "button_style": {
-          "options__1": {
-            "label": "Solid button"
-          },
-          "options__2": {
-            "label": "Outline button"
-          },
-          "label": "Button style"
-        },
-        "desktop_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Desktop content alignment"
-        },
-        "desktop_content_position": {
-          "options__1": {
-            "label": "Top"
-          },
-          "options__2": {
-            "label": "Middle"
-          },
-          "options__3": {
-            "label": "Bottom"
-          },
-          "label": "Desktop content position",
-          "info": "Position is automatically optimized for mobile."
-        },
-        "image_layout": {
-          "options__1": {
-            "label": "Alternate from left"
-          },
-          "options__2": {
-            "label": "Alternate from right"
-          },
-          "options__3": {
-            "label": "Aligned left"
-          },
-          "options__4": {
-            "label": "Aligned right"
-          },
-          "label": "Desktop image placement",
-          "info": "Placement is automatically optimized for mobile."
-        },
-        "container_color_scheme": {
-          "label": "Container color scheme"
-        },
-        "mobile_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Mobile content alignment"
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        }
-      },
       "blocks": {
-        "row": {
-          "name": "Row",
+        "block": {
+          "name": "Block",
           "settings": {
             "image": {
               "label": "Image"
             },
-            "caption": {
-              "label": "Caption",
-              "default": "Caption"
-            },
-            "heading": {
-              "label": "Heading",
-              "default": "Row"
-            },
             "text": {
               "label": "Text",
-              "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-            },
-            "button_label": {
-              "label": "Button label",
-              "default": "Button label"
-            },
-            "button_link": {
-              "label": "Button link"
+              "default": "<h3>Title</h3><p>Description</p>"
             }
           }
         }
@@ -2256,6 +1966,40 @@
             "heading_3": {
               "label": "Third heading",
               "default": "Heading"
+            }
+          }
+        },
+        "info-block": {
+          "name": "Info Block",
+          "settings": {
+            "icon": "Icon",
+            "text": {
+              "label": "Text",
+              "default": "Some text"
+            }
+          }
+        },
+        "personalization": {
+          "name": "Personalization",
+          "settings": {
+            "title": {
+              "label": "Title",
+              "default": "<p>Personalization</p> <p>+20 €</p>"
+            },
+            "style": {
+              "header": "Style customization",
+              "style_1": "Style 1",
+              "style_2": "Style 2",
+              "style_3": "Style 3",
+              "style_4": "Style 4",
+              "style_5": "Style 5",
+            },
+            "name": {
+              "header": "Name customization",
+              "description": {
+                "label": "Description",
+                "default": "<p>You can enter a name, multiple names, or quotes.</p> <p>Minimum 3 characters, maximum 300 characters.</p>"
+              },
             }
           }
         }
@@ -3307,6 +3051,277 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "hero": {
+      "name": "Hero Section",
+      "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "product": {
+          "label": "Product (optional)"
+        }
+      },
+      "blocks": {
+        "title": {
+          "name": "Title",
+          "settings": {
+            "label": "Text",
+            "default": "<h1>For explorers and dreamers, our pin travel map turns your journeys into lasting memories.</h1>"
+          }
+        },
+        "description": {
+          "name": "Description",
+          "settings": {
+            "label": "Description",
+            "default": "Every map is crafted with precision, bringing the world’s details into your home decor."
+          }
+        },
+        "rating": {
+          "name": "Rating",
+          "settings": {
+            "stars_number": {
+              "label": "Rating",
+              "info": ""
+            },
+            "reviews_number": {
+              "label": "Number of reviews",
+              "info": "Does not work if product is selected in the section settings"
+            }
+          }
+        },
+        "button": {
+          "name": "Button",
+          "settings": {
+            "link": {
+              "label": "Button link"
+            },
+            "text": {
+              "label": "Button text",
+              "default": "Shop now"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Hero Section"
+      }
+    },
+    "short_videos": {
+      "name": "Short Videos",
+      "settings": {
+        "title": {
+          "label": "Section Title",
+          "default": "Explore map types"
+        }
+      },
+      "blocks": {
+        "video": {
+          "name": "Video",
+          "settings": {
+            "video_url": {
+              "label": "Video File"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Short Videos"
+      }
+    },
+    "images": {
+      "name": "Images",
+      "settings": {
+        "title": {
+          "label": "Title",
+          "default": "As seen on"
+        }
+      },
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Logo Image"
+            },
+            "alt_text": {
+              "label": "Alt Text",
+              "default": "Brand Logo"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Images"
+      }
+    },
+    "featured_collection": {
+      "name": "Featured Collection",
+      "settings": {
+        "title": {
+          "label": "Section Title",
+          "default": "Our Featured Collection"
+        },
+        "collection": {
+          "label": "Select Collection"
+        },
+        "products_to_show": {
+          "label": "Number of Products to Show"
+        }
+      },
+      "presets": {
+        "name": "Featured Collection"
+      }
+    },
+    "info_section": {
+      "name": "Info Section",
+      "settings": {
+        "title": {
+          "label": "Section Title",
+          "default": "Women in our research reported noticeable hair growth within 90 days"
+        }
+      },
+      "blocks": {
+        "block": {
+          "name": "Block",
+          "settings": {
+            "icon": {
+              "label": "Icon"
+            },
+            "title": {
+              "label": "Block Title",
+              "default": "Some text"
+            },
+            "text": {
+              "label": "Block Text",
+              "default": "<p>Some text</p>"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Info Section"
+      }
+    },
+    "image-with-text": {
+      "name": "Image with Text",
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text",
+              "default": "<p></p>"
+            },
+            "image": {
+              "label": "Image (optional)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Image with Text"
+      }
+    },
+    "faq-section": {
+      "name": "FAQ Section",
+      "settings": {
+        "title": {
+          "label": "Section Title",
+          "default": "Frequently Asked Questions"
+        }
+      },
+      "blocks": {
+        "question": {
+          "name": "FAQ Item",
+          "settings": {
+            "question": {
+              "label": "Question",
+              "default": "Your question here"
+            },
+            "answer": {
+              "label": "Answer",
+              "default": "Your answer here"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "FAQ Section"
+      }
+    },
+    "gallery-section": {
+      "name": "Gallery Section",
+      "settings": {
+        "title": {
+          "label": "Title",
+          "default": "Gallery"
+        }
+      },
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Gallery Section"
+      }
+    },
+    "product-sizes": {
+      "name": "Product sizes",
+      "settings": {
+        "top": {
+          "header": "Top"
+        },
+        "title_top": {
+          "label": "Title",
+          "default": "Map size"
+        },
+        "image": {
+          "label": "Image"
+        },
+        "bottom": {
+          "header": "Bottom"
+        },
+        "title_bottom": {
+          "label": "Title",
+          "default": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
+        }
+      },
+      "blocks": {
+        "block": {
+          "name": "Block",
+          "settings": {
+            "icon": {
+              "label": "Icon"
+            },
+            "title": {
+              "label": "Title",
+              "default": "Some text"
+            },
+            "text": {
+              "label": "Text",
+              "default": "<p>Some text</p>"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Product sizes"
       }
     }
   }

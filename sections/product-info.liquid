@@ -1,0 +1,148 @@
+<section class="product-info">
+  <div class="container">
+    {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="reported__description">
+      <div class="col">
+        <div class="slider">
+          <div class="swiper" id="reported">
+            <ul class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'slider_image' %}
+                  <li class="swiper-slide">
+                    {%- if block.settings.image != blank -%}
+                      {{ block.settings.image | image_url: height: 450 | image_tag }}
+                    {%- else -%}
+                      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="swiper__navigation">
+            <div class="swiper-pagination reported-pagination"></div>
+            <div class="swiper-button-prev reported-button-prev"></div>
+            <div class="swiper-button-next reported-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        {% for block in section.blocks %}
+          {% if block.type == 'text' %}
+            {{ block.settings.text }}
+          {% elsif block.type == 'icons' %}
+            <ul class="icons">
+              {% for i in (1..5) %}
+                <li>
+                  {%- assign icon_key = "icon_" | append: i -%}
+                  {%- if block.settings[icon_key] != blank -%}
+                    {{ block.settings[icon_key] | image_url: height: 60 | image_tag }}
+                  {%- endif -%}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product info",
+  "class": "product-info_section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slider_image",
+      "name": "Slider image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Explore the world in striking detail with our Premium Travel Map. It’s crafted for adventurers, dreamers, and those who love to capture memories from around the globe. Each map is meticulously designed to include precise geographic details, showcasing states, capitals, major cities, and iconic National Parks.</p><ul><li>197 (UN) Countries</li><li>642 beautiful islands</li><li>2,500 major cities</li><li>54 vast seas</li><li>186 significant rivers</li><li>154 notable lakes</li></ul><p><strong>Crafted for explorers and dreamers, it’s meticulously designed to showcase the beauty and detail of the world, making each journey unforgettable. From vibrant cities to remote islands, every element on this map invites you to relive past adventures and dream of new ones, turning your space into a tribute to the wonders of travel.</strong></p>"
+        }
+      ]
+    },
+    {
+      "type": "icons",
+      "name": "Icons",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_5",
+          "label": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_6",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product info",
+      "blocks": [
+        {
+          "type": "slider_image"
+        },
+        {
+          "type": "slider_image"
+        },
+        {
+          "type": "slider_image"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "icons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -27,8 +27,8 @@ variant-selects {
 }
 
 .product-form__input input[type='radio'] {
-  clip: rect(0, 0, 0, 0);
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   position: absolute;
   height: 1px;
   width: 1px;

@@ -1,0 +1,64 @@
+<section class="faq">
+  <div class="container">
+    <h2>{{ section.settings.title }}</h2>
+    <ul class="faq__list">
+      {% for block in section.blocks %}
+        <li class="faq__item {% if forloop.first %}active{% endif %}">
+          <div class="faq__question">{{ block.settings.question }}</div>
+          <div class="faq__answer">{{ block.settings.answer }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.faq-section.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.faq-section.settings.title.label",
+      "default": "t:sections.faq-section.settings.title.default"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "t:sections.faq-section.blocks.question.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "t:sections.faq-section.blocks.question.settings.question.label",
+          "default": "t:sections.faq-section.blocks.question.settings.question.default"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "t:sections.faq-section.blocks.question.settings.answer.label",
+          "default": "t:sections.faq-section.blocks.question.settings.answer.default"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq-section.presets.name",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

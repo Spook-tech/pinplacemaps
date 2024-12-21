@@ -19,7 +19,7 @@
             <p>
               {{ section.settings.reviews_text }}</p>
           </div>
-          <a href="#" class="">
+          <div class="main-text">
             <svg
               width="24"
               height="24"
@@ -32,7 +32,7 @@
               <path d="M21.0235 17.0225C21.0235 18.7221 19.6479 20.1 17.9511 20.1C16.2545 20.1 14.8789 18.7221 14.8789 17.0225C14.8789 15.3229 16.2545 13.9451 17.9511 13.9451C19.6479 13.9451 21.0235 15.3229 21.0235 17.0225ZM17.9511 18.8961C18.9842 18.8961 19.8217 18.0573 19.8217 17.0225C19.8217 15.9877 18.9842 15.1489 17.9511 15.1489C16.9182 15.1489 16.0807 15.9877 16.0807 17.0225C16.0807 18.0573 16.9182 18.8961 17.9511 18.8961Z" fill="white" />
             </svg>
             {{ section.settings.main_text }}
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -49,19 +49,9 @@
     </a>
     <nav class="header__navigation navigation">
       <ul class="navigation__list">
-        {% for link in linklists[settings.menu].links %}
-          <li class="{% if link.links.size > 0 %}menu-item-has-children{% endif %}">
+        {% for link in section.settings.menu.links %}
+          <li>
             <a href="{{ link.url }}">{{ link.title }}</a>
-            {% if link.links.size > 0 %}
-              <ul class="sub-menu">
-                {% for sublink in link.links %}
-                  <li>
-                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
-                    
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
           </li>
         {% endfor %}
       </ul>
@@ -91,43 +81,21 @@
           </svg>
         </button>
         <div class="aws-container">
-          <form
-            class="aws-search-form"
-            action="{{ shop.url }}"
-            method="get"
-            role="search">
-            <div class="aws-wrapper">
-              <input
-                type="search"
-                name="s"
-                value="{{ search.terms }}"
-                class="aws-search-field"
-                placeholder="Search"
-                autocomplete="off">
-            </div>
-            <button class="icon aws-search-btn">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 28 28"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12.8333 22.1667C17.988 22.1667 22.1667 17.988 22.1667 12.8333C22.1667 7.67868 17.988 3.5 12.8333 3.5C7.67868 3.5 3.5 7.67868 3.5 12.8333C3.5 17.988 7.67868 22.1667 12.8333 22.1667Z"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path
-                  d="M25.2 26.6L19.6 20.3"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
+          <form class="aws-search-form" action="/search" method="get" role="search">
+              <div class="aws-wrapper">
+                  <input type="search" name="q" value="" class="aws-search-field" placeholder="Search" autocomplete="off">
+              </div>
+              <button class="icon aws-search-btn">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M12.8333 22.1667C17.988 22.1667 22.1667 17.988 22.1667 12.8333C22.1667 7.67868 17.988 3.5 12.8333 3.5C7.67868 3.5 3.5 7.67868 3.5 12.8333C3.5 17.988 7.67868 22.1667 12.8333 22.1667Z"
+                          stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M25.2 26.6L19.6 20.3" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+              </button>
           </form>
-        </div>
+      </div>
+      
       </div>
       <div class="cart">
         <a href="{{ routes.cart_url }}" class="cart__icon icon">

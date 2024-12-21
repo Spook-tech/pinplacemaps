@@ -2,7 +2,7 @@
   <div class="container">
     <div class="about__card">
       {% for block in section.blocks %}
-        {% if block.type == "image" %}
+        {% if block.type == 'image' %}
           <div class="col">
             {%- if block.settings.image != blank -%}
               {{ block.settings.image | image_url: height: 661 | image_tag }}
@@ -10,12 +10,12 @@
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
           </div>
-        {% elsif block.type == "text" %}
+        {% elsif block.type == 'text' %}
           <div class="col">
             {{ block.settings.text }}
 
             {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: height: 75 | image_tag: class: "signature" }}
+              {{ block.settings.image | image_url: height: 75 | image_tag: class: 'signature' }}
             {%- endif -%}
           </div>
         {% endif %}
@@ -25,50 +25,50 @@
 </section>
 
 {% schema %}
-  {
-    "name": "Image with text",
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "name": "Text",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "text",
-            "label": "Text",
-            "default": "<p></p>"
-          },
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image (optional)"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Image with text",
-        "blocks": [
-          {
-            "type": "image"
-          },
-          {
-            "type": "text"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "t:sections.image-with-text.name",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "t:sections.image-with-text.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.image-with-text.blocks.image.settings.image.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.image-with-text.blocks.text.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label",
+          "default": "t:sections.image-with-text.blocks.text.settings.text.default"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.image-with-text.blocks.text.settings.image.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-with-text.presets.name",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
