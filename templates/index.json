@@ -42,10 +42,54 @@
         "product": ""
       }
     },
-    "short_videos_cD7YV4": {
-      "type": "short-videos",
+    "images_3Bx3mE": {
+      "type": "images",
+      "blocks": {
+        "image_7kiQ36": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/newyorkpost.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_3AyBQh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/today.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_hy9KGP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/abc.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_U8ECJz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/theoprahmagazine.svg",
+            "alt_text": "Brand Logo"
+          }
+        },
+        "image_tfep99": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/nbc.svg",
+            "alt_text": "Brand Logo"
+          }
+        }
+      },
+      "block_order": [
+        "image_7kiQ36",
+        "image_3AyBQh",
+        "image_hy9KGP",
+        "image_U8ECJz",
+        "image_tfep99"
+      ],
       "settings": {
-        "title": "Explore map types"
+        "title": "As seen on"
       }
     },
     "reviews_A689Tf": {
@@ -74,7 +118,7 @@
   },
   "order": [
     "hero_hzJtJh",
-    "short_videos_cD7YV4",
+    "images_3Bx3mE",
     "reviews_A689Tf"
   ]
 }
