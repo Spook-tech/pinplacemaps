@@ -102,22 +102,25 @@
         "block_NjKb3W": {
           "type": "block",
           "settings": {
-            "title": "Some text",
-            "text": "<p>Some text</p>"
+            "icon": "shopify://shop_images/perfect.svg",
+            "title": "Perfect Gift Idea",
+            "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travel map is a thoughtful gift that celebrates adventure and new beginnings.</p><p>Give the gift of wanderlust, encouraging loved ones to document their journeys and dream of destinations yet to come. It's a unique, meaningful present that grows richer with every journey marked.</p><p></p>"
           }
         },
         "block_xYd7DX": {
           "type": "block",
           "settings": {
-            "title": "Some text",
-            "text": "<p>Some text</p>"
+            "icon": "shopify://shop_images/handcrafted.svg",
+            "title": "Premium Craftsmanship",
+            "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensure durability, elegance, and longevity.</p><p>This isn’t just a map; it’s a legacy piece, designed by skilled artisans to accompany you on your life’s journey and inspire a lifetime of exploration.</p><p></p>"
           }
         },
         "block_E8bPTc": {
           "type": "block",
           "settings": {
-            "title": "Some text",
-            "text": "<p>Some text</p>"
+            "icon": "shopify://shop_images/madeineu.svg",
+            "title": "Made in EU",
+            "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry.</p><p>Created with care and passion, our maps reflect a European heritage of quality, ensuring they’ll be cherished additions to any space.</p>"
           }
         }
       },
@@ -175,63 +178,238 @@
         "title": ""
       }
     },
-    "image_gallery_FpxzXh": {
-      "type": "image-gallery",
+    "images_gBAQKr": {
+      "type": "images",
       "blocks": {
-        "image_UQB4h6": {
+        "image_dLfgWy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+            "image": "shopify://shop_images/newyorkpost.svg",
+            "alt_text": "Brand Logo"
           }
         },
-        "image_NGW8kP": {
+        "image_nzbKkE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+            "image": "shopify://shop_images/today.svg",
+            "alt_text": "Brand Logo"
           }
         },
-        "image_4N4bJH": {
+        "image_JfYp7G": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+            "image": "shopify://shop_images/abc.svg",
+            "alt_text": "Brand Logo"
           }
         },
-        "image_NiP9aN": {
+        "image_PNp8xU": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+            "image": "shopify://shop_images/theoprahmagazine.svg",
+            "alt_text": "Brand Logo"
           }
         },
-        "image_BE4JEk": {
+        "image_T7FrtE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
-          }
-        },
-        "image_zKRFXQ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
-          }
-        },
-        "image_wajE7X": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png"
+            "image": "shopify://shop_images/nbc.svg",
+            "alt_text": "Brand Logo"
           }
         }
       },
       "block_order": [
-        "image_UQB4h6",
-        "image_NGW8kP",
-        "image_4N4bJH",
-        "image_NiP9aN",
-        "image_BE4JEk",
-        "image_zKRFXQ",
-        "image_wajE7X"
+        "image_dLfgWy",
+        "image_nzbKkE",
+        "image_JfYp7G",
+        "image_PNp8xU",
+        "image_T7FrtE"
+      ],
+      "settings": {
+        "title": "As seen on"
+      }
+    },
+    "multirow_iFnJVg": {
+      "type": "multirow",
+      "blocks": {
+        "block_yPzMEw": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/img3.png",
+            "text": "<h3>Capital, capture every moment, pin every place</h3><p>Mark your favorite destinations and relive every adventure by pinning special places. From iconic landmarks to quiet corners, let each pin tell a story. Whether it’s a dream trip or a cherished memory, our map is the perfect way to bring your travels to life and celebrate every journey.</p>"
+          }
+        },
+        "block_66XDgn": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/img4_419b8de4-1b13-4357-b3d1-09737cd669ce.png",
+            "text": "<h3>Discover New Destinations, Plan Your Journey</h3><p>Find new destinations and spark your wanderlust with our pin maps. From bucket-list landmarks to off-the-beaten-path locales, this map helps you visualize where you want to go next. Pinning new destinations motivates you to travel further and explore more, turning your dream trips into exciting future plans.</p><p></p>"
+          }
+        },
+        "block_rLwCwj": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/img5.png",
+            "text": "<h3>Add Personal Touch with Traveler Names</h3><p>Personalize your pin map with names, making it uniquely yours. Add your name or the names of travel companions to create a one-of-a-kind keepsake. Whether marking journeys with family, friends, or solo adventures, our map becomes a cherished reflection of your travels and shared experiences.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_yPzMEw",
+        "block_66XDgn",
+        "block_rLwCwj"
+      ],
+      "settings": {}
+    },
+    "product_info_BFUzjV": {
+      "type": "product-info",
+      "blocks": {
+        "slider_image_LWFe8t": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/product.png"
+          }
+        },
+        "slider_image_LyFic3": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/product.png"
+          }
+        },
+        "slider_image_t3kmPF": {
+          "type": "slider_image",
+          "settings": {
+            "image": "shopify://shop_images/product.png"
+          }
+        },
+        "text_3MLDGq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore the world in striking detail with our Premium Travel Map. It’s crafted for adventurers, dreamers, and those who love to capture memories from around the globe. Each map is meticulously designed to include precise geographic details, showcasing states, capitals, major cities, and iconic National Parks.</p><ul><li>197 (UN) Countries</li><li>642 beautiful islands</li><li>2,500 major cities</li><li>54 vast seas</li><li>186 significant rivers</li><li>154 notable lakes</li></ul><p><strong>Crafted for explorers and dreamers, it’s meticulously designed to showcase the beauty and detail of the world, making each journey unforgettable. From vibrant cities to remote islands, every element on this map invites you to relive past adventures and dream of new ones, turning your space into a tribute to the wonders of travel.</strong></p>"
+          }
+        },
+        "icons_U7rqKn": {
+          "type": "icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "slider_image_LWFe8t",
+        "slider_image_LyFic3",
+        "slider_image_t3kmPF",
+        "text_3MLDGq",
+        "icons_U7rqKn"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "image_gallery_irqQEW": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_F3g3eK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img1_24876e04-d2fb-43f2-a9da-1f71cc04b20b.png"
+          }
+        },
+        "image_LJpbEf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img2_077f10c3-f2c7-4641-9fab-9b168eae2f3a.png"
+          }
+        },
+        "image_3WRpBA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img3_d8c21be1-62b4-443c-89c8-ac90875fb4a4.png"
+          }
+        },
+        "image_89zH6K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img4_d16bb68d-242c-4c01-84a7-fa620c6d52d8.png"
+          }
+        },
+        "image_4wkLia": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img5_15a0bf9b-e75d-4b82-85b7-ab6abe935dac.png"
+          }
+        },
+        "image_PG67V4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/img6.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_F3g3eK",
+        "image_LJpbEf",
+        "image_3WRpBA",
+        "image_89zH6K",
+        "image_4wkLia",
+        "image_PG67V4"
       ],
       "settings": {
         "title": "Gallery"
+      }
+    },
+    "image_with_text_jtUfEY": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_kKk3Mx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image.png"
+          }
+        },
+        "text_YgJWyn": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>About us</h2><p>Our journey began seven years ago with a simple idea: to create something that would help travelers keep their memories alive. It all started when we, a group of avid explorers, realized that while our travels brought us incredible experiences, we didn’t have a way to truly commemorate them. We wanted something that could bring together the beauty of the world and the personal touch of each unique adventure.</p><p>And so, our pin travel maps were born. We envisioned a map that wasn’t just a decoration but a reflection of every journey—past, present, and future. Crafted with care and precision, each map is designed to help you capture the essence of your travels. From the moment you pin your first destination, it becomes a visual story of your adventures. Today, after seven years, we are proud to offer more than just a map. We offer a way for you to relive your travels, dream of new ones, and create lasting memories—one pin at a time.</p>",
+            "image": "shopify://shop_images/signature.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_kKk3Mx",
+        "text_YgJWyn"
+      ],
+      "settings": {}
+    },
+    "faq_nC9tNE": {
+      "type": "faq",
+      "blocks": {
+        "question_AdqBtp": {
+          "type": "question",
+          "settings": {
+            "question": "Your question here",
+            "answer": "Your answer here"
+          }
+        },
+        "question_3DJmBd": {
+          "type": "question",
+          "settings": {
+            "question": "Your question here",
+            "answer": "Your answer here"
+          }
+        },
+        "question_iwXbUb": {
+          "type": "question",
+          "settings": {
+            "question": "Your question here",
+            "answer": "Your answer here"
+          }
+        }
+      },
+      "block_order": [
+        "question_AdqBtp",
+        "question_3DJmBd",
+        "question_iwXbUb"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
       }
     }
   },
@@ -239,6 +417,11 @@
     "main",
     "product_page_info_kqVkQ6",
     "product_info_fXeLxb",
-    "image_gallery_FpxzXh"
+    "images_gBAQKr",
+    "multirow_iFnJVg",
+    "product_info_BFUzjV",
+    "image_gallery_irqQEW",
+    "image_with_text_jtUfEY",
+    "faq_nC9tNE"
   ]
 }
