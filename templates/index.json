@@ -24,6 +24,13 @@
             "description": "Every map is crafted with precision, bringing the world’s details into your home decor."
           }
         },
+        "rating_BUbYXY": {
+          "type": "rating",
+          "settings": {
+            "stars_number": 4.8,
+            "reviews_number": "missing translation: \"t:sections.hero.blocks.rating.settings.reviews_number.default\" is not present in any of the [\"en\"] schema locale files"
+          }
+        },
         "button_hUywyC": {
           "type": "button",
           "settings": {
@@ -35,11 +42,12 @@
       "block_order": [
         "title_APBizt",
         "description_7WcbXq",
+        "rating_BUbYXY",
         "button_hUywyC"
       ],
       "settings": {
         "image": "shopify://shop_images/hero.png",
-        "product": ""
+        "product": "world"
       }
     },
     "images_3Bx3mE": {
