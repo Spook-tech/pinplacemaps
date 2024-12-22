@@ -77,47 +77,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // Находим все элементы меню с подменю
   const menuItems = document.querySelectorAll(".menu-item-has-children");
 
-  // Обрабатываем клик по каждому элементу меню
+  // Обрабатываем наведение на каждый элемент меню
   menuItems.forEach(item => {
-    item.addEventListener("click", function (e) {
-
-      // Убираем класс 'active' у всех элементов
-      if (this.classList.contains("active")) {
-        this.classList.remove("active");
-      } else {
-        menuItems.forEach(el => {
-          el.classList.remove("active");
-          const openSubmenu = el.querySelector(".sub-menu");
-          if (openSubmenu) {
-          }
-        });
-
-        this.classList.add("active");
-      }
-
-
+    item.addEventListener("mouseenter", function () {
       // Находим подменю внутри текущего элемента
       const submenu = this.querySelector(".sub-menu");
 
-      // Если у элемента есть подменю, управляем его видимостью
+      // Если подменю существует, показываем его
       if (submenu) {
-        // Если подменю открыто, скрываем его
-        if (submenu.classList.contains("show")) {
-          fadeOut(submenu);
-        } else {
-          // Скрываем все открытые подменю
-          document.querySelectorAll(".sub-menu.show").forEach(openSubmenu => {
-            fadeOut(openSubmenu);
-          });
-          // Показываем текущее подменю
-          fadeIn(submenu);
-        }
+        fadeIn(submenu);
+      }
+    });
 
-      } else {
-        // Если у элемента нет подменю, просто скрываем все открытые подменю
-        document.querySelectorAll(".sub-menu.show").forEach(openSubmenu => {
-          fadeOut(openSubmenu);
-        });
+    item.addEventListener("mouseleave", function () {
+      // Находим подменю внутри текущего элемента
+      const submenu = this.querySelector(".sub-menu");
+
+      // Если подменю существует, скрываем его
+      if (submenu) {
+        fadeOut(submenu);
       }
     });
   });
@@ -125,10 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Закрытие подменю при клике вне области навигации
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".menu-item-has-children")) {
-      // Убираем класс 'active' у всех элементов меню
-      menuItems.forEach(item => {
-        item.classList.remove("active");
-      });
       // Закрываем все подменю
       document.querySelectorAll(".sub-menu.show").forEach(submenu => {
         fadeOut(submenu);
