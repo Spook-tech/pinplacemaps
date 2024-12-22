@@ -55,7 +55,6 @@
               {{ block.settings.video_url | video_tag }}
               {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
             {%- else -%}
-              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
 
             <div class="buttons">
@@ -104,49 +103,44 @@
 
 {% schema %}
 {
-  "name": "t:sections.images.name",
+  "name": "Short Videos",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "t:sections.images.settings.title.label",
-      "default": "t:sections.images.settings.title.default"
+      "label": "Section Title",
+      "default": "Explore map types"
     }
   ],
   "blocks": [
     {
-      "type": "image",
-      "name": "t:sections.images.blocks.image.name",
+      "type": "video",
+      "name": "Video",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.images.blocks.image.settings.image.label"
-        },
-        {
-          "type": "text",
-          "id": "alt_text",
-          "label": "t:sections.images.blocks.image.settings.alt_text.label",
-          "default": "t:sections.images.blocks.image.settings.alt_text.default"
+          "type": "video",
+          "id": "video_url",
+          "label": "Video File"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.images.presets.name",
+      "name": "Short Videos",
       "blocks": [
         {
-          "type": "image"
+          "type": "video"
         },
         {
-          "type": "image"
+          "type": "video"
         },
         {
-          "type": "image"
+          "type": "video"
         }
       ]
     }
   ]
 }
 {% endschema %}
+
