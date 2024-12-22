@@ -12,36 +12,13 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "show_section": true,
         "padding_top": 28,
         "padding_bottom": 28
-      }
-    },
-    "reviews_NeWkwe": {
-      "type": "reviews",
-      "blocks": {
-        "rating_dYhkLf": {
-          "type": "rating",
-          "settings": {}
-        },
-        "reviews_mBXDp7": {
-          "type": "reviews",
-          "settings": {
-            "reviews_per_page": 5
-          }
-        }
-      },
-      "block_order": [
-        "rating_dYhkLf",
-        "reviews_mBXDp7"
-      ],
-      "settings": {
-        "title": "Hear from our happy travelers",
-        "product": "world"
       }
     }
   },
   "order": [
-    "main",
-    "reviews_NeWkwe"
+    "main"
   ]
 }
