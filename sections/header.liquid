@@ -50,8 +50,16 @@
     <nav class="header__navigation navigation">
       <ul class="navigation__list">
         {% for link in section.settings.menu.links %}
-          <li>
+          <li class="{% if link.links.size > 0 %}menu-item-has-children{% endif %}">
             <a href="{{ link.url }}">{{ link.title }}</a>
+            
+            {% if link.links.size > 0 %}
+              <ul class="sub-menu">
+                {% for child_link in link.links %}
+                  <li><a href="{{ child_link.url }}">{{ child_link.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
