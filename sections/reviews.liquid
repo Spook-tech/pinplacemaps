@@ -64,7 +64,7 @@
                     </div>
                   {% endfor %}
                 </div>
-                <span class="count">{{ average_rating }}</span>
+                <span class="count">{{ average_rating | round: 1 }}</span>
               </div>
               <span class="total">Total {{ total_reviews }} Reviews</span>
               <ul class="reviews__grade">
