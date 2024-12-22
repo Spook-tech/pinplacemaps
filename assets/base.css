@@ -5099,8 +5099,8 @@ textarea:focus-visible {
   height: 16px;
   background-color: var(--color-black);
   /* Начальный цвет */
-  mask: url(../images/icons/chevron.svg) no-repeat center;
-  -webkit-mask: url(../images/icons/chevron.svg) no-repeat center;
+  mask: url(chevron.svg) no-repeat center;
+  -webkit-mask: url(chevron.svg) no-repeat center;
   mask-size: contain;
   -webkit-mask-size: contain;
   -webkit-transition: background-color var(--transition-duration);
