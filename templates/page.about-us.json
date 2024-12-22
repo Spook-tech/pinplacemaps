@@ -18,6 +18,26 @@
         "padding_bottom": 28
       }
     },
+    "image_with_text_RBL8By": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_faJfiN": {
+          "type": "image",
+          "settings": {}
+        },
+        "text_nKHef8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Some text</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_faJfiN",
+        "text_nKHef8"
+      ],
+      "settings": {}
+    },
     "rich_text_4P43Ki": {
       "type": "rich-text",
       "blocks": {
@@ -57,7 +77,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 24
+        "padding_bottom": 0
       }
     },
     "multirow_RzRqKR": {
@@ -95,6 +115,7 @@
   },
   "order": [
     "main",
+    "image_with_text_RBL8By",
     "rich_text_4P43Ki",
     "multirow_RzRqKR"
   ]
