@@ -16,14 +16,14 @@
         "padding_bottom": 28
       }
     },
-    "reviews_NeWkwe": {
+    "reviews_q6nKtN": {
       "type": "reviews",
       "blocks": {
-        "rating_dYhkLf": {
+        "rating_pJEfnJ": {
           "type": "rating",
           "settings": {}
         },
-        "reviews_mBXDp7": {
+        "reviews_W8QmKq": {
           "type": "reviews",
           "settings": {
             "reviews_per_page": 5
@@ -31,8 +31,8 @@
         }
       },
       "block_order": [
-        "rating_dYhkLf",
-        "reviews_mBXDp7"
+        "rating_pJEfnJ",
+        "reviews_W8QmKq"
       ],
       "settings": {
         "title": "Hear from our happy travelers",
@@ -42,6 +42,6 @@
   },
   "order": [
     "main",
-    "reviews_NeWkwe"
+    "reviews_q6nKtN"
   ]
 }
