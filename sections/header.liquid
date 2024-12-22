@@ -48,21 +48,32 @@
       <img src="{{ settings.logo | image_url: height: 40 | default: 'default-image.jpg' }}" alt="Logo">
     </a>
     <nav class="header__navigation navigation">
-      <ul class="navigation__list">
-        {% for link in section.settings.menu.links %}
-          <li class="{% if link.links.size > 0 %}menu-item-has-children{% endif %}">
-            <a href="{{ link.url }}">{{ link.title }}</a>
-            
-            {% if link.links.size > 0 %}
-              <ul class="sub-menu">
-                {% for child_link in link.links %}
-                  <li><a href="{{ child_link.url }}">{{ child_link.title }}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+<ul class="navigation__list">
+  {% for link in section.settings.menu.links %}
+    <li class="{% if link.links.size > 0 %}menu-item-has-children{% endif %}">
+      {% if link.url contains "empty" %}
+        <span>{{ link.title }}</span>
+      {% else %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endif %}
+      
+      {% if link.links.size > 0 %}
+        <ul class="sub-menu">
+          {% for child_link in link.links %}
+            <li>
+              {% if child_link.url contains "empty" %}
+                <span>{{ child_link.title }}</span>
+              {% else %}
+                <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
     </nav>
 
     <div class="action">
