@@ -1,11 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "settings": {
+        "show_section": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_z6WDdC": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_VUhC6X": {
+          "type": "image",
+          "settings": {}
+        },
+        "text_ffbGzF": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_VUhC6X",
+        "text_ffbGzF"
+      ],
+      "settings": {}
     },
     "form": {
       "type": "contact-form",
@@ -16,10 +46,59 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_banner_9MQDVW": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_YA6tBk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_hiqdVX": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_fJgQia": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YA6tBk",
+        "text_hiqdVX",
+        "buttons_fJgQia"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "fixed",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "main",
-    "form"
+    "image_with_text_z6WDdC",
+    "form",
+    "image_banner_9MQDVW"
   ]
 }
