@@ -265,6 +265,44 @@
         "title": "Hear from our happy travelers",
         "product": "world"
       }
+    },
+    "short_videos_ciDYUU": {
+      "type": "short-videos",
+      "blocks": {
+        "video_Mc67TB": {
+          "type": "video",
+          "settings": {
+            "video_url": "shopify://files/videos/reels.mp4"
+          }
+        },
+        "video_TUPRgh": {
+          "type": "video",
+          "settings": {
+            "video_url": "shopify://files/videos/reels2.mp4"
+          }
+        },
+        "video_i9iVAe": {
+          "type": "video",
+          "settings": {
+            "video_url": "shopify://files/videos/reels3.mp4"
+          }
+        },
+        "video_ETtnGp": {
+          "type": "video",
+          "settings": {
+            "video_url": "shopify://files/videos/reels4.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_Mc67TB",
+        "video_TUPRgh",
+        "video_i9iVAe",
+        "video_ETtnGp"
+      ],
+      "settings": {
+        "title": "Explore map types"
+      }
     }
   },
   "order": [
@@ -275,6 +313,7 @@
     "product_info_hAC8Uc",
     "multirow_a68Y7m",
     "image_with_text_BdjDEY",
-    "reviews_A689Tf"
+    "reviews_A689Tf",
+    "short_videos_ciDYUU"
   ]
 }
