@@ -402,6 +402,7 @@
       "padding": {
         "section_padding_heading": "Section padding",
         "padding_top": "Top padding",
+        "show_section": "Show section",
         "padding_bottom": "Bottom padding"
       },
       "spacing": "Spacing",
