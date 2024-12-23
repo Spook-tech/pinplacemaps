@@ -8881,3 +8881,7 @@ input:checked+.size-option {
 .shopify-policy__title{
   margin-bottom: 25px;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
