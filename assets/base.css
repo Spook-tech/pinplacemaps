@@ -4095,7 +4095,7 @@ body {
 /**
   Приводим к единому цвету svg-элементы
   */
-svg:not(.placeholder-svg):not(.spinner):not(.social svg) *[fill] {
+svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg) *[fill] {
   fill: currentColor;
 }
 
