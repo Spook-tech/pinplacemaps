@@ -1073,7 +1073,7 @@ function getHash() {
   		} else if (document.querySelector(`.${getHash()}`)) {
   			goToHash = `.${getHash()}`;
   		}
-  		goToHash ? gotoBlock(goToHash, false, 500, 20) : null;
+  		goToHash ? gotoBlock(goToHash, true, 500, 20) : null;
   	}
   }
 
