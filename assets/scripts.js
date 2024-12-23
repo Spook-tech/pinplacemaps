@@ -946,8 +946,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Находим все ссылки с классом .link
-    const faqLinks = document.querySelectorAll("a.link");
-
+    const faqLinks = Array.from(document.querySelectorAll("a.link")).filter(
+        (link) => link.getAttribute("href") === "/#FAQ"
+    );
+  
     faqLinks.forEach(function (link) {
         link.addEventListener("click", function (event) {
             // Проверяем, что мы на главной странице
@@ -971,7 +973,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const headerHeight = headerElement ? headerElement.offsetHeight : 0;
 
             // Вычисляем конечную позицию скролла
-            const scrollPosition = faqElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 40;
+            const scrollPosition = faqElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 30;
 
             // Скроллим к элементу с учетом высоты хедера
             window.scrollTo({
