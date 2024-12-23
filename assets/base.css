@@ -8874,3 +8874,7 @@ input:checked+.size-option {
   margin-top: 60px;
   margin-bottom: 80px;
 }
+
+.shopify-policy__container{
+    margin-top: 50px;
+}
