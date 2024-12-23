@@ -35,6 +35,11 @@
         {{ percent_off }}%
       </span>
     {%- endif -%}
+
+    {% if card_product.metafields.custom.show_best_seller_badge_ %}
+    <span class="hit">Hit</span>
+    {% endif %}
+
   </div>
 
   <a class="product__link" href="{{ card_product.url }}">
