@@ -627,9 +627,11 @@ if (document.getElementById('personalizationButton')) {
   
   function updatePersonalization() {
     if (isPersonalized) {
-      document.querySelector('[data-option-value-id="4569827541273"]').click();
+      const defaultInput = document.querySelector('input[type="radio"][value="Default"]');
+      defaultInput.click();
     } else{
-      document.querySelector('[data-option-value-id="4569827574041"]').click();
+      const personalizedInput = document.querySelector('input[type="radio"][value="Personalized"]');
+      personalizedInput.click();
     }
   }
   
