@@ -1000,6 +1000,10 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log(`Go-to library: Element not found: ${targetBlock}`)
       }
   };
+
+function getHash() {
+	if (location.hash) { return location.hash.replace('#', ''); }
+}
   
   function pageNavigation() {
   	// data-goto - вказати ID блоку
