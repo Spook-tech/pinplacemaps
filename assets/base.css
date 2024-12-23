@@ -4099,7 +4099,7 @@ svg:not(.placeholder-svg):not(.spinner) *[fill] {
   fill: currentColor;
 }
 
-svg:not(.placeholder-svg) *[stroke] {
+svg:not(.placeholder-svg):not(.spinner) *[stroke] {
   stroke: currentColor;
 }
 
