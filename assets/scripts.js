@@ -968,9 +968,9 @@ document.addEventListener('DOMContentLoaded', () => {
               const targetBlockMiddle = targetBlockRect.top + targetBlockRect.height / 2;
               const offsetPosition = targetBlockMiddle - windowHeight / 2 + window.scrollY;
 
-            console.log(targetPosition)
             
               targetPosition = offsetPosition - (headerItemHeight ? headerItemHeight : 0) + offsetTop;
+            console.log(targetPosition)
           } else {
               targetPosition = targetBlockElement.getBoundingClientRect().top + window.scrollY;
               targetPosition = headerItemHeight ? targetPosition - headerItemHeight : targetPosition;
