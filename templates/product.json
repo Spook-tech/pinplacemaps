@@ -23,12 +23,12 @@
             "text": "1,320 trusted reviews"
           }
         },
-        "description_6K9x7f": {
-          "type": "description",
-          "settings": {}
-        },
         "price_N3gXt7": {
           "type": "price",
+          "settings": {}
+        },
+        "description_6K9x7f": {
+          "type": "description",
           "settings": {}
         },
         "variant_picker_CXxieW": {
@@ -87,8 +87,8 @@
       "block_order": [
         "title_VjEcfC",
         "rating_qhK89W",
-        "description_6K9x7f",
         "price_N3gXt7",
+        "description_6K9x7f",
         "variant_picker_CXxieW",
         "personalization_pjE3Yh",
         "buy_buttons_VPENnQ",
