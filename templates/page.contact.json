@@ -17,6 +17,26 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_z6WDdC": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_VUhC6X": {
+          "type": "image",
+          "settings": {}
+        },
+        "text_ffbGzF": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Lorem ipsum</h2><p>dolor sit amet, consectetur adipiscing elit. Ut scelerisque molestie pretium. Integer a sagittis libero. Nullam efficitur non arcu ut fringilla. Duis scelerisque ligula a faucibus luctus. Curabitur blandit risus libero, nec convallis erat consectetur et. Suspendisse varius dolor id porttitor dictum. Nullam a nibh quam. In tristique, enim quis rhoncus ullamcorper, elit tellus tempor neque, id tincidunt tortor quam in dolor. Nulla venenatis lacus nec sodales aliquet. Phasellus convallis purus urna, ut mattis ipsum facilisis non. Ut ultrices lacus ac nisi vulputate, vel mattis lorem consequat. Suspendisse potenti. Phasellus orci ex, varius quis eros sit amet, pretium aliquam diam. Nunc turpis orci, pulvinar nec nunc placerat, eleifend dignissim mauris.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_VUhC6X",
+        "text_ffbGzF"
+      ],
+      "settings": {}
+    },
     "info_xFdfXA": {
       "type": "info",
       "blocks": {
@@ -52,26 +72,6 @@
         "white_bg": true
       }
     },
-    "image_with_text_z6WDdC": {
-      "type": "image-with-text",
-      "blocks": {
-        "image_VUhC6X": {
-          "type": "image",
-          "settings": {}
-        },
-        "text_ffbGzF": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Lorem ipsum</h2><p>dolor sit amet, consectetur adipiscing elit. Ut scelerisque molestie pretium. Integer a sagittis libero. Nullam efficitur non arcu ut fringilla. Duis scelerisque ligula a faucibus luctus. Curabitur blandit risus libero, nec convallis erat consectetur et. Suspendisse varius dolor id porttitor dictum. Nullam a nibh quam. In tristique, enim quis rhoncus ullamcorper, elit tellus tempor neque, id tincidunt tortor quam in dolor. Nulla venenatis lacus nec sodales aliquet. Phasellus convallis purus urna, ut mattis ipsum facilisis non. Ut ultrices lacus ac nisi vulputate, vel mattis lorem consequat. Suspendisse potenti. Phasellus orci ex, varius quis eros sit amet, pretium aliquam diam. Nunc turpis orci, pulvinar nec nunc placerat, eleifend dignissim mauris.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "image_VUhC6X",
-        "text_ffbGzF"
-      ],
-      "settings": {}
-    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -83,8 +83,8 @@
   },
   "order": [
     "main",
-    "info_xFdfXA",
     "image_with_text_z6WDdC",
+    "info_xFdfXA",
     "form"
   ]
 }
