@@ -975,7 +975,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Скроллим к элементу с учетом высоты хедера
             window.scrollTo({
-                top: scrollPosition,
+                top: scrollPosition + 40,
                 behavior: "smooth",
             });
         }
