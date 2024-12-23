@@ -938,7 +938,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateReviews();
   }
   
-  let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0, centered = true) => {
+  let gotoBlock = (targetBlock, noHeader = true, speed = 500, offsetTop = 0, centered = true) => {
       const targetBlockElement = document.querySelector(targetBlock);
       if (targetBlockElement) {
           let headerItem = '';
