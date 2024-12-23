@@ -6426,7 +6426,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .about.drop_shadow .about__card::after,
 .about.drop_shadow .about__card::before {
-  display: none;
+  display: block;
 }
 
 @media (max-width: 1023px) {
@@ -6446,6 +6446,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .about__card::before {
   content: "";
+  display: none;
   position: absolute;
   left: -110px;
   top: 50%;
@@ -6464,6 +6465,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .about__card::after {
   content: "";
+  display: none;
   position: absolute;
   right: -80px;
   top: 50px;
