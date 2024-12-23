@@ -1,7 +1,9 @@
 <section class="info">
   <div class="container">
     <div class="reported">
-      <h2>Women in our research reported noticeable hair growth within 90 days</h2>
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
       <ul class="reported__list">
         {% for block in section.blocks %}
           {% if block.type == 'block' %}
