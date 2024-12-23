@@ -28,7 +28,7 @@
           "type": "rating",
           "settings": {
             "stars_number": 4.8,
-            "reviews_number": "missing translation: \"t:sections.hero.blocks.rating.settings.reviews_number.default\" is not present in any of the [\"en\"] schema locale files"
+            "reviews_number": ""
           }
         },
         "button_hUywyC": {
@@ -47,7 +47,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/hero_55650dce-cd26-4fa5-bf92-81a5985c4231.png",
-        "product": "world"
+        "product": ""
       }
     },
     "images_3Bx3mE": {
