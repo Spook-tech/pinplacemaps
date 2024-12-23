@@ -14,7 +14,7 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <ul class="gallery__list">
+      <ul class="gallery__list gallery__list--clone">
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
@@ -35,7 +35,7 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <ul class="gallery__list">
+      <ul class="gallery__list gallery__list--clone">
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
