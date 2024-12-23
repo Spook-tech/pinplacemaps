@@ -284,6 +284,72 @@
         "drop_shadow": true
       }
     },
+    "faq_EyawRa": {
+      "type": "faq",
+      "blocks": {
+        "question_GyHKbR": {
+          "type": "question",
+          "settings": {
+            "question": "What size are the maps?",
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+          }
+        },
+        "question_VVLAiR": {
+          "type": "question",
+          "settings": {
+            "question": "How much does shipping cost?",
+            "answer": "The main difference between our two cradle bouncers is in how you use it. Our Moonboon Original can be turned on and off, and adjusted, using the TIMER and TEMPO knobs on the front of the motor."
+          }
+        },
+        "question_kb7MgN": {
+          "type": "question",
+          "settings": {
+            "question": "How many pins are included with the map?",
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+          }
+        },
+        "question_DaTHdX": {
+          "type": "question",
+          "settings": {
+            "question": "How is the map made?",
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+          }
+        },
+        "question_A7dNaz": {
+          "type": "question",
+          "settings": {
+            "question": "How do I hang the map?",
+            "answer": "When using our Motor Connect, you can easily turn it on and off and adjust it on your phone in the Moonboon App."
+          }
+        },
+        "question_XmFFWF": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "In addition, the Motor Connect also has multiple sleep programs available to you in the app that automatically speed up and slow down the pace of the rocking to match your child's sleep rhythm and were designed by sleep experts."
+          }
+        },
+        "question_pWKPej": {
+          "type": "question",
+          "settings": {
+            "question": "Can I customize the map?",
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+          }
+        }
+      },
+      "block_order": [
+        "question_GyHKbR",
+        "question_VVLAiR",
+        "question_kb7MgN",
+        "question_DaTHdX",
+        "question_A7dNaz",
+        "question_XmFFWF",
+        "question_pWKPej"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
     "reviews_A689Tf": {
       "type": "reviews",
       "blocks": {
@@ -305,40 +371,6 @@
       "settings": {
         "title": "Hear from our happy travelers",
         "product": "world"
-      }
-    },
-    "faq_EyawRa": {
-      "type": "faq",
-      "blocks": {
-        "question_pWKPej": {
-          "type": "question",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
-          }
-        },
-        "question_6DyNmf": {
-          "type": "question",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
-          }
-        },
-        "question_YX9XLR": {
-          "type": "question",
-          "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
-          }
-        }
-      },
-      "block_order": [
-        "question_pWKPej",
-        "question_6DyNmf",
-        "question_YX9XLR"
-      ],
-      "settings": {
-        "title": "Frequently Asked Questions"
       }
     }
   },
