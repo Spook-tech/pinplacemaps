@@ -24,21 +24,21 @@
           "type": "block",
           "settings": {
             "title": "Phone",
-            "text": "<p><a href=\"tel:+1 (555) 123-4567\" title=\"tel:+1 (555) 123-4567\"><strong>+1 (555) 123-4567</strong></a><br/>Available: Mon–Fri, 9 AM–6 PM</p>"
+            "text": "<p><a href=\"tel:+1 (555) 123-4567\" title=\"tel:+1 (555) 123-4567\"><strong>+1 (555) 123-4567</strong></a><br/></p><p>Available: Mon–Fri, 9 AM–6 PM</p>"
           }
         },
         "block_bgRcKV": {
           "type": "block",
           "settings": {
             "title": "E-mail",
-            "text": "<p>E-mail</p>"
+            "text": "<p><a><strong>support@example.com</strong></a></p><p>We usually respond within 24 hour</p>"
           }
         },
         "block_QmmzFY": {
           "type": "block",
           "settings": {
             "title": "Address",
-            "text": "<p>+1 (555) 123-4567<br/>Available: Mon–Fri, 9 AM–6 PM</p>"
+            "text": "<p>123 Main Street, Suite 456<br/>Springfield, IL, USA</p>"
           }
         }
       },
