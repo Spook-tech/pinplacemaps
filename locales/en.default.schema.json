@@ -3210,6 +3210,11 @@
     },
     "image-with-text": {
       "name": "Image with Text",
+      "settings": {
+        "drop_shadow": {
+          "label": "Drop shadow?"
+        }
+      },
       "blocks": {
         "image": {
           "name": "Image",
