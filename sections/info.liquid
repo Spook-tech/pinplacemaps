@@ -1,4 +1,4 @@
-<section class="info">
+<section class="info {% if section.settings.white_bg %} white-bg {% endif %}">
   <div class="container">
     <div class="reported">
       {% if section.settings.title != blank %}
@@ -35,6 +35,12 @@
       "id": "title",
       "label": "t:sections.info_section.settings.title.label",
       "default": "t:sections.info_section.settings.title.default"
+    },
+    {
+      "type": "checkbox",
+      "id": "white_bg",
+      "label": "t:sections.info_section.settings.white_bg.label",
+      "default": false
     }
   ],
   "blocks": [

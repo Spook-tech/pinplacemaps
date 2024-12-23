@@ -3181,6 +3181,9 @@
         "title": {
           "label": "Section Title",
           "default": "Women in our research reported noticeable hair growth within 90 days"
+        },
+        "white_bg": {
+          "label": "Use a white background?",
         }
       },
       "blocks": {
