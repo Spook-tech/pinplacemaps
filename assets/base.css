@@ -5125,7 +5125,7 @@ textarea:focus-visible {
   }
 }
 
-.navigation__list li a {
+.navigation__list li .link {
   position: relative;
   display: block;
   font-size: 14px;
@@ -5135,7 +5135,7 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
-.navigation__list li a::before {
+.navigation__list li .link::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -5149,21 +5149,21 @@ textarea:focus-visible {
 }
 
 @media (hover: hover) {
-  .navigation__list li a:hover {
+  .navigation__list li .link:hover {
     color: var(--color-green);
   }
 
-  .navigation__list li a:hover::before {
+  .navigation__list li .link:hover::before {
     width: 100%;
   }
 }
 
 @media (hover: none) {
-  .navigation__list li a:active {
+  .navigation__list li .link:active {
     color: var(--color-green);
   }
 
-  .navigation__list li a:active::before {
+  .navigation__list li .link:active::before {
     width: 100%;
   }
 }
