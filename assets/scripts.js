@@ -625,16 +625,16 @@ if (document.getElementById('personalizationButton')) {
   const nameInput = document.querySelector("#name");
   let isPersonalized = false;
   
-  const defaultInput = document.querySelector('input[type="radio"][value="Default"]');
   const personalizedInput = document.querySelector('input[type="radio"][value="Personalized"]');
+  const defaultInput = document.querySelector('input[type="radio"][value="Default"]');
   
   function updatePersonalization() {
     if (isPersonalized) {
       console.log(personalizedInput)
-      defaultInput.click();
+      personalizedInput.click();
     } else{
       console.log(personalizedInput)
-      personalizedInput.click();
+      defaultInput.click();
     }
   }
   
