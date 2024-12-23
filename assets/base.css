@@ -6417,7 +6417,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   background: var(--color-white);
 }
 
-.about.drop_shadow{
+.about.drop_shadow .about__card{
   padding: 20px;
   -webkit-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
