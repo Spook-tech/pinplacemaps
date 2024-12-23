@@ -971,11 +971,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const headerHeight = headerElement ? headerElement.offsetHeight : 0;
 
             // Вычисляем конечную позицию скролла
-            const scrollPosition = faqElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            const scrollPosition = faqElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 40;
 
             // Скроллим к элементу с учетом высоты хедера
             window.scrollTo({
-                top: scrollPosition + 40,
+                top: scrollPosition,
                 behavior: "smooth",
             });
         }
