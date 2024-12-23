@@ -939,7 +939,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   let gotoBlock = (targetBlock, noHeader = true, speed = 500, offsetTop = 0, centered = true) => {
-      noHeader = true;
+      noHeader = false;
       centered = true;
       const targetBlockElement = document.querySelector(targetBlock);
       if (targetBlockElement) {
