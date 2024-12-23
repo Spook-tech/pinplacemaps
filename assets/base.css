@@ -4095,11 +4095,11 @@ body {
 /**
   Приводим к единому цвету svg-элементы
   */
-svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg) *[fill] {
+svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.icon-success svg) *[fill] {
   fill: currentColor;
 }
 
-svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg) *[stroke] {
+svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.icon-success svg) *[stroke] {
   stroke: currentColor;
 }
 
