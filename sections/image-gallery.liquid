@@ -6,55 +6,6 @@
   <div class="gallery__slider">
     <div class="gallery__container to-right">
       <ul class="gallery__list">
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-      </ul>
-      <ul class="gallery__list gallery__list--clone">
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-          <li class="">
-              <img src="/cdn/shop/files/img4_4e88a841-e8c5-4dc9-8ca2-d96f9e14fc2a.png?height=200&v=1734551390" alt="">
-          </li>
-      </ul>
-  </div>
-
-    <div class="gallery__container to-left">
-      <ul class="gallery__list">
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
@@ -63,7 +14,10 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <ul class="gallery__list gallery__list--clone">
+  </div>
+
+    <div class="gallery__container to-left">
+      <ul class="gallery__list">
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
