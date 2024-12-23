@@ -940,9 +940,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Проверяем, есть ли в URL якорь #FAQ
+    // Проверяем, есть ли в URL якорь #FAQ при загрузке страницы
     if (window.location.hash === "#FAQ") {
-        // Находим элемент с ID FAQ
+        scrollToFAQ();
+    }
+
+    // Находим все ссылки с классом .link
+    const faqLinks = document.querySelectorAll("a.link");
+
+    faqLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            // Проверяем, что мы на главной странице
+            if (window.location.pathname === "/") {
+                // Отключаем переход по ссылке
+                event.preventDefault();
+
+                // Скроллим к блоку FAQ
+                scrollToFAQ();
+            }
+        });
+    });
+
+    function scrollToFAQ() {
+        // Находим элемент FAQ
         const faqElement = document.getElementById("FAQ");
         const headerElement = document.querySelector("header.header");
 
@@ -956,7 +976,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Скроллим к элементу с учетом высоты хедера
             window.scrollTo({
                 top: scrollPosition,
-                behavior: "smooth"
+                behavior: "smooth",
             });
         }
     }
