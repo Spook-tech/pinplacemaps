@@ -5468,7 +5468,7 @@ textarea:focus-visible {
 
 .customer,
 .product-info,
-.info {
+.info:not(.white-bg) {
   padding: 60px 0;
   background: var(--color-gray-light);
 }
@@ -5495,6 +5495,11 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .info_section~.product-info_section .product-info .container::before {
   top: 0%;
+}
+
+.info.white-bg .reported__list::before,
+.info.white-bg .reported__list::after{
+  display: none;
 }
 
 @media (max-width: 767px) {
