@@ -35,7 +35,9 @@
         "image_VUhC6X",
         "text_ffbGzF"
       ],
-      "settings": {}
+      "settings": {
+        "drop_shadow": false
+      }
     },
     "info_xFdfXA": {
       "type": "info",
