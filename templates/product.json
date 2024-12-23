@@ -379,7 +379,9 @@
         "image_kKk3Mx",
         "text_YgJWyn"
       ],
-      "settings": {}
+      "settings": {
+        "drop_shadow": true
+      }
     },
     "faq_nC9tNE": {
       "type": "faq",
@@ -387,29 +389,61 @@
         "question_AdqBtp": {
           "type": "question",
           "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
+            "question": "What size are the maps?",
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
           }
         },
         "question_3DJmBd": {
           "type": "question",
           "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
+            "question": "How much does shipping cost?",
+            "answer": "The main difference between our two cradle bouncers is in how you use it. Our Moonboon Original can be turned on and off, and adjusted, using the TIMER and TEMPO knobs on the front of the motor."
           }
         },
         "question_iwXbUb": {
           "type": "question",
           "settings": {
-            "question": "Your question here",
-            "answer": "Your answer here"
+            "question": "How many pins are included with the map?",
+            "answer": "Your answer hereWe offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+          }
+        },
+        "question_H73ckr": {
+          "type": "question",
+          "settings": {
+            "question": "How is the map made?",
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+          }
+        },
+        "question_aMakBD": {
+          "type": "question",
+          "settings": {
+            "question": "How do I hang the map?",
+            "answer": "When using our Motor Connect, you can easily turn it on and off and adjust it on your phone in the Moonboon App."
+          }
+        },
+        "question_nbWR96": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "In addition, the Motor Connect also has multiple sleep programs available to you in the app that automatically speed up and slow down the pace of the rocking to match your child's sleep rhythm and were designed by sleep experts."
+          }
+        },
+        "question_U4k98q": {
+          "type": "question",
+          "settings": {
+            "question": "Can I customize the map?",
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
           }
         }
       },
       "block_order": [
         "question_AdqBtp",
         "question_3DJmBd",
-        "question_iwXbUb"
+        "question_iwXbUb",
+        "question_H73ckr",
+        "question_aMakBD",
+        "question_nbWR96",
+        "question_U4k98q"
       ],
       "settings": {
         "title": "Frequently Asked Questions"
