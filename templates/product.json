@@ -292,7 +292,14 @@
         },
         "icons_U7rqKn": {
           "type": "icons",
-          "settings": {}
+          "settings": {
+            "icon_1": "shopify://shop_images/inspiring.svg",
+            "icon_2": "shopify://shop_images/hand-quality.svg",
+            "icon_3": "shopify://shop_images/premium.svg",
+            "icon_4": "shopify://shop_images/detailed.svg",
+            "icon_5": "shopify://shop_images/customizable.svg",
+            "icon_6": "shopify://shop_images/lifetime.svg"
+          }
         }
       },
       "block_order": [
