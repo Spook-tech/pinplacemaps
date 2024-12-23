@@ -17,6 +17,40 @@
         "padding_bottom": 36
       }
     },
+    "info_xFdfXA": {
+      "type": "info",
+      "blocks": {
+        "block_69brW4": {
+          "type": "block",
+          "settings": {
+            "title": "Phone",
+            "text": "<p><a href=\"tel:+1 (555) 123-4567\" title=\"tel:+1 (555) 123-4567\"><strong>+1 (555) 123-4567</strong></a><br/>Available: Mon–Fri, 9 AM–6 PM</p>"
+          }
+        },
+        "block_bgRcKV": {
+          "type": "block",
+          "settings": {
+            "title": "E-mail",
+            "text": "<p>E-mail</p>"
+          }
+        },
+        "block_QmmzFY": {
+          "type": "block",
+          "settings": {
+            "title": "Address",
+            "text": "<p>+1 (555) 123-4567<br/>Available: Mon–Fri, 9 AM–6 PM</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_69brW4",
+        "block_bgRcKV",
+        "block_QmmzFY"
+      ],
+      "settings": {
+        "title": "Women in our research reported noticeable hair growth within 90 days"
+      }
+    },
     "image_with_text_z6WDdC": {
       "type": "image-with-text",
       "blocks": {
@@ -41,8 +75,6 @@
       "type": "contact-form",
       "settings": {
         "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -50,6 +82,7 @@
   },
   "order": [
     "main",
+    "info_xFdfXA",
     "image_with_text_z6WDdC",
     "form"
   ]
