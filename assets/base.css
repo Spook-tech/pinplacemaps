@@ -6407,7 +6407,6 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .about__card {
   position: relative;
-  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6415,10 +6414,14 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   -ms-flex-align: center;
   align-items: center;
   gap: 30px;
+  background: var(--color-white);
+}
+
+.about.drop_shadow{
+  padding: 20px;
   -webkit-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
   border-radius: 20px;
-  background: var(--color-white);
 }
 
 @media (max-width: 1023px) {
@@ -6445,7 +6448,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   z-index: -1;
   width: 210px;
   height: 220px;
-  background: url(../images/decor/about1.svg) no-repeat center/contain;
+  background: url(about1.svg) no-repeat center/contain;
 }
 
 @media (max-width: 1023px) {
@@ -6462,7 +6465,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   z-index: -1;
   width: 205px;
   height: 220px;
-  background: url(../images/decor/about2.svg) no-repeat center/contain;
+  background: url(about2.svg) no-repeat center/contain;
 }
 
 @media (max-width: 1023px) {
