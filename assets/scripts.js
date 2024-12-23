@@ -625,13 +625,14 @@ if (document.getElementById('personalizationButton')) {
   const nameInput = document.querySelector("#name");
   let isPersonalized = false;
   
+  const defaultInput = document.querySelector('input[type="radio"][value="Default"]');
+  const personalizedInput = document.querySelector('input[type="radio"][value="Personalized"]');
+  
   function updatePersonalization() {
     if (isPersonalized) {
-      const defaultInput = document.querySelector('input[type="radio"][value="Default"]');
       console.log(personalizedInput)
       defaultInput.click();
     } else{
-      const personalizedInput = document.querySelector('input[type="radio"][value="Personalized"]');
       console.log(personalizedInput)
       personalizedInput.click();
     }
