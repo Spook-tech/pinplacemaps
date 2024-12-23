@@ -4099,7 +4099,7 @@ svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg) *
   fill: currentColor;
 }
 
-svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg *[stroke] {
+svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg) *[stroke] {
   stroke: currentColor;
 }
 
