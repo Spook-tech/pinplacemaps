@@ -52,11 +52,11 @@
   {% for link in section.settings.menu.links %}
     <li class="{% if link.links.size > 0 %}menu-item-has-children{% endif %}">
       {% if link.url == "/" and link.title == "FAQ" %}
-        <a href="/#FAQ">{{ link.title }}</a>
+        <a class="link" href="/#FAQ">{{ link.title }}</a>
       {% elsif link.url contains "empty" %}
-        <span>{{ link.title }}</span>
+        <span class="link">{{ link.title }}</span>
       {% else %}
-        <a href="{{ link.url }}">{{ link.title }}</a>
+        <a class="link" href="{{ link.url }}">{{ link.title }}</a>
       {% endif %}
       
       {% if link.links.size > 0 %}
@@ -64,9 +64,9 @@
           {% for child_link in link.links %}
             <li>
               {% if child_link.url contains "empty" %}
-                <span>{{ child_link.title }}</span>
+                <span class="link">{{ child_link.title }}</span>
               {% else %}
-                <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                <a class="link" href="{{ child_link.url }}">{{ child_link.title }}</a>
               {% endif %}
             </li>
           {% endfor %}
