@@ -7829,6 +7829,10 @@ input:checked+.size-option {
   gap: 10px;
 }
 
+.footer{
+  margin-top: 50px;
+}
+
 .footer .wrapper {
   gap: 20px;
 }
@@ -7840,6 +7844,9 @@ input:checked+.size-option {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 30px;
+  }
+  .footer {
+    margin-top: 35px;
   }
 }
 
