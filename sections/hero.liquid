@@ -54,14 +54,14 @@
         {% endfor %}
       </div>
       <div class="col">
-        {% if is_product_loaded %}
-          {%- assign product_image = section.settings.product.featured_image | default: section.settings.image -%}
-          {{ product_image | image_url: height: 425 | image_tag }}
-        {% elsif section.settings.image != blank %}
-          {{ section.settings.image | image_url: height: 425 | image_tag }}
-        {% else %}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {% endif %}
+{% if section.settings.image != blank %}
+  {{ section.settings.image | image_url: height: 425 | image_tag }}
+{% elsif is_product_loaded %}
+  {{ section.settings.product.featured_image | image_url: height: 425 | image_tag }}
+{% else %}
+  {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+{% endif %}
+
       </div>
     </div>
   </div>
