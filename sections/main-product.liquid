@@ -176,13 +176,13 @@
                             {%- assign style_key = 'style_' | append: i -%}
                             {%- if block.settings[style_key] != blank -%}
                               <div class="swiper-slide">
-                                <label class="personalization-option" for="img{{ i }}">
+                                <label class="personalization-option" for="style_{{ i }}">
                                   <input
                                     name="properties[style]"
                                     type="radio"
                                     name="image"
-                                    id="img{{ i }}"
-                                    value="img{{ i }}"
+                                    id="style_{{ i }}"
+                                    value="style_{{ i }}"
                                     form="{{ product_form_id }}"
 
                                     {% if forloop.first %}
