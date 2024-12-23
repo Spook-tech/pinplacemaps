@@ -142,7 +142,8 @@
         "block_kmfHYj"
       ],
       "settings": {
-        "title": "Women in our research reported noticeable hair growth within 90 days"
+        "title": "Women in our research reported noticeable hair growth within 90 days",
+        "white_bg": false
       }
     },
     "product_info_hAC8Uc": {
@@ -279,7 +280,9 @@
         "image_xezpUB",
         "text_8YG6dn"
       ],
-      "settings": {}
+      "settings": {
+        "drop_shadow": true
+      }
     },
     "reviews_A689Tf": {
       "type": "reviews",
@@ -303,6 +306,40 @@
         "title": "Hear from our happy travelers",
         "product": "world"
       }
+    },
+    "faq_EyawRa": {
+      "type": "faq",
+      "blocks": {
+        "question_pWKPej": {
+          "type": "question",
+          "settings": {
+            "question": "Your question here",
+            "answer": "Your answer here"
+          }
+        },
+        "question_6DyNmf": {
+          "type": "question",
+          "settings": {
+            "question": "Your question here",
+            "answer": "Your answer here"
+          }
+        },
+        "question_YX9XLR": {
+          "type": "question",
+          "settings": {
+            "question": "Your question here",
+            "answer": "Your answer here"
+          }
+        }
+      },
+      "block_order": [
+        "question_pWKPej",
+        "question_6DyNmf",
+        "question_YX9XLR"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
     }
   },
   "order": [
@@ -314,6 +351,7 @@
     "short_videos_ciDYUU",
     "multirow_a68Y7m",
     "image_with_text_BdjDEY",
+    "faq_EyawRa",
     "reviews_A689Tf"
   ]
 }
