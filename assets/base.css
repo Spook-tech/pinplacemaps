@@ -6424,6 +6424,11 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   border-radius: 20px;
 }
 
+.about.drop_shadow .about__card::after,
+.about.drop_shadow .about__card::before {
+  display: none;
+}
+
 @media (max-width: 1023px) {
   .about__card {
     -webkit-box-orient: vertical;
