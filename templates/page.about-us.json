@@ -36,7 +36,9 @@
         "image_faJfiN",
         "text_nKHef8"
       ],
-      "settings": {}
+      "settings": {
+        "drop_shadow": true
+      }
     },
     "rich_text_4P43Ki": {
       "type": "rich-text",
