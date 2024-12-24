@@ -4966,6 +4966,7 @@ textarea:focus-visible {
 }
 
 @media (max-width: 767px) {
+  .header__top .main-text,
   .header__top a {
     margin: 0;
   }
