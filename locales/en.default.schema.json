@@ -963,6 +963,8 @@
           "name": "Menu",
           "settings": {
             "select_menu": "Select Menu",
+            "payment_methods": "Payment methods",
+            "payment_icon": "Payment Icon",
             "heading": {
               "label": "Heading",
               "default": "Quick links"
