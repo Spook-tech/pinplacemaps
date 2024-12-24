@@ -138,54 +138,42 @@
         "title_bottom": "Loved by thousands of travelers, our maps are perfect for adventurers and dreamers alike."
       }
     },
-    "product_info_fXeLxb": {
-      "type": "product-info",
+    "short_videos_mCFcyQ": {
+      "type": "short-videos",
       "blocks": {
-        "slider_image_AEXkg7": {
-          "type": "slider_image",
+        "video_GmtKqU": {
+          "type": "video",
           "settings": {
-            "image": "shopify://shop_images/hero.png"
+            "video_url": "shopify://files/videos/reels.mp4"
           }
         },
-        "slider_image_bHigJR": {
-          "type": "slider_image",
+        "video_nyfXbX": {
+          "type": "video",
           "settings": {
-            "image": "shopify://shop_images/hero.png"
+            "video_url": "shopify://files/videos/reels2.mp4"
           }
         },
-        "slider_image_6h7NMU": {
-          "type": "slider_image",
+        "video_NnNhXd": {
+          "type": "video",
           "settings": {
-            "image": "shopify://shop_images/hero.png"
+            "video_url": "shopify://files/videos/reels3.mp4"
           }
         },
-        "text_arH9TW": {
-          "type": "text",
+        "video_kwbAB3": {
+          "type": "video",
           "settings": {
-            "text": "<p>Explore the world in striking detail with our Premium Travel Map. It’s crafted for adventurers, dreamers, and those who love to capture memories from around the globe. Each map is meticulously designed to include precise geographic details, showcasing states, capitals, major cities, and iconic National Parks.</p><ul><li>197 (UN) Countries</li><li>642 beautiful islands</li><li>2,500 major cities</li><li>54 vast seas</li><li>186 significant rivers</li><li>154 notable lakes</li></ul><p><strong>Crafted for explorers and dreamers, it’s meticulously designed to showcase the beauty and detail of the world, making each journey unforgettable. From vibrant cities to remote islands, every element on this map invites you to relive past adventures and dream of new ones, turning your space into a tribute to the wonders of travel.</strong></p>"
-          }
-        },
-        "icons_x6NEDK": {
-          "type": "icons",
-          "settings": {
-            "icon_1": "shopify://shop_images/inspiring.svg",
-            "icon_2": "shopify://shop_images/hand-quality.svg",
-            "icon_3": "shopify://shop_images/premium.svg",
-            "icon_4": "shopify://shop_images/detailed.svg",
-            "icon_5": "shopify://shop_images/customizable.svg",
-            "icon_6": "shopify://shop_images/lifetime.svg"
+            "video_url": "shopify://files/videos/reels4.mp4"
           }
         }
       },
       "block_order": [
-        "slider_image_AEXkg7",
-        "slider_image_bHigJR",
-        "slider_image_6h7NMU",
-        "text_arH9TW",
-        "icons_x6NEDK"
+        "video_GmtKqU",
+        "video_nyfXbX",
+        "video_NnNhXd",
+        "video_kwbAB3"
       ],
       "settings": {
-        "title": ""
+        "title": "Explore map types"
       }
     },
     "images_gBAQKr": {
@@ -497,7 +485,7 @@
   "order": [
     "main",
     "product_page_info_kqVkQ6",
-    "product_info_fXeLxb",
+    "short_videos_mCFcyQ",
     "images_gBAQKr",
     "multirow_iFnJVg",
     "product_info_BFUzjV",
