@@ -34,7 +34,7 @@
             {{ block.settings.text }}
           {% elsif block.type == 'icons' %}
             <ul class="icons">
-              {% for i in (1..5) %}
+              {% for i in (1..6) %}
                 <li>
                   {%- assign icon_key = "icon_" | append: i -%}
                   {%- if block.settings[icon_key] != blank -%}
