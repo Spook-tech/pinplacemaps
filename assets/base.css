@@ -6006,7 +6006,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   width: 246px;
   height: 200px;
   z-index: -1;
-  background: url(../images/decor/explore.svg) no-repeat center/contain;
+  background: url(explore.svg) no-repeat center/contain;
 }
 
 @media (max-width: 767px) {
