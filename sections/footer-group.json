@@ -24,13 +24,20 @@
         "newsletter_qBLVF7": {
           "type": "newsletter",
           "settings": {
+            "title": "Newsletter",
             "disclaimer": "Disclaimer: Results can vary from person to person. Our service is in no way designed to diagnose, treat, cure or prevent any disease and is not a substitute for medical advice."
           }
         },
         "menu_MabM37": {
           "type": "menu",
           "settings": {
-            "menu": "footer"
+            "menu": "footer",
+            "payment_icon_1": "shopify://shop_images/applepay.svg",
+            "payment_icon_2": "shopify://shop_images/klarna.svg",
+            "payment_icon_3": "shopify://shop_images/amex.svg",
+            "payment_icon_4": "shopify://shop_images/gpay.svg",
+            "payment_icon_5": "shopify://shop_images/visa.svg",
+            "payment_icon_6": "shopify://shop_images/mastercard.svg"
           }
         }
       },
