@@ -38,7 +38,7 @@
                 <li>
                   {%- assign icon_key = "icon_" | append: i -%}
                   {%- if block.settings[icon_key] != blank -%}
-                    {{ block.settings[icon_key] | image_url: height: 60 | image_tag }}
+                    {{ block.settings[icon_key] | image_url: height: 70 | image_tag }}
                   {%- endif -%}
                 </li>
               {% endfor %}
