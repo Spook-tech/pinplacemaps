@@ -4,7 +4,7 @@
       {% if block.type == 'info' %}
         <div class="footer__col">
           <a href="{{ shop.url }}" class="footer__logo logo">
-            <img src="{{ settings.logo | image_url: height: 40 | default: 'default-image.jpg' }}" alt="Logo">
+            <img src="{{ settings.logo | image_url: height: 40 | default: 'default-image.jpg' }}" alt="Logo" width="40" height="40">
           </a>
           <p class="footer__text hidden-mobile">
             {{ block.settings.description }}
@@ -162,6 +162,18 @@
               {% endfor %}
             </ul>
           </nav>
+          <ul class="payment__list">
+{% for i in (1..6) %}
+  {% assign icon_key = 'payment_icon_' | append: i %}
+  {% assign icon = block.settings[icon_key] %}
+  {% if icon != blank %}
+    <li>
+      {{ icon | image_url: height: 40 | image_tag }}
+    </li>
+  {% endif %}
+{% endfor %}
+
+          </ul>
         </div>
       {% endif %}
     {% endfor %}
@@ -229,7 +241,41 @@
           "type": "link_list",
           "id": "menu",
           "label": "t:sections.footer.blocks.link_list.settings.select_menu"
-        }
+        },
+        {
+          "type": "header",
+          "content": "t:sections.footer.blocks.link_list.settings.payment_methods"
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_icon_1",
+          "label": "t:sections.footer.blocks.link_list.settings.payment_icon",
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_icon_2",
+          "label": "t:sections.footer.blocks.link_list.settings.payment_icon",
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_icon_3",
+          "label": "t:sections.footer.blocks.link_list.settings.payment_icon",
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_icon_4",
+          "label": "t:sections.footer.blocks.link_list.settings.payment_icon",
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_icon_5",
+          "label": "t:sections.footer.blocks.link_list.settings.payment_icon",
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_icon_6",
+          "label": "t:sections.footer.blocks.link_list.settings.payment_icon",
+        },
       ]
     }
   ],
