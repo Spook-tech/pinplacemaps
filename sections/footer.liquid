@@ -4,7 +4,7 @@
       {% if block.type == 'info' %}
         <div class="footer__col">
           <a href="{{ shop.url }}" class="footer__logo logo">
-            <img src="{{ settings.logo | image_url: height: 40 | default: 'default-image.jpg' }}" alt="Logo" width="40" height="40">
+            <img src="{{ settings.logo | image_url: height: 40 | default: 'default-image.jpg' }}" alt="Logo">
           </a>
           <p class="footer__text hidden-mobile">
             {{ block.settings.description }}
