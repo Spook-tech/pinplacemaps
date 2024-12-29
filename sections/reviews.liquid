@@ -191,9 +191,7 @@
                       </p>
                       <div class="reviews__images">
                         {% for image_url in review_images_array %}
-                          <a href="#">
-                            <img src="{{ image_url | strip }}" height="80" width="80" alt="">
-                          </a>
+                          <img src="{{ image_url | strip }}" height="80" width="80" alt="">
                         {% endfor %}
                       </div>
                     </div>
