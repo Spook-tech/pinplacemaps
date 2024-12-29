@@ -55,9 +55,9 @@
       </div>
       <div class="col">
         {% if section.settings.image != blank %}
-          {{ section.settings.image | image_url: height: 425 | image_tag: fetchpriority: fetch_priority }}
+          {{ section.settings.image | image_url: width: 585 | image_tag: sizes: '(min-width: 768px) 585px, 250px', fetchpriority: fetch_priority }}
         {% elsif is_product_loaded %}
-          {{ section.settings.product.featured_image | image_url: height: 425 | image_tag: fetchpriority: fetch_priority }}
+          {{ section.settings.product.featured_image | image_url:  width: 585 | image_tag: sizes: '(min-width: 768px) 585px, 250px', fetchpriority: fetch_priority }}
         {% else %}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
