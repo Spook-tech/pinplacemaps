@@ -14,7 +14,7 @@
             <div class="social">
               {% comment %} Facebook {% endcomment %}
               {% if settings.social_facebook_link %}
-                <a href="{{ settings.social_facebook_link }}">
+                <a aria-label="{{ 'general.social.links.twitter' | t }}" href="{{ settings.social_facebook_link }}">
                   <svg
                     class="specific"
                     width="28"
@@ -35,7 +35,7 @@
 
               {% comment %} Instagram {% endcomment %}
               {% if settings.social_instagram_link %}
-                <a href="{{ settings.social_instagram_link }}">
+                <a aria-label="{{ 'general.social.links.instagram' | t }}" href="{{ settings.social_instagram_link }}">
                   <svg
                     class="specific"
                     width="28"
@@ -56,7 +56,7 @@
 
               {% comment %} TikTok {% endcomment %}
               {% if settings.social_tiktok_link %}
-                <a href="{{ settings.social_tiktok_link }}">
+                <a aria-label="{{ 'general.social.links.tiktok' | t }}" href="{{ settings.social_tiktok_link }}">
                   <svg
                     class="specific"
                     width="28"
@@ -77,7 +77,7 @@
 
               {% comment %} Pinterest {% endcomment %}
               {% if settings.social_pinterest_link %}
-                <a href="{{ settings.social_pinterest_link }}">
+                <a aria-label="{{ 'general.social.links.pinterest' | t }}" href="{{ settings.social_pinterest_link }}">
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M23.467 15.0812C23.6812 18.3201 22.2766 20.4769 19.7309 22.3778C17.2639 24.219 14.9323 24.4423 11.9863 23.653C9.20215 22.9068 6.76994 21.6778 5.34194 19.0965C3.8095 16.3283 3.34259 13.3747 4.71837 10.5195C6.07296 7.70961 8.71934 5.8041 11.7047 5.23351C14.5433 4.69091 17.3449 5.80107 19.5879 7.67783C21.8074 9.53642 23.2718 12.1351 23.467 15.0812Z"
@@ -125,7 +125,7 @@
               id="Subscribe"
               aria-label="{{ 'newsletter.button_label' | t }}"
             >
-              SUBSCRIBE
+              {{ 'newsletter.button_label' | t }}
             </button>
             {%- if form.errors -%}
               <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
@@ -163,16 +163,15 @@
             </ul>
           </nav>
           <ul class="payment__list">
-{% for i in (1..6) %}
-  {% assign icon_key = 'payment_icon_' | append: i %}
-  {% assign icon = block.settings[icon_key] %}
-  {% if icon != blank %}
-    <li>
-      {{ icon | image_url: height: 40 | image_tag }}
-    </li>
-  {% endif %}
-{% endfor %}
-
+            {% for i in (1..6) %}
+              {% assign icon_key = 'payment_icon_' | append: i %}
+              {% assign icon = block.settings[icon_key] %}
+              {% if icon != blank %}
+                <li>
+                  {{ icon | image_url: height: 40 | image_tag }}
+                </li>
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
       {% endif %}
