@@ -70,9 +70,9 @@
       "great": "Great",
       "good": "Good",
       "average": "Average",
-      "bad": "Bad"
+      "bad": "Bad",
+      "total_reviews": "Total {{ count }} Reviews"
     },
-    "total_reviews": "Total {{ count }} Reviews"
   },
   "newsletter": {
     "label": "Enter your email",
