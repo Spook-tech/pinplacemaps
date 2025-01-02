@@ -71,7 +71,8 @@
       "good": "Good",
       "average": "Average",
       "bad": "Bad"
-    }
+    },
+    "total_reviews": "Total {{ count }} Reviews"
   },
   "newsletter": {
     "label": "Enter your email",

@@ -14,108 +14,108 @@
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'rating' %}
-            <div class="reviews__stats">
-              {% assign review_ratings = product.metafields.custom.review_rating.value %}
-              {% assign total_reviews = review_ratings.size %}
+<div class="reviews__stats">
+  {% assign review_ratings = product.metafields.custom.review_rating.value %}
+  {% assign total_reviews = review_ratings.size %}
 
-              {% assign total_rating_sum = 0 %}
-              {% assign excellent_count = 0 %}
-              {% assign great_count = 0 %}
-              {% assign good_count = 0 %}
-              {% assign average_count = 0 %}
-              {% assign bad_count = 0 %}
+  {% assign total_rating_sum = 0 %}
+  {% assign excellent_count = 0 %}
+  {% assign great_count = 0 %}
+  {% assign good_count = 0 %}
+  {% assign average_count = 0 %}
+  {% assign bad_count = 0 %}
 
-              {% for rating in review_ratings %}
-                {% assign rating_value = rating | plus: 0 %}
-                {% assign total_rating_sum = total_rating_sum | plus: rating_value %}
+  {% for rating in review_ratings %}
+    {% assign rating_value = rating | plus: 0 %}
+    {% assign total_rating_sum = total_rating_sum | plus: rating_value %}
 
-                {% if rating_value >= 4.5 %}
-                  {% assign excellent_count = excellent_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.excellent' | t %}
-                {% elsif rating_value >= 3.5 %}
-                  {% assign great_count = great_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.great' | t %}
-                {% elsif rating_value >= 2.5 %}
-                  {% assign good_count = good_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.good' | t %}
-                {% elsif rating_value >= 1.5 %}
-                  {% assign average_count = average_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.average' | t %}
-                {% else %}
-                  {% assign bad_count = bad_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.bad' | t %}
-                {% endif %}
+    {% if rating_value >= 4.5 %}
+      {% assign excellent_count = excellent_count | plus: 1 %}
+      {% assign rating_text = 'general.rating.excellent' | t %}
+    {% elsif rating_value >= 3.5 %}
+      {% assign great_count = great_count | plus: 1 %}
+      {% assign rating_text = 'general.rating.great' | t %}
+    {% elsif rating_value >= 2.5 %}
+      {% assign good_count = good_count | plus: 1 %}
+      {% assign rating_text = 'general.rating.good' | t %}
+    {% elsif rating_value >= 1.5 %}
+      {% assign average_count = average_count | plus: 1 %}
+      {% assign rating_text = 'general.rating.average' | t %}
+    {% else %}
+      {% assign bad_count = bad_count | plus: 1 %}
+      {% assign rating_text = 'general.rating.bad' | t %}
+    {% endif %}
 
-              {% endfor %}
+  {% endfor %}
 
-              {% assign average_rating = total_rating_sum | times: 1.0 | divided_by: total_reviews %}
+  {% assign average_rating = total_rating_sum | times: 1.0 | divided_by: total_reviews %}
 
-              {% assign excellent_percent = excellent_count | times: 100 | divided_by: total_reviews %}
-              {% assign great_percent = great_count | times: 100 | divided_by: total_reviews %}
-              {% assign good_percent = good_count | times: 100 | divided_by: total_reviews %}
-              {% assign average_percent = average_count | times: 100 | divided_by: total_reviews %}
-              {% assign bad_percent = bad_count | times: 100 | divided_by: total_reviews %}
+  {% assign excellent_percent = excellent_count | times: 100 | divided_by: total_reviews %}
+  {% assign great_percent = great_count | times: 100 | divided_by: total_reviews %}
+  {% assign good_percent = good_count | times: 100 | divided_by: total_reviews %}
+  {% assign average_percent = average_count | times: 100 | divided_by: total_reviews %}
+  {% assign bad_percent = bad_count | times: 100 | divided_by: total_reviews %}
 
-              <h3>{{ rating_text }}</h3>
-              <div class="reviews__summary">
-                <div class="reviews__rating">
-                  {% for i in (1..5) %}
-                    <div class="mark">
-                      <span class="filled"></span>
-                    </div>
-                  {% endfor %}
-                </div>
-                <span class="count">{{ average_rating | round: 1 }}</span>
-              </div>
-              <span class="total">Total {{ total_reviews }} Reviews</span>
-              <ul class="reviews__grade">
-                <li>
-                  <button data-reviews-rating="5">
-                    <b>Excellent</b>
-                  </button>
-                  <span class="bar">
-                    <span class="progress excellent" style="width: {{ excellent_percent }}%;"></span>
-                  </span>
-                  <span class="percent">{{ excellent_percent | round: 0 }}%</span>
-                </li>
-                <li>
-                  <button data-reviews-rating="4">
-                    <b>Great</b>
-                  </button>
-                  <span class="bar">
-                    <span class="progress excellent" style="width: {{ great_percent }}%;"></span>
-                  </span>
-                  <span class="percent">{{ great_percent | round: 0 }}%</span>
-                </li>
-                <li>
-                  <button data-reviews-rating="3">
-                    <b>Good</b>
-                  </button>
-                  <span class="bar">
-                    <span class="progress good" style="width: {{ good_percent }}%;"></span>
-                  </span>
-                  <span class="percent">{{ good_percent | round: 0 }}%</span>
-                </li>
-                <li>
-                  <button data-reviews-rating="2">
-                    <b>Average</b>
-                  </button>
-                  <span class="bar">
-                    <span class="progress average" style="width: {{ average_percent }}%;"></span>
-                  </span>
-                  <span class="percent">{{ average_percent | round: 0 }}%</span>
-                </li>
-                <li>
-                  <button data-reviews-rating="1">
-                    <b>Bad</b>
-                  </button>
-                  <span class="bar">
-                    <span class="progress bad" style="width: {{ bad_percent }}%;"></span>
-                  </span>
-                  <span class="percent">{{ bad_percent | round: 0 }}%</span>
-                </li>
-              </ul>
-            </div>
+  <h3>{{ rating_text }}</h3>
+  <div class="reviews__summary">
+    <div class="reviews__rating">
+      {% for i in (1..5) %}
+        <div class="mark">
+          <span class="filled"></span>
+        </div>
+      {% endfor %}
+    </div>
+    <span class="count">{{ average_rating | round: 1 }}</span>
+  </div>
+  <span class="total">{{ 'general.total_reviews' | t: count: total_reviews }}</span>
+  <ul class="reviews__grade">
+    <li>
+      <button data-reviews-rating="5">
+        <b>{{ 'general.rating.excellent' | t }}</b>
+      </button>
+      <span class="bar">
+        <span class="progress excellent" style="width: {{ excellent_percent }}%;"></span>
+      </span>
+      <span class="percent">{{ excellent_percent | round: 0 }}%</span>
+    </li>
+    <li>
+      <button data-reviews-rating="4">
+        <b>{{ 'general.rating.great' | t }}</b>
+      </button>
+      <span class="bar">
+        <span class="progress great" style="width: {{ great_percent }}%;"></span>
+      </span>
+      <span class="percent">{{ great_percent | round: 0 }}%</span>
+    </li>
+    <li>
+      <button data-reviews-rating="3">
+        <b>{{ 'general.rating.good' | t }}</b>
+      </button>
+      <span class="bar">
+        <span class="progress good" style="width: {{ good_percent }}%;"></span>
+      </span>
+      <span class="percent">{{ good_percent | round: 0 }}%</span>
+    </li>
+    <li>
+      <button data-reviews-rating="2">
+        <b>{{ 'general.rating.average' | t }}</b>
+      </button>
+      <span class="bar">
+        <span class="progress average" style="width: {{ average_percent }}%;"></span>
+      </span>
+      <span class="percent">{{ average_percent | round: 0 }}%</span>
+    </li>
+    <li>
+      <button data-reviews-rating="1">
+        <b>{{ 'general.rating.bad' | t }}</b>
+      </button>
+      <span class="bar">
+        <span class="progress bad" style="width: {{ bad_percent }}%;"></span>
+      </span>
+      <span class="percent">{{ bad_percent | round: 0 }}%</span>
+    </li>
+  </ul>
+</div>
           {% when 'reviews' %}
             <div class="reviews__content">
               <!-- Filter and sort -->
