@@ -31,20 +31,21 @@
 
                 {% if rating_value >= 4.5 %}
                   {% assign excellent_count = excellent_count | plus: 1 %}
-                  {% assign rating_text = 'Excellent' %}
+                  {% assign rating_text = 'general.rating.excellent' | t %}
                 {% elsif rating_value >= 3.5 %}
                   {% assign great_count = great_count | plus: 1 %}
-                  {% assign rating_text = 'Great' %}
+                  {% assign rating_text = 'general.rating.great' | t %}
                 {% elsif rating_value >= 2.5 %}
                   {% assign good_count = good_count | plus: 1 %}
-                  {% assign rating_text = 'Good' %}
+                  {% assign rating_text = 'general.rating.good' | t %}
                 {% elsif rating_value >= 1.5 %}
                   {% assign average_count = average_count | plus: 1 %}
-                  {% assign rating_text = 'Average' %}
+                  {% assign rating_text = 'general.rating.average' | t %}
                 {% else %}
                   {% assign bad_count = bad_count | plus: 1 %}
-                  {% assign rating_text = 'Bad' %}
+                  {% assign rating_text = 'general.rating.bad' | t %}
                 {% endif %}
+
               {% endfor %}
 
               {% assign average_rating = total_rating_sum | times: 1.0 | divided_by: total_reviews %}
