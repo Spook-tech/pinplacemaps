@@ -1030,41 +1030,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-
-function initSortSelect() {
-document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
-  button.addEventListener('click', function () {
-    // Получаем значение, которое нужно установить в select
-    const filterValue = button.dataset.filter;
-
-    // Находим селект
-    const selectElement = document.querySelector('#SortBy');
-
-    if (selectElement) {
-      // Устанавливаем значение в select
-      selectElement.value = filterValue;
-
-      // Создаем и инициируем событие change, чтобы сработали слушатели
-      const event = new Event('input', { bubbles: true });
-      selectElement.dispatchEvent(event);
-    }
-  });
-});
-}
-
-
-  // initSortSelect();
 });
 
-setInterval(() => {
-    const filterMenus = document.querySelectorAll(".filters__button");
+if (document.querySelector('.template-search')) {
+  const filterMenus = document.querySelectorAll(".filters__button");
 
-  // Закрытие всех активных мен
+  // Закрытие всех активных меню
   const closeAllMenus = () => {
     filterMenus.forEach((menu) => menu.classList.remove("active"));
   };
 
-  // Обработчик кликов на странице
+  // Обработчик кликов на странице (добавляется один раз)
   document.addEventListener("click", (event) => {
     const isClickInsideMenu = event.target.closest(".filters__button");
     if (!isClickInsideMenu) {
@@ -1073,50 +1049,63 @@ setInterval(() => {
   });
 
   filterMenus.forEach((menu) => {
-    const title = menu.querySelector(".filters__button-value");
-    const optionButtons = menu.querySelectorAll(
-      ".filters__button-variants button"
-    );
+    if (!menu.hasAttribute('data-listeners-initialized')) {
+      const title = menu.querySelector(".filters__button-value");
+      const optionButtons = menu.querySelectorAll(
+        ".filters__button-variants button"
+      );
 
-    // Обработчик клика по основному меню
-    menu.addEventListener("click", (event) => {
-      event.stopPropagation(); // Не даем событию подняться вверх
-      const isActive = menu.classList.contains("active");
-      closeAllMenus();
-      if (!isActive) {
-        menu.classList.add("active");
-      }
-    });
-
-    // Обработчик кликов по вариантам сортировки
-    optionButtons.forEach((subbutton) => {
-      subbutton.addEventListener("click", () => {
-        const newText = subbutton.dataset.selectedText;
-
-        if (newText) {
-          title.textContent = newText;
+      // Обработчик клика по основному меню
+      menu.addEventListener("click", (event) => {
+        event.stopPropagation(); // Не даем событию подняться вверх
+        const isActive = menu.classList.contains("active");
+        closeAllMenus();
+        if (!isActive) {
+          menu.classList.add("active");
         }
-
-        menu.classList.remove("active"); // Закрываем меню после выбора
       });
-    });
+
+      // Обработчик кликов по вариантам сортировки
+      optionButtons.forEach((subbutton) => {
+        subbutton.addEventListener("click", () => {
+          const newText = subbutton.dataset.selectedText;
+
+          if (newText) {
+            title.textContent = newText;
+          }
+
+          menu.classList.remove("active"); // Закрываем меню после выбора
+        });
+      });
+
+      // Помечаем, что слушатели добавлены
+      menu.setAttribute('data-listeners-initialized', 'true');
+    }
   });
-  document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
-    button.addEventListener('click', function () {
-      // Получаем значение, которое нужно установить в select
-      const filterValue = button.dataset.filter;
 
-      // Находим селект
-      const selectElement = document.querySelector('#SortBy');
+  document
+    .querySelectorAll('.facets-container .filters__button-variants .button')
+    .forEach(button => {
+      if (!button.hasAttribute('data-listeners-initialized')) {
+        button.addEventListener('click', function () {
+          // Получаем значение, которое нужно установить в select
+          const filterValue = button.dataset.filter;
 
-      if (selectElement) {
-        // Устанавливаем значение в select
-        selectElement.value = filterValue;
+          // Находим селект
+          const selectElement = document.querySelector('#SortBy');
 
-        // Создаем и инициируем событие change, чтобы сработали слушатели
-        const event = new Event('input', { bubbles: true });
-        selectElement.dispatchEvent(event);
+          if (selectElement) {
+            // Устанавливаем значение в select
+            selectElement.value = filterValue;
+
+            // Создаем и инициируем событие change, чтобы сработали слушатели
+            const event = new Event('input', { bubbles: true });
+            selectElement.dispatchEvent(event);
+          }
+        });
+
+        // Помечаем, что слушатели добавлены
+        button.setAttribute('data-listeners-initialized', 'true');
       }
     });
-  });
-}, 500)
+}
