@@ -5424,23 +5424,23 @@ textarea:focus-visible {
   line-height: 1.2;
 }
 
-.rating a {
+.rating .link {
   font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
-  text-decoration-line: underline;
-  text-underline-position: from-font;
+  /* text-decoration-line: underline;
+  text-underline-position: from-font; */
   opacity: 0.6;
 }
 
 @media (hover: hover) {
-  .rating a:hover {
+  .rating .link:hover {
     color: var(--color-green);
   }
 }
 
 @media (hover: none) {
-  .rating a:active {
+  .rating .link:active {
     color: var(--color-green);
   }
 }
