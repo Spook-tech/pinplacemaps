@@ -418,9 +418,6 @@
                     {%- endfor -%}
                   </select>
 
-                                      <script>console.log(777)</script>
-
-
                   <div id="sort_by-btn" class="filters__button">
                     <!-- Основная кнопка для отображения текущего выбранного значения -->
                     <div role="button" class="button filters__button-value button--white">
@@ -684,6 +681,8 @@
 
                           <div class="mobile-facets__footer gradient">
                             <facet-remove class="mobile-facets__clear-wrapper">
+                                                <script>console.log(777)</script>
+
                               <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
                                 {{- 'products.facets.clear' | t -}}
                               </a>
