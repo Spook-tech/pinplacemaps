@@ -6129,7 +6129,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
   .explore .swiper-button-next,
   .explore .swiper-button-prev {
-    display: none;
+    display: none !important;
   }
 }
 
