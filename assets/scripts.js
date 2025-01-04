@@ -1041,8 +1041,7 @@ function initSortSelect() {
   const menuButtons = menu.querySelectorAll('.filters__button-variants .button');
 
   menuButtons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
+    button.addEventListener('click', () => {
       const filterValue = button.dataset.filter;
 
       // Находим соответствующий вариант в селекте
@@ -1060,8 +1059,9 @@ function initSortSelect() {
           mainButton.textContent = button.dataset.selectedText || button.textContent;
         }
 
-        // Вызываем событие изменения у селекта
-        select.dispatchEvent(new Event('change'));
+        // Создаём событие change и диспатчим его на селекте
+        const event = new Event('change', { bubbles: true, cancelable: true });
+        select.dispatchEvent(event);
       }
     });
   });
