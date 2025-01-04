@@ -914,9 +914,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Первоначальное обновлени
     updateReviews();
 
-    () => {
+    (() => {
       const filterMenus = document.querySelectorAll(".filters__button");
-      console.log(filterMenus);
+
+      if (filterMenus.length === 0) {
+        console.log("Фильтры не найдены.");
+        return;
+      }
 
       filterMenus.forEach((menu) => {
         const title = menu.querySelector(".filters__button-value");
@@ -924,19 +928,17 @@ document.addEventListener("DOMContentLoaded", () => {
           ".filters__button-variants button"
         );
 
-        // Обработчик кликов по вариантам сортировки
         optionButtons.forEach((subbutton) => {
           subbutton.addEventListener("click", () => {
             const sortType = subbutton.dataset.filter;
 
             if (sortType) {
               selectedSort = sortType;
-              updateReviews();
             }
           });
         });
       });
-    }();
+    })();
   }
 
   const filterMenus = document.querySelectorAll(".filters__button");
