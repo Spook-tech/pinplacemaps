@@ -1031,49 +1031,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function initSortSelect() {
-      // Найти селект
-    const selectElement = document.querySelector(".facet-filters__sort");
-  
-    if (!selectElement) return;
-  
-    // Создать контейнер для меню
-    const menuContainer = document.createElement("div");
-    menuContainer.className = "filters__button";
-  
-    // Создать кнопку для отображения текущего значения
-    const mainButton = document.createElement("button");
-    mainButton.className = "button filters__button-value button--white";
-    mainButton.textContent = selectElement.options[selectElement.selectedIndex].textContent;
-    menuContainer.appendChild(mainButton);
-  
-    // Создать выпадающий список
-    const variantsContainer = document.createElement("div");
-    variantsContainer.className = "filters__button-variants";
-    menuContainer.appendChild(variantsContainer);
-  
-    // Заполнить выпадающий список вариантами из селекта
-    Array.from(selectElement.options).forEach((option) => {
-      const button = document.createElement("button");
-      button.className = "button";
-      button.dataset.filter = option.value;
-      button.dataset.selectedText = option.textContent;
-      button.textContent = option.textContent;
-  
-      // При клике на вариант обновлять текст основной кнопки и селект
-      button.addEventListener("click", () => {
-        selectElement.value = option.value;
-  
-        // Вызов события изменения у селекта (если требуется)
-        selectElement.dispatchEvent(new Event("change"));
-      });
-  
-      variantsContainer.appendChild(button);
-    });
-  
-    // Добавить созданное меню рядом с селектом
-    selectElement.parentNode.insertBefore(menuContainer, selectElement.nextSibling);
-  }
+function initSortSelect() {
+  const menu = document.querySelector('.filters__button');
+  const select = document.querySelector('.facet-filters__sort');
 
-  // initSortSelect();
+  if (!menu || !select) return;
+
+  // Получаем все кнопки из меню
+  const menuButtons = menu.querySelectorAll('.filters__button-variants .button');
+
+  menuButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filterValue = button.dataset.filter;
+
+      // Находим соответствующий вариант в селекте
+      const selectOption = Array.from(select.options).find(
+        (option) => option.value === filterValue
+      );
+
+      if (selectOption) {
+        // Устанавливаем значение в селекте
+        select.value = selectOption.value;
+
+        // Обновляем текст основной кнопки в меню
+        const mainButton = menu.querySelector('.filters__button-value');
+        if (mainButton) {
+          mainButton.textContent = button.dataset.selectedText || button.textContent;
+        }
+
+        // Вызываем событие изменения у селекта
+        select.dispatchEvent(new Event('change'));
+      }
+    });
+  });
+}
+
+
+  initSortSelect();
 });
