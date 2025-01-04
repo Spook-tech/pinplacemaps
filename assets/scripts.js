@@ -956,6 +956,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (sortType) {
             // Здесь выполняем действия при выборе фильтра
             console.log(`Selected sort: ${sortType}`);
+            selectedSort = sortType;
             updateReviews();
           }
           menu.classList.remove("active"); // Закрываем меню после выбора
