@@ -8905,3 +8905,19 @@ html, body {
   display: flex;
   align-items: end;
 }
+.product .slider .swiper-button-prev {
+  left: 0px;
+}
+@media (max-width: 1023px) {
+  .product .slider .swiper-button-prev {
+    left: 50px;
+  }
+}
+.product .slider .swiper-button-next {
+  right: 0px;
+}
+@media (max-width: 1023px) {
+  .product .slider .swiper-button-next {
+    right: 50px;
+  }
+}
