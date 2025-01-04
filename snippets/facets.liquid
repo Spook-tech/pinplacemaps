@@ -420,24 +420,24 @@
 
                   <div id="sort_by-btn" class="filters__button">
                     <!-- Основная кнопка для отображения текущего выбранного значения -->
-                    <button class="button filters__button-value button--white">
+                    <div class="button filters__button-value button--white">
                       {%- for option in results.sort_options -%}
                         {%- if option.value == sort_by -%}
                           {{ option.name | escape }}
                         {%- endif -%}
                       {%- endfor -%}
-                    </button>
+                    </div>
                   
                     <!-- Выпадающий список вариантов -->
                     <div class="filters__button-variants">
                       {%- for option in results.sort_options -%}
-                        <button 
+                        <div 
                           class="button" 
                           data-filter="{{ option.value | escape }}" 
                           data-selected-text="{{ option.name | escape }}"
                         >
                           {{ option.name | escape }}
-                        </button>
+                        </div>
                       {%- endfor -%}
                     </div>
                   </div>
