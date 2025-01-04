@@ -36,7 +36,8 @@
         "text_ffbGzF"
       ],
       "settings": {
-        "drop_shadow": false
+        "drop_shadow": false,
+        "horizontal": true
       }
     },
     "info_xFdfXA": {
