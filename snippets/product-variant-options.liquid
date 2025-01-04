@@ -97,13 +97,7 @@
         {% for variant in product.variants %}
           <script>console.log({{variant | json }})</script>
           {% if value == variant.option1 and variant.option3 == 'Default' %}
-    {% assign raw_price = variant.price | money %}
-    {% assign price_parts = raw_price | split: ',' %}
-    {% if price_parts.size > 1 and price_parts[1] == '00' %}
-      {% assign price = price_parts[0] %}
-    {% else %}
-      {% assign price = raw_price %}
-    {% endif %}
+            {% assign price = variant.price %}
             {% break %}
           {% endif %}          
         {% endfor %}
