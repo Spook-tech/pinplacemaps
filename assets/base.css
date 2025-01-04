@@ -6426,6 +6426,9 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   box-shadow: var(--shadow);
   border-radius: 20px;
 }
+.about.horizontal .about__card{
+  display: flex;
+}
 
 .about.drop_shadow .about__card::after,
 .about.drop_shadow .about__card::before {
