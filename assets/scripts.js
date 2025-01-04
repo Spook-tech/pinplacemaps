@@ -916,6 +916,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     () => {
       const filterMenus = document.querySelectorAll(".filters__button");
+      console.log(filterMenus);
 
       filterMenus.forEach((menu) => {
         const title = menu.querySelector(".filters__button-value");
