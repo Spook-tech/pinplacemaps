@@ -1046,9 +1046,11 @@ document.querySelectorAll('.filters__button-variants .button').forEach(button =>
 
       // Создаем и инициируем событие change, чтобы сработали слушатели
       const event = new Event('change', { bubbles: true });
-      const event = new Event('input', { bubbles: true });
-      const event = new Event('submit', { bubbles: true });
+      const event2 = new Event('input', { bubbles: true });
+      const event3 = new Event('submit', { bubbles: true });
       selectElement.dispatchEvent(event);
+      selectElement.dispatchEvent(event2);
+      selectElement.dispatchEvent(event3);
     }
   });
 });
