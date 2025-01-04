@@ -758,6 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //filters
+let updateReviews;
 document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.reviews')) {
 
@@ -854,7 +855,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
   
     // Функция для обновления отзывов (с учетом фильтров, сортировки и пагинации)
-    const updateReviews = () => {
+    updateReviews = () => {
   
       // Фильтрация
       const filteredReviews = reviews.filter(review => {
