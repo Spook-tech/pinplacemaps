@@ -916,16 +916,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const filterMenus = document.querySelectorAll(".filters__button");
 
-    if (filterMenus.length === 0) {
-      console.log("Фильтры не найдены.");
-      return;
-    }
-
     filterMenus.forEach((menu) => {
       const title = menu.querySelector(".filters__button-value");
       const optionButtons = menu.querySelectorAll(
         ".filters__button-variants button"
       );
+
+      console.log(menu)
 
       optionButtons.forEach((subbutton) => {
         subbutton.addEventListener("click", () => {
@@ -937,7 +934,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
-    (() => {})();
   }
 
   const filterMenus = document.querySelectorAll(".filters__button");
