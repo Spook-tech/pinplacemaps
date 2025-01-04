@@ -1041,7 +1041,8 @@ function initSortSelect() {
   const menuButtons = menu.querySelectorAll('.filters__button-variants .button');
 
   menuButtons.forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
       const filterValue = button.dataset.filter;
 
       // Находим соответствующий вариант в селекте
