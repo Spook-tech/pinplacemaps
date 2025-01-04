@@ -97,13 +97,13 @@
         {% for variant in product.variants %}
           <script>console.log({{variant | json }})</script>
           {% if value == variant.option1 and variant.option3 == 'Default' %}
-    {% assign raw_price = variant.price | money_with_currency %}
-    {% assign price_parts = raw_price | split: ',' %}
-    {% if price_parts.size > 1 and price_parts[1] == '00 €' %}
-      {% assign price = price_parts[0] | append: ' €' %}
-    {% else %}
-      {% assign price = raw_price %}
-    {% endif %}
+            {% assign raw_price = variant.price | money_with_currency %}
+            {% assign price_parts = raw_price | split: ',' %}
+            {% if price_parts.size > 1 and price_parts[1] == '00 €' %}
+              {% assign price = price_parts[0] | append: ' €' %}
+            {% else %}
+              {% assign price = raw_price %}
+            {% endif %}
             {% break %}
           {% endif %}          
         {% endfor %}
@@ -116,27 +116,39 @@
       {%- when 'Large' -%}
         {% for variant in product.variants %}
           {% if value == variant.option1 and variant.option3 == 'Default' %}
-            {% assign price = variant.price %}
+            {% assign raw_price = variant.price | money_with_currency %}
+            {% assign price_parts = raw_price | split: ',' %}
+            {% if price_parts.size > 1 and price_parts[1] == '00 €' %}
+              {% assign price = price_parts[0] | append: ' €' %}
+            {% else %}
+              {% assign price = raw_price %}
+            {% endif %}
             {% break %}
           {% endif %}
         {% endfor %}
   
         <label for="{{ input_id }}" class="size-option">
           <img src="{{ 'large.svg' | asset_url }}" width="39" height="100px" alt="Medium Size">
-          <h3>Large – {{ price | money_with_currency }}</h3>
+          <h3>Large – {{ price }}</h3>
           <p>120cm x 80cm</p>
         </label>
       {%- when 'XLarge' -%}
         {% for variant in product.variants %}
           {% if value == variant.option1 and variant.option3 == 'Default' %}
-            {% assign price = variant.price %}
+            {% assign raw_price = variant.price | money_with_currency %}
+            {% assign price_parts = raw_price | split: ',' %}
+            {% if price_parts.size > 1 and price_parts[1] == '00 €' %}
+              {% assign price = price_parts[0] | append: ' €' %}
+            {% else %}
+              {% assign price = raw_price %}
+            {% endif %}
             {% break %}
           {% endif %}
         {% endfor %}
         
         <label for="{{ input_id }}" class="size-option">
           <img src="{{ 'xlarge.svg' | asset_url }}" width="42" height="100px" alt="Medium Size">
-          <h3>XLarge – {{ price | money_with_currency }}</h3>
+          <h3>XLarge – {{ price }}</h3>
           <p>150cm x 100cm</p>
         </label>
       {% else %}
