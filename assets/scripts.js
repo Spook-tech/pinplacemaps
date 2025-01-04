@@ -1030,4 +1030,49 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
+  function initSortSelect() {
+      // Найти селект
+  const selectElement = document.querySelector(".facet-filters__sort");
+
+  if (!selectElement) return;
+
+  // Создать контейнер для меню
+  const menuContainer = document.createElement("div");
+  menuContainer.className = "filters__button";
+
+  // Создать кнопку для отображения текущего значения
+  const mainButton = document.createElement("button");
+  mainButton.className = "button filters__button-value button--white";
+  mainButton.textContent = selectElement.options[selectElement.selectedIndex].textContent;
+  menuContainer.appendChild(mainButton);
+
+  // Создать выпадающий список
+  const variantsContainer = document.createElement("div");
+  variantsContainer.className = "filters__button-variants";
+  menuContainer.appendChild(variantsContainer);
+
+  // Заполнить выпадающий список вариантами из селекта
+  Array.from(selectElement.options).forEach((option) => {
+    const button = document.createElement("button");
+    button.className = "button";
+    button.dataset.filter = option.value;
+    button.dataset.selectedText = option.textContent;
+    button.textContent = option.textContent;
+
+    // При клике на вариант обновлять текст основной кнопки и селект
+    button.addEventListener("click", () => {
+      mainButton.textContent = option.textContent;
+      selectElement.value = option.value;
+
+      // Вызов события изменения у селекта (если требуется)
+      selectElement.dispatchEvent(new Event("change"));
+    });
+
+    variantsContainer.appendChild(button);
+  });
+
+  // Добавить созданное меню рядом с селектом
+  selectElement.parentNode.insertBefore(menuContainer, selectElement.nextSibling);
+  }
 });
