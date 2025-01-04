@@ -930,6 +930,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (sortType) {
             selectedSort = sortType;
+            updateReviews();
           }
         });
       });
