@@ -55,11 +55,11 @@
 }
 
 .collection-hero--with-image .collection-hero__text-wrapper {
-  padding: 5rem 0 4rem;
+  padding: 3rem 0 4rem;
 }
 
 .collection-hero__image-container {
-  height: 500px
+  height: 500px;
   object-fit: cover;
   border-radius: 20px;
 }
