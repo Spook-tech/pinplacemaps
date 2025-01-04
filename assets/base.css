@@ -6427,7 +6427,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   border-radius: 20px;
 }
 .about.horizontal .about__card{
-  display: flex;
+    flex-direction: column;
 }
 
 .about.drop_shadow .about__card::after,
