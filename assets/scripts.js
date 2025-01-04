@@ -1037,6 +1037,13 @@ function initSortSelect() {
 
   if (!menu || !select) return;
 
+  // Получаем родительскую форму
+  const form = select.closest('form');
+  if (!form) {
+    console.error('Селект не находится внутри формы.');
+    return;
+  }
+
   // Получаем все кнопки из меню
   const menuButtons = menu.querySelectorAll('.filters__button-variants .button');
 
@@ -1059,9 +1066,8 @@ function initSortSelect() {
           mainButton.textContent = button.dataset.selectedText || button.textContent;
         }
 
-        // Создаём событие change и диспатчим его на селекте
-        const event = new Event('change', { bubbles: true, cancelable: true });
-        select.dispatchEvent(event);
+        // Вызываем submit на родительской форме
+        form.submit();
       }
     });
   });
