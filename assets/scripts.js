@@ -1075,5 +1075,5 @@ document.addEventListener("DOMContentLoaded", function () {
     selectElement.parentNode.insertBefore(menuContainer, selectElement.nextSibling);
   }
 
-  initSortSelect();
+  // initSortSelect();
 });
