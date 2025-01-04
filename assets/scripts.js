@@ -1053,5 +1053,5 @@ document.querySelectorAll('.facets-container .filters__button-variants .button')
 }
 
 
-  initSortSelect();
+  // initSortSelect();
 });
