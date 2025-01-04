@@ -104,7 +104,7 @@
   
         <label for="{{ input_id }}" class="size-option">
           <img src="{{ 'medium.svg' | asset_url }}" width="29" height="100px" alt="Medium Size">
-          <h3>Medium – {{ price | money_without_trailing_zeros }}</h3>
+          <h3>Medium – {{ price | money_with_currency }}</h3>
           <p>100cm x 70cm</p>
         </label>
       {%- when 'Large' -%}
@@ -117,7 +117,7 @@
   
         <label for="{{ input_id }}" class="size-option">
           <img src="{{ 'large.svg' | asset_url }}" width="39" height="100px" alt="Medium Size">
-          <h3>Large – {{ price | money_without_trailing_zeros }}</h3>
+          <h3>Large – {{ price | money_with_currency }}</h3>
           <p>120cm x 80cm</p>
         </label>
       {%- when 'XLarge' -%}
@@ -130,7 +130,7 @@
         
         <label for="{{ input_id }}" class="size-option">
           <img src="{{ 'xlarge.svg' | asset_url }}" width="42" height="100px" alt="Medium Size">
-          <h3>XLarge – {{ price | money_without_trailing_zeros }}</h3>
+          <h3>XLarge – {{ price | money_with_currency }}</h3>
           <p>150cm x 100cm</p>
         </label>
       {% else %}
