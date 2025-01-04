@@ -440,14 +440,6 @@
                           {{ option.name | escape }}
                         </div>
                       {%- endfor -%}
-                    </div>
-                  </div>
-                  
-                  <span class="svg-wrapper">
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
-                  </span>
-                </div>
-
                   <script>
                     console.log(123123123)
                     document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
@@ -469,6 +461,14 @@
                       });
                     });
                   </script>
+                    </div>
+                  </div>
+                  
+                  <span class="svg-wrapper">
+                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                  </span>
+                </div>
+
               </div>
             </div>
           {%- endif -%}
