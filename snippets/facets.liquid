@@ -442,33 +442,32 @@
                       {%- endfor -%}
                     </div>
                   </div>
-
-                  <script>
-                    document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
-  button.addEventListener('click', function () {
-    // Получаем значение, которое нужно установить в select
-    const filterValue = button.dataset.filter;
-
-    // Находим селект
-    const selectElement = document.querySelector('#SortBy');
-
-    if (selectElement) {
-      // Устанавливаем значение в select
-      selectElement.value = filterValue;
-
-      // Создаем и инициируем событие change, чтобы сработали слушатели
-      const event = new Event('input', { bubbles: true });
-      selectElement.dispatchEvent(event);
-    }
-  });
-});
-                  </script>
-
                   
                   <span class="svg-wrapper">
                     {{- 'icon-caret.svg' | inline_asset_content -}}
                   </span>
                 </div>
+
+                  <script>
+                    document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
+                      button.addEventListener('click', function () {
+                        // Получаем значение, которое нужно установить в select
+                        const filterValue = button.dataset.filter;
+                    
+                        // Находим селект
+                        const selectElement = document.querySelector('#SortBy');
+                    
+                        if (selectElement) {
+                          // Устанавливаем значение в select
+                          selectElement.value = filterValue;
+                    
+                          // Создаем и инициируем событие change, чтобы сработали слушатели
+                          const event = new Event('input', { bubbles: true });
+                          selectElement.dispatchEvent(event);
+                        }
+                      });
+                    });
+                  </script>
               </div>
             </div>
           {%- endif -%}
