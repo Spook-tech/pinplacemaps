@@ -7333,6 +7333,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  margin-right: 0px;
 }
 
 .single .size-option {
