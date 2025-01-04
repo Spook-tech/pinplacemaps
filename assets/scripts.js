@@ -914,31 +914,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // Первоначальное обновлени
     updateReviews();
 
-    (() => {
-      const filterMenus = document.querySelectorAll(".filters__button");
+    const filterMenus = document.querySelectorAll(".filters__button");
 
-      if (filterMenus.length === 0) {
-        console.log("Фильтры не найдены.");
-        return;
-      }
+    if (filterMenus.length === 0) {
+      console.log("Фильтры не найдены.");
+      return;
+    }
 
-      filterMenus.forEach((menu) => {
-        const title = menu.querySelector(".filters__button-value");
-        const optionButtons = menu.querySelectorAll(
-          ".filters__button-variants button"
-        );
+    filterMenus.forEach((menu) => {
+      const title = menu.querySelector(".filters__button-value");
+      const optionButtons = menu.querySelectorAll(
+        ".filters__button-variants button"
+      );
 
-        optionButtons.forEach((subbutton) => {
-          subbutton.addEventListener("click", () => {
-            const sortType = subbutton.dataset.filter;
+      optionButtons.forEach((subbutton) => {
+        subbutton.addEventListener("click", () => {
+          const sortType = subbutton.dataset.filter;
 
-            if (sortType) {
-              selectedSort = sortType;
-            }
-          });
+          if (sortType) {
+            selectedSort = sortType;
+          }
         });
       });
-    })();
+    });
+    (() => {})();
   }
 
   const filterMenus = document.querySelectorAll(".filters__button");
