@@ -913,54 +913,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Первоначальное обновление
     updateReviews();
-  }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Проверяем, есть ли в URL якорь #FAQ при загрузке страницы
-    if (window.location.hash === "#FAQ") {
-        scrollToFAQ();
-    }
-
-    // Находим все ссылки с классом .link
-    const faqLinks = Array.from(document.querySelectorAll("a.link")).filter(
-        (link) => link.getAttribute("href") === "/#FAQ"
-    );
-  
-    faqLinks.forEach(function (link) {
-        link.addEventListener("click", function (event) {
-            // Проверяем, что мы на главной странице
-            if (window.location.pathname === "/") {
-                // Отключаем переход по ссылке
-                event.preventDefault();
-
-                // Скроллим к блоку FAQ
-                scrollToFAQ();
-            }
-        });
-    });
-
-    function scrollToFAQ() {
-        // Находим элемент FAQ
-        const faqElement = document.getElementById("FAQ");
-        const headerElement = document.querySelector("header.header");
-
-        if (faqElement) {
-            // Вычисляем высоту хедера
-            const headerHeight = headerElement ? headerElement.offsetHeight : 0;
-
-            // Вычисляем конечную позицию скролла
-            const scrollPosition = faqElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 30;
-
-            // Скроллим к элементу с учетом высоты хедера
-            window.scrollTo({
-                top: scrollPosition,
-                behavior: "smooth",
-            });
-        }
-    }
-
-    const filterMenus = document.querySelectorAll('.filters__button');
+        const filterMenus = document.querySelectorAll('.filters__button');
 
   // Закрытие всех активных меню
   const closeAllMenus = () => {
@@ -1007,4 +961,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Проверяем, есть ли в URL якорь #FAQ при загрузке страницы
+    if (window.location.hash === "#FAQ") {
+        scrollToFAQ();
+    }
+
+    // Находим все ссылки с классом .link
+    const faqLinks = Array.from(document.querySelectorAll("a.link")).filter(
+        (link) => link.getAttribute("href") === "/#FAQ"
+    );
+  
+    faqLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            // Проверяем, что мы на главной странице
+            if (window.location.pathname === "/") {
+                // Отключаем переход по ссылке
+                event.preventDefault();
+
+                // Скроллим к блоку FAQ
+                scrollToFAQ();
+            }
+        });
+    });
+
+    function scrollToFAQ() {
+        // Находим элемент FAQ
+        const faqElement = document.getElementById("FAQ");
+        const headerElement = document.querySelector("header.header");
+
+        if (faqElement) {
+            // Вычисляем высоту хедера
+            const headerHeight = headerElement ? headerElement.offsetHeight : 0;
+
+            // Вычисляем конечную позицию скролла
+            const scrollPosition = faqElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 30;
+
+            // Скроллим к элементу с учетом высоты хедера
+            window.scrollTo({
+                top: scrollPosition,
+                behavior: "smooth",
+            });
+        }
+    }
 });
