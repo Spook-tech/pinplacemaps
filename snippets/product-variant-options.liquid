@@ -104,7 +104,7 @@
   
         <label for="{{ input_id }}" class="size-option">
           <img src="{{ 'medium.svg' | asset_url }}" width="29" height="100px" alt="Medium Size">
-          <h3>Medium – {{ price | money_without_currency }}</h3>
+          <h3>Medium – {{ price | money_without_trailing_zeros }}</h3>
           <p>100cm x 70cm</p>
         </label>
       {%- when 'Large' -%}
