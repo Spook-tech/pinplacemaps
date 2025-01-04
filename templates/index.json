@@ -104,7 +104,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Our Featured Collection",
-        "collection": "frontpage",
+        "collection": "maps",
         "products_to_show": 4
       }
     },
