@@ -937,50 +937,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const filterMenus = document.querySelectorAll(".filters__button");
+  // const filterMenus = document.querySelectorAll(".filters__button");
 
-  // Закрытие всех активных меню
-  const closeAllMenus = () => {
-    filterMenus.forEach((menu) => menu.classList.remove("active"));
-  };
+  // // Закрытие всех активных меню
+  // const closeAllMenus = () => {
+  //   filterMenus.forEach((menu) => menu.classList.remove("active"));
+  // };
 
-  // Обработчик кликов на странице
-  document.addEventListener("click", (event) => {
-    const isClickInsideMenu = event.target.closest(".filters__button");
-    if (!isClickInsideMenu) {
-      closeAllMenus();
-    }
-  });
+  // // Обработчик кликов на странице
+  // document.addEventListener("click", (event) => {
+  //   const isClickInsideMenu = event.target.closest(".filters__button");
+  //   if (!isClickInsideMenu) {
+  //     closeAllMenus();
+  //   }
+  // });
 
-  filterMenus.forEach((menu) => {
-    const title = menu.querySelector(".filters__button-value");
-    const optionButtons = menu.querySelectorAll(
-      ".filters__button-variants button"
-    );
+  // filterMenus.forEach((menu) => {
+  //   const title = menu.querySelector(".filters__button-value");
+  //   const optionButtons = menu.querySelectorAll(
+  //     ".filters__button-variants button"
+  //   );
 
-    // Обработчик клика по основному меню
-    menu.addEventListener("click", (event) => {
-      event.stopPropagation(); // Не даем событию подняться вверх
-      const isActive = menu.classList.contains("active");
-      closeAllMenus();
-      if (!isActive) {
-        menu.classList.add("active");
-      }
-    });
+  //   // Обработчик клика по основному меню
+  //   menu.addEventListener("click", (event) => {
+  //     event.stopPropagation(); // Не даем событию подняться вверх
+  //     const isActive = menu.classList.contains("active");
+  //     closeAllMenus();
+  //     if (!isActive) {
+  //       menu.classList.add("active");
+  //     }
+  //   });
 
-    // Обработчик кликов по вариантам сортировки
-    optionButtons.forEach((subbutton) => {
-      subbutton.addEventListener("click", () => {
-        const newText = subbutton.dataset.selectedText;
+  //   // Обработчик кликов по вариантам сортировки
+  //   optionButtons.forEach((subbutton) => {
+  //     subbutton.addEventListener("click", () => {
+  //       const newText = subbutton.dataset.selectedText;
 
-        if (newText) {
-          title.textContent = newText;
-        }
+  //       if (newText) {
+  //         title.textContent = newText;
+  //       }
 
-        menu.classList.remove("active"); // Закрываем меню после выбора
-      });
-    });
-  });
+  //       menu.classList.remove("active"); // Закрываем меню после выбора
+  //     });
+  //   });
+  // });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
