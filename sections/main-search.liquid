@@ -239,10 +239,10 @@
             >
               <div class="loading-overlay gradient"></div>
               <ul
-
                 class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
                 role="list"
               >
+                {% assign loaded = true %}
                 {%- assign skip_card_product_styles = false -%}
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
@@ -250,79 +250,79 @@
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
 
-                  
-
                   <li
                     class="grid__item"
                   >
-                                                        <script>
-                                      console.log(233);
-                const filterMenus = document.querySelectorAll(".filters__button");
+                    {% if loaded %}
+                      <script>
+                        console.log(233);
+                        const filterMenus = document.querySelectorAll(".filters__button");
 
-                // Закрытие всех активных мен
-                const closeAllMenus = () => {
-                  filterMenus.forEach((menu) => menu.classList.remove("active"));
-                };
+                        // Закрытие всех активных мен
+                        const closeAllMenus = () => {
+                          filterMenus.forEach((menu) => menu.classList.remove("active"));
+                        };
 
-                // Обработчик кликов на странице
-                document.addEventListener("click", (event) => {
-                  const isClickInsideMenu = event.target.closest(".filters__button");
-                  if (!isClickInsideMenu) {
-                    closeAllMenus();
-                  }
-                });
+                        // Обработчик кликов на странице
+                        document.addEventListener("click", (event) => {
+                          const isClickInsideMenu = event.target.closest(".filters__button");
+                          if (!isClickInsideMenu) {
+                            closeAllMenus();
+                          }
+                        });
 
-                filterMenus.forEach((menu) => {
-                  const title = menu.querySelector(".filters__button-value");
-                  const optionButtons = menu.querySelectorAll(
-                    ".filters__button-variants button"
-                  );
+                        filterMenus.forEach((menu) => {
+                          const title = menu.querySelector(".filters__button-value");
+                          const optionButtons = menu.querySelectorAll(
+                            ".filters__button-variants button"
+                          );
 
-                  // Обработчик клика по основному меню
-                  menu.addEventListener("click", (event) => {
-                    event.stopPropagation(); // Не даем событию подняться вверх
-                    const isActive = menu.classList.contains("active");
-                    closeAllMenus();
-                    if (!isActive) {
-                      menu.classList.add("active");
-                    }
-                  });
+                          // Обработчик клика по основному меню
+                          menu.addEventListener("click", (event) => {
+                            event.stopPropagation(); // Не даем событию подняться вверх
+                            const isActive = menu.classList.contains("active");
+                            closeAllMenus();
+                            if (!isActive) {
+                              menu.classList.add("active");
+                            }
+                          });
 
-                  // Обработчик кликов по вариантам сортировки
-                  optionButtons.forEach((subbutton) => {
-                    subbutton.addEventListener("click", () => {
-                      const newText = subbutton.dataset.selectedText;
+                          // Обработчик кликов по вариантам сортировки
+                          optionButtons.forEach((subbutton) => {
+                            subbutton.addEventListener("click", () => {
+                              const newText = subbutton.dataset.selectedText;
 
-                      if (newText) {
-                        title.textContent = newText;
-                      }
+                              if (newText) {
+                                title.textContent = newText;
+                              }
 
-                      menu.classList.remove("active"); // Закрываем меню после выбора
-                    });
-                  });
-                });
-                document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
-                  button.addEventListener('click', function () {
-                    // Получаем значение, которое нужно установить в select
-                    const filterValue = button.dataset.filter;
+                              menu.classList.remove("active"); // Закрываем меню после выбора
+                            });
+                          });
+                        });
+                        document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
+                          button.addEventListener('click', function () {
+                            // Получаем значение, которое нужно установить в select
+                            const filterValue = button.dataset.filter;
 
-                    // Находим селект
-                    const selectElement = document.querySelector('#SortBy');
+                            // Находим селект
+                            const selectElement = document.querySelector('#SortBy');
 
-                    if (selectElement) {
-                      // Устанавливаем значение в select
-                      selectElement.value = filterValue;
+                            if (selectElement) {
+                              // Устанавливаем значение в select
+                              selectElement.value = filterValue;
 
-                      // Создаем и инициируем событие change, чтобы сработали слушатели
-                      const event = new Event('input', { bubbles: true });
-                      selectElement.dispatchEvent(event);
-                    }
-                  });
-                });
-              </script>
+                              // Создаем и инициируем событие change, чтобы сработали слушатели
+                              const event = new Event('input', { bubbles: true });
+                              selectElement.dispatchEvent(event);
+                            }
+                          });
+                        });
+                      </script>
 
+                    {% assign loaded = false %}  
+                    {% endif %}
 
-                    
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
