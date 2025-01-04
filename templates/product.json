@@ -389,7 +389,31 @@
         "text_YgJWyn"
       ],
       "settings": {
-        "drop_shadow": true
+        "drop_shadow": true,
+        "horizontal": false
+      }
+    },
+    "reviews_3C3tmL": {
+      "type": "reviews",
+      "blocks": {
+        "rating_6JLEWJ": {
+          "type": "rating",
+          "settings": {}
+        },
+        "reviews_gN4gwz": {
+          "type": "reviews",
+          "settings": {
+            "reviews_per_page": 5
+          }
+        }
+      },
+      "block_order": [
+        "rating_6JLEWJ",
+        "reviews_gN4gwz"
+      ],
+      "settings": {
+        "title": "Hear from our happy travelers",
+        "product": ""
       }
     },
     "faq_nC9tNE": {
@@ -457,29 +481,6 @@
       "settings": {
         "title": "Frequently Asked Questions"
       }
-    },
-    "reviews_3C3tmL": {
-      "type": "reviews",
-      "blocks": {
-        "rating_6JLEWJ": {
-          "type": "rating",
-          "settings": {}
-        },
-        "reviews_gN4gwz": {
-          "type": "reviews",
-          "settings": {
-            "reviews_per_page": 5
-          }
-        }
-      },
-      "block_order": [
-        "rating_6JLEWJ",
-        "reviews_gN4gwz"
-      ],
-      "settings": {
-        "title": "Hear from our happy travelers",
-        "product": ""
-      }
     }
   },
   "order": [
@@ -491,7 +492,7 @@
     "product_info_BFUzjV",
     "image_gallery_irqQEW",
     "image_with_text_jtUfEY",
-    "faq_nC9tNE",
-    "reviews_3C3tmL"
+    "reviews_3C3tmL",
+    "faq_nC9tNE"
   ]
 }
