@@ -36,7 +36,8 @@
         "text_VxhDaE"
       ],
       "settings": {
-        "drop_shadow": false
+        "drop_shadow": false,
+        "horizontal": true
       }
     },
     "reviews_q6nKtN": {

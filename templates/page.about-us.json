@@ -37,7 +37,8 @@
         "text_nKHef8"
       ],
       "settings": {
-        "drop_shadow": false
+        "drop_shadow": false,
+        "horizontal": true
       }
     },
     "rich_text_4P43Ki": {
