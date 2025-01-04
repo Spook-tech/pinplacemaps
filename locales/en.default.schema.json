@@ -3215,6 +3215,9 @@
       "settings": {
         "drop_shadow": {
           "label": "Drop shadow?"
+        },
+        "horizontal": {
+          "label": "Show horizontally?"
         }
       },
       "blocks": {
