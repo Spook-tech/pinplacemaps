@@ -936,7 +936,7 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         });
       });
-    };
+    }();
   }
 
   const filterMenus = document.querySelectorAll(".filters__button");
