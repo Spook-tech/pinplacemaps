@@ -1062,7 +1062,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // При клике на вариант обновлять текст основной кнопки и селект
       button.addEventListener("click", () => {
-        mainButton.textContent = option.textContent;
         selectElement.value = option.value;
   
         // Вызов события изменения у селекта (если требуется)
