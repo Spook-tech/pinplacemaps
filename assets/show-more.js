@@ -25,3 +25,6 @@ if (!customElements.get('show-more-button')) {
     }
   );
 }
+
+
+console.log(777)
