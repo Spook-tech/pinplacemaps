@@ -1030,4 +1030,32 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
+function initSortSelect() {
+document.querySelectorAll('.facets-container .filters__button-variants .button').forEach(button => {
+  button.addEventListener('click', function () {
+    // Получаем значение, которое нужно установить в select
+    const filterValue = button.dataset.filter;
+
+    // Находим селект
+    const selectElement = document.querySelector('#SortBy');
+
+    if (selectElement) {
+      // Устанавливаем значение в select
+      selectElement.value = filterValue;
+
+      // Создаем и инициируем событие change, чтобы сработали слушатели
+      const event = new Event('change', { bubbles: true });
+      const event2 = new Event('input', { bubbles: true });
+      const event3 = new Event('submit', { bubbles: true });
+      selectElement.dispatchEvent(event);
+      selectElement.dispatchEvent(event2);
+      selectElement.dispatchEvent(event3);
+    }
+  });
+});
+}
+
+
+  initSortSelect();
 });
