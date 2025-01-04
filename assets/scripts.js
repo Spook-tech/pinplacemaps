@@ -1032,45 +1032,25 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 function initSortSelect() {
-  const menu = document.querySelector('.filters__button');
-  const select = document.querySelector('.facet-filters__sort');
+document.querySelectorAll('.filters__button-variants .button').forEach(button => {
+  button.addEventListener('click', function () {
+    // Получаем значение, которое нужно установить в select
+    const filterValue = button.dataset.filter;
 
-  if (!menu || !select) return;
+    // Находим селект
+    const selectElement = document.querySelector('#SortBy');
 
-  // Получаем родительскую форму
-  const form = select.closest('form');
-  if (!form) {
-    console.error('Селект не находится внутри формы.');
-    return;
-  }
+    if (selectElement) {
+      // Устанавливаем значение в select
+      selectElement.value = filterValue;
 
-  // Получаем все кнопки из меню
-  const menuButtons = menu.querySelectorAll('.filters__button-variants .button');
-
-  menuButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const filterValue = button.dataset.filter;
-
-      // Находим соответствующий вариант в селекте
-      const selectOption = Array.from(select.options).find(
-        (option) => option.value === filterValue
-      );
-
-      if (selectOption) {
-        // Устанавливаем значение в селекте
-        select.value = selectOption.value;
-
-        // Обновляем текст основной кнопки в меню
-        const mainButton = menu.querySelector('.filters__button-value');
-        if (mainButton) {
-          mainButton.textContent = button.dataset.selectedText || button.textContent;
-        }
-
-        // Вызываем submit на родительской форме
-        form.submit();
-      }
-    });
+      // Создаем и инициируем событие change, чтобы сработали слушатели
+      const event = new Event('change', { bubbles: true });
+      selectElement.dispatchEvent(event);
+    }
   });
+});
+
 }
 
 
