@@ -910,30 +910,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   
-    const filterButtons = document.querySelectorAll('.filters__button');
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const title = button.querySelector('.filters__button-value');
-        const optionButtons = button.querySelectorAll('.filters__button-variants button');
-    
-        button.classList.toggle('active');
-    
-        optionButtons.forEach(subbutton => {
-          subbutton.addEventListener('click', () => {
-            const newText = subbutton.dataset.selectedText;
-            const sortType = subbutton.dataset.filter
-            if (newText) {
-              title.textContent = newText;
-            }
-            if (sortType) {
-              selectedSort = sortType;
-              updateReviews();
-            }
-          })
-        });
-      });
-    });
-  
     // Первоначальное обновление
     updateReviews();
   }
@@ -982,5 +958,52 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
-});
 
+    const filterMenus = document.querySelectorAll('.filters__button');
+
+  // Закрытие всех активных меню
+  const closeAllMenus = () => {
+    filterMenus.forEach(menu => menu.classList.remove('active'));
+  };
+
+  // Обработчик кликов на странице
+  document.addEventListener('click', (event) => {
+    const isClickInsideMenu = event.target.closest('.filters__button');
+    if (!isClickInsideMenu) {
+      closeAllMenus();
+    }
+  });
+
+  filterMenus.forEach(menu => {
+    const title = menu.querySelector('.filters__button-value');
+    const optionButtons = menu.querySelectorAll('.filters__button-variants button');
+
+    // Обработчик клика по основному меню
+    menu.addEventListener('click', (event) => {
+      event.stopPropagation(); // Не даем событию подняться вверх
+      const isActive = menu.classList.contains('active');
+      closeAllMenus();
+      if (!isActive) {
+        menu.classList.add('active');
+      }
+    });
+
+    // Обработчик кликов по вариантам сортировки
+    optionButtons.forEach(subbutton => {
+      subbutton.addEventListener('click', () => {
+        const newText = subbutton.dataset.selectedText;
+        const sortType = subbutton.dataset.filter;
+        if (newText) {
+          title.textContent = newText;
+        }
+        if (sortType) {
+          // Здесь выполняем действия при выборе фильтра
+          console.log(`Selected sort: ${sortType}`);
+          updateReviews();
+        }
+        menu.classList.remove('active'); // Закрываем меню после выбора
+      });
+    });
+  });
+
+});
