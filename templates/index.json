@@ -288,7 +288,8 @@
         "text_8YG6dn"
       ],
       "settings": {
-        "drop_shadow": true
+        "drop_shadow": true,
+        "horizontal": false
       }
     },
     "faq_EyawRa": {
@@ -353,6 +354,7 @@
         "question_XmFFWF",
         "question_pWKPej"
       ],
+      "disabled": true,
       "settings": {
         "title": "Frequently Asked Questions"
       }
