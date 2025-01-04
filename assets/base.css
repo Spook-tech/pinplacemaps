@@ -6429,6 +6429,10 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 .about.horizontal .about__card{
     flex-direction: column;
 }
+
+.about.horizontal .about__card svg, img{
+    max-height: 500px;
+}
 .about.horizontal .about__card .col{
     max-width: none;
 }
