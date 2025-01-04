@@ -115,9 +115,7 @@
               {%- when 'title' -%}
                 <h1>{{ product.title | escape }}</h1>
               {%- when 'description' -%}
-                <p>
-                  {{ product.description }}
-                </p>
+                {{ product.description }}
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
