@@ -8934,6 +8934,10 @@ html, body {
   background: var(--color-white);
 }
 
+.contact form{
+  width: 100%;
+}
+
 .contact .reported__list::after,
 .contact .reported__list::before{
   display: none;
