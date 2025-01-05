@@ -1168,11 +1168,11 @@ function ajaxFormInit(form) {
 
 			var checkoutUrl = getUrlParameter("checkout_url");
 
-			if (checkoutUrl) {
-				window.location = getUrlParameter("checkout_url");
-			} else if (response.status === 200 && form_type !== "contact") {
-				window.location.pathname = "/account"
-			}
+			// if (checkoutUrl) {
+			// 	window.location = getUrlParameter("checkout_url");
+			// } else if (response.status === 200 && form_type !== "contact") {
+			// 	window.location.pathname = "/account"
+			// }
 		}).catch(function(err) {
 			console.error(err);
 
