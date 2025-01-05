@@ -8839,7 +8839,7 @@ input:checked+.size-option {
   position: absolute;
   left: 0;
   top: 100%;
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   z-index: 2;
