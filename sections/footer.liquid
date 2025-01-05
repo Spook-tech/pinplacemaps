@@ -97,6 +97,47 @@
           <p class="footer__text visible-mobile">
             {{ block.settings.disclaimer }}
           </p>
+          {% comment %}
+              Contact Form Wide
+          {% endcomment %}
+          
+{%- form 'contact' -%}
+  <div class="row">
+    <div class="col-md-4 mb-3">
+        <label for="name">Name <i class="fa fa-asterisk"></i></label>
+        <input type="text" class="form-control" name="contact[name]" autocomplete="name" required>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <label for="email">Email <i class="fa fa-asterisk"></i></label>
+        <input type="email" class="form-control" name="contact[email]" autocomplete="email" required>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <label for="phone">Phone <i class="fa fa-asterisk"></i></label>
+        <input type="tel" class="form-control" name="contact[phone]" autocomplete="tel" required>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="message">Message</label>
+    <textarea id="message" class="form-control" name="contact[body]" rows="7"></textarea>
+  </div>
+
+  <!-- 2019 Honeypot / Checkbox Placeholder -->
+  <div class="checkbox captcha"><input type="text" class="honeypot" autocomplete="off" style="display:none;"></div>
+
+  <script type="application/json" class="form-alerts">
+    {
+      "error": "An error occurred while submitting the form.",
+      "success": "Your message has been successfully sent!"
+    }
+  </script>
+
+  <div class="d-none" data-alert="status"></div>
+
+  <button type="button" class="btn btn-lg btn-outline-primary btn-submit disabled" disabled>Send</button>
+{%- endform -%}
           <!-- {% form 'customer', class: 'news__form' %}
             <input type="hidden" name="contact[tags]" value="newsletter">
             <input
