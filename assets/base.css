@@ -8941,10 +8941,17 @@ html, body {
   -webkit-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
   border-radius: var(--border-radius);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact form .contact__button button{
   width: 100%;
+}
+
+.contact form .field:has(textarea) {
+  flex: 1 0 auto;
 }
 
 .contact .reported__list::after,
