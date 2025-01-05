@@ -8943,7 +8943,7 @@ html, body {
   border-radius: var(--border-radius);
 }
 
-.contact form .contact__button{
+.contact form .contact__button button{
   width: 100%;
 }
 
