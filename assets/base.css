@@ -8926,6 +8926,9 @@ html, body {
   .contacts__row {
     flex-direction: column;
   }
+  .contacts__row .col{
+    max-width: 100%;
+  }
 }
 
 .contacts__row {
