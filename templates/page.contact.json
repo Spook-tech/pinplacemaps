@@ -77,6 +77,34 @@
     },
     "form": {
       "type": "contact-form",
+      "blocks": {
+        "block_UqMpE7": {
+          "type": "block",
+          "settings": {
+            "title": "Phone",
+            "text": "<p><a href=\"tel:+1 (555) 123-4567\" title=\"tel:+1 (555) 123-4567\"><strong>+1 (555) 123-4567</strong></a><br/></p><p>Available: Mon–Fri, 9 AM–6 PM</p>"
+          }
+        },
+        "block_6Q9kmt": {
+          "type": "block",
+          "settings": {
+            "title": "E-mail",
+            "text": "<p><a><strong>support@example.com</strong></a></p><p>We usually respond within 24 hour</p>"
+          }
+        },
+        "block_gDkUUp": {
+          "type": "block",
+          "settings": {
+            "title": "Address",
+            "text": "<p>Some text</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_UqMpE7",
+        "block_6Q9kmt",
+        "block_gDkUUp"
+      ],
       "settings": {
         "heading": "",
         "padding_top": 36,
