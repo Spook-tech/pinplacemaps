@@ -9027,3 +9027,9 @@ html, body {
 .rating-label {
   font-size: 14px;
 }
+
+.filters__button-wrapper{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
