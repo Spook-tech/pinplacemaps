@@ -1,7 +1,5 @@
 {% if section.settings.product != blank %}
-  {% 
-    assign product = section.settings.product
-  %}
+  {% assign product = section.settings.product %}
 {% endif %}
 
 <div class="container">
@@ -17,18 +15,18 @@
             <div class="reviews__stats">
               {% assign review_ratings = product.metafields.custom.review_rating.value %}
               {% assign total_reviews = review_ratings.size %}
-            
+
               {% assign total_rating_sum = 0 %}
               {% assign excellent_count = 0 %}
               {% assign great_count = 0 %}
               {% assign good_count = 0 %}
               {% assign average_count = 0 %}
               {% assign bad_count = 0 %}
-            
+
               {% for rating in review_ratings %}
                 {% assign rating_value = rating | plus: 0 %}
                 {% assign total_rating_sum = total_rating_sum | plus: rating_value %}
-            
+
                 {% if rating_value >= 4.5 %}
                   {% assign excellent_count = excellent_count | plus: 1 %}
                   {% assign rating_text = 'general.rating.excellent' | t %}
@@ -45,17 +43,16 @@
                   {% assign bad_count = bad_count | plus: 1 %}
                   {% assign rating_text = 'general.rating.bad' | t %}
                 {% endif %}
-            
               {% endfor %}
-            
+
               {% assign average_rating = total_rating_sum | times: 1.0 | divided_by: total_reviews %}
-            
+
               {% assign excellent_percent = excellent_count | times: 100 | divided_by: total_reviews %}
               {% assign great_percent = great_count | times: 100 | divided_by: total_reviews %}
               {% assign good_percent = good_count | times: 100 | divided_by: total_reviews %}
               {% assign average_percent = average_count | times: 100 | divided_by: total_reviews %}
               {% assign bad_percent = bad_count | times: 100 | divided_by: total_reviews %}
-            
+
               <h3>{{ rating_text }}</h3>
               <div class="reviews__summary">
                 <div class="reviews__rating">
@@ -120,7 +117,66 @@
             <div class="reviews__content">
               <!-- Filter and sort -->
               <div class="filters">
-                <div class="filters">
+                <div class="filters__button-wrapper">
+                  FILTER
+                  <div class="filters__button">
+                    <button class="button filters__button-value button--white">
+                      Newest first
+                      <svg
+                        width="9"
+                        height="12"
+                        viewBox="0 0 9 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                            d="M8.00776 7.18388C7.87867 7.18505 7.7537 7.22941 7.65276 7.30988L4.42276 9.80688L1.19676 7.30988C1.09581 7.22941 0.970841 7.18505 0.841757 7.18388C0.596757 7.18388 0.369757 7.35187 0.248757 7.62087C0.160611 7.82207 0.136521 8.04552 0.179757 8.26087C0.223757 8.48387 0.332757 8.67088 0.486757 8.79088L4.06976 11.5599C4.17576 11.6419 4.29976 11.6859 4.42376 11.6859C4.55284 11.6847 4.67781 11.6403 4.77876 11.5599L8.36276 8.78988C8.52509 8.65611 8.63374 8.46829 8.66876 8.26087C8.71186 8.04551 8.68778 7.8221 8.59976 7.62087C8.47976 7.35087 8.25176 7.18388 8.00776 7.18388ZM0.840757 4.54988C0.969497 4.54847 1.09408 4.50413 1.19476 4.42387L4.42476 1.92787L7.65276 4.42287C7.75976 4.50588 7.88276 4.54887 8.00776 4.54887C8.25176 4.54887 8.47876 4.38188 8.59976 4.11188C8.68824 3.91079 8.71268 3.68734 8.66976 3.47187C8.63448 3.26432 8.52546 3.07648 8.36276 2.94288L4.77976 0.172875C4.67878 0.0924792 4.55383 0.048131 4.42476 0.046875C4.29567 0.0480543 4.1707 0.092411 4.06976 0.172875L0.485757 2.94388C0.322774 3.07767 0.213724 3.26593 0.178757 3.47388C0.135757 3.69088 0.160757 3.91887 0.248757 4.11387C0.368757 4.38387 0.595757 4.54988 0.840757 4.54988Z"
+                            fill="black" />
+                      </svg>
+                    </button>
+  
+                    <div class="filters__button-variants">
+                      <div class="rating-picker">
+                        <div class="rating-picker__item">
+                          <span class="checkmark"></span>
+                          <span class="rating-bar">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span>
+                          </span>
+                          <span class="rating-label">Exzellent</span>
+                        </div>
+                        <div class="rating-picker__item">
+                          <span class="checkmark"></span>
+                          <span class="rating-bar">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="empty"></span>
+                          </span>
+                          <span class="rating-label">Großartig</span>
+                        </div>
+                        <div class="rating-picker__item">
+                          <span class="checkmark"></span>
+                          <span class="rating-bar">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="empty"></span><span class="empty"></span>
+                          </span>
+                          <span class="rating-label">Gut</span>
+                        </div>
+                        <div class="rating-picker__item">
+                          <span class="checkmark"></span>
+                          <span class="rating-bar">
+                            <span class="filled"></span><span class="filled"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
+                          </span>
+                          <span class="rating-label">Durchschnitt</span>
+                        </div>
+                        <div class="rating-picker__item">
+                          <span class="checkmark"></span>
+                          <span class="rating-bar">
+                            <span class="filled"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
+                          </span>
+                          <span class="rating-label">Schlecht</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__button-wrapper">
                   Sort by
                   <div class="filters__button">
                     <button class="button filters__button-value button--white">
@@ -137,7 +193,7 @@
                             fill="black" />
                       </svg>
                     </button>
-
+  
                     <div class="filters__button-variants">
                       <button data-filter="newest" data-selected-text="Newest first" class="button">
                         {{ 'general.rating.newest' | t }}
@@ -148,6 +204,8 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="filters">
               </div>
 
               <ul data-reviews-per-page="{{ block.settings.reviews_per_page }}" class="reviews__list">
@@ -162,10 +220,10 @@
                   {% assign review_images_raw = product.metafields.custom.review_images.value | slice: review_index %}
                   {% assign review_images = review_images_raw[0] | strip %}
                   {% assign review_images_array = review_images | split: ', ' %}
-                  
+
                   {% assign review_rating_raw = product.metafields.custom.review_rating.value | slice: review_index %}
                   {% assign review_rating = review_rating_raw[0] | plus: 0 %}
-                  
+
                   <li data-rating="{{ review_rating }}" class="review__card">
                     <div class="reviews__product">
                       <a href="{{ product.url }}" class="reviews__link">
@@ -179,7 +237,7 @@
                     </div>
                     <div class="reviews__info">
                       <span class="author">{{ review_author }}</span>
-                      <span class="date">{{ review_date | date: "%-d %B %Y" }}</span>
+                      <span class="date">{{ review_date | date: '%-d %B %Y' }}</span>
 
                       {% if review_rating != blank %}
                         {%- render 'rating', stars_number: review_rating, use_small_text: true -%}
@@ -241,10 +299,10 @@
         {
           "type": "range",
           "min": 1,
-          "max": 15,        
+          "max": 15,
           "id": "reviews_per_page",
           "label": "Reviews per page",
-          "default": 5,
+          "default": 5
         }
       ]
     }
