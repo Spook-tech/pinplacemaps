@@ -8923,6 +8923,9 @@ html, body {
   .reported__list li {
     border-radius: 8px;
   }
+  .contacts__row {
+    flex-direction: column;
+  }
 }
 
 .contacts__row {
