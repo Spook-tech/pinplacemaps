@@ -6860,7 +6860,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   align-items: center;
 }
 
-.reviews__grade li button {
+.reviews__grade li div {
   padding: 0;
   background: transparent;
   text-align: left;
