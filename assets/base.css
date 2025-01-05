@@ -8933,3 +8933,11 @@ html, body {
   gap: 30px;
   background: var(--color-white);
 }
+
+.contact .reported__list::after,
+.contact .reported__list::before{
+  display: none;
+}
+.contact .reported__list {
+  flex-direction: column;
+}
