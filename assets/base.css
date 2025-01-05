@@ -8939,5 +8939,5 @@ html, body {
   display: none;
 }
 .contact .reported__list {
-  flex-direction: column;
+  grid-template-columns: 100%;
 }
