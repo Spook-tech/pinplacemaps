@@ -97,7 +97,7 @@
           <p class="footer__text visible-mobile">
             {{ block.settings.disclaimer }}
           </p>
-          {% form 'customer', class: 'news__form' %}
+          <!-- {% form 'customer', class: 'news__form' %}
             <input type="hidden" name="contact[tags]" value="newsletter">
             <input
               id="NewsletterForm--{{ section.id }}"
@@ -149,7 +149,7 @@
                 {{- 'newsletter.success' | t }}
               </h3>
             {%- endif -%}
-          {% endform %}
+          {% endform %} -->
         </div>
       {% elsif block.type == 'menu' %}
         <div class="footer__col">
