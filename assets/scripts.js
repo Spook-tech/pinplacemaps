@@ -1185,7 +1185,5 @@ function ajaxFormInit(form) {
 }
 
 // Init Shopify Forms
-document.querySelectorAll("#contact_form").forEach(function(el) {
-	ajaxFormInit(el.closest("form"));
-});
+ajaxFormInit(document.querySelector('#contact_form'));
 
