@@ -67,45 +67,45 @@
               <span class="total">{{ 'general.rating.total_reviews' | t: count: total_reviews }}</span>
               <ul class="reviews__grade">
                 <li>
-                  <button data-reviews-rating="5">
+                  <div>
                     <b>{{ 'general.rating.excellent' | t }}</b>
-                  </button>
+                  </div>
                   <span class="bar">
                     <span class="progress excellent" style="width: {{ excellent_percent }}%;"></span>
                   </span>
                   <span class="percent">{{ excellent_percent | round: 0 }}%</span>
                 </li>
                 <li>
-                  <button data-reviews-rating="4">
+                  <div>
                     <b>{{ 'general.rating.great' | t }}</b>
-                  </button>
+                  </div>
                   <span class="bar">
-                    <span class="progress great" style="width: {{ great_percent }}%;"></span>
+                    <span class="progress excellent" style="width: {{ great_percent }}%;"></span>
                   </span>
                   <span class="percent">{{ great_percent | round: 0 }}%</span>
                 </li>
                 <li>
-                  <button data-reviews-rating="3">
+                  <div>
                     <b>{{ 'general.rating.good' | t }}</b>
-                  </button>
+                  </div>
                   <span class="bar">
                     <span class="progress good" style="width: {{ good_percent }}%;"></span>
                   </span>
                   <span class="percent">{{ good_percent | round: 0 }}%</span>
                 </li>
                 <li>
-                  <button data-reviews-rating="2">
+                  <div>
                     <b>{{ 'general.rating.average' | t }}</b>
-                  </button>
+                  </div>
                   <span class="bar">
                     <span class="progress average" style="width: {{ average_percent }}%;"></span>
                   </span>
                   <span class="percent">{{ average_percent | round: 0 }}%</span>
                 </li>
                 <li>
-                  <button data-reviews-rating="1">
+                  <div>
                     <b>{{ 'general.rating.bad' | t }}</b>
-                  </button>
+                  </div>
                   <span class="bar">
                     <span class="progress bad" style="width: {{ bad_percent }}%;"></span>
                   </span>
@@ -137,41 +137,41 @@
   
                     <div class="filters__button-variants">
                       <div class="rating-picker">
-                        <div class="rating-picker__item">
+                        <button data-reviews-rating="5" class="rating-picker__item">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
                             <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span>
                           </span>
                           <span class="rating-label">Exzellent</span>
-                        </div>
-                        <div class="rating-picker__item">
+                        </button>
+                        <button data-reviews-rating="4" class="rating-picker__item">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
                             <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">Großartig</span>
-                        </div>
-                        <div class="rating-picker__item">
+                        </button>
+                        <button data-reviews-rating="3" class="rating-picker__item">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
                             <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="empty"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">Gut</span>
-                        </div>
-                        <div class="rating-picker__item">
+                        </button>
+                        <button data-reviews-rating="2" class="rating-picker__item">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
                             <span class="filled"></span><span class="filled"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">Durchschnitt</span>
-                        </div>
-                        <div class="rating-picker__item">
+                        </button>
+                        <button data-reviews-rating="1" class="rating-picker__item">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
                             <span class="filled"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">Schlecht</span>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
