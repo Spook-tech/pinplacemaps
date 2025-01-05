@@ -1095,33 +1095,3 @@ document.addEventListener("DOMContentLoaded", function () {
 //       });
 //   }, 500);
 // }
-
-document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contactForm');
-  const contactFormResponse = document.getElementById('contactFormResponse');
-
-  contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Предотвращаем стандартную отправку формы
-
-    const formData = new FormData(contactForm);
-
-    fetch(contactForm.action, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        return response.text();
-      } else {
-        throw new Error('Произошла ошибка при отправке формы.');
-      }
-    })
-    .then(data => {
-      contactFormResponse.innerHTML = '<p>Ваше сообщение успешно отправлено!</p>';
-      contactForm.reset(); // Сбрасываем форму
-    })
-    .catch(error => {
-      contactFormResponse.innerHTML = `<p>${error.message}</p>`;
-    });
-  });
-});
