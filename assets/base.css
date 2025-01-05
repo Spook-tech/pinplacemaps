@@ -8966,5 +8966,5 @@ html, body {
   grid-template-columns: 100% !important;
 }
 .contact .reported__list li{
-  width: 100% !important;
+  max-width: 100% !important;
 }
