@@ -31,7 +31,23 @@
     -%}
     <div class="contacts__row">
       <div class="col">
-      
+        <ul class="reported__list">
+          {% for block in section.blocks %}
+            {% if block.type == 'block' %}
+              <li>
+                <div class="top">
+                  {%- if block.settings.icon != blank -%}
+                    {{ block.settings.icon | image_url: height: 70 | image_tag }}
+                  {%- endif -%}
+                  <h5>{{ block.settings.title }}</h5>
+                </div>
+                <div class="bottom">
+                  {{ block.settings.text }}
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
       </div>
       <div class="col">
         {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
@@ -182,6 +198,32 @@
       "default": 36
     }
   ],
+    "blocks": [
+    {
+      "type": "block",
+      "name": "t:sections.info_section.blocks.block.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "t:sections.info_section.blocks.block.settings.icon.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.info_section.blocks.block.settings.title.label",
+          "default": "t:sections.info_section.blocks.block.settings.title.default"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.info_section.blocks.block.settings.text.label",
+          "default": "t:sections.info_section.blocks.block.settings.text.default"
+        }
+      ]
+    }
+  ],
+
   "presets": [
     {
       "name": "t:sections.contact-form.presets.name"
