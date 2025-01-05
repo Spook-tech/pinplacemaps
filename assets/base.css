@@ -8981,6 +8981,10 @@ html, body {
 .rating-picker__item {
   display: flex;
   align-items: center;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+  border: none;
 }
 
 .rating-picker__item:not(:last-child) {
