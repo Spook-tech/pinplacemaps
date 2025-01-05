@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (e) {
       burgerButton.classList.remove("burger--active");
       navigation.classList.remove("navigation--active");
-      console.log("link", link);
     });
   });
 });
@@ -642,7 +641,6 @@ if (document.getElementById("personalizationButton")) {
 
   nameInput.addEventListener("input", (e) => {
     const value = nameInput.value;
-    console.log(value);
 
     if (value.length > 0) {
       isPersonalized = true;
@@ -858,7 +856,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Функция для обновления отзывов (с учетом фильтров, сортировки и пагинации)
     updateReviews = () => {
       // Фильтрация
-      console.log(123);
       const filteredReviews = reviews.filter((review) => {
         if (selectedRating === "all") return true;
         const ratingElement = review.querySelector(".rating__star");
@@ -923,7 +920,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       optionButtons.forEach((subbutton) => {
-        console.log(subbutton);
         subbutton.addEventListener("click", () => {
           const sortType = subbutton.dataset.filter;
 
