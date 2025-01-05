@@ -8943,6 +8943,10 @@ html, body {
   border-radius: var(--border-radius);
 }
 
+.contact form .contact__button{
+  width: 100%;
+}
+
 .contact .reported__list::after,
 .contact .reported__list::before{
   display: none;
