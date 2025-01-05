@@ -40,41 +40,6 @@
         "horizontal": true
       }
     },
-    "info_xFdfXA": {
-      "type": "info",
-      "blocks": {
-        "block_69brW4": {
-          "type": "block",
-          "settings": {
-            "title": "Phone",
-            "text": "<p><a href=\"tel:+1 (555) 123-4567\" title=\"tel:+1 (555) 123-4567\"><strong>+1 (555) 123-4567</strong></a><br/></p><p>Available: Mon–Fri, 9 AM–6 PM</p>"
-          }
-        },
-        "block_bgRcKV": {
-          "type": "block",
-          "settings": {
-            "title": "E-mail",
-            "text": "<p><a><strong>support@example.com</strong></a></p><p>We usually respond within 24 hour</p>"
-          }
-        },
-        "block_QmmzFY": {
-          "type": "block",
-          "settings": {
-            "title": "Address",
-            "text": "<p>123 Main Street, Suite 456<br/>Springfield, IL, USA</p>"
-          }
-        }
-      },
-      "block_order": [
-        "block_69brW4",
-        "block_bgRcKV",
-        "block_QmmzFY"
-      ],
-      "settings": {
-        "title": "Contacts",
-        "white_bg": true
-      }
-    },
     "form": {
       "type": "contact-form",
       "blocks": {
@@ -115,7 +80,6 @@
   "order": [
     "main",
     "image_with_text_z6WDdC",
-    "info_xFdfXA",
     "form"
   ]
 }
