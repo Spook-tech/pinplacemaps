@@ -97,39 +97,22 @@
           <p class="footer__text visible-mobile">
             {{ block.settings.disclaimer }}
           </p>
-          {% comment %}
-            Contact Form Wide
-          {% endcomment %}
-
-          {%- form 'contact',  data-type: 'json' -%}
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <label for="email">Email <i class="fa fa-asterisk"></i></label>
-                <input type="email" class="form-control" name="contact[email]" autocomplete="email" required>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="message">Message</label>
-              <textarea id="message" class="form-control" name="contact[body]" rows="7"></textarea>
-            </div>
-
-            <!-- 2019 Honeypot / Checkbox Placeholder -->
-            <div class="checkbox captcha">
-              <input type="text" class="honeypot" autocomplete="off" style="display:none;">
-            </div>
-
-            <script type="application/json" class="form-alerts">
-              {
-                "error": "An error occurred while submitting the form.",
-                "success": "Your message has been successfully sent!"
-              }
-            </script>
-
-            <div class="d-none" data-alert="status"></div>
-
-            <button type="submit" class="btn btn-lg btn-outline-primary btn-submit">Send</button>
-          {%- endform -%}
+<form id="contactForm" method="post" action="/contact#contactForm">
+  <div>
+    <label for="contactName">Имя:</label>
+    <input type="text" id="contactName" name="contact[name]" required>
+  </div>
+  <div>
+    <label for="contactEmail">Email:</label>
+    <input type="email" id="contactEmail" name="contact[email]" required>
+  </div>
+  <div>
+    <label for="contactMessage">Сообщение:</label>
+    <textarea id="contactMessage" name="contact[body]" required></textarea>
+  </div>
+  <button type="submit" id="contactSubmit">Отправить</button>
+</form>
+<div id="contactFormResponse"></div>
           <!--
             {% form 'customer', class: 'news__form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
