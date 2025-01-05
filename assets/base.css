@@ -6866,7 +6866,6 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   text-align: left;
   border: none;
   width: 70px;
-  cursor: pointer;
 }
 
 .reviews__grade li b {
@@ -8985,6 +8984,7 @@ html, body {
   background: transparent;
   text-align: left;
   border: none;
+  cursor: pointer;
 }
 
 .rating-picker__item:not(:last-child) {
