@@ -8920,6 +8920,9 @@ html, body {
   .product .slider .swiper-button-next {
     right: 50px;
   }
+  .reported__list li {
+    border-radius: 8px;
+  }
 }
 
 .contacts__row {
@@ -8933,6 +8936,11 @@ html, body {
 
 .contact form{
   width: 100%;
+  padding: 22px 16px;
+  background: var(--color-white);
+  -webkit-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
 }
 
 .contact .reported__list::after,
