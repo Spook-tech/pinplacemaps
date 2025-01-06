@@ -8858,7 +8858,7 @@ input:checked+.size-option {
 }
 
 .filters__button-variants .button {
-  padding: 0px;
+    white-space: nowrap;
 }
 
 
