@@ -6937,7 +6937,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .filters .button {
   height: 48px;
-  font-size: clamp(10px, 1.1965811966vw, 14px);
+  font-size: 14px;
 }
 
 @media (max-width: 767px) {
