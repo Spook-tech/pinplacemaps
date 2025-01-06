@@ -6943,7 +6943,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 @media (max-width: 767px) {
   .filters .button {
     padding: 0 10px;
-    height: 33px;
+    /* height: 50px; */
   }
 }
 
