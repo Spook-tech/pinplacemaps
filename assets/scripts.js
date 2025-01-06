@@ -763,16 +763,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Используем делегирование событий на body
   document.body.addEventListener('click', function(event) {
     console.log(event.target)
-    if (event.target.classList.contains('button') && event.target.closest('.filters__button-variants')) {
-      // Получаем значение data-filter из нажатой кнопки
-      const filterValue = event.target.getAttribute('data-filter');
+    // if (event.target.classList.contains('button') && event.target.closest('.filters__button-variants')) {
+    //   // Получаем значение data-filter из нажатой кнопки
+    //   const filterValue = event.target.getAttribute('data-filter');
 
-      // Устанавливаем соответствующее значение в селект
-      selectElement.value = filterValue;
+    //   // Устанавливаем соответствующее значение в селект
+    //   selectElement.value = filterValue;
 
-      // Вызываем событие input для селекта
-      selectElement.dispatchEvent(new Event('input', { bubbles: true }));
-    }
+    //   // Вызываем событие input для селекта
+    //   selectElement.dispatchEvent(new Event('input', { bubbles: true }));
+    // }
   });
 
   
