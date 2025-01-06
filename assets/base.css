@@ -8934,6 +8934,9 @@ html, body {
   .contacts__row .col{
     max-width: 100%;
   }
+  .filters__button-variants{
+    padding: 10px;
+  }
 }
 
 .contacts__row {
