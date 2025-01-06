@@ -981,7 +981,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const selectElement = document.getElementById('SortBy');
 const filterSearchBtn = document.getElementById('filter_search_btn');
 const filterMenus = document.querySelectorAll(".filters__button");
 
@@ -993,13 +992,20 @@ const closeAllMenus = () => {
 // Обработчик кликов на body
 document.body.addEventListener('click', function(event) {
   const clickedMenu = event.target.closest(".filters__button");
-  console.log(event.target)
-
+  
   // Обработка кликов по кнопке #filter_search_btn
-  if (filterSearchBtn.contains(event.target)) {
+  if (event.target.closest('#filter_search_btn')) {
     if (event.target.classList.contains('button') && event.target.closest('.filters__button-variants')) {
-      // Получаем значение data-filter из нажатой кнопки
+      const selectElement = document.getElementById('SortBy');
       const filterValue = event.target.getAttribute('data-filter');
+      const title = event.target.closest('#filter_search_btn').querySelector(".filters__button-value span");
+
+      const newText = event.target.dataset.selectedText;
+
+      if (newText) {
+        title.textContent = newText;
+      }
+
 
       // Устанавливаем соответствующее значение в селект
       selectElement.value = filterValue;
