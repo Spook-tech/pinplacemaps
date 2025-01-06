@@ -758,6 +758,27 @@ document.addEventListener("DOMContentLoaded", () => {
 //filters
 let updateReviews;
 document.addEventListener("DOMContentLoaded", () => {
+  const selectElement = document.getElementById('SortBy');
+  const filterSearchBtn = document.getElementById('filter_search_btn');
+
+  // Используем делегирование событий на body
+  document.body.addEventListener('click', function(event) {
+    // Проверяем, что событие произошло внутри #filter_search_btn
+    if (filterSearchBtn.contains(event.target)) {
+      if (event.target.classList.contains('button') && event.target.closest('.filters__button-variants')) {
+        // Получаем значение data-filter из нажатой кнопки
+        const filterValue = event.target.getAttribute('data-filter');
+
+        // Устанавливаем соответствующее значение в селект
+        selectElement.value = filterValue;
+
+        // Вызываем событие input для селекта
+        selectElement.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    }
+  });
+
+  
   if (document.querySelector(".reviews")) {
     const reviewsList = document.querySelector(".reviews__list");
     const reviews = Array.from(reviewsList.children); // Сохраняем отзывы в массив
@@ -1072,24 +1093,4 @@ if (document.querySelector(".template-search")) {
       });
     });
   }, 500);
-
-  document.addEventListener('DOMContentLoaded', function() {
-  // Получаем все кнопки внутри .filters__button-variants
-  const filterButtons = document.querySelectorAll('.filters__button-variants .button');
-  const selectElement = document.getElementById('SortBy');
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Получаем значение data-filter из кнопки
-      const filterValue = this.getAttribute('data-filter');
-
-      // Устанавливаем соответствующее значение в селект
-      selectElement.value = filterValue;
-
-      // Вызываем событие input для селекта
-      selectElement.dispatchEvent(new Event('input', { bubbles: true }));
-    });
-  });
-});
-
 }
