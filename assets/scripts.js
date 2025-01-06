@@ -854,33 +854,33 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Функция для обновления отзывов (с учетом фильтров, сортировки и пагинации)
-    updateReviews = () => {
-      // Фильтрация
+    const updateReviews = () => {
       const filteredReviews = reviews.filter((review) => {
-        if (selectedRating === "all") return true;
+        if (selectedRating.includes("all")) return true;
+    
         const ratingElement = review.querySelector(".rating__star");
         const rating = ratingElement ? ratingElement.children.length : 0;
-        return rating === parseInt(selectedRating, 10);
+        return selectedRating.includes(String(rating));
       });
-
+    
       // Сортировка
       if (selectedSort === "newest") {
         filteredReviews.sort((a, b) => {
           const dateA = new Date(a.querySelector(".date").textContent);
           const dateB = new Date(b.querySelector(".date").textContent);
-          return dateB - dateA; // Новейшие идут первыми
+          return dateB - dateA;
         });
       } else if (selectedSort === "featured") {
         filteredReviews.sort((a, b) => {
           const ratingA = a.dataset.rating;
           const ratingB = b.dataset.rating;
-          return ratingB - ratingA; // Новейшие идут первыми
+          return ratingB - ratingA;
         });
       }
-
+    
       // Сброс страницы на первую после фильтрации/сортировки
       currentPage = 1;
-
+    
       // Обновление отображения
       showPage(filteredReviews);
     };
@@ -888,22 +888,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // События на изменение фильтров и сортировки
     ratingButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        const newValue = button.dataset.reviewsRating;
-
-        if (button.classList.contains("green")) {
-          button.classList.remove("green");
-          selectedRating = "all";
-          updateReviews();
-          return;
-        }
-
-        ratingButtons.forEach((button) => {
-          button.classList.remove("green");
-        });
-
-        selectedRating = newValue;
-        button.classList.add("green");
-
+        const ratingValue = button.dataset.reviewsRating;
+    
+        // Переключаем класс 'green' для выбранной кнопки
+        button.classList.toggle("green");
+    
+        // Собираем все активные рейтинги
+        const activeRatings = Array.from(ratingButtons)
+          .filter((btn) => btn.classList.contains("green"))
+          .map((btn) => btn.dataset.reviewsRating);
+    
+        // Обновляем выбранные рейтинги или сбрасываем на "all", если ничего не выбрано
+        selectedRating = activeRatings.length ? activeRatings : ["all"];
+    
+        // Обновляем отображение отзывов
         updateReviews();
       });
     });
