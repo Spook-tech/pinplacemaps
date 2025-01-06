@@ -9052,5 +9052,5 @@ html, body {
 }
 
 .facet-filters{
-  padding-left: 0px;
+  padding-left: 0px !important;
 }
