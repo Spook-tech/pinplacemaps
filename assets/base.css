@@ -8857,7 +8857,9 @@ input:checked+.size-option {
   pointer-events: all;
 }
 
-
+.filters__button-variants button {
+  padding: 0px;
+}
 
 
 .ajax-search {
