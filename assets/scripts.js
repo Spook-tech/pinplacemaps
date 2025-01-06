@@ -939,6 +939,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Обработчик кликов на body
   document.body.addEventListener("click", (event) => {
+    console.log(event.target)
     const clickedMenu = event.target.closest(".filters__button");
   
     // Если клик был внутри .filters__button, переключаем его активность
