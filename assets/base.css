@@ -9050,3 +9050,7 @@ html, body {
 .filters__button-wrapper{
   white-space: nowrap;
 }
+
+.facet-filters{
+  padding-left: 0px;
+}
