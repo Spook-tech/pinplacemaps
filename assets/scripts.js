@@ -929,69 +929,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-document.addEventListener('DOMContentLoaded', function() {
-  const selectElement = document.getElementById('SortBy');
-  const filterSearchBtn = document.getElementById('filter_search_btn');
-  const filterMenus = document.querySelectorAll(".filters__button");
-
-  // Закрытие всех активных меню
-  const closeAllMenus = () => {
-    filterMenus.forEach((menu) => menu.classList.remove("active"));
-  };
-
-  // Обработчик кликов на body
-  document.body.addEventListener('click', function(event) {
-    const clickedMenu = event.target.closest(".filters__button");
-
-    // Обработка кликов по кнопке #filter_search_btn
-    if (filterSearchBtn.contains(event.target)) {
-      if (event.target.classList.contains('button') && event.target.closest('.filters__button-variants')) {
-        // Получаем значение data-filter из нажатой кнопки
-        const filterValue = event.target.getAttribute('data-filter');
-
-        // Устанавливаем соответствующее значение в селект
-        selectElement.value = filterValue;
-
-        // Вызываем событие input для селекта
-        selectElement.dispatchEvent(new Event('input', { bubbles: true }));
-      }
-    }
-
-    // Обработка кликов по меню фильтров
-    if (clickedMenu) {
-      event.stopPropagation(); // Останавливаем всплытие события
-      const isActive = clickedMenu.classList.contains("active");
-      closeAllMenus();
-      if (!isActive) {
-        clickedMenu.classList.add("active");
-      }
-    } else {
-      // Закрываем все активные меню при клике вне них
-      closeAllMenus();
-    }
-  });
-
-  // Устанавливаем обработчики для кнопок внутри меню
-  filterMenus.forEach((menu) => {
-    const title = menu.querySelector(".filters__button-value");
-    const optionButtons = menu.querySelectorAll(".filters__button-variants button");
-
-    // Обработчик кликов по вариантам сортировки
-    optionButtons.forEach((subbutton) => {
-      subbutton.addEventListener("click", (event) => {
-        event.stopPropagation(); // Останавливаем всплытие события
-        const newText = subbutton.dataset.selectedText;
-
-        if (newText) {
-          title.textContent = newText;
-        }
-
-        menu.classList.remove("active"); // Закрываем меню после выбора
-      });
-    });
-  });
-});
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -1041,4 +978,67 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+});
+
+
+const selectElement = document.getElementById('SortBy');
+const filterSearchBtn = document.getElementById('filter_search_btn');
+const filterMenus = document.querySelectorAll(".filters__button");
+
+// Закрытие всех активных меню
+const closeAllMenus = () => {
+  filterMenus.forEach((menu) => menu.classList.remove("active"));
+};
+
+// Обработчик кликов на body
+document.body.addEventListener('click', function(event) {
+  const clickedMenu = event.target.closest(".filters__button");
+  console.log(event.target)
+
+  // Обработка кликов по кнопке #filter_search_btn
+  if (filterSearchBtn.contains(event.target)) {
+    if (event.target.classList.contains('button') && event.target.closest('.filters__button-variants')) {
+      // Получаем значение data-filter из нажатой кнопки
+      const filterValue = event.target.getAttribute('data-filter');
+
+      // Устанавливаем соответствующее значение в селект
+      selectElement.value = filterValue;
+
+      // Вызываем событие input для селекта
+      selectElement.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  }
+
+  // Обработка кликов по меню фильтров
+  if (clickedMenu) {
+    event.stopPropagation(); // Останавливаем всплытие события
+    const isActive = clickedMenu.classList.contains("active");
+    closeAllMenus();
+    if (!isActive) {
+      clickedMenu.classList.add("active");
+    }
+  } else {
+    // Закрываем все активные меню при клике вне них
+    closeAllMenus();
+  }
+});
+
+// Устанавливаем обработчики для кнопок внутри меню
+filterMenus.forEach((menu) => {
+  const title = menu.querySelector(".filters__button-value");
+  const optionButtons = menu.querySelectorAll(".filters__button-variants button");
+
+  // Обработчик кликов по вариантам сортировки
+  optionButtons.forEach((subbutton) => {
+    subbutton.addEventListener("click", (event) => {
+      event.stopPropagation(); // Останавливаем всплытие события
+      const newText = subbutton.dataset.selectedText;
+
+      if (newText) {
+        title.textContent = newText;
+      }
+
+      menu.classList.remove("active"); // Закрываем меню после выбора
+    });
+  });
 });
