@@ -1025,71 +1025,71 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// if (document.querySelector(".template-search")) {
-//   setInterval(() => {
-//     const filterMenus = document.querySelectorAll(".filters__button");
+if (document.querySelector(".template-search")) {
+  setInterval(() => {
+    const filterMenus = document.querySelectorAll(".filters__button");
 
-//     // Закрытие всех активных ме
-//     const closeAllMenus = () => {
-//       filterMenus.forEach((menu) => menu.classList.remove("active"));
-//     };
+    // Закрытие всех активных ме
+    const closeAllMenus = () => {
+      filterMenus.forEach((menu) => menu.classList.remove("active"));
+    };
 
-//     // Обработчик кликов на странице
-//     document.addEventListener("click", (event) => {
-//       const isClickInsideMenu = event.target.closest(".filters__button");
-//       if (!isClickInsideMenu) {
-//         closeAllMenus();
-//       }
-//     });
+    // Обработчик кликов на странице
+    document.addEventListener("click", (event) => {
+      const isClickInsideMenu = event.target.closest(".filters__button");
+      if (!isClickInsideMenu) {
+        closeAllMenus();
+      }
+    });
 
-//     filterMenus.forEach((menu) => {
-//       const title = menu.querySelector(".filters__button-value");
-//       const optionButtons = menu.querySelectorAll(
-//         ".filters__button-variants button"
-//       );
+    filterMenus.forEach((menu) => {
+      const title = menu.querySelector(".filters__button-value");
+      const optionButtons = menu.querySelectorAll(
+        ".filters__button-variants button"
+      );
 
-//       // Обработчик клика по основному меню
-//       menu.addEventListener("click", (event) => {
-//         event.stopPropagation(); // Не даем событию подняться вверх
-//         const isActive = menu.classList.contains("active");
-//         closeAllMenus();
-//         if (!isActive) {
-//           menu.classList.add("active");
-//         }
-//       });
+      // Обработчик клика по основному меню
+      menu.addEventListener("click", (event) => {
+        event.stopPropagation(); // Не даем событию подняться вверх
+        const isActive = menu.classList.contains("active");
+        closeAllMenus();
+        if (!isActive) {
+          menu.classList.add("active");
+        }
+      });
 
-//       // Обработчик кликов по вариантам сортировки
-//       optionButtons.forEach((subbutton) => {
-//         subbutton.addEventListener("click", () => {
-//           const newText = subbutton.dataset.selectedText;
+      // Обработчик кликов по вариантам сортировки
+      optionButtons.forEach((subbutton) => {
+        subbutton.addEventListener("click", () => {
+          const newText = subbutton.dataset.selectedText;
 
-//           if (newText) {
-//             title.textContent = newText;
-//           }
+          if (newText) {
+            title.textContent = newText;
+          }
 
-//           menu.classList.remove("active"); // Закрываем меню после выбора
-//         });
-//       });
-//     });
-//     document
-//       .querySelectorAll(".facets-container .filters__button-variants .button")
-//       .forEach((button) => {
-//         button.addEventListener("click", function () {
-//           // Получаем значение, которое нужно установить в select
-//           const filterValue = button.dataset.filter;
+          menu.classList.remove("active"); // Закрываем меню после выбора
+        });
+      });
+    });
+  }, 500);
 
-//           // Находим селект
-//           const selectElement = document.querySelector("#SortBy");
+  document.addEventListener('DOMContentLoaded', function() {
+  // Получаем все кнопки внутри .filters__button-variants
+  const filterButtons = document.querySelectorAll('.filters__button-variants .button');
+  const selectElement = document.getElementById('SortBy');
 
-//           if (selectElement) {
-//             // Устанавливаем значение в select
-//             selectElement.value = filterValue;
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Получаем значение data-filter из кнопки
+      const filterValue = this.getAttribute('data-filter');
 
-//             // Создаем и инициируем событие change, чтобы сработали слушатели
-//             const event = new Event("input", { bubbles: true });
-//             selectElement.dispatchEvent(event);
-//           }
-//         });
-//       });
-//   }, 500);
-// }
+      // Устанавливаем соответствующее значение в селект
+      selectElement.value = filterValue;
+
+      // Вызываем событие input для селекта
+      selectElement.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  });
+});
+
+}
