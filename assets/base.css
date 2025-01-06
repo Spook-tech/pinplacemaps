@@ -9046,3 +9046,7 @@ html, body {
   gap: 10px;
   align-items: center;
 }
+
+.filters__button-value{
+  white-space: nowrap;
+}
