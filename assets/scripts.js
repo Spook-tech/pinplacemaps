@@ -762,6 +762,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Используем делегирование событий на body
   document.body.addEventListener('click', function(event) {
+    console.log(event.target)
     if (event.target.classList.contains('button') && event.target.closest('.filters__button-variants')) {
       // Получаем значение data-filter из нажатой кнопки
       const filterValue = event.target.getAttribute('data-filter');
