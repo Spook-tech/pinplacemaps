@@ -9,7 +9,8 @@
 
           <div class="col">
             {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: height: 661 | image_tag }}
+              {{ block.settings.image | image_url: height: block.settings.image.height | image_tag }}
+              
             {%- else -%}
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
