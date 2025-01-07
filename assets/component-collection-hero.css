@@ -67,6 +67,15 @@
   .collection-hero__image-container {
     height: 20rem;
   }
+
+  .collection-hero--with-image h1{
+    color: var(--color-white);
+    font-size: 32px;
+  }
+
+  .collection-hero--with-image .collection-hero__text-wrapper {
+    padding: 2rem 0rem;
+  }
 }
 
 .collection-hero--with-image {
