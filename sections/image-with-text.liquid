@@ -9,12 +9,7 @@
 
           <div class="col">
             {%- if block.settings.image != blank -%}
-              <img
-                src="{{ block.settings.image | image_url: width: block.settings.image.width }}"
-                alt="{{ block.settings.image.alt | escape }}"
-                width="{{ block.settings.image.width }}"
-                height="{{ block.settings.image.height }}"
-              >
+              {{ block.settings.image | image_url: height: block.settings.image.height | image_tag }}
               
             {%- else -%}
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
