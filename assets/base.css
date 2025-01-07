@@ -5096,6 +5096,10 @@ textarea:focus-visible {
   gap: 6px;
 }
 
+.menu-item-has-children{
+  position: relative;
+}
+
 .navigation__list li.menu-item-has-children::after {
   content: "";
   display: inline-block;
