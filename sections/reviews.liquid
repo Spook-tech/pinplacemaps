@@ -53,15 +53,29 @@
             
               {% assign bad_percent = bad_percent | plus: correction %}
 
-              {% if average_percent >= 4.5 %}
+              {% assign highest_count = 0 %}
+              {% if excellent_count > highest_count %}
+                {% assign highest_count = excellent_count %}
                 {% assign rating_text = 'general.rating.excellent' | t %}
-              {% elsif rating_value >= 3.5 %}
+              {% endif %}
+              
+              {% if great_count > highest_count %}
+                {% assign highest_count = great_count %}
                 {% assign rating_text = 'general.rating.great' | t %}
-              {% elsif rating_value >= 2.5 %}
+              {% endif %}
+              
+              {% if good_count > highest_count %}
+                {% assign highest_count = good_count %}
                 {% assign rating_text = 'general.rating.good' | t %}
-              {% elsif rating_value >= 1.5 %}
+              {% endif %}
+              
+              {% if average_count > highest_count %}
+                {% assign highest_count = average_count %}
                 {% assign rating_text = 'general.rating.average' | t %}
-              {% else %}
+              {% endif %}
+              
+              {% if bad_count > highest_count %}
+                {% assign highest_count = bad_count %}
                 {% assign rating_text = 'general.rating.bad' | t %}
               {% endif %}
             
