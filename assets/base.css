@@ -5428,8 +5428,8 @@ textarea:focus-visible {
   font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
-  /* text-decoration-line: underline;
-  text-underline-position: from-font; */
+  text-decoration-line: underline;
+  text-underline-position: from-font;
   opacity: 0.6;
 }
 
