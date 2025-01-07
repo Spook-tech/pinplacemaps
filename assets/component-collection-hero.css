@@ -60,7 +60,7 @@
 
 .collection-hero--with-image h1{
   color: var(--color-white);
-  font-size: 60px;
+  font-size: 3.75rem;
 }
 
 @media screen and (max-width: 749px) {
