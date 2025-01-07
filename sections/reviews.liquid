@@ -29,19 +29,14 @@
             
                 {% if rating_value >= 4.5 %}
                   {% assign excellent_count = excellent_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.excellent' | t %}
                 {% elsif rating_value >= 3.5 %}
                   {% assign great_count = great_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.great' | t %}
                 {% elsif rating_value >= 2.5 %}
                   {% assign good_count = good_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.good' | t %}
                 {% elsif rating_value >= 1.5 %}
                   {% assign average_count = average_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.average' | t %}
                 {% else %}
                   {% assign bad_count = bad_count | plus: 1 %}
-                  {% assign rating_text = 'general.rating.bad' | t %}
                 {% endif %}
               {% endfor %}
             
@@ -57,6 +52,18 @@
               {% assign correction = 100 | minus: total_percent %}
             
               {% assign bad_percent = bad_percent | plus: correction %}
+
+              {% if average_percent >= 4.5 %}
+                {% assign rating_text = 'general.rating.excellent' | t %}
+              {% elsif rating_value >= 3.5 %}
+                {% assign rating_text = 'general.rating.great' | t %}
+              {% elsif rating_value >= 2.5 %}
+                {% assign rating_text = 'general.rating.good' | t %}
+              {% elsif rating_value >= 1.5 %}
+                {% assign rating_text = 'general.rating.average' | t %}
+              {% else %}
+                {% assign rating_text = 'general.rating.bad' | t %}
+              {% endif %}
             
               <h3>{{ rating_text }}</h3>
               <div class="reviews__summary">
