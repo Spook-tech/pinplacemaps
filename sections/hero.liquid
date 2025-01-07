@@ -1,3 +1,171 @@
+<div x-data="{
+  submitting: false,
+  showAlert: false,
+  alertMessage: '',
+  formSubmitted: false,
+  submitForm() {
+    if (this.submitting) {
+      // Form is already being submitted, prevent multiple submissions
+      return;
+    }
+
+    this.submitting = true;
+    let formData = new FormData($refs.submit_contact_custom_form);
+    console.log('submitting form', formData);
+
+    // Introduce a delay before form submission (e.g., 1000 milliseconds = 1 second)
+    setTimeout(() => {
+      fetch('/contact', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        console.log(response);
+        console.log(response.status);
+        if (response.status === 200) {
+          // Successful response
+          this.formSubmitted = true;
+          this.showAlert = true;
+          this.alertMessage = 'Your message was successfully sent.';
+          this.$refs.submit_contact_custom_form.reset() // Reset the form inputs
+        } else {
+          // Non-successful response
+          throw new Error('Form submission failed.');
+        }
+      })
+      .catch(error => {
+        // Handle errors here
+        console.error('Form submission error:', error);
+        this.showAlert = true;
+        this.alertMessage = 'An error occurred while submitting the form.';
+        this.formSubmitted = false; // Reset formSubmitted if there was an error
+      })
+      .finally(() => {
+        // Reset the submitting status after form submission
+        this.submitting = false;
+      });
+    }, 1000); // 1000 milliseconds = 1 second
+  }
+}">
+
+  {%- form 'contact', id: 'ContactFormCustom', class: 'bg-white', x-ref: 'submit_contact_custom_form' -%}
+    <div class="field">
+      <input
+        class="field__input"
+        autocomplete="given-name"
+        type="text"
+        id="ContactForm-first_name"
+        name="contact[{{ 'templates.contact_custom.form.firstname' | t }}]"
+        value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}"
+        placeholder="{{ 'templates.contact_custom.form.firstname' | t }}"
+      >
+      <label class="field__label" for="ContactForm-first_name">{{ 'templates.contact_custom.form.firstname' | t }}</label>
+    </div>
+    <div class="field">
+      <input
+        class="field__input"
+        autocomplete="family-name"
+        type="text"
+        id="ContactForm-last_name"
+        name="contact[{{ 'templates.contact_custom.form.lastname' | t }}]"
+        value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}"
+        placeholder="{{ 'templates.contact_custom.form.lastname' | t }}"
+      >
+      <label class="field__label" for="ContactForm-last_name">{{ 'templates.contact_custom.form.lastname' | t }}</label>
+    </div>
+    <div class="field field--with-error">
+      <input
+        autocomplete="email"
+        type="email"
+        id="ContactForm-email"
+        class="field__input"
+        name="contact[email]"
+        spellcheck="false"
+        autocapitalize="off"
+        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+        aria-required="true"
+        {% if form.errors contains 'email' %}
+          aria-invalid="true"
+          aria-describedby="ContactForm-email-error"
+        {% endif %}
+        placeholder="{{ 'templates.contact_custom.form.email' | t }}"
+      >
+      <label class="field__label" for="ContactForm-email">
+        {{- 'templates.contact_custom.form.email' | t }}
+        <span aria-hidden="true">*</span></label
+      >
+      {%- if form.errors contains 'email' -%}
+        <small class="contact__field-error" id="ContactForm-email-error">
+          <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+          <span class="form__message">
+            {%- render 'icon-error' -%}
+            {{- form.errors.translated_fields.email | capitalize }}
+            {{ form.errors.messages.email -}}
+          </span>
+        </small>
+      {%- endif -%}
+    </div>
+
+    <div class="field">
+      <input
+        type="tel"
+        id="ContactForm-phone"
+        class="field__input"
+        autocomplete="tel"
+        name="contact[{{ 'templates.contact_custom.form.phone' | t }}]"
+        pattern="[0-9\-]*"
+        value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+        placeholder="{{ 'templates.contact_custom.form.phone' | t }}"
+      >
+      <label class="field__label" for="ContactForm-phone">{{ 'templates.contact_custom.form.phone' | t }}</label>
+    </div>
+    <div class="field">
+      <textarea
+        rows="10"
+        id="ContactForm-body"
+        class="text-area field__input"
+        name="contact[{{ 'templates.contact_custom.form.comment' | t }}]"
+        placeholder="{{ 'templates.contact_custom.form.comment' | t }}"
+      >
+        {{- form.body -}}
+      </textarea>
+      <label class="form__label field__label" for="ContactForm-body">
+        {{- 'templates.contact_custom.form.comment' | t -}}
+      </label>
+    </div>
+
+    <div x-show="!formSubmitted">
+      <button type="button" class="primary_button alt" @click="submitForm()" x-bind:disabled="submitting">{{ 'templates.contact_custom.form.send' | t }}</button>
+    </div>
+
+    {%- if form.posted_successfully? -%}
+      <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+        {% render 'icon-success' %}
+        {{ 'templates.contact_custom.form.post_success' | t }}
+      </h2>
+    {%- elsif form.errors -%}
+      <div class="form__message">
+        <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+          {% render 'icon-error' %}
+          {{ 'templates.contact_custom.form.error_heading' | t }}
+        </h2>
+      </div>
+      <ul class="form-status-list caption-large" role="list">
+        <li>
+          <a href="#ContactForm-email" class="link">
+            {{ form.errors.translated_fields.email | capitalize }}
+            {{ form.errors.messages.email }}
+          </a>
+        </li>
+      </ul>
+    {%- endif -%}
+
+  {%- endform -%}
+
+  <div x-show="showAlert" x-text="alertMessage" x-bind:class="{'success-message text-primary-main_dark': formSubmitted, 'error-message': !formSubmitted}"></div>
+</div>
+
+
 
 {%- liquid
   assign fetch_priority = 'auto'
@@ -12,51 +180,6 @@
 
 <section class="hero">
   <div class="container">
-    <form id="contact-form" method="POST" action="/contact">
-        <input type="hidden" name="form_type" value="contact">
-        <input type="hidden" name="utf8" value="✓">
-
-      <input type="text" name="contact[name]" placeholder="Ваше имя" required>
-      <input type="email" name="contact[email]" placeholder="Ваш email" required>
-      <textarea name="contact[body]" placeholder="Ваше сообщение" required></textarea>
-      <button type="submit">Отправить</button>
-    </form>
-
-    
-    <div id="form-response"></div>
-
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Предотвращаем стандартное поведение формы
-
-  const form = event.target;
-  const formData = new FormData(form);
-
-  fetch(form.action, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json'
-    },
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error('Ошибка при отправке формы');
-    }
-  })
-  .then(data => {
-    document.getElementById('form-response').textContent = 'Ваше сообщение отправлено!';
-    form.reset(); // Очистка формы после успешной отправки
-  })
-  .catch(error => {
-    document.getElementById('form-response').textContent = 'Ошибка отправки формы. Пожалуйста, попробуйте снова.';
-  });
-});
-
-    </script>
-        
     <div class="wrapper">
       <div class="col">
         {% for block in section.blocks %}
