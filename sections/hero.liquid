@@ -12,6 +12,15 @@
 
 <section class="hero">
   <div class="container">
+    <form id="contact-form" method="POST" action="/contact">
+      <input type="text" name="contact[name]" placeholder="Ваше имя" required>
+      <input type="email" name="contact[email]" placeholder="Ваш email" required>
+      <textarea name="contact[body]" placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+    <div id="form-response"></div>
+    
+        
     <div class="wrapper">
       <div class="col">
         {% for block in section.blocks %}
