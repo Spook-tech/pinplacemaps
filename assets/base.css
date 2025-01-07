@@ -5176,7 +5176,7 @@ textarea:focus-visible {
 
 .navigation__list .sub-menu {
   width: 100%;
-  min-width: 400px;
+  min-width: 300px;
   flex-direction: column;
   display: none;
   padding: 20px;
