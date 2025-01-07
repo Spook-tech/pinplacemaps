@@ -55,11 +55,12 @@
 }
 
 .collection-hero--with-image .collection-hero__text-wrapper {
-  padding: 6rem 4rem;
+  padding: 6rem 0rem;
 }
 
 .collection-hero--with-image h1{
   color: var(--color-white);
+  font-size: 60px;
 }
 
 @media screen and (max-width: 749px) {
