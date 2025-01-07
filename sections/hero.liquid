@@ -14,15 +14,48 @@
   <div class="container">
     <form id="contact-form" method="POST" action="/contact">
         <input type="hidden" name="form_type" value="contact">
-  <input type="hidden" name="utf8" value="✓">
+        <input type="hidden" name="utf8" value="✓">
 
       <input type="text" name="contact[name]" placeholder="Ваше имя" required>
       <input type="email" name="contact[email]" placeholder="Ваш email" required>
       <textarea name="contact[body]" placeholder="Ваше сообщение" required></textarea>
       <button type="submit">Отправить</button>
     </form>
-    <div id="form-response"></div>
+
     
+    <div id="form-response"></div>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Ошибка при отправке формы');
+    }
+  })
+  .then(data => {
+    document.getElementById('form-response').textContent = 'Ваше сообщение отправлено!';
+    form.reset(); // Очистка формы после успешной отправки
+  })
+  .catch(error => {
+    document.getElementById('form-response').textContent = 'Ошибка отправки формы. Пожалуйста, попробуйте снова.';
+  });
+});
+
+    </script>
         
     <div class="wrapper">
       <div class="col">
