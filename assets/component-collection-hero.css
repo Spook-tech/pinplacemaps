@@ -59,7 +59,7 @@
 }
 
 .collection-hero--with-image h1{
-  color: var(--color-gray-light);
+  color: var(--color-white);
 }
 
 @media screen and (max-width: 749px) {
