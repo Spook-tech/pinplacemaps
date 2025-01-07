@@ -4,7 +4,7 @@
       <h2>{{ section.settings.title_top }}</h2>
 
       {%- if section.settings.image != blank -%}
-        {{ section.settings.image | image_url: height: 1170 | image_tag }}
+        {{ section.settings.image | image_url: height: section.settings.image.height | image_tag }}
       {%- else -%}
         {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
       {%- endif -%}
@@ -17,7 +17,7 @@
             <li>
               <div class="top">
                 {%- if block.settings.icon != blank -%}
-                  {{ block.settings.icon | image_url: height: 70 | image_tag }}
+                  {{ block.settings.icon | image_url: height: block.settings.icon.height | image_tag }}
                 {%- endif -%}
                 <h5>{{ block.settings.title }}</h5>
               </div>
