@@ -70,11 +70,11 @@
 
   .collection-hero--with-image h1{
     color: var(--color-white);
-    font-size: 32px;
+    font-size: 25px;
   }
 
   .collection-hero--with-image .collection-hero__text-wrapper {
-    padding: 2rem 0rem;
+    padding: 3rem 0rem;
   }
 
   .collection-hero--with-image .collection-hero__inner {
