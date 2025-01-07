@@ -6430,7 +6430,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
     flex-direction: column;
 }
 
-.about.horizontal .about__card svg, img{
+.about.horizontal .about__card svg,{
     max-height: 500px;
     /* object-fit: cover; */
 }
