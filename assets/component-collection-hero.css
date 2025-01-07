@@ -76,6 +76,10 @@
   .collection-hero--with-image .collection-hero__text-wrapper {
     padding: 2rem 0rem;
   }
+
+  .collection-hero--with-image .collection-hero__inner {
+    padding: 0px;
+  }
 }
 
 .collection-hero--with-image {
