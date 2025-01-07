@@ -10,7 +10,7 @@
             <li>
               <div class="top">
                 {%- if block.settings.icon != blank -%}
-                  {{ block.settings.icon | image_url: height: 70 | image_tag }}
+                  {{ block.settings.icon | image_url: height: block.settings.icon.height | image_tag }}
                 {%- endif -%}
                 <h5>{{ block.settings.title }}</h5>
               </div>
