@@ -3,6 +3,9 @@
     <div class="about__card">
       {% for block in section.blocks %}
         {% if block.type == 'image' %}
+
+                      <script>console.log({{ block.settings.image.width | json }})</script>
+
           <div class="col">
             {%- if block.settings.image != blank -%}
               {{ block.settings.image | image_url: height: 661 | image_tag }}
@@ -13,8 +16,6 @@
         {% elsif block.type == 'text' %}
           <div class="col">
             {{ block.settings.text }}
-
-            <script>console.log({{ block.settings.image.width | json }})</script>
 
             {%- if block.settings.image != blank -%}
               {{ block.settings.image | image_url: height: 75 | image_tag: class: 'signature' }}
