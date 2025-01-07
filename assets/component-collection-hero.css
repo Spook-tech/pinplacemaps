@@ -56,7 +56,10 @@
 
 .collection-hero--with-image .collection-hero__text-wrapper {
   padding: 6rem 4rem;
-  color: #ffffff;
+}
+
+.collection-hero--with-image h1{
+  color: var(--color-background);
 }
 
 @media screen and (max-width: 749px) {
