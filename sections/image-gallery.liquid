@@ -9,7 +9,7 @@
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
-              {{ block.settings.image | image_url: height: 1200 | image_tag}}
+              {{ block.settings.image | image_url: height: block.settings.image.height | image_tag}}
             </li>
           {% endif %}
         {% endfor %}
@@ -18,7 +18,7 @@
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
-              {{ block.settings.image | image_url: height: 1200 | image_tag}}
+              {{ block.settings.image | image_url: height: block.settings.image.height | image_tag}}
             </li>
           {% endif %}
         {% endfor %}
@@ -30,7 +30,7 @@
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
-              {{ block.settings.image | image_url: height: 1200 | image_tag}}
+              {{ block.settings.image | image_url: height: block.settings.image.height | image_tag}}
             </li>
           {% endif %}
         {% endfor %}
@@ -39,7 +39,7 @@
         {% for block in section.blocks %}
           {% if block.settings.image != blank %}
             <li>
-              {{ block.settings.image | image_url: height: 1200 | image_tag}}
+              {{ block.settings.image | image_url: height: block.settings.image.height | image_tag}}
             </li>
           {% endif %}
         {% endfor %}
