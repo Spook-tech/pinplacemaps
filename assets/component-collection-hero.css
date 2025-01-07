@@ -58,12 +58,6 @@
   padding: 3rem 0 4rem;
 }
 
-.collection-hero__image-container {
-  height: 500px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
 @media screen and (max-width: 749px) {
   .collection-hero__image-container {
     height: 20rem;
@@ -75,6 +69,7 @@
 }
 
 .collection-hero__image-container{
+  object-fit: cover;
   position: absolute;
   left: 0;
   top: 0;
