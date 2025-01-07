@@ -51,7 +51,7 @@
   {% assign total_percent = excellent_percent | plus: great_percent | plus: good_percent | plus: average_percent | plus: bad_percent %}
   {% assign correction = 100 | minus: total_percent %}
 
-  <!-- {% assign bad_percent = bad_percent | plus: correction %} -->
+  {% assign bad_percent = bad_percent | plus: correction %}
 
   <h3>{{ average_rating | round: 1 }}</h3>
   <div class="reviews__summary">
