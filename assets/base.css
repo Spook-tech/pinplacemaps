@@ -5096,10 +5096,6 @@ textarea:focus-visible {
   gap: 6px;
 }
 
-.menu-item-has-children{
-  position: relative;
-}
-
 .navigation__list li.menu-item-has-children::after {
   content: "";
   display: inline-block;
@@ -5174,8 +5170,13 @@ textarea:focus-visible {
   }
 }
 
+.menu-item-has-children{
+  position: relative;
+}
+
 .navigation__list .sub-menu {
   width: 100%;
+  min-width: 400px;
   flex-direction: column;
   display: none;
   padding: 20px;
@@ -5184,7 +5185,8 @@ textarea:focus-visible {
   flex-wrap: wrap;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px 30px;
-  left: 0;
+  left: 50%;
+  transform: traslateX(-50%);
   top: 100%;
   z-index: 2;
   background: var(--color-gray-light);
