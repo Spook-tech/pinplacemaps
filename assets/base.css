@@ -5435,13 +5435,13 @@ textarea:focus-visible {
 
 @media (hover: hover) {
   .rating .link:hover {
-    /* color: var(--color-green); */
+    color: var(--color-green);
   }
 }
 
 @media (hover: none) {
   .rating .link:active {
-    /* color: var(--color-green); */
+    color: var(--color-green);
   }
 }
 
