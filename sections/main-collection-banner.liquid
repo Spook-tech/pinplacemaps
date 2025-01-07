@@ -25,8 +25,7 @@
     {%- if section.settings.show_collection_image and collection.image -%}
       <div class="collection-hero__image-container media gradient">
         <img
-          src="{{ collection.image | image_url: width: 1100 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width }}px"
+          src="{{ collection.image | image_url: width: 1920 }}"
           alt="{{ collection.image.alt | escape }}"
           width="{{ collection.image.width }}"
           height="{{ collection.image.height }}"
