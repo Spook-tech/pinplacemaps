@@ -9059,6 +9059,6 @@ html, body {
   padding-left: 0px !important;
 }
 
-.collection-hero__inner {
+.collection-hero--with-image {
   position: relative;
 }
