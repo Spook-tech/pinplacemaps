@@ -81,7 +81,7 @@
             <div class="swiper-wrapper">
               {% for image in product.images %}
                 <div class="swiper-slide">
-                  {{ image | image_url: width: 570 | image_tag }}
+                  {{ image | image_url: width: image.width | image_tag }}
                 </div>
               {% endfor %}
             </div>
