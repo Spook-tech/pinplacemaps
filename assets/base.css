@@ -11,6 +11,8 @@
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+
+  
 }
 
 @font-face {
@@ -4176,6 +4178,7 @@ table {
   --color-gray-light: #F7F7F7;
   --color-green: #146F60;
   --color-green-light: #0D947D;
+  --oke-button-textColorHover: #ffffff;
   /* --color-red: #E55250; */
   --color-red: #E55250;
   --color-red-dark: #9A180B;
@@ -9065,6 +9068,6 @@ html, body {
   padding-left: 0px !important;
 }
 
-.okeReviews[data-oke-container] .oke-button:not(.oke-is-loading):not(.oke-is-active):hover, div.okeReviews .oke-button:not(.oke-is-loading):not(.oke-is-active):hover {
+/* .okeReviews[data-oke-container] .oke-button:not(.oke-is-loading):not(.oke-is-active):hover, div.okeReviews .oke-button:not(.oke-is-loading):not(.oke-is-active):hover {
   color: var(--color-white) !important;
-}
+} */
