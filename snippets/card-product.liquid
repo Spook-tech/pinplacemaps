@@ -9,17 +9,17 @@
 {% endcomment %}
 
 {%- if card_product and card_product != empty -%}
-    {% assign review_ratings_string = "" %}
-    
-    {% for review in section.settings.product.metafields.custom.reviews.value %}
-      {% if forloop.first %}
-        {% assign review_ratings_string = review.rating %}
-      {% else %}
-        {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
-      {% endif %}
-    {% endfor %}
-    
-    {% assign review_ratings = review_ratings_string | split: "," %}
+  {% assign review_ratings_string = "" %}
+  
+  {% for review in card_product.metafields.custom.reviews.value %}
+    {% if forloop.first %}
+      {% assign review_ratings_string = review.rating %}
+    {% else %}
+      {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+    {% endif %}
+  {% endfor %}
+  
+  {% assign review_ratings = review_ratings_string | split: "," %}
   {% assign total_reviews = review_ratings.size %}
   {% assign total_rating_sum = 0 %}
 
