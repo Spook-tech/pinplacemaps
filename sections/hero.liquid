@@ -1,14 +1,4 @@
-{% if collection.metafields.reviews.author %}
-  <div class="review-author">
-    <strong>Автор отзыва:</strong>
-    {{ collection.metafields.reviews.author.value }}
-  </div>
-{% else %}
-  <div class="review-author">
-    Автор отзыва не указан.
-  </div>
-{% endif %}
-
+<script>console.log({{ shop.metaobject | json}})</script>
 
 
 {%- liquid
