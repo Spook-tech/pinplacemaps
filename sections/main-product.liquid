@@ -2,8 +2,20 @@
 
 <h2>Отзывы</h2>
 <ul>
-  {% for review in product.metafields.reviews %}
-    <li>{{ review.title }}</li>
+  {% for review in product.metafields.custom.reviews.value %}
+    <li>
+      <strong>Заголовок:</strong> {{ review.title }}<br>
+      <strong>Автор:</strong> {{ review.author }}<br>
+      <strong>Дата:</strong> {{ review.date }}<br>
+      <strong>Оценка:</strong> {{ review.rating }}/5<br>
+      <strong>Текст:</strong> {{ review.text }}<br>
+      <strong>Изображения:</strong>
+      <ul>
+        {% for image in review.images %}
+          <li><img src="{{ image | media_url }}" alt="Review image"></li>
+        {% endfor %}
+      </ul>
+    </li>
   {% endfor %}
 </ul>
 
