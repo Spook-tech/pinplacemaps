@@ -1,4 +1,27 @@
-<script>console.log({{ product.metafields.custom.reviews.reviews[0].title | json }})</script>
+{% assign reviews = product.metafields.custom.reviews %}
+{% if reviews != null and reviews.value.size > 0 %}
+  <div class="reviews">
+    {% for review in reviews.value %}
+      <div class="review">
+        <h3>{{ review.author }}</h3>
+        <p><strong>{{ review.title }}</strong></p>
+        <p>{{ review.text }}</p>
+        <p><em>{{ review.date | date: "%d %B %Y" }}</em></p>
+        <p>Rating: {{ review.rating }}/5</p>
+
+        {% if review.images.size > 0 %}
+          <div class="review-images">
+            {% for image in review.images %}
+              <img src="{{ image | image_url }}" alt="{{ review.title }}">
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No reviews available for this product.</p>
+{% endif %}
 
 <product-info
   id="MainProduct-{{ section.id }}"
