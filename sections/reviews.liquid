@@ -32,7 +32,6 @@
         {% case block.type %}
           {% when 'rating' %}
             <div class="reviews__stats">
-              {% assign review_ratings = product.metafields.custom.review_rating.value %}
               {% assign total_reviews = review_ratings.size %}
             
               {% assign total_rating_sum = 0 %}
