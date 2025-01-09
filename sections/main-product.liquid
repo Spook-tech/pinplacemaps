@@ -11,7 +11,7 @@
       <strong>Изображения:</strong>
       <ul>
         {% for image in review.images.value %}
-      <script>console.log({{ image | json }})</script>
+          <script>console.log({{ image | json }})</script>
           <li><img src="{{ image | file_url   }}" alt="Review image"></li>
         {% endfor %}
       </ul>
