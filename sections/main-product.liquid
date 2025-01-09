@@ -1,4 +1,11 @@
-<script>console.log({{ product.metafields.reviews.value | json }})</script>
+<script>console.log({{ product.metafields.custom.reviews.value | json }})</script>
+
+<h2>Отзывы</h2>
+<ul>
+  {% for review in product.metafields.reviews %}
+    <li>{{ review.title }}</li>
+  {% endfor %}
+</ul>
 
 
 <product-info
