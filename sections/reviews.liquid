@@ -234,29 +234,18 @@
               </div>
 
               <ul data-reviews-per-page="{{ block.settings.reviews_per_page }}" class="reviews__list">
-                {% for text in product.metafields.custom.review_text.value %}
+                {% for review in product.metafields.custom.reviews.value %}
                   {% assign review_index = forloop.index | minus: 1 %}
 
-                  {% assign review_author = product.metafields.custom.review_author.value | slice: review_index %}
-                  {% assign review_date_raw = product.metafields.custom.review_date.value | slice: review_index %}
-                  {% assign review_date = review_date_raw[0] | strip %}
-                  {% assign review_title = product.metafields.custom.review_title.value | slice: review_index %}
-
-                  {% assign review_images_raw = product.metafields.custom.review_images.value | slice: review_index %}
-                  {% assign review_images = review_images_raw[0] | strip %}
-                  {% assign review_images_array = review_images | split: ', ' %}
-
-                  {% assign review_rating_raw = product.metafields.custom.review_rating.value | slice: review_index %}
-                  {% assign review_rating = review_rating_raw[0] | plus: 0 %}
+                  {% assign review_author = review.author %}
+                  {% assign review_date = review.date %}
+                  {% assign review_title = review.title %}
+                  {% assign review_rating = review.rating %}
+                  {% assign review_text = review.text %}
 
                   <li data-rating="{{ review_rating }}" class="review__card">
                     <div class="reviews__product">
                       <a href="{{ product.url }}" class="reviews__link">
-                        {% for image_url in review_images_array %}
-                          {% if forloop.first %}
-                            <img src="{{ image_url | strip }}" height="170" width="170" alt="">
-                          {% endif %}
-                        {% endfor %}
                         <h5>{{ product.title }}</h5>
                       </a>
                     </div>
@@ -273,12 +262,10 @@
                       {% endif %}
 
                       <p class="review__text">
-                        {{ text }}
+                        {{ review_text }}
                       </p>
                       <div class="reviews__images">
-                        {% for image_url in review_images_array %}
-                          <img src="{{ image_url | strip }}" height="80" width="80" alt="">
-                        {% endfor %}
+
                       </div>
                     </div>
                   </li>
