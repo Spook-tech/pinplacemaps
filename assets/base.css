@@ -4178,7 +4178,7 @@ table {
   --color-gray-light: #F7F7F7;
   --color-green: #146F60;
   --color-green-light: #0D947D;
-  --oke-button-textColorHover: #ffffff;
+  --oke-button-textColorHover: #ffffff !important;
   /* --color-red: #E55250; */
   --color-red: #E55250;
   --color-red-dark: #9A180B;
