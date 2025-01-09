@@ -265,7 +265,9 @@
                         {{ review_text }}
                       </p>
                       <div class="reviews__images">
-
+                        {% for image in review.images.value %}
+                          {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
+                        {% endfor %}
                       </div>
                     </div>
                   </li>
