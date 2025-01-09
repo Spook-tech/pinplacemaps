@@ -9,7 +9,7 @@
       <strong>Оценка:</strong> {{ review.rating }}/5<br>
       <strong>Текст:</strong> {{ review.text }}<br>
       <strong>Изображения:</strong>
-      <script>console.log({{ review.image.value | json }})</script>
+      <script>console.log({{ review.images.value | json }})</script>
       <ul>
         {% for image in review.images %}
           <li><img src="{{ image | media_url }}" alt="Review image"></li>
