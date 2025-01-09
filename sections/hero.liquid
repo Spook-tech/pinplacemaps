@@ -1,4 +1,14 @@
-<script>console.log({{  shop.metaobjects['reviews']['title'] | json}})</script>
+{% for review in product.metaobjects.reviews %}
+  <div class="review">
+    {% if review.fields.author %}
+      <strong>Автор:</strong> {{ review.fields.author }}
+    {% else %}
+      <strong>Автор:</strong> Не указан
+    {% endif %}
+  </div>
+{% else %}
+  <p>Отзывов пока нет.</p>
+{% endfor %}
 
 
 {%- liquid
