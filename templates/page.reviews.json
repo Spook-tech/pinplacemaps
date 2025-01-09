@@ -27,7 +27,7 @@
         "text_VxhDaE": {
           "type": "text",
           "settings": {
-            "text": "<h2>Lorem ipsum</h2><p>dolor sit amet, consectetur adipiscing elit. Cras maximus gravida consequat. Cras viverra ut nunc sit amet malesuada. Vivamus lectus velit, venenatis a nibh ac, tempor blandit orci. Proin nec felis lacus. Pellentesque ut bibendum purus. Praesent vitae quam interdum, mollis purus nec, efficitur ipsum. Morbi ut posuere libero, ac vehicula lacus. Nam iaculis dui velit, eu suscipit justo feugiat nec. Phasellus efficitur felis non finibus condimentum.</p>"
+            "text": "<h1>10,000+ happy customers</h1><p>Your words matter! Explore customer reviews and learn how our pin travel maps have inspired countless adventures. Share your experience and help us continue creating exceptional products for travelers everywhere.</p>"
           }
         }
       },
@@ -59,7 +59,7 @@
         "reviews_W8QmKq"
       ],
       "settings": {
-        "title": "Hear from our happy travelers",
+        "title": "Hear from Them",
         "product": "world-map-coloured-copy"
       }
     }
