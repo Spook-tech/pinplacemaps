@@ -23,7 +23,18 @@
 
             {% when 'rating' %}
               {% if is_product_loaded %}
-                {% assign review_ratings = section.settings.product.metafields.custom.review_rating.value %}
+                {% assign review_ratings_string = "" %}
+                
+                {% for review in product.metafields.custom.reviews.value %}
+                  {% if forloop.first %}
+                    {% assign review_ratings_string = review.rating %}
+                  {% else %}
+                    {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+                  {% endif %}
+                {% endfor %}
+                
+                {% assign review_ratings = review_ratings_string | split: "," %}
+
                 {% assign total_reviews = review_ratings.size %}
                 {% assign total_rating_sum = 0 %}
 
