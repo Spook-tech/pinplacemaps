@@ -1,4 +1,3 @@
-<script>console.log({{ product.metafields.custom.reviews.value | json }})</script>
 
 <h2>Отзывы</h2>
 <ul>
@@ -10,6 +9,7 @@
       <strong>Оценка:</strong> {{ review.rating }}/5<br>
       <strong>Текст:</strong> {{ review.text }}<br>
       <strong>Изображения:</strong>
+<script>console.log({{ review.images | json }})</script>
       <ul>
         {% for image in review.images %}
           <li><img src="{{ image | media_url }}" alt="Review image"></li>
