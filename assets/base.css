@@ -9069,5 +9069,5 @@ html, body {
 }
 
 .oke-reviewsTab {
-  display: none;
+  display: none !important;
 }
