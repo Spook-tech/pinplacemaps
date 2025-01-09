@@ -23,6 +23,7 @@
 
             {% when 'rating' %}
               {% if is_product_loaded %}
+                <script>console.log({{ product.metafields.custom.reviews.value.value | json }})</script>
                 {% assign review_ratings_string = "" %}
                 
                 {% for review in product.metafields.custom.reviews.value %}
