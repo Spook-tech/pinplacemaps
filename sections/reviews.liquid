@@ -2,6 +2,25 @@
   {% assign product = section.settings.product %}
 {% endif %}
 
+{% assign review_ratings_string = "" %}
+
+{% for review in product.metafields.custom.reviews.value %}
+  {% if forloop.first %}
+    {% assign review_ratings_string = review.rating %}
+  {% else %}
+    {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+  {% endif %}
+{% endfor %}
+
+{% assign review_ratings = review_ratings_string | split: "," %}
+
+<ul>
+  {% for rating in review_ratings %}
+    <li>{{ rating }}/5</li>
+  {% endfor %}
+</ul>
+
+
 <div class="container">
   <div class="reviews">
     {% if section.settings.title != blank %}
