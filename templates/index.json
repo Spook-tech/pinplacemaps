@@ -310,7 +310,6 @@
         "rating_BTJPfk",
         "reviews_GNyVaN"
       ],
-      "disabled": true,
       "settings": {
         "title": "Hear from our happy travelers",
         "product": "world-map-coloured-copy"
@@ -318,18 +317,6 @@
     },
     "1736412588984b56d1": {
       "type": "apps",
-      "blocks": {
-        "okendo_reviews_widget_Fyq7Gg": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "world-map-coloured-copy",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_widget_Fyq7Gg"
-      ],
       "settings": {
         "include_margins": true
       }
