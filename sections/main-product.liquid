@@ -1,23 +1,4 @@
 
-<h2>Отзывы</h2>
-<ul>
-  {% for review in product.metafields.custom.reviews.value %}
-    <li>
-      <strong>Заголовок:</strong> {{ review.title }}<br>
-      <strong>Автор:</strong> {{ review.author }}<br>
-      <strong>Дата:</strong> {{ review.date }}<br>
-      <strong>Оценка:</strong> {{ review.rating }}/5<br>
-      <strong>Текст:</strong> {{ review.text }}<br>
-      <strong>Изображения:</strong>
-      <ul>
-        {% for image in review.images.value %}
-          {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
-        {% endfor %}
-      </ul>
-    </li>
-  {% endfor %}
-</ul>
-
 
 <product-info
   id="MainProduct-{{ section.id }}"
