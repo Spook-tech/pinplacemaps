@@ -22,7 +22,9 @@
       "blocks": {
         "image_VUhC6X": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Red_and_White_Modern_New_Year_Big_Sale_Outdoor_mini.png"
+          }
         },
         "text_ffbGzF": {
           "type": "text",
