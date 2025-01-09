@@ -10,8 +10,8 @@
       <strong>Текст:</strong> {{ review.text }}<br>
       <strong>Изображения:</strong>
       <ul>
-      <script>console.log({{ image | json }})</script>
         {% for image in review.images.value %}
+      <script>console.log({{ image | json }})</script>
           <li><img src="{{ image | file_url   }}" alt="Review image"></li>
         {% endfor %}
       </ul>
