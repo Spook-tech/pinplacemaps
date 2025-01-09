@@ -32,8 +32,6 @@
                     {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
                   {% endif %}
                 {% endfor %}
-
-                {{ review_ratings_string }}
                 
                 {% assign review_ratings = review_ratings_string | split: "," %}
 
