@@ -14,13 +14,6 @@
 
 {% assign review_ratings = review_ratings_string | split: "," %}
 
-<ul>
-  {% for rating in review_ratings %}
-    <li>{{ rating }}/5</li>
-  {% endfor %}
-</ul>
-
-
 <div class="container">
   <div class="reviews">
     {% if section.settings.title != blank %}
