@@ -1,13 +1,14 @@
-{% if product.metafields.custom_fields.reviews %}
-  <div class="metafield">
-    <strong>Дополнительная информация:</strong>
-    {{ product.metafields.custom_fields.reviews.author }}
+{% if collection.metafields.reviews.author %}
+  <div class="review-author">
+    <strong>Автор отзыва:</strong>
+    {{ collection.metafields.reviews.author.value }}
   </div>
 {% else %}
-  <div class="metafield">
-    Нет дополнительной информации.
+  <div class="review-author">
+    Автор отзыва не указан.
   </div>
 {% endif %}
+
 
 
 {%- liquid
