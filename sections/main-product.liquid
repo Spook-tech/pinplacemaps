@@ -124,7 +124,7 @@
               {%- when 'rating' -%}
                 {% assign review_ratings_string = "" %}
                 
-                {% for review in section.settings.product.metafields.custom.reviews.value %}
+                {% for review in product.metafields.custom.reviews.value %}
                   {% if forloop.first %}
                     {% assign review_ratings_string = review.rating %}
                   {% else %}
@@ -134,8 +134,15 @@
                 
                 {% assign review_ratings = review_ratings_string | split: "," %}
                 {% assign total_reviews = review_ratings.size %}
+                {% assign total_rating_sum = 0 %}
 
-                {%- render 'rating', stars_number: block.settings.stars_number, reviews_number: total_reviews -%}
+                {% for rating in review_ratings %}
+                  {% assign total_rating_sum = total_rating_sum | plus: rating | plus: 0 %}
+                {% endfor %}
+
+                {% assign average_rating = total_rating_sum | times: 1.0 | divided_by: total_reviews %}
+
+                {%- render 'rating', stars_number: average_rating, reviews_number: total_reviews -%}
               {%- when 'personalization' -%}
                 <div class="personalization-selector">
                   <div class="top">
