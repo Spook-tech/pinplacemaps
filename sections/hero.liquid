@@ -1,3 +1,15 @@
+{% if product.metafields.custom_fields.reviews %}
+  <div class="metafield">
+    <strong>Дополнительная информация:</strong>
+    {{ product.metafields.custom_fields.reviews.author }}
+  </div>
+{% else %}
+  <div class="metafield">
+    Нет дополнительной информации.
+  </div>
+{% endif %}
+
+
 {%- liquid
   assign fetch_priority = 'auto'
   if section.index == 1
