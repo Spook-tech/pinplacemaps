@@ -246,6 +246,11 @@
                   <li data-rating="{{ review_rating }}" class="review__card">
                     <div class="reviews__product">
                       <a href="{{ product.url }}" class="reviews__link">
+                        {% for image in review.images.value %}
+                          {% if forloop.first %}
+                            {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
+                          {% endif %}
+                        {% endfor %}
                         <h5>{{ product.title }}</h5>
                       </a>
                     </div>
