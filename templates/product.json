@@ -393,12 +393,6 @@
         "horizontal": false
       }
     },
-    "1736412782e025ceab": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
-    },
     "reviews_3C3tmL": {
       "type": "reviews",
       "blocks": {
@@ -418,8 +412,7 @@
         "reviews_gN4gwz"
       ],
       "settings": {
-        "title": "Hear from our happy travelers",
-        "product": ""
+        "title": "Hear from our happy travelers"
       }
     },
     "faq_nC9tNE": {
@@ -498,7 +491,6 @@
     "product_info_BFUzjV",
     "image_gallery_irqQEW",
     "image_with_text_jtUfEY",
-    "1736412782e025ceab",
     "reviews_3C3tmL",
     "faq_nC9tNE"
   ]
