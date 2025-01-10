@@ -1,17 +1,6 @@
-{% for product in collections.all.products %}
-  <div class="product">
-    <h2>{{ product.title }}</h2>
-    <a href="{{ product.url }}">
-      <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-    </a>
-    <p>{{ product.price | money }}</p>
-    <a href="{{ product.url }}">View Product</a>
-  </div>
-{% endfor %}
-
 {% assign review_ratings_string = "" %}
 
-{% for product in all_products %}
+{% for product in collections.all.products %}
   {{ product.title }}
   {% for review in product.metafields.custom.reviews.value %}
     {% if review_ratings_string == "" %}
