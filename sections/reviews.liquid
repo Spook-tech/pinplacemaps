@@ -254,6 +254,7 @@
                     {% assign review_rating = review.rating %}
                     {% assign review_text = review.text %}
                     {% assign review_image = review.product_image %}
+                    {% assign review_country = review.country %}
 
                     <li data-rating="{{ review_rating }}" class="review__card">
                       <div class="reviews__product">
@@ -262,7 +263,7 @@
                             {{ review_image | image_url: width: review_image.width | image_tag }}
                           {% endif %}
                           
-                          <h5>{{ product.title }}</h5>
+                          <h5>{{ product.title }} <br> {{ review_country }}</h5>
                         </a>
                       </div>
                       <div class="reviews__info">
