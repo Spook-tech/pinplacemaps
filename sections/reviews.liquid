@@ -1,7 +1,6 @@
 {% assign review_ratings_string = "" %}
 
 {% for product in collections.all.products %}
-  {{ product.title }}
   {% for review in product.metafields.custom.reviews.value %}
     {% if review_ratings_string == "" %}
       {% assign review_ratings_string = review.rating %}
@@ -245,48 +244,50 @@
               </div>
 
               <ul data-reviews-per-page="{{ block.settings.reviews_per_page }}" class="reviews__list">
-                {% for review in product.metafields.custom.reviews.value %}
-                  {% assign review_index = forloop.index | minus: 1 %}
+                {% for product in collections.all.products %}
+                  {% for review in product.metafields.custom.reviews.value %}
+                    {% assign review_index = forloop.index | minus: 1 %}
 
-                  {% assign review_author = review.author %}
-                  {% assign review_date = review.date %}
-                  {% assign review_title = review.title %}
-                  {% assign review_rating = review.rating %}
-                  {% assign review_text = review.text %}
+                    {% assign review_author = review.author %}
+                    {% assign review_date = review.date %}
+                    {% assign review_title = review.title %}
+                    {% assign review_rating = review.rating %}
+                    {% assign review_text = review.text %}
 
-                  <li data-rating="{{ review_rating }}" class="review__card">
-                    <div class="reviews__product">
-                      <a href="{{ product.url }}" class="reviews__link">
-                        {% for image in review.images.value %}
-                          {% if forloop.first %}
-                            {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
-                          {% endif %}
-                        {% endfor %}
-                        <h5>{{ product.title }}</h5>
-                      </a>
-                    </div>
-                    <div class="reviews__info">
-                      <span class="author">{{ review_author }}</span>
-                      <span class="date">{{ review_date | date: '%-d %B %Y' }}</span>
-
-                      {% if review_rating != blank %}
-                        {%- render 'rating', stars_number: review_rating, use_small_text: true -%}
-                      {% endif %}
-
-                      {% if review_title != blank %}
-                        <h4>{{ review_title }}</h4>
-                      {% endif %}
-
-                      <p class="review__text">
-                        {{ review_text }}
-                      </p>
-                      <div class="reviews__images">
-                        {% for image in review.images.value %}
-                          {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
-                        {% endfor %}
+                    <li data-rating="{{ review_rating }}" class="review__card">
+                      <div class="reviews__product">
+                        <a href="{{ product.url }}" class="reviews__link">
+                          {% for image in review.images.value %}
+                            {% if forloop.first %}
+                              {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
+                            {% endif %}
+                          {% endfor %}
+                          <h5>{{ product.title }}</h5>
+                        </a>
                       </div>
-                    </div>
-                  </li>
+                      <div class="reviews__info">
+                        <span class="author">{{ review_author }}</span>
+                        <span class="date">{{ review_date | date: '%-d %B %Y' }}</span>
+
+                        {% if review_rating != blank %}
+                          {%- render 'rating', stars_number: review_rating, use_small_text: true -%}
+                        {% endif %}
+
+                        {% if review_title != blank %}
+                          <h4>{{ review_title }}</h4>
+                        {% endif %}
+
+                        <p class="review__text">
+                          {{ review_text }}
+                        </p>
+                        <div class="reviews__images">
+                          {% for image in review.images.value %}
+                            {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </li>
+                  {% endfor %}
                 {% endfor %}
               </ul>
 
@@ -311,11 +312,6 @@
       "label": "Title",
       "default": "Hear from our happy travelers"
     },
-    {
-      "type": "product",
-      "id": "product",
-      "label": "Select product"
-    }
   ],
   "blocks": [
     {
