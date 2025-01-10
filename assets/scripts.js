@@ -768,25 +768,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("prev-page");
     const nextButton = document.getElementById("next-page");
 
-    const REVIEWS_PER_PAGE = reviewsList.dataset.reviewsPerPage; // Максимальное количество отзывов на одной странице
+    const REVIEWS_PER_PAGE = parseInt(reviewsList.dataset.reviewsPerPage, 5);
     let currentPage = 1; // Текущая страница
 
     let selectedRating = "all";
     let selectedSort = "newest";
 
-    // Функция для отображения отзывов на текущей странице
     const showPage = (filteredReviews) => {
       const startIndex = (currentPage - 1) * REVIEWS_PER_PAGE;
       const endIndex = startIndex + REVIEWS_PER_PAGE;
-
+    
       // Показываем только отзывы на текущей странице
       const reviewsToShow = filteredReviews.slice(startIndex, endIndex);
-      reviewsList.innerHTML = "";
+      reviewsList.innerHTML = ""; // Очистка списка отзывов
       reviewsToShow.forEach((review) => reviewsList.appendChild(review));
-
+    
       // Обновление активной страницы и видимости кнопок
       updatePagination(filteredReviews);
     };
+
 
     // Функция для обновления кнопок пагинации
     const updatePagination = (filteredReviews) => {
