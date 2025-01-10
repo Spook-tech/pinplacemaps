@@ -47,7 +47,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/hero_55650dce-cd26-4fa5-bf92-81a5985c4231.png",
-        "product": "world-map-beige-colour"
+        "product": "world-map-coloured-copy"
       }
     },
     "images_3Bx3mE": {
@@ -217,6 +217,12 @@
             "video_url": "shopify://files/videos/reels3.mp4"
           }
         },
+        "video_BzqRLm": {
+          "type": "video",
+          "settings": {
+            "video_url": "shopify://files/videos/Snapinsta.app_video_AQOrdOKKDEk2vKHgmsYEclWsjFM8qTHaTvX25PHqDtYkLPh6vfK1fdlYcZK1G5VAAqP1dFzJtlcn6rb9xmF960O6.mp4"
+          }
+        },
         "video_ETtnGp": {
           "type": "video",
           "settings": {
@@ -228,6 +234,7 @@
         "video_Mc67TB",
         "video_TUPRgh",
         "video_i9iVAe",
+        "video_BzqRLm",
         "video_ETtnGp"
       ],
       "settings": {
@@ -310,6 +317,7 @@
         "rating_BTJPfk",
         "reviews_GNyVaN"
       ],
+      "disabled": true,
       "settings": {
         "title": "Hear from our happy travelers",
         "product": "world-map-coloured-copy"
