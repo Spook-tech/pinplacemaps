@@ -309,7 +309,7 @@
         "reviews_GNyVaN": {
           "type": "reviews",
           "settings": {
-            "reviews_per_page": 5
+            "reviews_per_page": 3
           }
         }
       },
