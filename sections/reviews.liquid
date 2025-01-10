@@ -1,6 +1,4 @@
-{% assign products = all_products %}
-{% for product_handle in products %}
-  {% assign product = all_products[product_handle] %}
+{% for product in collections.all.products %}
   <div class="product">
     <h2>{{ product.title }}</h2>
     <a href="{{ product.url }}">
@@ -11,6 +9,18 @@
   </div>
 {% endfor %}
 
+{% assign review_ratings_string = "" %}
+
+{% for product in all_products %}
+  {{ product.title }}
+  {% for review in product.metafields.custom.reviews.value %}
+    {% if review_ratings_string == "" %}
+      {% assign review_ratings_string = review.rating %}
+    {% else %}
+      {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
 
 {% assign review_ratings = review_ratings_string | split: "," %}
 
