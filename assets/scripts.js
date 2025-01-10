@@ -768,7 +768,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("prev-page");
     const nextButton = document.getElementById("next-page");
 
-    const REVIEWS_PER_PAGE = parseInt(reviewsList.dataset.reviewsPerPage, 5);
+    const REVIEWS_PER_PAGE = 5;
     let currentPage = 1; // Текущая страница
 
     let selectedRating = "all";
