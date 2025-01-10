@@ -4,7 +4,7 @@
 
 {% assign review_ratings_string = "" %}
 
-{% for product in collection.products %}
+{% for product in all_products %}
   {% for review in product.metafields.custom.reviews.value %}
     {% if review_ratings_string == "" %}
       {% assign review_ratings_string = review.rating %}
