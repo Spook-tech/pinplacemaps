@@ -403,7 +403,7 @@
         "reviews_gN4gwz": {
           "type": "reviews",
           "settings": {
-            "reviews_per_page": 5
+            "reviews_per_page": 6
           }
         }
       },
