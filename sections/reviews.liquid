@@ -258,8 +258,10 @@
                     <li data-rating="{{ review_rating }}" class="review__card">
                       <div class="reviews__product">
                         <a href="{{ product.url }}" class="reviews__link">
-                          {{ review_image | image_url: width: review_image.width | image_tag: fetchpriority: fetch_priority }}
-
+                          {% if review_image != blank %}
+                            {{ review_image | image_url: width: review_image.width | image_tag }}
+                          {% endif %}
+                          
                           <h5>{{ product.title }}</h5>
                         </a>
                       </div>
