@@ -253,15 +253,13 @@
                     {% assign review_title = review.title %}
                     {% assign review_rating = review.rating %}
                     {% assign review_text = review.text %}
+                    {% assign review_image = review.product_image %}
 
                     <li data-rating="{{ review_rating }}" class="review__card">
                       <div class="reviews__product">
                         <a href="{{ product.url }}" class="reviews__link">
-                          {% for image in review.images.value %}
-                            {% if forloop.first %}
-                              {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
-                            {% endif %}
-                          {% endfor %}
+                          {{ review_image | image_url: width: review_image.width | image_tag: fetchpriority: fetch_priority }}
+
                           <h5>{{ product.title }}</h5>
                         </a>
                       </div>
