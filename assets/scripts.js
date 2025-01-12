@@ -353,15 +353,11 @@ document.addEventListener("DOMContentLoaded", function () {
           handleVideoPlayback();
           updateSlideOpacity();
         },
-    init: function () {
-      const slides = this.slides;
-      slides.forEach((slide, index) => {
-        slide.addEventListener('click', () => {
-          const realIndex = swiper.slides[index].getAttribute('data-swiper-slide-index');
-          swiper.slideToLoop(parseInt(realIndex, 10));
-        });
-      });
-    }
+    click() {
+        console.log('index', this.clickedIndex);
+        mySwiper.slideTo(this.clickedIndex);    
+    },
+
       },
       breakpoints: {
         320: {
