@@ -927,11 +927,6 @@ summary::-webkit-details-marker {
 }
 
 @media screen and (max-width: 989px) {
-  .grid--1-col-tablet-down .grid__item {
-    width: 100%;
-    max-width: 100%;
-  }
-
   .slider--tablet.grid--peek {
     margin: 0;
     width: 100%;
@@ -4222,6 +4217,10 @@ table {
 @media (max-width: 767px) {
   .container {
     padding-inline: 16px;
+  }
+  .grid--1-col-tablet-down .grid__item {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
