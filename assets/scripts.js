@@ -794,7 +794,6 @@ document.addEventListener("DOMContentLoaded", () => {
       updatePagination(filteredReviews);
 
       if (loaded !== 0) {
-        loaded++;
         const element = document.querySelector('.reviews');
         const y = element.getBoundingClientRect().top + window.scrollY;      
         
@@ -803,6 +802,7 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: 'instant' // Или 'smooth' для плавного скролла
         });
       }
+      loaded++;
     };
 
 
