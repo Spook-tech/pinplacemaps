@@ -941,6 +941,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  setTimeout(() => { 
   document.querySelectorAll('.page-numbers').forEach((pageNumber) => {
     pageNumber.addEventListener('click', () => {
       console.log(pageNumber)
@@ -955,6 +956,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  }, 2000)
 
   
   // Проверяем, есть ли в URL якорь #FAQ при загрузке страницы
