@@ -353,6 +353,14 @@ document.addEventListener("DOMContentLoaded", function () {
           handleVideoPlayback();
           updateSlideOpacity();
         },
+        init: function () {
+          const slides = this.slides;
+          slides.forEach((slide, index) => {
+            slide.addEventListener('click', () => {
+              swiper.slideTo(index);
+            });
+          });
+        }
       },
       breakpoints: {
         320: {
