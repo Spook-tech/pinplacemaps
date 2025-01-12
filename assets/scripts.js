@@ -398,11 +398,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (video) {
           // Активное видео начинает воспроизведение
-          if (slide.classList.contains("swiper-slide-active") {
+          if (slide.classList.contains("swiper-slide-active")) {
             video.play();
-          }
-          if (slide.classList.contains("swiper-slide-active") || slide.classList.contains("swiper-slide-next") || slide.classList.contains("swiper-slide-prev")) {
-            console.log(slide)
             playButton.style.display = "none";
             pauseButton.style.display = "block";
           } else {
