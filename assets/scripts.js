@@ -796,7 +796,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         window.scroll({
           top: y - 150,
-          behavior: 'smooth' // Или 'smooth' для плавного скролла
+          behavior: 'instant' // Или 'smooth' для плавного скролла
         });
     };
 
