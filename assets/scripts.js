@@ -792,11 +792,12 @@ document.addEventListener("DOMContentLoaded", () => {
       updatePagination(filteredReviews);
 
 
-      const element = document.querySelector('.reviews');
+      const element = document.queryselector('.reviews');
       const y = element.getBoundingClientRect().top + window.scrollY;
       
       window.scroll({
-        top: y + -50,
+        top: y + 50,
+        behavior: 'instant'
       });
     };
 
