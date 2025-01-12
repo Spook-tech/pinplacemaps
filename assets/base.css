@@ -9105,3 +9105,10 @@ html, body {
 .oke-reviewsTab {
   display: none !important;
 }
+
+.facet-filters__field{
+  position: relative;
+}
+.facet-filters__field .filters__button{
+  position: static;
+}
