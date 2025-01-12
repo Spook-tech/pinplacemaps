@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper("#explore", {
       observer: true,
       observeParents: true,
-      // loop: true,
+      loop: true,
       pagination: {
         el: ".explore-pagination",
         clickable: true,
@@ -353,14 +353,15 @@ document.addEventListener("DOMContentLoaded", function () {
           handleVideoPlayback();
           updateSlideOpacity();
         },
-        init: function () {
-          const slides = this.slides;
-          slides.forEach((slide, index) => {
-            slide.addEventListener('click', () => {
-              swiper.slideTo(index);
-            });
-          });
-        }
+    init: function () {
+      const slides = this.slides;
+      slides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+          const realIndex = swiper.slides[index].getAttribute('data-swiper-slide-index');
+          swiper.slideToLoop(parseInt(realIndex, 10));
+        });
+      });
+    }
       },
       breakpoints: {
         320: {
