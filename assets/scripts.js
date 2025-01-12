@@ -941,15 +941,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  document.querySelectorAll('.page-numbers').forEach(() => {
-      const element = document.querySelector('.reviews');
+document.querySelectorAll('.page-numbers').forEach((pageNumber) => {
+  pageNumber.addEventListener('click', () => {
+    const element = document.querySelector('.reviews');
+    if (element) {
       const y = element.getBoundingClientRect().top + window.scrollY;
-      
+
       window.scroll({
         top: y,
-        behavior: 'instant'
+        behavior: 'auto' // Или 'smooth' для плавного скролла
       });
-  })
+    }
+  });
+});
+
   
   // Проверяем, есть ли в URL якорь #FAQ при загрузке страницы
   if (window.location.hash === "#FAQ") {
