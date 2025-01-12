@@ -5898,6 +5898,13 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   }
 }
 
+.product .slider {
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
 .product__item h5 {
   font-size: 14px;
   font-weight: 700;
