@@ -767,6 +767,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const reviewsList = document.querySelector(".reviews__list");
     const reviews = Array.from(reviewsList.children); // Сохраняем отзывы в массив
 
+    let loaded = 0;
+
     const ratingButtons = document.querySelectorAll("[data-reviews-rating]");
     const sortDropdown = document.getElementById("sort-reviews");
     const paginationContainer = document.querySelector(".pagination__list");
@@ -791,13 +793,16 @@ document.addEventListener("DOMContentLoaded", () => {
       // Обновление активной страницы и видимости кнопок
       updatePagination(filteredReviews);
 
+      if (loaded !== 0) {
+        loaded++;
         const element = document.querySelector('.reviews');
-        const y = element.getBoundingClientRect().top + window.scrollY;
-  
+        const y = element.getBoundingClientRect().top + window.scrollY;      
+        
         window.scroll({
           top: y - 150,
           behavior: 'instant' // Или 'smooth' для плавного скролла
         });
+      }
     };
 
 
