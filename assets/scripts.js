@@ -795,7 +795,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const y = element.getBoundingClientRect().top + window.scrollY;
   
         window.scroll({
-          top: y,
+          top: y - 100,
           behavior: 'smooth' // Или 'smooth' для плавного скролла
         });
     };
