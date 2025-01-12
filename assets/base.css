@@ -5905,6 +5905,10 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
     padding: 0 25px;
 }
 
+.product .slider .swiper {
+    padding: 0 10px;
+}
+
 .product__item h5 {
   font-size: 14px;
   font-weight: 700;
