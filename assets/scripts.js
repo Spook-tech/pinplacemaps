@@ -790,6 +790,14 @@ document.addEventListener("DOMContentLoaded", () => {
     
       // Обновление активной страницы и видимости кнопок
       updatePagination(filteredReviews);
+
+
+      const y = document.queryselector('.reviews').getBoundingClientRect().top + window.scrollY;
+      
+      window.scroll({
+        top: y + 50,
+        behavior: 'smooth'
+      });
     };
 
 
