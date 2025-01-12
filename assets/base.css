@@ -933,8 +933,8 @@ summary::-webkit-details-marker {
   }
 
   .grid--1-col-tablet-down .grid__item {
-    width: 50%;
-    max-width: 50%;
+    width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2);
+    max-width: calc((100% - var(--grid-desktop-horizontal-spacing)) / 2);
   }
   
   .slider--tablet.grid--peek .grid__item {
