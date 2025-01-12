@@ -6059,7 +6059,9 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   overflow: hidden;
 }
 
-.explore .swiper-slide.swiper-slide-active .buttons .icon {
+.explore .swiper-slide.swiper-slide-active .buttons .icon,
+.explore .swiper-slide.swiper-slide-next .buttons .icon,
+.explore .swiper-slide.swiper-slide-prev .buttons .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
