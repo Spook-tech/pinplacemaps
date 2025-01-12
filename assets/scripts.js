@@ -791,8 +791,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Обновление активной страницы и видимости кнопок
       updatePagination(filteredReviews);
 
-
-
+        const element = document.querySelector('.reviews');
+        const y = element.getBoundingClientRect().top + window.scrollY;
+  
+        window.scroll({
+          top: y,
+          behavior: 'smooth' // Или 'smooth' для плавного скролла
+        });
     };
 
 
@@ -941,24 +946,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  setTimeout(() => { 
-  document.querySelectorAll('.pagination__list li').forEach((pageNumber) => {
-    pageNumber.addEventListener('click', () => {
-      console.log(pageNumber)
-      const element = document.querySelector('.reviews');
-      if (element) {
-        const y = element.getBoundingClientRect().top + window.scrollY;
-  
-        window.scroll({
-          top: y,
-          behavior: 'smooth' // Или 'smooth' для плавного скролла
-        });
-      }
-    });
-  });
-  }, 2000)
-
-  
   // Проверяем, есть ли в URL якорь #FAQ при загрузке страницы
   if (window.location.hash === "#FAQ") {
     scrollToFAQ();
