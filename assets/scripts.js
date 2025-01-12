@@ -942,8 +942,8 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll('.page-numbers').forEach((pageNumber) => {
-    console.log(pageNumber)
     pageNumber.addEventListener('click', () => {
+      console.log(pageNumber)
       const element = document.querySelector('.reviews');
       if (element) {
         const y = element.getBoundingClientRect().top + window.scrollY;
