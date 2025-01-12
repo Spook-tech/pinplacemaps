@@ -6589,6 +6589,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  width: 100%;
 }
 
 .reviews__list {
