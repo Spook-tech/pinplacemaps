@@ -5864,7 +5864,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 }
 
 .product__list {
-  padding: 10px 40px 10px 40px;
+  padding: 40px 0 40px;
 }
 
 @media (max-width: 767px) {
