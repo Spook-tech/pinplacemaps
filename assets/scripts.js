@@ -792,13 +792,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updatePagination(filteredReviews);
 
 
-      const element = document.queryselector('.reviews');
-      const y = element.getBoundingClientRect().top + window.scrollY;
-      
-      window.scroll({
-        top: y + 50,
-        behavior: 'instant'
-      });
+
     };
 
 
@@ -946,6 +940,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('.page-numbers').forEach(() => {
+      const element = document.queryselector('.reviews');
+      const y = element.getBoundingClientRect().top + window.scrollY;
+      
+      window.scroll({
+        top: y,
+        behavior: 'instant'
+      });
+  })
+  
   // Проверяем, есть ли в URL якорь #FAQ при загрузке страницы
   if (window.location.hash === "#FAQ") {
     scrollToFAQ();
