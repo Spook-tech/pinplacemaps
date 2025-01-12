@@ -4946,6 +4946,9 @@ textarea:focus-visible {
   .header__top .rating {
     display: none;
   }
+  .product-grid{
+    grid-template-columns: 100%;
+  }
 }
 
 .header__top .rating__star {
