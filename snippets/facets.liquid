@@ -476,7 +476,7 @@
     </facet-filters-form>
   {%- endif -%}
   {% comment %}  Drawer and mobile filter {% endcomment %}
-  <menu-drawer
+  <!-- <menu-drawer
     class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}"
     data-breakpoint="mobile"
   >
@@ -818,7 +818,7 @@
       </facet-filters-form>
     </details>
   </menu-drawer>
-
+ -->
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
@@ -926,10 +926,6 @@
       </form>
     </facet-filters-form>
   {%- endif -%}
-  <div
-    class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
-    role="status"
-  >
     <h2 class="product-count__text text-body">
       <span id="ProductCount">
         {%- if results.results_count -%}
