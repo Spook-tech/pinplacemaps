@@ -949,7 +949,7 @@ document.querySelectorAll('.page-numbers').forEach((pageNumber) => {
 
       window.scroll({
         top: y,
-        behavior: 'auto' // Или 'smooth' для плавного скролла
+        behavior: 'smooth' // Или 'smooth' для плавного скролла
       });
     }
   });
