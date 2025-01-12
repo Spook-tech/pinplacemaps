@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     click() {
         console.log('index', this.clickedIndex);
-        mySwiper.slideTo(this.clickedIndex);    
+        swiper.slideTo(this.clickedIndex);    
     },
 
       },
