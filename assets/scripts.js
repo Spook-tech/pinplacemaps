@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (video) {
           // Активное видео начинает воспроизведение
-          if (slide.classList.contains("swiper-slide-active")) {
+          if (slide.classList.contains("swiper-slide-active") || slide.classList.contains("swiper-slide-next") || slide.classList.contains("swiper-slide-prev")) {
             video.play();
             playButton.style.display = "none";
             pauseButton.style.display = "block";
