@@ -932,6 +932,11 @@ summary::-webkit-details-marker {
     width: 100%;
   }
 
+  .grid--1-col-tablet-down .grid__item {
+    width: 50%;
+    max-width: 50%;
+  }
+  
   .slider--tablet.grid--peek .grid__item {
     box-sizing: content-box;
     margin: 0;
