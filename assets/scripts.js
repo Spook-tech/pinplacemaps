@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper("#explore", {
       observer: true,
       observeParents: true,
-      loop: true,
+      // loop: true,
       pagination: {
         el: ".explore-pagination",
         clickable: true,
