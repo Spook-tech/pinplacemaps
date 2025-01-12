@@ -942,7 +942,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(() => { 
-  document.querySelectorAll('.page-numbers').forEach((pageNumber) => {
+  document.querySelectorAll('.pagination__list li').forEach((pageNumber) => {
     pageNumber.addEventListener('click', () => {
       console.log(pageNumber)
       const element = document.querySelector('.reviews');
