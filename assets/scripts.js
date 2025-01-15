@@ -425,10 +425,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
               } else{
                 video.muted = false;
+                soundOnIcon.style.display = "block";
+                soundOffIcon.style.display = "none";
               }
-              
-              soundOnIcon.style.display = "block";
-              soundOffIcon.style.display = "none";
             }
           } else {
             // Неактивные видео ставим на паузу
