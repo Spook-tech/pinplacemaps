@@ -416,16 +416,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
               const prevVideo = document.querySelector("#explore .swiper-slide-prev video");
 
-              if (prevVideo.muted) {
-                console.log('work')
-                video.muted = true;
-                soundOnIcon.style.display = "none";
-                soundOffIcon.style.display = "block";
-              } else{
-              //   video.muted = false;
-              //   soundOnIcon.style.display = "block";
-              //   soundOffIcon.style.display = "none";
+              if (prevVideo) {
+                if (prevVideo.muted) {
+                  console.log('work')
+                  video.muted = true;
+                  soundOnIcon.style.display = "none";
+                  soundOffIcon.style.display = "block";
+                } else{
+                //   video.muted = false;
+                //   soundOnIcon.style.display = "block";
+                //   soundOffIcon.style.display = "none";
+                }
               }
+
             }
           } else {
             // Неактивные видео ставим на паузу
