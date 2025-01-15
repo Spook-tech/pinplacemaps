@@ -432,10 +432,16 @@ function handleVideoPlayback() {
             const relevantVideo = relevantSlide.querySelector("video");
 
             // Логика переключения звука
-            if (relevantVideo && relevantVideo.muted) {
-              video.muted = true;
-              soundOnIcon.style.display = "none";
-              soundOffIcon.style.display = "block";
+            if (relevantVideo) {
+              if (relevantVideo.muted) {
+                video.muted = true;
+                soundOnIcon.style.display = "none";
+                soundOffIcon.style.display = "block";
+              } else{
+                video.muted = false;
+                soundOnIcon.style.display = "block";
+                soundOffIcon.style.display = "none";
+              }
             }
           }
         }
