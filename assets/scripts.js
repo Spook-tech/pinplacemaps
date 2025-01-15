@@ -421,12 +421,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 video.muted = true;
                 soundOnIcon.style.display = "none";
                 soundOffIcon.style.display = "block";
-                
               } else{
               //   video.muted = false;
               //   soundOnIcon.style.display = "block";
               //   soundOffIcon.style.display = "none";
-              // }
+              }
             }
           } else {
             // Неактивные видео ставим на паузу
