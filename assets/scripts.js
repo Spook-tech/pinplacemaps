@@ -395,57 +395,64 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Функция управления воспроизведением видео
-    function handleVideoPlayback() {
-      const slides = document.querySelectorAll("#explore .swiper-slide");
-      slides.forEach((slide) => {
-        const video = slide.querySelector("video");
-        const playButton = slide.querySelector(".play");
-        const pauseButton = slide.querySelector(".pause");
+function handleVideoPlayback() {
+  const slides = document.querySelectorAll("#explore .swiper-slide");
+  const swiperInstance = document.querySelector("#explore").swiper; // Получаем экземпляр Swiper
 
-        if (video) {
-          // Активное видео начинает воспроизведение
-          if (slide.classList.contains("swiper-slide-active")) {
-            video.play();
-            playButton.style.display = "none";
-            pauseButton.style.display = "block";
+  slides.forEach((slide) => {
+    const video = slide.querySelector("video");
+    const playButton = slide.querySelector(".play");
+    const pauseButton = slide.querySelector(".pause");
 
-            if (window.innerWidth < 761) {
-              const button = slide.querySelector(".sound");
-              const soundOnIcon = button.querySelector(".sound-on");
-              const soundOffIcon = button.querySelector(".sound-off");
+    if (video) {
+      if (slide.classList.contains("swiper-slide-active")) {
+        video.play();
+        playButton.style.display = "none";
+        pauseButton.style.display = "block";
 
-              const prevVideo = document.querySelector("#explore .swiper-slide-prev video");
+        if (window.innerWidth < 761) {
+          const button = slide.querySelector(".sound");
+          if (button) {
+            const soundOnIcon = button.querySelector(".sound-on");
+            const soundOffIcon = button.querySelector(".sound-off");
 
-              if (prevVideo) {
-                if (prevVideo.muted) {
-                  console.log('work')
-                  video.muted = true;
-                  soundOnIcon.style.display = "none";
-                  soundOffIcon.style.display = "block";
-                } else{
-                //   video.muted = false;
-                //   soundOnIcon.style.display = "block";
-                //   soundOffIcon.style.display = "none";
-                }
-              }
+            // Определение направления свайпа
+            const currentIndex = swiperInstance.activeIndex;
+            const previousIndex = swiperInstance.previousIndex;
 
+            let relevantSlide;
+            if (currentIndex > previousIndex || (currentIndex === 0 && previousIndex === swiperInstance.slides.length - 1)) {
+              // Свайп вперед
+              relevantSlide = swiperInstance.slides[previousIndex];
+            } else {
+              // Свайп назад
+              relevantSlide = swiperInstance.slides[(currentIndex + 1) % swiperInstance.slides.length];
             }
-          } else {
-            // Неактивные видео ставим на паузу
-            video.pause();
-            video.currentTime = 0;
-            playButton.style.display = "block";
-            pauseButton.style.display = "none";
-          }
 
-          // Событие, когда видео заканчивается
-          video.addEventListener("ended", () => {
-            playButton.style.display = "block";
-            pauseButton.style.display = "none";
-          });
+            const relevantVideo = relevantSlide.querySelector("video");
+
+            // Логика переключения звука
+            if (relevantVideo && relevantVideo.muted) {
+              video.muted = true;
+              soundOnIcon.style.display = "none";
+              soundOffIcon.style.display = "block";
+            }
+          }
         }
-      });
+      } else {
+        video.pause();
+        video.currentTime = 0;
+        playButton.style.display = "block";
+        pauseButton.style.display = "none";
+      }
+
+      video.addEventListener("ended", () => {
+        playButton.style.display = "block";
+        pauseButton.style.display = "none";
+      }, { once: true });
     }
+  });
+}
 
     // Функция для обновления прозрачности слайдов
     function updateSlideOpacity() {
