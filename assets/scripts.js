@@ -415,8 +415,15 @@ document.addEventListener("DOMContentLoaded", function () {
               const soundOffIcon = button.querySelector(".sound-off");
 
               const prevVideo = document.querySelector("#explore .swiper-slide-prev video");
+              if (prevVideo.muted) {
+                video.muted = true;
+                soundOnIcon.style.display = "none";
+                soundOffIcon.style.display = "block";
 
-              video.muted = false;
+              } else{
+                video.muted = false;
+              }
+              
               soundOnIcon.style.display = "block";
               soundOffIcon.style.display = "none";
             }
