@@ -353,11 +353,12 @@ document.addEventListener("DOMContentLoaded", function () {
           handleVideoPlayback();
           updateSlideOpacity();
         },
-    click() {
-        console.log('index', this.clickedIndex);
-        swiper.slideTo(this.clickedIndex);    
-    },
-
+        click() {
+            if (window.innerWidth < 761) {
+              console.log('index', this.clickedIndex);
+              swiper.slideTo(this.clickedIndex);    
+            }
+        },
       },
       breakpoints: {
         320: {
