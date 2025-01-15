@@ -521,7 +521,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.querySelectorAll(".swiper-slide .sound").forEach((button) => {
-      const slide = event.target.closest(".swiper-slide");
+      const slide = button.target.closest(".swiper-slide");
       const video = slide.querySelector("video");
       const soundOnIcon = button.querySelector(".sound-on");
       const soundOffIcon = button.querySelector(".sound-off");
