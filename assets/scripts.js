@@ -485,12 +485,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Обработчик для кнопок звука
     document.querySelectorAll(".swiper-slide .sound").forEach((button) => {
-
-      // if (window.innerWidth < 761) {
-      //   video.muted = true;
-      //   soundOnIcon.style.display = "none";
-      //   soundOffIcon.style.display = "block";
-      // }
       
       button.addEventListener("click", (event) => {
         const slide = event.target.closest(".swiper-slide");
@@ -513,6 +507,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+
+    document.querySelectorAll(".swiper-slide .sound").forEach((button) => {
+      const slide = event.target.closest(".swiper-slide");
+      const video = slide.querySelector("video");
+      const soundOnIcon = button.querySelector(".sound-on");
+      const soundOffIcon = button.querySelector(".sound-off");
+
+      
+      if (window.innerWidth < 761) {
+        video.muted = true;
+        soundOnIcon.style.display = "none";
+        soundOffIcon.style.display = "block";
+      }
+    })
 
     // Событие: при загрузке страницы все видео запускаются без звука
     window.addEventListener("load", () => {
