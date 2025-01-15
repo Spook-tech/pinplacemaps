@@ -415,6 +415,9 @@ document.addEventListener("DOMContentLoaded", function () {
               const soundOffIcon = button.querySelector(".sound-off");
 
               const prevVideo = document.querySelector("#explore .swiper-slide-prev video");
+
+              console.log(prevVideo)
+              
               if (prevVideo.muted) {
                 video.muted = true;
                 soundOnIcon.style.display = "none";
