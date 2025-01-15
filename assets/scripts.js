@@ -417,8 +417,8 @@ document.addEventListener("DOMContentLoaded", function () {
               const prevVideo = document.querySelector("#explore .swiper-slide-prev video");
 
               
-              console.log(prevVideo, prevVideo.muted)
               if (prevVideo.muted) {
+                console.log(prevVideo, prevVideo.muted)
                 video.muted = false;
                 soundOnIcon.style.display = "block";
                 soundOffIcon.style.display = "none";
