@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", function () {
               const soundOnIcon = button.querySelector(".sound-on");
               const soundOffIcon = button.querySelector(".sound-off");
 
-              const prevSlide = document.querySelector("#explore .swiper-slide-prev");
+              const prevVideo = document.querySelector("#explore .swiper-slide-prev video");
 
               video.muted = false;
               soundOnIcon.style.display = "block";
