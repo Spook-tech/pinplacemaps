@@ -408,6 +408,16 @@ document.addEventListener("DOMContentLoaded", function () {
             video.play();
             playButton.style.display = "none";
             pauseButton.style.display = "block";
+
+            if (window.innerWidth < 761) {
+              const button = slide.querySelector(".sound");
+              const soundOnIcon = button.querySelector(".sound-on");
+              const soundOffIcon = button.querySelector(".sound-off");
+
+              video.muted = false;
+              soundOnIcon.style.display = "block";
+              soundOffIcon.style.display = "none";
+            }
           } else {
             // Неактивные видео ставим на паузу
             video.pause();
