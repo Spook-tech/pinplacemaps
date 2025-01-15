@@ -485,10 +485,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Обработчик для кнопок звука
     document.querySelectorAll(".swiper-slide .sound").forEach((button) => {
-      const slide = event.target.closest(".swiper-slide");
-      const video = slide.querySelector("video");
-      const soundOnIcon = button.querySelector(".sound-on");
-      const soundOffIcon = button.querySelector(".sound-off");
 
       // if (window.innerWidth < 761) {
       //   video.muted = true;
@@ -497,6 +493,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // }
       
       button.addEventListener("click", (event) => {
+      const slide = event.target.closest(".swiper-slide");
+      const video = slide.querySelector("video");
+      const soundOnIcon = button.querySelector(".sound-on");
+      const soundOffIcon = button.querySelector(".sound-off");
 
         if (video) {
           // Переключаем звук для видео
