@@ -419,14 +419,14 @@ document.addEventListener("DOMContentLoaded", function () {
               
               console.log(prevVideo, prevVideo.muted)
               if (prevVideo.muted) {
-                video.muted = true;
-                soundOnIcon.style.display = "none";
-                soundOffIcon.style.display = "block";
-
-              } else{
                 video.muted = false;
                 soundOnIcon.style.display = "block";
                 soundOffIcon.style.display = "none";
+
+              } else{
+                video.muted = true;
+                soundOnIcon.style.display = "none";
+                soundOffIcon.style.display = "block";
               }
             }
           } else {
