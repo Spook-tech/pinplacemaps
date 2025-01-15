@@ -490,11 +490,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const soundOnIcon = button.querySelector(".sound-on");
       const soundOffIcon = button.querySelector(".sound-off");
 
-      if (window.innerWidth < 761) {
-        video.muted = true;
-        soundOnIcon.style.display = "none";
-        soundOffIcon.style.display = "block";
-      }
+      // if (window.innerWidth < 761) {
+      //   video.muted = true;
+      //   soundOnIcon.style.display = "none";
+      //   soundOffIcon.style.display = "block";
+      // }
       
       button.addEventListener("click", (event) => {
 
