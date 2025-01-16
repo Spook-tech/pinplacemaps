@@ -395,8 +395,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".pagination__list .page-numbers svg path {stroke: var(--color-black);}",
-      ".pagination__list .page-numbers:hover svg path,.pagination__list .page-numbers:focus svg path {stroke: var(--color-green);}"
+      ".pagination__list .page-numbers svg path {stroke: var(--color-black)!important;}",
+      ".pagination__list .page-numbers:hover svg path,.pagination__list .page-numbers:focus svg path {stroke: var(--color-green)!important;}"
     ]
   }
 }
