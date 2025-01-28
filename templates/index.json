@@ -103,7 +103,7 @@
     "featured_collection_KrJFrU": {
       "type": "featured-collection",
       "settings": {
-        "title": "Our Featured Collection",
+        "title": "Our featured collection",
         "collection": "maps",
         "products_to_show": 4
       }
@@ -116,7 +116,7 @@
           "settings": {
             "icon": "shopify://shop_images/perfect.svg",
             "title": "Perfect Gift Idea",
-            "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travel map is a thoughtful gift that celebrates adventure and new beginnings.</p><p>Give the gift of wanderlust, encouraging loved ones to document their journeys and dream of destinations yet to come. It's a unique, meaningful present that grows richer with every journey marked.</p>"
+            "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travel map is a thoughtful gift that celebrates adventure and new beginnings. Give the gift of wanderlust, encouraging loved ones to document their journeys and dream of destinations yet to come.</p>"
           }
         },
         "block_WtBBtM": {
@@ -124,15 +124,15 @@
           "settings": {
             "icon": "shopify://shop_images/handcrafted.svg",
             "title": "Premium Craftsmanship",
-            "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensure durability, elegance, and longevity.</p><p>This isn’t just a map; it’s a legacy piece, designed by skilled artisans to accompany you on your life’s journey and inspire a lifetime of exploration.</p>"
+            "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensure durability, elegance, and longevity. This isn’t just a map; it’s a legacy piece, designed by skilled artisans to accompany you on your life’s journey and inspire a lifetime of exploration.</p>"
           }
         },
         "block_kmfHYj": {
           "type": "block",
           "settings": {
             "icon": "shopify://shop_images/madeineu.svg",
-            "title": "Made in EU",
-            "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry.</p><p>Created with care and passion, our maps reflect a European heritage of quality, ensuring they’ll be cherished additions to any space.</p>"
+            "title": "Made in European Union",
+            "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry. Created with care and passion, our maps reflect a European heritage of quality, ensuring they’ll be cherished additions to any space.</p>"
           }
         }
       },
@@ -142,7 +142,7 @@
         "block_kmfHYj"
       ],
       "settings": {
-        "title": "Women in our research reported noticeable hair growth within 90 days",
+        "title": "Discover uniqueness and quality with Pinplace Maps",
         "white_bg": false
       }
     },
