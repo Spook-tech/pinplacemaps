@@ -107,7 +107,7 @@
           "settings": {
             "icon": "shopify://shop_images/perfect.svg",
             "title": "Perfect Gift Idea",
-            "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travel map is a thoughtful gift that celebrates adventure and new beginnings.</p><p>Give the gift of wanderlust, encouraging loved ones to document their journeys and dream of destinations yet to come. It's a unique, meaningful present that grows richer with every journey marked.</p><p></p>"
+            "text": "<p>Whether for a seasoned traveler, a recent graduate, or a newlywed couple, our travel map is a thoughtful gift that celebrates adventure and new beginnings. Give the gift of wanderlust, encouraging loved ones to document their journeys and dream of destinations yet to come. </p><p></p>"
           }
         },
         "block_xYd7DX": {
@@ -115,15 +115,15 @@
           "settings": {
             "icon": "shopify://shop_images/handcrafted.svg",
             "title": "Premium Craftsmanship",
-            "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensure durability, elegance, and longevity.</p><p>This isn’t just a map; it’s a legacy piece, designed by skilled artisans to accompany you on your life’s journey and inspire a lifetime of exploration.</p><p></p>"
+            "text": "<p>Every map is a work of art, crafted by experts using premium materials to ensure durability, elegance, and longevity. This isn’t just a map; it’s a legacy piece, designed by skilled artisans to accompany you on your life’s journey and inspire a lifetime of exploration.</p><p></p>"
           }
         },
         "block_E8bPTc": {
           "type": "block",
           "settings": {
             "icon": "shopify://shop_images/madeineu.svg",
-            "title": "Made in EU",
-            "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry.</p><p>Created with care and passion, our maps reflect a European heritage of quality, ensuring they’ll be cherished additions to any space.</p>"
+            "title": "Made in European Union",
+            "text": "<p>Each map is thoughtfully made in Europe, blending precision with artistry. Created with care and passion, our maps reflect a European heritage of quality, ensuring they’ll be cherished additions to any space.</p>"
           }
         }
       },
@@ -173,7 +173,7 @@
         "video_kwbAB3"
       ],
       "settings": {
-        "title": "From our comunnity"
+        "title": "Watch our maps in action"
       }
     },
     "images_gBAQKr": {
@@ -240,14 +240,14 @@
           "type": "block",
           "settings": {
             "image": "shopify://shop_images/img4_419b8de4-1b13-4357-b3d1-09737cd669ce.png",
-            "text": "<h3>Discover New Destinations, Plan Your Journey</h3><p>Find new destinations and spark your wanderlust with our pin maps. From bucket-list landmarks to off-the-beaten-path locales, this map helps you visualize where you want to go next. Pinning new destinations motivates you to travel further and explore more, turning your dream trips into exciting future plans.</p><p></p>"
+            "text": "<h3>Discover new destinations, plan your journey</h3><p>Find new destinations and spark your wanderlust with our pin maps. From bucket-list landmarks to off-the-beaten-path locales, this map helps you visualize where you want to go next. Pinning new destinations motivates you to travel further and explore more, turning your dream trips into exciting future plans.</p><p></p>"
           }
         },
         "block_rLwCwj": {
           "type": "block",
           "settings": {
             "image": "shopify://shop_images/img5.png",
-            "text": "<h3>Add Personal Touch with Traveler Names</h3><p>Personalize your pin map with names, making it uniquely yours. Add your name or the names of travel companions to create a one-of-a-kind keepsake. Whether marking journeys with family, friends, or solo adventures, our map becomes a cherished reflection of your travels and shared experiences.</p>"
+            "text": "<h3>Add personal touch with traveler names</h3><p>Personalize your pin map with names, making it uniquely yours. Add your name or the names of travel companions to create a one-of-a-kind keepsake. Whether marking journeys with family, friends, or solo adventures, our map becomes a cherished reflection of your travels and shared experiences.</p>"
           }
         }
       },
@@ -418,46 +418,53 @@
     "faq_nC9tNE": {
       "type": "faq",
       "blocks": {
-        "question_AdqBtp": {
-          "type": "question",
-          "settings": {
-            "question": "What size are the maps?",
-            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
-          }
-        },
         "question_3DJmBd": {
           "type": "question",
           "settings": {
             "question": "How much does shipping cost?",
-            "answer": "The main difference between our two cradle bouncers is in how you use it. Our Moonboon Original can be turned on and off, and adjusted, using the TIMER and TEMPO knobs on the front of the motor."
+            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+          }
+        },
+        "question_AdqBtp": {
+          "type": "question",
+          "settings": {
+            "question": "What size are the maps?",
+            "answer": "We offer three map sizes: M, L, and XL."
+          }
+        },
+        "question_H73ckr": {
+          "type": "question",
+          "settings": {
+            "question": "What personalization options are available?",
+            "answer": "When customizing your travel map, you'll have the option to select from a variety of personalization styles (which you can view on the product page). Additionally, you can choose the overall personalization theme, including the text you want to feature on the map.\n\nSome of the most popular personalization options include: the names of the travelers, an inspiring quote, a personalized map legend with the travelers' names, or key details like the places you've visited or plan to visit. You can also add greetings or well-wishes for the map recipient or even a company logo."
           }
         },
         "question_iwXbUb": {
           "type": "question",
           "settings": {
             "question": "How many pins are included with the map?",
-            "answer": "Your answer hereWe offer free shipping to European countries. For other continents, please check the shipping price in your cart."
-          }
-        },
-        "question_H73ckr": {
-          "type": "question",
-          "settings": {
-            "question": "How is the map made?",
-            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
+            "answer": "Each map comes with 100 pins in your chosen color."
           }
         },
         "question_aMakBD": {
           "type": "question",
           "settings": {
-            "question": "How do I hang the map?",
-            "answer": "When using our Motor Connect, you can easily turn it on and off and adjust it on your phone in the Moonboon App."
+            "question": "How long will it take for my order to ship?",
+            "answer": "We usually ship all standard (non-personalized) orders within 1-2 business days. Personalized maps may require a few extra days for processing.\n\nPlease allow additional time for personalized map orders or during peak periods, such as the holiday season (November and December)."
+          }
+        },
+        "question_FfCGEf": {
+          "type": "question",
+          "settings": {
+            "question": "Where do you ship?",
+            "answer": "We offer worldwide shipping! Please note that international orders outside of the European Union may be subject to additional shipping charges."
           }
         },
         "question_nbWR96": {
           "type": "question",
           "settings": {
-            "question": "How long does shipping take?",
-            "answer": "In addition, the Motor Connect also has multiple sleep programs available to you in the app that automatically speed up and slow down the pace of the rocking to match your child's sleep rhythm and were designed by sleep experts."
+            "question": "Can I return a personalized map?",
+            "answer": "We’re happy to accept returns on personalized maps! They must be in new condition and returned within 30 days of purchase. You’ll be responsible for return shipping costs, but the full cost of the product will be refunded. Maps with pinholes can be returned, but a restocking fee of up to 20% will be deducted from your refund. For more details, please refer to our Return Policy or contact us directly."
           }
         },
         "question_U4k98q": {
@@ -469,11 +476,12 @@
         }
       },
       "block_order": [
-        "question_AdqBtp",
         "question_3DJmBd",
-        "question_iwXbUb",
+        "question_AdqBtp",
         "question_H73ckr",
+        "question_iwXbUb",
         "question_aMakBD",
+        "question_FfCGEf",
         "question_nbWR96",
         "question_U4k98q"
       ],
