@@ -466,13 +466,6 @@
             "question": "Can I return a personalized map?",
             "answer": "We’re happy to accept returns on personalized maps! They must be in new condition and returned within 30 days of purchase. You’ll be responsible for return shipping costs, but the full cost of the product will be refunded. Maps with pinholes can be returned, but a restocking fee of up to 20% will be deducted from your refund. For more details, please refer to our Return Policy or contact us directly."
           }
-        },
-        "question_U4k98q": {
-          "type": "question",
-          "settings": {
-            "question": "Can I customize the map?",
-            "answer": "We offer free shipping to European countries. For other continents, please check the shipping price in your cart."
-          }
         }
       },
       "block_order": [
@@ -482,8 +475,7 @@
         "question_iwXbUb",
         "question_aMakBD",
         "question_FfCGEf",
-        "question_nbWR96",
-        "question_U4k98q"
+        "question_nbWR96"
       ],
       "settings": {
         "title": "Frequently Asked Questions"
