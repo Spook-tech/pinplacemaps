@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/logo.svg",
+    "logo": "shopify://shop_images/Group_1185.svg",
     "logo_width": 90,
     "favicon": "shopify://shop_images/logo.svg",
     "social_facebook_link": "",
@@ -395,8 +395,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".pagination__list .page-numbers svg path {stroke: var(--color-black)!important;}",
-      ".pagination__list .page-numbers:hover svg path,.pagination__list .page-numbers:focus svg path {stroke: var(--color-green)!important;}"
+      ".pagination__list .page-numbers svg path {stroke: var(--color-black) !important;}",
+      ".pagination__list .page-numbers:hover svg path,.pagination__list .page-numbers:focus svg path {stroke: var(--color-green) !important;}"
     ]
   }
 }
