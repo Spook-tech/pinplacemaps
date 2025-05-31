@@ -8942,6 +8942,7 @@ input:checked+.size-option {
 
 .shopify-policy__container{
     margin-top: 50px;
+  max-width: 1140px;
 }
 .shopify-policy__title{
   margin-bottom: 25px;
