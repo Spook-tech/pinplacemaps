@@ -6073,7 +6073,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 @media (max-width: 560px) {
   .explore .reels {
-    padding: 10px 0 20px 16px;
+    padding: 10px 13px 20px 13px;
   }
 }
 
