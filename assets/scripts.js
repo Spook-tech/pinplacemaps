@@ -860,69 +860,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Функция для обновления кнопок пагинации
-    const updatePagination = (filteredReviews) => {
-      const totalPages = Math.ceil(filteredReviews.length / REVIEWS_PER_PAGE);
+const updatePagination = (filteredReviews) => {
+  const totalPages = Math.ceil(filteredReviews.length / REVIEWS_PER_PAGE);
 
-      // Если отзывов меньше или равно REVIEWS_PER_PAGE, скрыть пагинацию
-      if (filteredReviews.length <= REVIEWS_PER_PAGE) {
-        paginationContainer.innerHTML = "";
-        return; // Выход из функции
-      }
+  if (filteredReviews.length <= REVIEWS_PER_PAGE) {
+    paginationContainer.innerHTML = "";
+    return;
+  }
 
-      // Очистить текущие кнопки пагинации
-      paginationContainer.innerHTML = "";
+  paginationContainer.innerHTML = "";
 
-      // Добавление кнопки "Назад"
-      const prevPageButton = document.createElement("li");
-      prevPageButton.innerHTML = `
-        <button class="prev page-numbers" ${
-          currentPage === 1 ? "disabled" : ""
-        }>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>`;
-      prevPageButton.addEventListener("click", () => {
-        if (currentPage > 1) {
-          currentPage--;
-          showPage(filteredReviews);
-        }
+  // Кнопка "Назад"
+  const prevPageButton = document.createElement("li");
+  prevPageButton.innerHTML = `
+    <button class="prev page-numbers" ${currentPage === 1 ? "disabled" : ""}>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>`;
+  prevPageButton.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(filteredReviews);
+    }
+  });
+  paginationContainer.appendChild(prevPageButton);
+
+  // Максимум 10 страниц
+  const MAX_VISIBLE_PAGES = 10;
+  let startPage = Math.max(1, currentPage - Math.floor(MAX_VISIBLE_PAGES / 2));
+  let endPage = startPage + MAX_VISIBLE_PAGES - 1;
+
+  if (endPage > totalPages) {
+    endPage = totalPages;
+    startPage = Math.max(1, endPage - MAX_VISIBLE_PAGES + 1);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    const pageButton = document.createElement("li");
+
+    if (i === currentPage) {
+      pageButton.innerHTML = `<span class="page-numbers current" aria-current="page">${i}</span>`;
+    } else {
+      pageButton.innerHTML = `<a class="page-numbers" href="#">${i}</a>`;
+      pageButton.querySelector("a").addEventListener("click", (e) => {
+        e.preventDefault();
+        currentPage = i;
+        showPage(filteredReviews);
       });
-      paginationContainer.appendChild(prevPageButton);
+    }
 
-      // Добавление кнопок для страниц
-      for (let i = 1; i <= totalPages; i++) {
-        const pageButton = document.createElement("li");
-        pageButton.innerHTML = `<a class="page-numbers" href="#">${i}</a>`;
-        if (i === currentPage) {
-          pageButton.innerHTML = `<span class="page-numbers current" aria-current="page">${i}</span>`;
-        }
-        pageButton.querySelector("a")?.addEventListener("click", (e) => {
-          e.preventDefault();
-          currentPage = i;
-          showPage(filteredReviews);
-        });
-        paginationContainer.appendChild(pageButton);
-      }
+    paginationContainer.appendChild(pageButton);
+  }
 
-      // Добавление кнопки "Вперед"
-      const nextPageButton = document.createElement("li");
-      nextPageButton.innerHTML = `
-        <button class="next page-numbers" ${
-          currentPage === totalPages ? "disabled" : ""
-        }>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>`;
-      nextPageButton.addEventListener("click", () => {
-        if (currentPage < totalPages) {
-          currentPage++;
-          showPage(filteredReviews);
-        }
-      });
-      paginationContainer.appendChild(nextPageButton);
-    };
+  // Кнопка "Вперёд"
+  const nextPageButton = document.createElement("li");
+  nextPageButton.innerHTML = `
+    <button class="next page-numbers" ${currentPage === totalPages ? "disabled" : ""}>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.95251 10.0942L8.04747 5.99926L3.95251 1.9043" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>`;
+  nextPageButton.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      showPage(filteredReviews);
+    }
+  });
+  paginationContainer.appendChild(nextPageButton);
+};
 
     // Функция для обновления отзывов (с учетом фильтров, сортировки и пагинации)
     const updateReviews = () => {
