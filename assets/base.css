@@ -6348,13 +6348,13 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 }
 
 .gallery__container.to-right .gallery__list {
-  -webkit-animation: scroll-right 30s linear infinite;
-  animation: scroll-right 30s linear infinite;
+  -webkit-animation: scroll-right 60s linear infinite;
+  animation: scroll-right 60s linear infinite;
 }
 
 .gallery__container.to-left .gallery__list {
-  -webkit-animation: scroll-left 30s linear infinite;
-  animation: scroll-left 30s linear infinite;
+  -webkit-animation: scroll-left 60s linear infinite;
+  animation: scroll-left 60s linear infinite;
 }
 
 .gallery__list {
