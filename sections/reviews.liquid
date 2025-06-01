@@ -114,68 +114,77 @@
               </div>
               <span class="total">{{ 'general.rating.total_reviews' | t: count: total_reviews }}</span>
               <ul class="reviews__grade">
+                {% assign excellent_stars = excellent_percent | divided_by: 20.0 | round %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.excellent' | t }}</b>
                   </div>
-                  <span class="bar">
-                    <span class="progress-star excellent" style="width: {{ excellent_percent }}%;">
+                  <span class="stars">
+                    {% for i in (1..excellent_stars) %}
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60"></path>
                       </svg>
-                    </span>
+                    {% endfor %}
                   </span>
                   <span class="percent">{{ excellent_percent | round: 0 }}%</span>
                 </li>
+
+                {% assign great_stars = great_percent | divided_by: 20.0 | round %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.great' | t }}</b>
                   </div>
-                  <span class="bar">
-                    <span class="progress-star excellent" style="width: {{ great_percent }}%;">
+                  <span class="stars">
+                    {% for i in (1..great_stars) %}
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60"></path>
                       </svg>
-                    </span>
+                    {% endfor %}
                   </span>
                   <span class="percent">{{ great_percent | round: 0 }}%</span>
                 </li>
+
+                {% assign good_stars = good_percent | divided_by: 20.0 | round %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.good' | t }}</b>
                   </div>
-                  <span class="bar">
-                    <span class="progress-star good" style="width: {{ good_percent }}%;">
+                  <span class="stars">
+                    {% for i in (1..good_stars) %}
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60"></path>
                       </svg>
-                    </span>
+                    {% endfor %}
                   </span>
                   <span class="percent">{{ good_percent | round: 0 }}%</span>
                 </li>
+
+                {% assign average_stars = average_percent | divided_by: 20.0 | round %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.average' | t }}</b>
                   </div>
-                  <span class="bar">
-                    <span class="progress-star good" style="width: {{ average_percent }}%;">
+                  <span class="stars">
+                    {% for i in (1..average_stars) %}
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60"></path>
                       </svg>
-                    </span>
+                    {% endfor %}
                   </span>
                   <span class="percent">{{ average_percent | round: 0 }}%</span>
                 </li>
+
+                {% assign bad_stars = bad_percent | divided_by: 20.0 | round %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.bad' | t }}</b>
                   </div>
-                  <span class="bar">
-                    <span class="progress-star bad" style="width: {{ bad_percent }}%;">
+                  <span class="stars">
+                    {% for i in (1..bad_stars) %}
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60"></path>
                       </svg>
-                    </span>
+                    {% endfor %}
                   </span>
                   <span class="percent">{{ bad_percent | round: 0 }}%</span>
                 </li>
