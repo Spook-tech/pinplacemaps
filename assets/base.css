@@ -6389,12 +6389,6 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   cursor: pointer;
 }
 
-@media (max-width: 560px) {
-  .gallery__list>li img {
-    height: 150px;
-  }
-}
-
 .modal {
   display: none;
   /* Скрыть по умолчанию */
