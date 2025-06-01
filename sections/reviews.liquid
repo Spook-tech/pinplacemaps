@@ -1,17 +1,16 @@
-{% assign review_ratings_string = "" %}
+{% assign review_ratings_string = '' %}
 
 {% for product in collections.all.products %}
   {% for review in product.metafields.custom.reviews.value %}
-    {% if review_ratings_string == "" %}
+    {% if review_ratings_string == '' %}
       {% assign review_ratings_string = review.rating %}
     {% else %}
-      {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+      {% assign review_ratings_string = review_ratings_string | append: ',' | append: review.rating %}
     {% endif %}
   {% endfor %}
 {% endfor %}
 
-{% assign review_ratings = review_ratings_string | split: "," %}
-
+{% assign review_ratings = review_ratings_string | split: ',' %}
 
 <div class="container">
   <div class="reviews">
@@ -25,18 +24,18 @@
           {% when 'rating' %}
             <div class="reviews__stats">
               {% assign total_reviews = review_ratings.size %}
-            
+
               {% assign total_rating_sum = 0 %}
               {% assign excellent_count = 0 %}
               {% assign great_count = 0 %}
               {% assign good_count = 0 %}
               {% assign average_count = 0 %}
               {% assign bad_count = 0 %}
-            
+
               {% for rating in review_ratings %}
                 {% assign rating_value = rating | plus: 0 %}
                 {% assign total_rating_sum = total_rating_sum | plus: rating_value %}
-            
+
                 {% if rating_value >= 4.5 %}
                   {% assign excellent_count = excellent_count | plus: 1 %}
                 {% elsif rating_value >= 3.5 %}
@@ -49,18 +48,23 @@
                   {% assign bad_count = bad_count | plus: 1 %}
                 {% endif %}
               {% endfor %}
-            
+
               {% assign average_rating = total_rating_sum | times: 1.0 | divided_by: total_reviews %}
-            
+
               {% assign excellent_percent = excellent_count | times: 100 | divided_by: total_reviews %}
               {% assign great_percent = great_count | times: 100 | divided_by: total_reviews %}
               {% assign good_percent = good_count | times: 100 | divided_by: total_reviews %}
               {% assign average_percent = average_count | times: 100 | divided_by: total_reviews %}
               {% assign bad_percent = bad_count | times: 100 | divided_by: total_reviews %}
-            
-              {% assign total_percent = excellent_percent | plus: great_percent | plus: good_percent | plus: average_percent | plus: bad_percent %}
+
+              {% assign total_percent = excellent_percent
+                | plus: great_percent
+                | plus: good_percent
+                | plus: average_percent
+                | plus: bad_percent
+              %}
               {% assign correction = 100 | minus: total_percent %}
-            
+
               {% assign excellent_percent = excellent_percent | plus: correction %}
 
               {% assign highest_count = 0 %}
@@ -68,33 +72,41 @@
                 {% assign highest_count = excellent_count %}
                 {% assign rating_text = 'general.rating.excellent' | t %}
               {% endif %}
-              
+
               {% if great_count > highest_count %}
                 {% assign highest_count = great_count %}
                 {% assign rating_text = 'general.rating.great' | t %}
               {% endif %}
-              
+
               {% if good_count > highest_count %}
                 {% assign highest_count = good_count %}
                 {% assign rating_text = 'general.rating.good' | t %}
               {% endif %}
-              
+
               {% if average_count > highest_count %}
                 {% assign highest_count = average_count %}
                 {% assign rating_text = 'general.rating.average' | t %}
               {% endif %}
-              
+
               {% if bad_count > highest_count %}
                 {% assign highest_count = bad_count %}
                 {% assign rating_text = 'general.rating.bad' | t %}
               {% endif %}
-            
+
               <h3>{{ rating_text }}</h3>
               <div class="reviews__summary">
                 <div class="reviews__rating">
                   {% for i in (1..5) %}
-                    <div class="mark">
-                      <span class="filled"></span>
+                    <!--
+                      <div class="mark">
+                        <span class="filled"></span>
+                      </div>
+                    -->
+
+                    <div class="reviews__summary-star">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.635 15.75L12.4088 10.4782L16.5 6.933L11.1068 6.47025L9 1.5L6.89325 6.47025L1.5 6.933L5.59125 10.4782L4.365 15.75L9 12.954L13.635 15.75Z" fill="#146F60"></path>
+                      </svg>
                     </div>
                   {% endfor %}
                 </div>
@@ -169,41 +181,46 @@
                             fill="black" />
                       </svg>
                     </button>
-  
+
                     <div class="filters__button-variants">
                       <div class="rating-picker">
                         <button data-reviews-rating="5" class="rating-picker__item green">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
-                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span>
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span
+                            ><span class="filled"></span><span class="filled"></span>
                           </span>
                           <span class="rating-label">{{ 'general.rating.excellent' | t }}</span>
                         </button>
                         <button data-reviews-rating="4" class="rating-picker__item green">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
-                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="empty"></span>
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span
+                            ><span class="filled"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">{{ 'general.rating.great' | t }}</span>
                         </button>
                         <button data-reviews-rating="3" class="rating-picker__item green">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
-                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="empty"></span><span class="empty"></span>
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span
+                            ><span class="empty"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">{{ 'general.rating.good' | t }}</span>
                         </button>
                         <button data-reviews-rating="2" class="rating-picker__item green">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
-                            <span class="filled"></span><span class="filled"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
+                            <span class="filled"></span><span class="filled"></span><span class="empty"></span
+                            ><span class="empty"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">{{ 'general.rating.average' | t }}</span>
                         </button>
                         <button data-reviews-rating="1" class="rating-picker__item green">
                           <span class="checkmark"></span>
                           <span class="rating-bar">
-                            <span class="filled"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
+                            <span class="filled"></span><span class="empty"></span><span class="empty"></span
+                            ><span class="empty"></span><span class="empty"></span>
                           </span>
                           <span class="rating-label">{{ 'general.rating.bad' | t }}</span>
                         </button>
@@ -228,7 +245,7 @@
                             fill="black" />
                       </svg>
                     </button>
-  
+
                     <div class="filters__button-variants">
                       <button data-filter="newest" data-selected-text="Newest first" class="button">
                         {{ 'general.rating.newest' | t }}
@@ -240,8 +257,7 @@
                   </div>
                 </div>
               </div>
-              <div class="filters">
-              </div>
+              <div class="filters"></div>
 
               <ul data-reviews-per-page="{{ block.settings.reviews_per_page }}" class="reviews__list">
                 {% for product in collections.all.products %}
@@ -262,12 +278,16 @@
                           {% if review_image != blank %}
                             {{ review_image | image_url: width: review_image.width | image_tag }}
                           {% endif %}
-                          
+
                           <h5>{{ product.title }}</h5>
                         </a>
                       </div>
                       <div class="reviews__info">
-                        <span class="author">{{ review_author }} <br> {{ review_country }}</span>
+                        <span class="author">
+                          {{- review_author }}
+                          <br>
+                          {{ review_country -}}
+                        </span>
                         <span class="date">{{ review_date | date: '%-d %B %Y' }}</span>
 
                         {% if review_rating != blank %}
