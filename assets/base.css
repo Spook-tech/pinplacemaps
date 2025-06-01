@@ -6413,7 +6413,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 90%;
+  width: 90%;
 }
 
 .modal .close {
