@@ -6944,16 +6944,16 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   border-radius: 5px;
 }
 
-.reviews__grade li .bar .progress.excellent {
-  background: var(--color-green);
+.reviews__grade .excellent {
+  color: var(--color-green);
 }
 
-.reviews__grade li .bar .progress.good {
-  background: var(--color-yellow);
+.reviews__grade .good {
+  color: var(--color-yellow);
 }
 
-.reviews__grade li .bar .progress.bad {
-  background: var(--color-red);
+.reviews__grade .bad {
+  color: var(--color-red);
 }
 
 /* Filter and sort buttons */
