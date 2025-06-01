@@ -1126,3 +1126,23 @@ filterMenus.forEach((menu) => {
     });
   });
 });
+
+// скрипт
+document.querySelectorAll('.reviews__images img').forEach(img => {
+  img.addEventListener('click', () => {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    modalImg.src = img.src;
+    modal.style.display = 'flex';
+  });
+});
+
+document.querySelector('.modal__close').addEventListener('click', () => {
+  document.getElementById('image-modal').style.display = 'none';
+});
+
+document.getElementById('image-modal').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) {
+    e.currentTarget.style.display = 'none';
+  }
+});
