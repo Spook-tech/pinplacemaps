@@ -227,5 +227,7 @@ cart-items {
       bottom: 0;
     left: 0;
     right: 0;
+    background: rgb(253, 253, 253);
+    
   }
 }
