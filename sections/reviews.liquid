@@ -115,7 +115,7 @@
               <span class="total">{{ 'general.rating.total_reviews' | t: count: total_reviews }}</span>
               <ul class="reviews__grade">
                 {% assign excellent_stars = excellent_percent | divided_by: 20.0 | ceil %}
-                <li>
+                <li class="excellent">
                   <div>
                     <b>{{ 'general.rating.excellent' | t }}</b>
                   </div>
@@ -130,7 +130,7 @@
                 </li>
 
                 {% assign great_stars = great_percent | divided_by: 20.0 | ceil %}
-                <li>
+                <li class="great">
                   <div>
                     <b>{{ 'general.rating.great' | t }}</b>
                   </div>
@@ -145,7 +145,7 @@
                 </li>
 
                 {% assign good_stars = good_percent | divided_by: 20.0 | ceil %}
-                <li>
+                <li class="good">
                   <div>
                     <b>{{ 'general.rating.good' | t }}</b>
                   </div>
@@ -160,7 +160,7 @@
                 </li>
 
                 {% assign average_stars = average_percent | divided_by: 20.0 | ceil %}
-                <li>
+                <li class="average">
                   <div>
                     <b>{{ 'general.rating.average' | t }}</b>
                   </div>
@@ -175,7 +175,7 @@
                 </li>
 
                 {% assign bad_stars = bad_percent | divided_by: 20.0 | ceil %}
-                <li>
+                <li class="bad">
                   <div>
                     <b>{{ 'general.rating.bad' | t }}</b>
                   </div>
