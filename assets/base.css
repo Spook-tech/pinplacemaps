@@ -9116,3 +9116,31 @@ html, body {
 .facet-filters__field .filters__button{
   position: static;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 10000;
+}
