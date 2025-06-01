@@ -6925,7 +6925,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   line-height: 1;
 }
 
-.reviews__grade li .bar {
+.reviews__grade .stars {
   position: relative;
   display: flex;
   align-items: center;
