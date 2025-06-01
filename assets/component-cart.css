@@ -230,4 +230,8 @@ cart-items {
     background: rgb(253, 253, 253);
     z-index: 10;
   }
+
+  .totals{
+    justify-content: space-between;
+  }
 }
