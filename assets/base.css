@@ -1996,7 +1996,7 @@ input[type='checkbox'] {
   height: 1.7rem;
 }
 
-.modal__content {
+/* .modal__content {
   position: absolute;
   top: 0;
   left: 0;
@@ -2016,7 +2016,7 @@ input[type='checkbox'] {
 .media-modal .deferred-media {
   cursor: initial;
 }
-
+ */
 /* component-cart-count-bubble */
 .cart-count-bubble:empty {
   display: none;
