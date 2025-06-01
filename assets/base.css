@@ -6944,15 +6944,15 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   border-radius: 5px;
 }
 
-.reviews__grade .excellent {
+.reviews__grade .excellent .stars{
   color: var(--color-green);
 }
 
-.reviews__grade .good {
+.reviews__grade .good .stars{
   color: var(--color-yellow);
 }
 
-.reviews__grade .bad {
+.reviews__grade .bad .stars{
   color: var(--color-red);
 }
 
