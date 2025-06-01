@@ -6410,6 +6410,12 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   justify-content: center;
 }
 
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+}
+
 .modal .close {
   width: 40px;
   height: 40px;
