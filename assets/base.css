@@ -9146,3 +9146,7 @@ html, body {
   cursor: pointer;
   z-index: 10000;
 }
+
+.gallery__container.to-left {
+  margin-top: 30px;
+}
