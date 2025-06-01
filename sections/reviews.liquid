@@ -114,7 +114,7 @@
               </div>
               <span class="total">{{ 'general.rating.total_reviews' | t: count: total_reviews }}</span>
               <ul class="reviews__grade">
-                {% assign excellent_stars = excellent_percent | divided_by: 20.0 | round %}
+                {% assign excellent_stars = excellent_percent | divided_by: 20.0 | ceil %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.excellent' | t }}</b>
@@ -129,7 +129,7 @@
                   <span class="percent">{{ excellent_percent | round: 0 }}%</span>
                 </li>
 
-                {% assign great_stars = great_percent | divided_by: 20.0 | round %}
+                {% assign great_stars = great_percent | divided_by: 20.0 | ceil %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.great' | t }}</b>
@@ -144,7 +144,7 @@
                   <span class="percent">{{ great_percent | round: 0 }}%</span>
                 </li>
 
-                {% assign good_stars = good_percent | divided_by: 20.0 | round %}
+                {% assign good_stars = good_percent | divided_by: 20.0 | ceil %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.good' | t }}</b>
@@ -159,7 +159,7 @@
                   <span class="percent">{{ good_percent | round: 0 }}%</span>
                 </li>
 
-                {% assign average_stars = average_percent | divided_by: 20.0 | round %}
+                {% assign average_stars = average_percent | divided_by: 20.0 | ceil %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.average' | t }}</b>
@@ -174,7 +174,7 @@
                   <span class="percent">{{ average_percent | round: 0 }}%</span>
                 </li>
 
-                {% assign bad_stars = bad_percent | divided_by: 20.0 | round %}
+                {% assign bad_stars = bad_percent | divided_by: 20.0 | ceil %}
                 <li>
                   <div>
                     <b>{{ 'general.rating.bad' | t }}</b>
