@@ -236,7 +236,7 @@ cart-items {
     background: rgb(253, 253, 253);
     z-index: 10;
     padding: 25px;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #0000001A;
   }
 
   .totals{
