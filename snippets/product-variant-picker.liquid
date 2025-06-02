@@ -113,10 +113,10 @@
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         {% if option.name == 'Map size' %}
-          <button data-show-guide class="top">
+          <div class="top">
             <span class="form__label title">{{ option.name }}:</span>
-            <span class="title"><img src="{{  'Frame.svg' | asset_url }}" alt="">Size guide</span>
-          </button>
+            <button data-show-guide class="title"><img src="{{  'Frame.svg' | asset_url }}" alt="">Size guide</button>
+          </div>
           <fieldset class="js product-form__input bottom">
             {% render 'product-variant-options',
               product: product,
