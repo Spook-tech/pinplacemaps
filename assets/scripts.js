@@ -399,6 +399,27 @@ function handleVideoPlayback() {
   const slides = document.querySelectorAll("#explore .swiper-slide");
   const swiperInstance = document.querySelector("#explore").swiper; // Получаем экземпляр Swiper
 
+if (window.innerWidth >= 761) {
+  slides.forEach((slide) => {
+    const video = slide.querySelector("video");
+    if (video) {
+      video.muted = true;
+
+      slide.addEventListener("mouseenter", () => {
+        if (!slide.classList.contains("swiper-slide-active")) return;
+        video.play();
+      });
+
+      slide.addEventListener("mouseleave", () => {
+        if (!slide.classList.contains("swiper-slide-active")) return;
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
+  });
+}
+
+  
   slides.forEach((slide) => {
     const video = slide.querySelector("video");
     const playButton = slide.querySelector(".play");
