@@ -1,5 +1,3 @@
-
-
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding"
@@ -122,17 +120,17 @@
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
               {%- when 'rating' -%}
-                {% assign review_ratings_string = "" %}
-                
+                {% assign review_ratings_string = '' %}
+
                 {% for review in product.metafields.custom.reviews.value %}
                   {% if forloop.first %}
                     {% assign review_ratings_string = review.rating %}
                   {% else %}
-                    {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+                    {% assign review_ratings_string = review_ratings_string | append: ',' | append: review.rating %}
                   {% endif %}
                 {% endfor %}
-                
-                {% assign review_ratings = review_ratings_string | split: "," %}
+
+                {% assign review_ratings = review_ratings_string | split: ',' %}
                 {% assign total_reviews = review_ratings.size %}
                 {% assign total_rating_sum = 0 %}
 
@@ -269,6 +267,28 @@
   </section>
 </product-info>
 
+<div id="mapGuide" class="popup hidden">
+  <div class="popup-content">
+    <button class="popup-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="512"
+        height="512"
+        x="0"
+        y="0"
+        viewBox="0 0 32 32"
+        style="enable-background:new 0 0 512 512"
+        xml:space="preserve"
+        class="hovered-paths"
+      >
+        <g><path d="M21 12.46 17.41 16 21 19.54A1 1 0 0 1 21 21a1 1 0 0 1-.71.29 1 1 0 0 1-.7-.29L16 17.41 12.46 21a1 1 0 0 1-.7.29 1 1 0 0 1-.71-.29 1 1 0 0 1 0-1.41L14.59 16l-3.54-3.54a1 1 0 0 1 1.41-1.41L16 14.59l3.54-3.54A1 1 0 0 1 21 12.46zm4.9 13.44a14 14 0 1 1 0-19.8 14 14 0 0 1 0 19.8zM24.49 7.51a12 12 0 1 0 0 17 12 12 0 0 0 0-17z" data-name="Layer 22" fill="#000000" opacity="1" data-original="#000000" class="hovered-path"></path></g>
+      </svg>
+    </button>
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -307,7 +327,7 @@
             }
           ],
           "default": "button",
-          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label",
         },
         {
           "id": "swatch_shape",
@@ -325,6 +345,11 @@
             }
           ],
           "default": "circle"
+        },
+        {
+          "id": "guide_text",
+          "label": "Guide text",
+          "type": "richtext"
         }
       ]
     },
