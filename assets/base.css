@@ -15,6 +15,14 @@
   
 }
 
+button.title{
+    padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
 @font-face {
   font-family: 'Gilroy';
   src: url('Gilroy-Regular.woff') format('woff');
@@ -9190,12 +9198,4 @@ html, body {
 .popup-close svg{
   width: 100%;
   height: 100%;
-}
-
-button.title{
-    padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
 }
