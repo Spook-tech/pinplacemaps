@@ -409,6 +409,8 @@ function handleVideoPlayback() {
 
         playButton.style.display = "none";
         pauseButton.style.display = "block";
+
+        console.log(pauseButton)
       });
 
       slide.addEventListener("mouseleave", () => {
