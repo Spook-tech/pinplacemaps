@@ -406,11 +406,18 @@ function handleVideoPlayback() {
 
       slide.addEventListener("mouseenter", () => {
         video.play();
+
+        playButton.style.display = "none";
+        pauseButton.style.display = "block";
       });
 
       slide.addEventListener("mouseleave", () => {
         video.pause();
         video.currentTime = 0;
+
+                  playButton.style.display = "block";
+          pauseButton.style.display = "none";
+
       });
     
     if (video) {
