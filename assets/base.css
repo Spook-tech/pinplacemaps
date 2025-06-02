@@ -9182,13 +9182,12 @@ html, body {
 }
 
 .popup-content {
-  background: white;
+  background: #fff;
   max-width: 900px;
   width: 90%;
   padding: 2rem;
   border-radius: 8px;
   position: relative;
-  font-family: sans-serif;
 }
 
 .popup-close {
