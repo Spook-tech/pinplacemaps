@@ -402,6 +402,7 @@ function handleVideoPlayback() {
 if (window.innerWidth >= 761) {
   slides.forEach((slide) => {
     const video = slide.querySelector("video");
+    console.log(video)
     if (video) {
       video.muted = true;
 
