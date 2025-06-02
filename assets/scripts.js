@@ -405,12 +405,10 @@ function handleVideoPlayback() {
     const pauseButton = slide.querySelector(".pause");
 
       slide.addEventListener("mouseenter", () => {
-        if (!slide.classList.contains("swiper-slide-active")) return;
         video.play();
       });
 
       slide.addEventListener("mouseleave", () => {
-        if (!slide.classList.contains("swiper-slide-active")) return;
         video.pause();
         video.currentTime = 0;
       });
