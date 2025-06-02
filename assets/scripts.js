@@ -398,13 +398,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function handleVideoPlayback() {
   const slides = document.querySelectorAll("#explore .swiper-slide");
   const swiperInstance = document.querySelector("#explore").swiper; // Получаем экземпляр Swiper
-
-if (window.innerWidth >= 761) {
+  
   slides.forEach((slide) => {
     const video = slide.querySelector("video");
-    console.log(video)
-    if (video) {
-      video.muted = true;
+    const playButton = slide.querySelector(".play");
+    const pauseButton = slide.querySelector(".pause");
 
       slide.addEventListener("mouseenter", () => {
         if (!slide.classList.contains("swiper-slide-active")) return;
@@ -416,16 +414,7 @@ if (window.innerWidth >= 761) {
         video.pause();
         video.currentTime = 0;
       });
-    }
-  });
-}
-
-  
-  slides.forEach((slide) => {
-    const video = slide.querySelector("video");
-    const playButton = slide.querySelector(".play");
-    const pauseButton = slide.querySelector(".pause");
-
+    
     if (video) {
       if (slide.classList.contains("swiper-slide-active")) {
         video.play();
