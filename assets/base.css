@@ -5877,6 +5877,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 }
 
 .product__item {
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
