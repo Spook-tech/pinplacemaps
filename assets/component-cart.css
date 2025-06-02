@@ -237,8 +237,8 @@ cart-items {
     z-index: 10;
     
     border-top: 1px solid #0000001A;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
     padding-inline: 25px;
   }
 
