@@ -22,6 +22,7 @@ button.title{
     align-items: center;
   gap: 5px;
   background-color: transparent;
+  cursor: pointer;
 
   font-size: clamp(16px, 1.7094017094vw, 20px);
     font-weight: 700;
