@@ -9188,6 +9188,8 @@ html, body {
   padding: 2rem;
   border-radius: 8px;
   position: relative;
+  line-height: 1.45;
+  font-size: 18px;
 }
 
 .popup-close {
