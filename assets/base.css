@@ -9210,4 +9210,5 @@ html, body {
 .popup-content h2{
   text-align: left;
   margin-bottom: 20px;
+  max-width: 100%;
 }
