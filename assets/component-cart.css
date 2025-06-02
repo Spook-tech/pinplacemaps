@@ -221,6 +221,12 @@ cart-items {
   }
 }
 
+@media (min-width: 767px) {
+  .footer{
+    padding-bottom: 0px;
+  }
+}
+
 @media (max-width: 767px) {
   .cart__footer {
      position: fixed;
