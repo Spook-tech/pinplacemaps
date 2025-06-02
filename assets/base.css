@@ -9149,3 +9149,38 @@ html, body {
 .gallery__container.to-left {
   margin-top: 30px;
 }
+
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: white;
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
