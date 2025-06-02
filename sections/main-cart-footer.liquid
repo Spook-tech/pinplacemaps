@@ -135,6 +135,18 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const cartFooter = document.querySelector('.cart__footer');
+  const footer = document.querySelector('.footer');
+
+  if (cartFooter && footer) {
+    const cartFooterHeight = cartFooter.offsetHeight;
+    footer.style.paddingBottom = `${cartFooterHeight}px`;
+  }
+});
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-cart-footer.name",
