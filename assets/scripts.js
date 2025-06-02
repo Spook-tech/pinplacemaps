@@ -1168,3 +1168,21 @@ document.getElementById('image-modal').addEventListener('click', (e) => {
     e.currentTarget.style.display = 'none';
   }
 });
+
+const trigger = document.querySelector('[data-show-guide]');
+const popup = document.getElementById('mapGuide');
+const closeBtn = popup.querySelector('.popup-close');
+
+trigger.addEventListener('click', () => {
+  popup.classList.remove('hidden');
+});
+
+closeBtn.addEventListener('click', () => {
+  popup.classList.add('hidden');
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === popup) {
+    popup.classList.add('hidden');
+  }
+});
