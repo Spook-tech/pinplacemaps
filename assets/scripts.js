@@ -405,7 +405,7 @@ function handleVideoPlayback() {
     const pauseButton = slide.querySelector(".pause");
 
       slide.addEventListener("mouseenter", () => {
-        if (!slide.classList.contains("swiper-slide-active")) return;
+        if (slide.classList.contains("swiper-slide-active")) return;
 
         video.play();
 
@@ -416,7 +416,7 @@ function handleVideoPlayback() {
       });
 
       slide.addEventListener("mouseleave", () => {
-        if (!slide.classList.contains("swiper-slide-active")) return;
+        if (slide.classList.contains("swiper-slide-active")) return;
 
         video.pause();
         video.currentTime = 0;
