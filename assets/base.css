@@ -18,7 +18,9 @@
 button.title{
     padding: 0;
   border: none;
-
+    display: flex;
+    align-items: center;
+  gap: 5px;
   background-color: transparent;
 
   font-size: clamp(16px, 1.7094017094vw, 20px);
