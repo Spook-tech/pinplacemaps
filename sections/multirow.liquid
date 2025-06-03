@@ -1,4 +1,9 @@
-<section class="multirow">
+<section
+  {% if section.settings.bg != blank %}
+    style="background: url('{{ section.settings.bg | image_url }}') center/cover no-repeat;"
+  {% endif %}
+  class="multirow"
+>
   <div class="container">
     <ul class="maps__list">
       {% for block in section.blocks %}
@@ -22,6 +27,13 @@
 {% schema %}
 {
   "name": "t:sections.multirow.name",
+  "settings": [
+        {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Background image"
+    },
+  ],
   "blocks": [
     {
       "type": "block",
