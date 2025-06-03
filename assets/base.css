@@ -5055,7 +5055,12 @@ textarea:focus-visible {
   .logo img {
     max-width: 150px;
   }
+
+    .single .swipper-gallery {
+    margin-inline: -16px;
+  }
 }
+
 
 .navigation {
   display: -webkit-box;
