@@ -1,4 +1,9 @@
-<section class="product-info">
+<section
+  {% if section.settings.bg != blank %}
+    style="background: url('{{ section.settings.bg | image_url }}') center/cover no-repeat;"
+  {% endif %}
+  class="product-info"
+>
   <div class="container">
     {% if section.settings.title != blank %}
       <h2>{{ section.settings.title }}</h2>
@@ -36,7 +41,7 @@
             <ul class="icons">
               {% for i in (1..6) %}
                 <li>
-                  {%- assign icon_key = "icon_" | append: i -%}
+                  {%- assign icon_key = 'icon_' | append: i -%}
                   {%- if block.settings[icon_key] != blank -%}
                     {{ block.settings[icon_key] | image_url: height: 70 | image_tag }}
                   {%- endif -%}
@@ -55,6 +60,11 @@
   "name": "Product info",
   "class": "product-info_section",
   "settings": [
+        {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Background image"
+    },
     {
       "type": "text",
       "id": "title",
