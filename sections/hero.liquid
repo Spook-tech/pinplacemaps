@@ -9,7 +9,12 @@
   endif
 -%}
 
-<section class="hero">
+<section
+  {% if section.settings.bg != blank %}
+    style="background: url('{{ section.settings.bg | image_url }}') center/cover no-repeat;"
+  {% endif %}
+  class="hero"
+>
   <div class="container">
     <div class="wrapper">
       <div class="col">
@@ -23,17 +28,17 @@
 
             {% when 'rating' %}
               {% if is_product_loaded %}
-                {% assign review_ratings_string = "" %}
-                
+                {% assign review_ratings_string = '' %}
+
                 {% for review in section.settings.product.metafields.custom.reviews.value %}
                   {% if forloop.first %}
                     {% assign review_ratings_string = review.rating %}
                   {% else %}
-                    {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+                    {% assign review_ratings_string = review_ratings_string | append: ',' | append: review.rating %}
                   {% endif %}
                 {% endfor %}
-                
-                {% assign review_ratings = review_ratings_string | split: "," %}
+
+                {% assign review_ratings = review_ratings_string | split: ',' %}
 
                 {% assign total_reviews = review_ratings.size %}
                 {% assign total_rating_sum = 0 %}
@@ -66,9 +71,17 @@
       </div>
       <div class="col">
         {% if section.settings.image != blank %}
-          {{ section.settings.image | image_url: width: section.settings.image.width | image_tag: fetchpriority: fetch_priority }}
+          {{
+            section.settings.image
+            | image_url: width: section.settings.image.width
+            | image_tag: fetchpriority: fetch_priority
+          }}
         {% elsif is_product_loaded %}
-          {{ section.settings.product.featured_image | image_url:  width: section.settings.product.featured_image.width | image_tag: fetchpriority: fetch_priority }}
+          {{
+            section.settings.product.featured_image
+            | image_url: width: section.settings.product.featured_image.width
+            | image_tag: fetchpriority: fetch_priority
+          }}
         {% else %}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
@@ -81,6 +94,11 @@
 {
   "name": "t:sections.hero.name",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Background image"
+    },
     {
       "type": "image_picker",
       "id": "image",
