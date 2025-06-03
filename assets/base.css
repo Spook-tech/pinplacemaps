@@ -5058,6 +5058,7 @@ textarea:focus-visible {
 
     .single .swipper-gallery {
     margin-inline: -16px;
+          width: calc(100% + 32px);
   }
 }
 
@@ -5096,6 +5097,7 @@ textarea:focus-visible {
 
   .single .swipper-gallery {
     margin-inline: -25px;
+    width: calc(100% + 50px);
   }
 }
 
