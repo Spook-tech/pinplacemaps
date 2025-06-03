@@ -5051,18 +5051,6 @@ textarea:focus-visible {
   max-width: 200px;
 }
 
-@media (max-width: 767px) {
-  .logo img {
-    max-width: 150px;
-  }
-
-    .single .swipper-gallery {
-    margin-inline: -16px;
-          width: calc(100% + 32px);
-  }
-}
-
-
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5097,9 +5085,21 @@ textarea:focus-visible {
 
   .single .swipper-gallery {
     margin-inline: -25px;
-    width: calc(100% + 50px);
+    width: calc(100% + 50px) !important;
   }
 }
+
+@media (max-width: 767px) {
+  .logo img {
+    max-width: 150px;
+  }
+
+    .single .swipper-gallery {
+    margin-inline: -16px;
+    width: calc(100% + 32px) !important;
+  }
+}
+
 
 .navigation__list {
   position: relative;
@@ -7245,6 +7245,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .single .swipper-gallery {
   height: 540px;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
