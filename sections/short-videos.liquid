@@ -1,4 +1,9 @@
-<section class="explore">
+<section
+  {% if section.settings.bg != blank %}
+    style="background: url('{{ section.settings.bg | image_url }}') center/cover no-repeat;"
+  {% endif %}
+  class="explore"
+>
   <h2>{{ section.settings.title }}</h2>
 
   <div class="reels">
@@ -105,6 +110,11 @@
 {
   "name": "Short Videos",
   "settings": [
+        {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Background image"
+    },
     {
       "type": "text",
       "id": "title",
@@ -143,5 +153,3 @@
   ]
 }
 {% endschema %}
-
- 
