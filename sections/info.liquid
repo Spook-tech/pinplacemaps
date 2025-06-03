@@ -1,4 +1,9 @@
-<section class="info {% if section.settings.white_bg %} white-bg {% endif %}">
+<section
+  {% if section.settings.bg != blank %}
+    style="background: url('{{ section.settings.bg | image_url }}') center/cover no-repeat;"
+  {% endif %}
+  class="info {% if section.settings.white_bg %} white-bg {% endif %}"
+>
   <div class="container">
     <div class="reported">
       {% if section.settings.title != blank %}
@@ -30,6 +35,11 @@
   "name": "t:sections.info_section.name",
   "class": "info_section",
   "settings": [
+        {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Background image"
+    },
     {
       "type": "text",
       "id": "title",
