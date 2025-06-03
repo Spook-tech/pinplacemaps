@@ -7245,7 +7245,6 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .single .swipper-gallery {
   height: 540px;
-  width: 100%;
 }
 
 @media (max-width: 767px) {
