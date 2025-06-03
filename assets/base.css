@@ -5088,6 +5088,10 @@ textarea:focus-visible {
     left: 0;
     opacity: 1;
   }
+
+  .single .swipper-gallery {
+    margin-inline: -25px;
+  }
 }
 
 .navigation__list {
