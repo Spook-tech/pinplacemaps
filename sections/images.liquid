@@ -1,10 +1,15 @@
-<div class="seen">
+<div
+  {% if section.settings.bg != blank %}
+    style="background: url('{{ section.settings.bg | image_url }}') center/cover no-repeat;"
+  {% endif %}
+  class="seen"
+>
   <h2>{{ section.settings.title }}</h2>
   <ul class="seen__list">
     {% for block in section.blocks %}
       <li>
         {%- if block.settings.image != blank -%}
-          {{ block.settings.image | image_url: height: block.settings.image.height | image_tag}}
+          {{ block.settings.image | image_url: height: block.settings.image.height | image_tag }}
         {%- else -%}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
@@ -13,52 +18,56 @@
   </ul>
 </div>
 
-
 {% schema %}
-  {
-    "name": "Images",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Title",
-        "default": "As seen on"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Logo Image"
-          },
-          {
-            "type": "text",
-            "id": "alt_text",
-            "label": "Alt Text",
-            "default": "Brand Logo"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Images",
-        "blocks": [
-          {
-            "type": "image"
-          },
-          {
-            "type": "image"
-          },
-          {
-            "type": "image"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "Images",
+  "settings": [
+        {
+    "type": "image_picker",
+    "id": "bg",
+    "label": "Background image"
+  },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "As seen on"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text",
+          "default": "Brand Logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
