@@ -1,16 +1,24 @@
-<section class="about {% if section.settings.drop_shadow %} drop_shadow {% endif %} {% if section.settings.horizontal %} horizontal {% endif %}">
+<section
+  {% if section.settings.bg != blank %}
+    style="background: url('{{ section.settings.bg | image_url }}') center/cover no-repeat;"
+  {% endif %}
+  class="about {% if section.settings.drop_shadow %} drop_shadow {% endif %} {% if section.settings.horizontal %} horizontal {% endif %}"
+>
   <div class="container">
     <div class="about__card">
       {% for block in section.blocks %}
         {% if block.type == 'image' %}
-
-          <script>console.log({{ block.settings.image.width | json }})</script>
-          <script>console.log({{ block.settings.image.height | json }})</script>
+          <script>
+            console.log({{ block.settings.image.width | json }})
+          </script>
+          <script>
+            console.log({{ block.settings.image.height | json }})
+          </script>
 
           <div class="col">
             {%- if block.settings.image != blank -%}
               {{ block.settings.image | image_url: height: block.settings.image.height | image_tag }}
-              
+
             {%- else -%}
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
@@ -33,6 +41,11 @@
 {
   "name": "t:sections.image-with-text.name",
   "settings": [
+        {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Background image"
+    },
     {
       "type": "checkbox",
       "id": "drop_shadow",
