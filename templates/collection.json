@@ -17,29 +17,6 @@
         "color_scheme": "scheme-1"
       }
     },
-    "rich_text_TkKFtq": {
-      "type": "rich-text",
-      "blocks": {
-        "text_CCMPEn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Turn every trip into a lasting memory with a pin on your personalized world map.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_CCMPEn"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -63,7 +40,6 @@
   },
   "order": [
     "banner",
-    "rich_text_TkKFtq",
     "product-grid"
   ]
 }
