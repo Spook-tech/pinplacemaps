@@ -9232,6 +9232,6 @@ html, body {
   box-shadow: none;
   padding: 0;
 }
-.collection .product__goods {
+.collection .product__link {
   max-height: 230px;
 }
