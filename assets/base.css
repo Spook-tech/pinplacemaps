@@ -9234,4 +9234,5 @@ html, body {
 }
 .collection .product__link img {
   max-height: 230px;
+  object-fit: cover;
 }
