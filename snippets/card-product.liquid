@@ -78,7 +78,7 @@
     <h5>{{ card_product.title }}</h5>
   </a>
 
-  {% if alternative_view == false %}
+  {% if alternative_view == blank %}
     <div class="rating">
       <div class="rating__star">
         {% for i in (1..average_rating) %}
