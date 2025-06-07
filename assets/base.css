@@ -9237,5 +9237,8 @@ html, body {
   object-fit: cover;
 }
 .collection .product__item .rating {
+  margin-top: 0px;
+}
+.collection .product__item h5 {
   margin-top: 10px;
 }
