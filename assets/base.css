@@ -9245,3 +9245,6 @@ html, body {
 .collection .product__price {
   margin-top: 10px;
 }
+.collection .product__item .button {
+  margin-top: 20px;
+}
