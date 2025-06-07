@@ -9240,5 +9240,8 @@ html, body {
   margin-top: 0px;
 }
 .collection .product__item h5 {
-  margin-top: 10px;
+  margin-top: 5px;
+}
+.collection .product__price {
+  margin-top: 5px;
 }
