@@ -9248,3 +9248,6 @@ html, body {
 .collection .product__item .button {
   margin-top: 20px;
 }
+.collection .product__price .price {
+  font-size: 18px;
+}
