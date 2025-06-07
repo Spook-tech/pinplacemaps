@@ -9251,3 +9251,10 @@ html, body {
 .collection .product__price .price {
   font-size: 18px;
 }
+.collection .product__price .price-old {
+  background: transparent;
+  padding: 0; 
+}
+.collection .product__price .price-old s {
+  text-decoration: none;
+}
