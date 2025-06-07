@@ -9236,3 +9236,6 @@ html, body {
 .collection .product__link img {
   object-fit: cover;
 }
+.collection .product__item .rating {
+  margin-top: 10px;
+}
