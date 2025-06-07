@@ -9231,6 +9231,7 @@ html, body {
   border-radius: 0;
   box-shadow: none;
   padding: 0 20px;
+  align-items: start;
 }
 .collection .product__link img {
   object-fit: cover;
