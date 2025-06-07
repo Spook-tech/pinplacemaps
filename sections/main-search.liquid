@@ -213,7 +213,6 @@
           {%- endif -%}
         {%- endif -%}
         <div class="product-grid-container" id="ProductGridContainer">
-
           {%- if search.results.size == 0 and search.filters != empty -%}
             <div
               class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} container{% endif %}"
@@ -238,7 +237,10 @@
               id="product-grid"
               data-id="{{ section.id }}"
             >
-              <div class="loading-overlay gradient"></div> <script>console.log(777)</script>
+              <div class="loading-overlay gradient"></div>
+              <script>
+                console.log(777)
+              </script>
               <ul
                 class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
                 role="list"
@@ -254,11 +256,10 @@
                   <li
                     class="grid__item"
                   >
-
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                        {% render 'card-product', card_product: item %}
+                        {% render 'card-product', alternative_view: true, card_product: item %}
                         {%- assign skip_card_product_styles = true -%}
                       {%- when 'article' -%}
                         {% render 'article-card', article: item %}

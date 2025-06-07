@@ -4,22 +4,23 @@
   Accepts:
   - card_product: {Object} Product Liquid object (optional)
   - display_as_slide {Boolean}
+  - alternative_view {Boolean}
   Usage:
   {% render 'card-product' %}
 {% endcomment %}
 
 {%- if card_product and card_product != empty -%}
-  {% assign review_ratings_string = "" %}
-  
+  {% assign review_ratings_string = '' %}
+
   {% for review in card_product.metafields.custom.reviews.value %}
     {% if forloop.first %}
       {% assign review_ratings_string = review.rating %}
     {% else %}
-      {% assign review_ratings_string = review_ratings_string | append: "," | append: review.rating %}
+      {% assign review_ratings_string = review_ratings_string | append: ',' | append: review.rating %}
     {% endif %}
   {% endfor %}
-  
-  {% assign review_ratings = review_ratings_string | split: "," %}
+
+  {% assign review_ratings = review_ratings_string | split: ',' %}
   {% assign total_reviews = review_ratings.size %}
   {% assign total_rating_sum = 0 %}
 
@@ -46,9 +47,8 @@
     {%- endif -%}
 
     {% if card_product.metafields.custom.show_best_seller_badge_ %}
-    <span class="hit">Hit</span>
+      <span class="hit">Hit</span>
     {% endif %}
-
   </div>
 
   <a class="product__link" href="{{ card_product.url }}">
@@ -91,5 +91,3 @@
     </div>
   {%- endif -%}
 {%- endif -%}
-
-            
