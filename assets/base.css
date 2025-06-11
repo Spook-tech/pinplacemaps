@@ -7302,6 +7302,12 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   .single .swipper-gallery{
     height: auto;
   }
+
+  .glightbox-clean .gprev,
+  .glightbox-clean .gnext {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .single .swiper-thumb {
