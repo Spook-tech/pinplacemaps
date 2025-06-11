@@ -6338,6 +6338,9 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 }
 
 .header__grats{
+  color: #fff;
+  padding: 7px;
+  text-align: center;
   background: var(--color-green);
 }
 
