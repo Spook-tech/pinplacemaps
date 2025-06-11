@@ -155,7 +155,11 @@
     </div>
   </div>
 
-                {{ request.path }}
+  {% if request.path == '/cart' %}
+    <div class="header__grats">
+      Congratulations you have free shipping!
+    </div>
+  {% endif %}}
 </header>
 
 
