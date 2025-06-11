@@ -6333,6 +6333,10 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   border-radius: 20px;
 }
 
+.glightbox-mobile .goverlay {
+  background: #fff;
+}
+
 @media (max-width: 767px) {
   .size img {
     margin: 30px 0;
