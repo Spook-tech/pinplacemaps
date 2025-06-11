@@ -6317,6 +6317,11 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   .maps__list li p {
     text-align: center;
   }
+
+  .maps__list li img{
+    margin-inline: -16px;
+    width: calc(100% + 32px);
+  }
 }
 
 .size img {
