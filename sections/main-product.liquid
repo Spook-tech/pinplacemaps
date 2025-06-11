@@ -94,9 +94,7 @@
             <div class="swiper-wrapper">
 {% for image in product.images %}
   <div class="swiper-slide">
-    <a href="{{ image | image_url }}" class="glightbox" data-gallery="product-gallery">
       {{ image | image_url: width: image.width | image_tag }}
-    </a>
   </div>
 {% endfor %}
             </div>
@@ -296,6 +294,17 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true
+    });
+  });
+</script>
+
+                          
 {% schema %}
 {
   "name": "t:sections.main-product.name",
