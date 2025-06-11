@@ -6322,6 +6322,10 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
     margin-inline: -16px;
     width: calc(100% + 32px);
   }
+
+  .maps__list li img {
+    border-radius: 0;
+  }
 }
 
 .size img {
