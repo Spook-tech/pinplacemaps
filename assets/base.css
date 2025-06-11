@@ -7308,6 +7308,14 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .glightbox-clean .gnext {
+    right: 10px;
+  }
+
+  .glightbox-clean .gprev {
+    left: 10px;
+  }
 }
 
 .single .swiper-thumb {
