@@ -7270,16 +7270,8 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  .single .swipper-gallery {
-    height: 400px;
-  }
-}
 
 @media (max-width: 560px) {
-  .single .swipper-gallery {
-    height: 320px;
-  }
 
   .single .swipper-gallery .swiper-button-next,
   .single .swipper-gallery .swiper-button-prev {
@@ -7305,6 +7297,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 @media (max-width: 767px) {
   .single .swipper-gallery .swiper-slide {
     border-radius: 8px;
+    aspect-ratio: 1 / 1;
   }
 }
 
