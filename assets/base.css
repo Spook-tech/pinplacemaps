@@ -473,10 +473,6 @@ table:not([class]) th {
   .small-hide {
     display: none !important;
   }
-
-  .popup-content{
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
@@ -8067,6 +8063,10 @@ input:checked+.size-option {
 @media (max-width: 767px) {
   .footer .news__form {
     margin-top: 20px;
+  }
+
+    .popup-content{
+    width: 100%;
   }
 }
 
