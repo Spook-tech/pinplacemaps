@@ -9245,6 +9245,7 @@ html, body {
 .popup-close svg{
   width: 100%;
   height: 100%;
+  fill: #0D947D;
 }
 
 .popup-content h2{
