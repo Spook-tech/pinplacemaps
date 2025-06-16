@@ -9256,7 +9256,7 @@ html, body {
 .collection .product__item {
   border-radius: 0;
   box-shadow: none;
-  padding: 0 0px;
+  padding: 0 20px;
   align-items: start;
 }
 .collection .product__link img {
@@ -9297,5 +9297,9 @@ html, body {
 
   .popup {
     align-items: end;
+  }
+
+  .collection .product__item{
+    padding: 0;
   }
 }
