@@ -9293,4 +9293,8 @@ html, body {
     .popup-content{
     width: 100%;
   }
+
+  .popup {
+    align-items: end;
+  }
 }
