@@ -9228,7 +9228,7 @@ html, body {
   line-height: 1.45;
   font-size: 18px;
   overflow-y: auto;
-  max-height: 65vh;
+  max-height: 85vh;
 }
 
 .popup-close {
