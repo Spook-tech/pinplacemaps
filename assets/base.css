@@ -9247,7 +9247,7 @@ html, body {
   height: 100%;
   fill: #0D947D;
 }
-.popup-close svg g{
+.popup-close svg path{
   fill: #0D947D;
 }
 
