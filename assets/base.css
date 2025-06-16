@@ -9261,6 +9261,7 @@ html, body {
 }
 .collection .product__link img {
   object-fit: cover;
+  border-radius: 10px;
 }
 .collection .product__item .rating {
   margin-top: 0px;
