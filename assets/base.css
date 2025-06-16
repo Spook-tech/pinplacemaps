@@ -9248,7 +9248,7 @@ html, body {
   fill: #0D947D;
 }
 .popup-close svg path{
-  fill: #0D947D;
+  fill: #0D947D !important;
 }
 
 .popup-content h2{
