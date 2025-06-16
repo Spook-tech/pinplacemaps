@@ -6051,7 +6051,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .product__price .price-old {
   padding: 2px 10px;
-  font-size: 10px;
+  // font-size: 10px;
   font-weight: 500;
   color: var(--color-white);
   background: var(--color-red);
