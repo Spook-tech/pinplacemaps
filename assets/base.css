@@ -9279,6 +9279,7 @@ html, body {
 }
 .collection .product__item .button {
   margin-top: 20px;
+  display: none;
 }
 .collection .product__price .price {
   font-size: 18px;
