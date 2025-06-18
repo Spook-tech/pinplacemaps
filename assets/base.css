@@ -7921,8 +7921,6 @@ input:checked+.size-option {
 @media (max-width: 560px) {
   .single .payment__list {
     margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(6, auto);
   }
 }
 
