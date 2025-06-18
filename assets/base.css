@@ -9270,12 +9270,13 @@ html, body {
 }
 .collection .product__item .rating {
   margin-top: 8px;
+  margin-left: -3px;
 }
 .collection .product__item h5 {
   margin-top: 5px;
 }
 .collection .product__price {
-  margin-top: 7px;
+  margin-top: 5px;
   gap: 6.5px;
 }
 .collection .product__item .button {
