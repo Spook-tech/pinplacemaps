@@ -44,50 +44,6 @@
 
           <p>1 box - 100 pins</p>
 
-          <script>
-            if (document.getElementById('color-palette')) {
-              const buttonPalette = document.getElementById('color-palette');
-              const colorPalette = document.querySelector('.color-options');
-              const colorOptions = document.querySelectorAll('.color-option');
-              const selectedColorName = document.getElementById('selected-color-name');
-              const selectedColorCircle = document.getElementById('selected-color-circle');
-
-              const currentColorElement = document.querySelector('#current-color-hidden');
-
-              if (currentColorElement.dataset.color) {
-                selectedColorCircle.style.backgroundColor = currentColorElement.dataset.color;
-              }
-
-              buttonPalette.addEventListener('click', function () {
-                this.classList.toggle('active'); // Работает корректно, так как используется обычная функция
-                colorPalette.classList.toggle('show');
-              });
-
-              colorOptions.forEach(option => {
-                option.addEventListener('click', () => {
-                  // Удаляем класс active со всех опций
-                  colorOptions.forEach(opt => opt.classList.remove('active'));
-
-                  // Добавляем active к выбранной
-                  option.classList.add('active');
-
-                  // Обновляем текст и круг выбранного цвета
-                  const color = option.querySelector('.swatch').style.cssText;
-                  console.log(color);
-                  const match = color.match(/rgb\(\d+\s\d+\s\d+\)/)[0];
-
-
-                  const colorName = option.getAttribute('data-color');
-                  selectedColorName.textContent = colorName;
-                  if (match){
-                    currentColorElement.dataset.color = match;
-                    selectedColorCircle.style.backgroundColor = match;
-                  }
-                });
-              });
-            }
-          </script>
-
           <div class="color-actions">
             <div class="color-options">
               {% render 'product-variant-options',
