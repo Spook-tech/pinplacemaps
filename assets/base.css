@@ -9309,7 +9309,7 @@ html, body {
   }
 }
 
-.collection-banner__title,
-.collection-banner__description {
+.collection-hero__title,
+.collection-hero__description {
   display: none !important;
 }
