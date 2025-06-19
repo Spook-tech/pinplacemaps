@@ -9316,15 +9316,11 @@ html, body {
 
 .collection-hero {
   width: 100%;
-  display: block;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.collection-hero img {
-  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   height: auto;
-  display: block;
-  object-fit: contain;
+  aspect-ratio: unset; /* optional */
+  padding-top: 0;
+  padding-bottom: 0;
 }
