@@ -9313,3 +9313,14 @@ html, body {
 .collection-hero__description {
   display: none !important;
 }
+
+.collection-hero {
+  height: auto !important;
+}
+
+.collection-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
