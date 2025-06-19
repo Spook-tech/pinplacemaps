@@ -22,7 +22,9 @@
       "blocks": {
         "image_XLxGrk": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Be_pavadinimo_1600_x_700_piks._2f90ea5c-ab50-470c-beef-b82b0f1d4dec.png"
+          }
         },
         "text_VxhDaE": {
           "type": "text",
@@ -59,8 +61,7 @@
         "reviews_W8QmKq"
       ],
       "settings": {
-        "title": "Hear from Them",
-        "product": "world-map-coloured-copy"
+        "title": "Hear from Them"
       }
     }
   },
