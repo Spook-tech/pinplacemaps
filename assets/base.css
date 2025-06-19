@@ -9309,18 +9309,3 @@ html, body {
   }
 }
 
-.collection-hero__title,
-.collection-hero__description {
-  display: none !important;
-}
-
-.collection-hero {
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: auto;
-  aspect-ratio: unset; /* optional */
-  padding-top: 0;
-  padding-bottom: 0;
-}
