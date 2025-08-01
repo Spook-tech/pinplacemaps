@@ -74,7 +74,9 @@
       "total_reviews": "{{ count }} Bewertungen insgesamt",
       "newest": "Neueste",
       "featured": "Empfohlen"
-    }
+    },
+    "names": "Name (oder Namen):",
+    "personalization_info": "Sie können einen Namen, mehrere Namen oder Anführungszeichen eingeben. Mindestens 3 Zeichen, maximal 300 Zeichen."
   },
   "newsletter": {
     "label": "E-Mail",
