@@ -12,17 +12,16 @@
 
 
 {% if stars_number >= 4.5 %}
-  {% assign rating_text = general['rating']['excellent'] %}
+  {% assign rating_text = 'general.rating.excellent' | t %}
 {% elsif stars_number >= 3.5 %}
-  {% assign rating_text = general['rating']['great'] %}
+  {% assign rating_text = 'general.rating.great' | t %}
 {% elsif stars_number >= 2.5 %}
-  {% assign rating_text = general['rating']['good'] %}
+  {% assign rating_text = 'general.rating.good' | t %}
 {% elsif stars_number >= 1.5 %}
-  {% assign rating_text = general['rating']['average'] %}
+  {% assign rating_text = 'general.rating.average' | t %}
 {% else %}
-  {% assign rating_text = general['rating']['bad'] %}
+  {% assign rating_text = 'general.rating.bad' | t %}
 {% endif %}
-
 <div class="rating">
   {% assign stars = stars_number | round %}
   <div class="rating__star">
