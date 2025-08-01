@@ -142,7 +142,7 @@
   {% assign is_default = true %}
 {% endif %}
 
-          {% if is_default %}
+          {% if true %}
             {% assign raw_price = variant.price | money_with_currency %}
             {% assign price_parts = raw_price | split: ',' %}
             {% if price_parts.size > 1 and price_parts[1] == '00 €' %}
