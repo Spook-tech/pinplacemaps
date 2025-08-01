@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -55,6 +64,16 @@
       "next_slide": "Nach rechts schieben",
       "previous_slide": "Nach links schieben",
       "name": "Slider"
+    },
+    "rating": {
+      "excellent": "Exzellent",
+      "great": "Großartig",
+      "good": "Gut",
+      "average": "Durchschnitt",
+      "bad": "Schlecht",
+      "total_reviews": "{{ count }} Bewertungen insgesamt",
+      "newest": "Neueste",
+      "featured": "Empfohlen"
     }
   },
   "newsletter": {
@@ -271,7 +290,9 @@
       "cart_count": {
         "one": "{{ count }} Artikel",
         "other": "{{ count }} Artikel"
-      }
+      },
+      "main_label": "Haupttext",
+      "reviews_label": "Rezensionen Text"
     },
     "cart": {
       "title": "Dein Warenkorb",
@@ -523,6 +544,19 @@
       "send_on_label": "Senden am (optional)",
       "expanded": "Formular für den Empfänger des Gutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Gutscheins minimiert"
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_status": {
+        "expected_by": "Erwartet bis {{date}}",
+        "was_expected_by": "Wurde erwartet bis {{date}}"
+      },
+      "group_title_label": "Teil von: {{groupTitle}}",
+      "group_title_label_with_parent": "Für: {{groupTitle}}"
+    },
+    "order_details": {
+      "group_title_label_with_parent": "Für: {{groupTitle}}"
     }
   }
 }
