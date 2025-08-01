@@ -133,7 +133,7 @@
         </label>
       {%- when 'XLarge' -%}
         {% for variant in product.variants %}
-          {% if value == variant.option1 and variant.option3 == 'Default' %}
+          {% if value == variant.option1 and (variant.option3 == 'Default' or variant.option3 == 'Standard') %}
             {% assign raw_price = variant.price | money_with_currency %}
             {% assign price_parts = raw_price | split: ',' %}
             {% if price_parts.size > 1 and price_parts[1] == '00 €' %}
