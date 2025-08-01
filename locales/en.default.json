@@ -10,7 +10,7 @@
 {
   "general": {
     "names": "Name (or names):",
-    "personalization_info": "You can enter a name, multiple names, or quotes. <br> Minimum 3 characters, maximum 300 characters.",
+    "personalization_info": "You can enter a name, multiple names, or quotes. Minimum 3 characters, maximum 300 characters.",
     "password_page": {
       "login_form_heading": "Enter store using password:",
       "login_password_button": "Enter using password",
