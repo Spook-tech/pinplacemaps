@@ -8919,6 +8919,7 @@ input:checked+.size-option {
   display: none;
 }
 
+.product-form__input--pill:has(input[value="Personalisiert"]),
 .product-form__input--pill:has(input[value="Personalized"]) {
   display: none;
 }
