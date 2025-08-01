@@ -112,7 +112,8 @@
           <h3>Medium – {{ price }}</h3>
           <p>100cm x 70cm</p>
         </label>
-{%- when 'Large', 'groß' -%}        {% for variant in product.variants %}
+      {%- when 'groß' -%}
+        {% for variant in product.variants %}
           {% if value == variant.option1 and variant.option3 == 'Default' %}
             {% assign raw_price = variant.price | money_with_currency %}
             {% assign price_parts = raw_price | split: ',' %}
