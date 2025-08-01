@@ -112,7 +112,7 @@
           </div>
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        {% if option.name == 'Map size' %}
+        {% if option.name == 'Map size' or option.name == 'Kartengröße'  %}
           <div class="top">
             <span class="form__label title">{{ option.name }}:</span>
             <button data-show-guide class="title"><img src="{{  'Frame.svg' | asset_url }}" alt="">Size guide</button>
