@@ -113,31 +113,46 @@
             </div>
             <div class="code-block" id="liquidCode">
 {% assign all_reviews = '' %}
+{% assign used_authors = '' %}
+
 {% for product in collections.all.products %}
   {% for review in product.metafields.custom.reviews.value %}
-    {% capture review_json %}
-    {
-      "product_handle": "{{ product.handle | replace: '"', '\\"' }}",
-      "rating": {{ review.rating }},
-      "author": "{{ review.author | replace: '"', '\\"' | replace: '\', '\\\\' }}",
-      "email": "",
-      "body": "{{ review.text | replace: '"', '\\"' | replace: '\', '\\\\' | replace: '\n', '\\n' | replace: '\r', '\\r' | replace: '\t', '\\t' }}",
-      "created_at": "{{ review.date }}",
-      {% assign first_image = review.images.value | first %}
-      {% assign image_url = first_image | image_url: width: first_image.width %}
-      "photo_url": "{{ image_url }}",
-      "verified_purchase": "true"
-    }
-    {% endcapture %}
+    {% assign author_name = review.author | downcase | strip %}
     
-    {% if all_reviews == '' %}
-      {% assign all_reviews = review_json %}
-    {% else %}
-      {% assign all_reviews = all_reviews | append: ',' | append: review_json %}
-    {% endif %}
+    {% comment %} Проверяем, использовался ли уже этот автор {% endcomment %}
+    {% unless used_authors contains author_name %}
+      {% comment %} Добавляем автора в список использованных {% endcomment %}
+      {% if used_authors == '' %}
+        {% assign used_authors = author_name %}
+      {% else %}
+        {% assign used_authors = used_authors | append: '|' | append: author_name %}
+      {% endif %}
+      
+      {% comment %} Формируем JSON для отзыва {% endcomment %}
+      {% capture review_json %}
+      {
+        "product_handle": "{{ product.handle | replace: '"', '\\"' }}",
+        "rating": {{ review.rating }},
+        "author": "{{ review.author | replace: '"', '\\"' | replace: '\', '\\\\' }}",
+        "email": "",
+        "body": "{{ review.text | replace: '"', '\\"' | replace: '\', '\\\\' | replace: '\n', '\\n' | replace: '\r', '\\r' | replace: '\t', '\\t' }}",
+        "created_at": "{{ review.date }}",
+        {% assign first_image = review.images.value | first %}
+        {% assign image_url = first_image | image_url: width: first_image.width %}
+        "photo_url": "{{ image_url }}",
+        "verified_purchase": "true"
+      }
+      {% endcapture %}
+      
+      {% comment %} Добавляем отзыв в общий список {% endcomment %}
+      {% if all_reviews == '' %}
+        {% assign all_reviews = review_json %}
+      {% else %}
+        {% assign all_reviews = all_reviews | append: ',' | append: review_json %}
+      {% endif %}
+    {% endunless %}
   {% endfor %}
 {% endfor %}
-
 [{{ all_reviews }}]
             </div>
             <button onclick="copyCode()">📋 Скопировать код</button>
