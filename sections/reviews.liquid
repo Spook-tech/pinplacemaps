@@ -117,11 +117,11 @@
   {% for review in product.metafields.custom.reviews.value %}
     {% capture review_json %}
     {
-      "product_handle": {{ product.handle | json }},
+      "product_handle": "{{ product.handle | replace: '"', '\\"' }}",
       "rating": {{ review.rating }},
-      "author": {{ review.author | json }},
+      "author": "{{ review.author | replace: '"', '\\"' | replace: '\', '\\\\' }}",
       "email": "",
-      "body": {{ review.text | json }},
+      "body": "{{ review.text | replace: '"', '\\"' | replace: '\', '\\\\' | replace: '\n', '\\n' | replace: '\r', '\\r' | replace: '\t', '\\t' }}",
       "created_at": "{{ review.date }}",
       {% if review.images.size > 0 %}
         {% assign photo_url = review.images[0] | replace: 'gid://shopify/MediaImage/', '' %}
