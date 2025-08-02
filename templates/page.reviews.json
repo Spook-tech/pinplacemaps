@@ -60,14 +60,39 @@
         "rating_pJEfnJ",
         "reviews_W8QmKq"
       ],
+      "disabled": true,
       "settings": {
         "title": "Loved by Travelers Around the World"
+      }
+    },
+    "17541620389a0b2602": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_bjaRNr": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_bjaRNr"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
     "image_with_text_jBbipq",
-    "reviews_q6nKtN"
+    "reviews_q6nKtN",
+    "17541620389a0b2602"
   ]
 }
