@@ -1,10 +1,78 @@
+{% comment %}
+Этот код создает CSV файл для импорта в Loox из отзывов Shopify
+Разместите этот код в новом liquid template файле в админке Shopify
+{% endcomment %}
+
+{% assign csv_rows = '' %}
+
+{% comment %} Заголовок CSV {% endcomment %}
+{% assign csv_header = 'product_handle,rating,author,email,body,created_at,photo_url,verified_purchase' %}
+
+{% comment %} Получаем все отзывы по всем продуктам {% endcomment %}
+{% for product in collections.all.products %}
+  {% for review in product.metafields.custom.reviews.value %}
+    
+    {% comment %} Формируем строку CSV {% endcomment %}
+    {% assign csv_row = '' %}
+    
+    {% comment %} product_handle {% endcomment %}
+    {% assign csv_row = csv_row | append: product.handle %}
+    
+    {% comment %} rating {% endcomment %}
+    {% assign csv_row = csv_row | append: ',' | append: review.rating %}
+    
+    {% comment %} author {% endcomment %}
+    {% assign csv_row = csv_row | append: ',"' | append: review.author | append: '"' %}
+    
+    {% comment %} email (если есть в данных, иначе пустое поле) {% endcomment %}
+    {% if review.email %}
+      {% assign csv_row = csv_row | append: ',"' | append: review.email | append: '"' %}
+    {% else %}
+      {% assign csv_row = csv_row | append: ',' %}
+    {% endif %}
+    
+    {% comment %} body (текст отзыва) {% endcomment %}
+    {% assign review_text = review.text | replace: '"', '""' %}
+    {% assign csv_row = csv_row | append: ',"' | append: review_text | append: '"' %}
+    
+    {% comment %} created_at (дата в формате YYYY-MM-DD) {% endcomment %}
+    {% assign csv_row = csv_row | append: ',' | append: review.date %}
+    
+    {% comment %} photo_url (извлекаем URL изображения из Shopify Media ID) {% endcomment %}
+    {% if review.images.size > 0 %}
+      {% assign image_id = review.images[0] | split: '/' | last %}
+      {% for media in product.media %}
+        {% if media.id == image_id %}
+          {% assign csv_row = csv_row | append: ',' | append: media.preview_image.url %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {% assign csv_row = csv_row | append: ',' %}
+    {% endif %}
+    
+    {% comment %} verified_purchase (предполагаем TRUE для всех отзывов) {% endcomment %}
+    {% assign csv_row = csv_row | append: ',TRUE' %}
+    
+    {% comment %} Добавляем строку к общему результату {% endcomment %}
+    {% if csv_rows == '' %}
+      {% assign csv_rows = csv_row %}
+    {% else %}
+      {% assign csv_rows = csv_rows | append: '\n' | append: csv_row %}
+    {% endif %}
+    
+  {% endfor %}
+{% endfor %}
+
+{% comment %} Выводим результат {% endcomment %}
+{{ csv_header }}
+{{ csv_rows }}
+
 {% assign review_ratings_string = '' %}
 {% assign unique_review_texts = '' %}
 
 {% for product in collections.all.products %}
   {% for review in product.metafields.custom.reviews.value %}
-
-    <script>console.log({{ review | json }})</script>
 
     {% if review_ratings_string == '' %}
       {% assign review_ratings_string = review.rating %}
