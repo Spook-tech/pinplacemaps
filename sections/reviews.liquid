@@ -117,11 +117,11 @@
   {% for review in product.metafields.custom.reviews.value %}
     {% capture review_json %}
     {
-      "product_handle": "{{ product.handle | escape }}",
+      "product_handle": {{ product.handle | json }},
       "rating": {{ review.rating }},
-      "author": "{{ review.author | escape }}",
+      "author": {{ review.author | json }},
       "email": "",
-      "body": "{{ review.text | escape }}",
+      "body": {{ review.text | json }},
       "created_at": "{{ review.date }}",
       {% if review.images.size > 0 %}
         {% assign photo_url = review.images[0] | replace: 'gid://shopify/MediaImage/', '' %}
@@ -233,7 +233,14 @@
                 // Исправляем проблемы с экранированием кавычек
                 jsonInput = jsonInput
                     .replace(/\\"/g, '"')  // Убираем лишние экранирования
-                    .replace(/\\\\/g, '\\'); // Исправляем двойные слэши
+                    .replace(/\\\\/g, '\\') // Исправляем двойные слэши
+                    // Исправляем двойные кавычки в значениях полей
+                    .replace(/"body":"([^"]*)"([^"]*)"([^"]*)"([^"]*)"([^"]*)"/g, '"body":"$1\\"$2\\"$3\\"$4\\"$5"')
+                    .replace(/"body":"([^"]*)"([^"]*)"([^"]*)"/g, '"body":"$1\\"$2\\"$3"')
+                    .replace(/"body":"([^"]*)"([^"]*)"/g, '"body":"$1\\"$2"')
+                    // Исправляем кавычки в других полях
+                    .replace(/"author":"([^"]*)"([^"]*)"/g, '"author":"$1\\"$2"')
+                    .replace(/"product_handle":"([^"]*)"([^"]*)"/g, '"product_handle":"$1\\"$2"');
                 
                 const reviews = JSON.parse(jsonInput);
                 
