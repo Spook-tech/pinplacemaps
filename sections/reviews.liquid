@@ -115,25 +115,28 @@
 {% assign all_reviews = '' %}
 {% for product in collections.all.products %}
   {% for review in product.metafields.custom.reviews.value %}
-    {% assign review_data = '' %}
-    {% assign review_data = review_data | append: '{"product_handle":"' | append: product.handle | append: '",' %}
-    {% assign review_data = review_data | append: '"rating":' | append: review.rating | append: ',' %}
-    {% assign review_data = review_data | append: '"author":"' | append: review.author | replace: '"', '\"' | append: '",' %}
-    {% assign review_data = review_data | append: '"email":"",' %}
-    {% assign review_data = review_data | append: '"body":"' | append: review.text | replace: '"', '\"' | replace: '\n', '\\n' | append: '",' %}
-    {% assign review_data = review_data | append: '"created_at":"' | append: review.date | append: '",' %}
-    {% if review.images.size > 0 %}
-      {% assign photo_url = review.images[0] | replace: 'gid://shopify/MediaImage/', '' %}
-      {% assign review_data = review_data | append: '"photo_url":"https://cdn.shopify.com/s/files/1/YOUR_SHOP_ID/files/' | append: photo_url | append: '.jpg",' %}
-    {% else %}
-      {% assign review_data = review_data | append: '"photo_url":"",' %}
-    {% endif %}
-    {% assign review_data = review_data | append: '"verified_purchase":"true"}' %}
+    {% capture review_json %}
+    {
+      "product_handle": "{{ product.handle | escape }}",
+      "rating": {{ review.rating }},
+      "author": "{{ review.author | escape }}",
+      "email": "",
+      "body": "{{ review.text | escape }}",
+      "created_at": "{{ review.date }}",
+      {% if review.images.size > 0 %}
+        {% assign photo_url = review.images[0] | replace: 'gid://shopify/MediaImage/', '' %}
+        "photo_url": "https://cdn.shopify.com/s/files/1/YOUR_SHOP_ID/files/{{ photo_url }}.jpg",
+      {% else %}
+        "photo_url": "",
+      {% endif %}
+      "verified_purchase": "true"
+    }
+    {% endcapture %}
     
     {% if all_reviews == '' %}
-      {% assign all_reviews = review_data %}
+      {% assign all_reviews = review_json %}
     {% else %}
-      {% assign all_reviews = all_reviews | append: ',' | append: review_data %}
+      {% assign all_reviews = all_reviews | append: ',' | append: review_json %}
     {% endif %}
   {% endfor %}
 {% endfor %}
@@ -219,7 +222,7 @@
         }
 
         function convertToCSV() {
-            const jsonInput = document.getElementById('jsonInput').value.trim();
+            let jsonInput = document.getElementById('jsonInput').value.trim();
             
             if (!jsonInput) {
                 alert('Пожалуйста, вставьте JSON данные');
@@ -227,6 +230,11 @@
             }
 
             try {
+                // Исправляем проблемы с экранированием кавычек
+                jsonInput = jsonInput
+                    .replace(/\\"/g, '"')  // Убираем лишние экранирования
+                    .replace(/\\\\/g, '\\'); // Исправляем двойные слэши
+                
                 const reviews = JSON.parse(jsonInput);
                 
                 if (!Array.isArray(reviews)) {
