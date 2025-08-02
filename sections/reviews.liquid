@@ -1,8 +1,11 @@
 {% for product in collections.all.products %}
   {% for review in product.metafields.custom.reviews.value %}
-      {% for image in review.images.value %}
-        {{ image | image_url: width: image.width | image_tag }}
-      {% endfor %}
+    {% assign first_image = review.images.value | first %}
+    {% if first_image %}
+      {% assign image_url = first_image | image_url: width: first_image.width %}
+      <!-- Теперь в переменной image_url содержится ссылка на изображение -->
+      {{ image_url }}
+    {% endif %}
   {% endfor %}
 {% endfor %}
 
