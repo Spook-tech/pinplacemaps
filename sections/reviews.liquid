@@ -1,4 +1,5 @@
 {% assign review_ratings_string = '' %}
+{% assign unique_review_texts = '' %}
 
 {% for product in collections.all.products %}
   {% for review in product.metafields.custom.reviews.value %}
@@ -301,42 +302,57 @@
                     {% assign review_image = review.product_image %}
                     {% assign review_country = review.country %}
 
-                    <li data-rating="{{ review_rating }}" class="review__card">
-                      <div class="reviews__product">
-                        <a href="{{ product.url }}" class="reviews__link">
-                          {% if review_image != blank %}
-                            {{ review_image | image_url: width: review_image.width | image_tag }}
+                    {% comment %} Проверяем, есть ли уже такой текст отзыва {% endcomment %}
+                    {% assign text_already_exists = false %}
+                    {% unless review_text == blank %}
+                      {% assign text_separator = '|||' %}
+                      {% assign text_to_check = text_separator | append: review_text | append: text_separator %}
+                      {% if unique_review_texts contains text_to_check %}
+                        {% assign text_already_exists = true %}
+                      {% else %}
+                        {% assign unique_review_texts = unique_review_texts | append: text_to_check %}
+                      {% endif %}
+                    {% endunless %}
+
+                    {% comment %} Выводим отзыв только если текст уникальный {% endcomment %}
+                    {% unless text_already_exists %}
+                      <li data-rating="{{ review_rating }}" class="review__card">
+                        <div class="reviews__product">
+                          <a href="{{ product.url }}" class="reviews__link">
+                            {% if review_image != blank %}
+                              {{ review_image | image_url: width: review_image.width | image_tag }}
+                            {% endif %}
+
+                            <h5>{{ product.title }}</h5>
+                          </a>
+                        </div>
+                        <div class="reviews__info">
+                          <span class="author">
+                            {{- review_author }}
+                            <br>
+                            {{ review_country -}}
+                          </span>
+                          <span class="date">{{ review_date | date: '%-d %B %Y' }}</span>
+
+                          {% if review_rating != blank %}
+                            {%- render 'rating', stars_number: review_rating, use_small_text: true -%}
                           {% endif %}
 
-                          <h5>{{ product.title }}</h5>
-                        </a>
-                      </div>
-                      <div class="reviews__info">
-                        <span class="author">
-                          {{- review_author }}
-                          <br>
-                          {{ review_country -}}
-                        </span>
-                        <span class="date">{{ review_date | date: '%-d %B %Y' }}</span>
+                          {% if review_title != blank %}
+                            <h4>{{ review_title }}</h4>
+                          {% endif %}
 
-                        {% if review_rating != blank %}
-                          {%- render 'rating', stars_number: review_rating, use_small_text: true -%}
-                        {% endif %}
-
-                        {% if review_title != blank %}
-                          <h4>{{ review_title }}</h4>
-                        {% endif %}
-
-                        <p class="review__text">
-                          {{ review_text }}
-                        </p>
-                        <div class="reviews__images">
-                          {% for image in review.images.value %}
-                            {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
-                          {% endfor %}
+                          <p class="review__text">
+                            {{ review_text }}
+                          </p>
+                          <div class="reviews__images">
+                            {% for image in review.images.value %}
+                              {{ image | image_url: width: image.width | image_tag: fetchpriority: fetch_priority }}
+                            {% endfor %}
+                          </div>
                         </div>
-                      </div>
-                    </li>
+                      </li>
+                    {% endunless %}
                   {% endfor %}
                 {% endfor %}
               </ul>
