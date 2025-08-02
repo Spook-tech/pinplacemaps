@@ -123,13 +123,9 @@
       "email": "",
       "body": "{{ review.text | replace: '"', '\\"' | replace: '\', '\\\\' | replace: '\n', '\\n' | replace: '\r', '\\r' | replace: '\t', '\\t' }}",
       "created_at": "{{ review.date }}",
-      {% if review.images.size > 0 %}
-        {% assign first_image = review.images.value | first %}
-        {% assign image_url = first_image | image_url: width: first_image.width %}
-        "photo_url": "{{ image_url }}",
-      {% else %}
-        "photo_url": "",
-      {% endif %}
+      {% assign first_image = review.images.value | first %}
+      {% assign image_url = first_image | image_url: width: first_image.width %}
+      "photo_url": "{{ image_url }}",
       "verified_purchase": "true"
     }
     {% endcapture %}
