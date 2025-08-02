@@ -126,7 +126,7 @@
       {% if review.images.size > 0 %}
         {% assign first_image = review.images.value | first %}
         {% assign image_url = first_image | image_url: width: first_image.width %}
-        "photo_url": "https://cdn.shopify.com/s/files/1/YOUR_SHOP_ID/files/{{ photo_url }}.jpg",
+        "photo_url": "{{ image_url }}",
       {% else %}
         "photo_url": "",
       {% endif %}
