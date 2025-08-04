@@ -321,6 +321,29 @@
       "settings": {
         "title": "Hear from our happy travelers"
       }
+    },
+    "17543124726821a6e1": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_AGcwMi": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": false
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_AGcwMi"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -332,6 +355,7 @@
     "short_videos_ciDYUU",
     "multirow_a68Y7m",
     "image_with_text_BdjDEY",
-    "reviews_A689Tf"
+    "reviews_A689Tf",
+    "17543124726821a6e1"
   ]
 }
