@@ -4112,13 +4112,13 @@ body {
 /**
   Приводим к единому цвету svg-элементы
   */
-svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg):not(.form-status svg) *[fill] {
+/* svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg):not(.form-status svg) *[fill] {
   fill: currentColor;
 }
 
 svg:not(.placeholder-svg):not(.spinner):not(.social svg):not(.footer__col svg):not(.form-status svg) *[stroke] {
   stroke: currentColor;
-}
+} */
 
 /**
   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
