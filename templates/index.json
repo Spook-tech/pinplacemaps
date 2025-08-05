@@ -299,6 +299,29 @@
         "horizontal": false
       }
     },
+    "reviews_A689Tf": {
+      "type": "reviews",
+      "blocks": {
+        "rating_BTJPfk": {
+          "type": "rating",
+          "settings": {}
+        },
+        "reviews_GNyVaN": {
+          "type": "reviews",
+          "settings": {
+            "reviews_per_page": 5
+          }
+        }
+      },
+      "block_order": [
+        "rating_BTJPfk",
+        "reviews_GNyVaN"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Hear from our happy travelers"
+      }
+    },
     "17543124726821a6e1": {
       "type": "apps",
       "blocks": {
@@ -332,6 +355,7 @@
     "short_videos_ciDYUU",
     "multirow_a68Y7m",
     "image_with_text_BdjDEY",
+    "reviews_A689Tf",
     "17543124726821a6e1"
   ]
 }
