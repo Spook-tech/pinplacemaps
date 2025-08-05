@@ -8911,9 +8911,13 @@ input:checked+.size-option {
   padding: 6px
 }
 
-.reviews__info {
-  position: relative;
-  width: 100%;
+.reviews__info{
+  
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    margin-inline: auto;
+    text-align: center;
 }
 
 .reviews__info .author {
