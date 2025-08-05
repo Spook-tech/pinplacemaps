@@ -8911,6 +8911,47 @@ input:checked+.size-option {
   padding: 6px
 }
 
+.reviews__info {
+  position: relative;
+  width: 100%;
+}
+
+.reviews__info .author {
+  display: block;
+  max-width: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.reviews__info .date {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: clamp(12px, 1.1965811966vw, 14px);
+  line-height: 1.2;
+  letter-spacing: 0.25px;
+}
+
+.reviews__info h4 {
+  margin: 30px 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .reviews__info h4 {
+    margin: 20px 0 10px;
+  }
+}
+
+.reviews__info p {
+  font-size: 14px;
+}
+
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb
 }
