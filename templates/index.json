@@ -322,6 +322,17 @@
         "title": "Hear from our happy travelers"
       }
     },
+    "reviews_info_YKtQdU": {
+      "type": "reviews-info",
+      "name": "Reviews info",
+      "settings": {
+        "title": "Customers reviews",
+        "subtitle": "Average customer rating:",
+        "rating": "4.8/5",
+        "bottom": "Rating based on <strong>60 reviews.</strong>",
+        "padding_top": 0
+      }
+    },
     "17543124726821a6e1": {
       "type": "apps",
       "blocks": {
@@ -356,6 +367,7 @@
     "multirow_a68Y7m",
     "image_with_text_BdjDEY",
     "reviews_A689Tf",
+    "reviews_info_YKtQdU",
     "17543124726821a6e1"
   ]
 }
