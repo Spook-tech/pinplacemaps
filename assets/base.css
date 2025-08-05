@@ -6895,7 +6895,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   font-weight: 700;
   line-height: 1.22;
 }
-
+/* 
 .reviews__rating {
   position: relative;
   display: -webkit-box;
@@ -6927,6 +6927,24 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   background-color: var(--color-green);
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
+} */
+
+.reviews__rating {
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.reviews__rating {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .reviews__grade {
