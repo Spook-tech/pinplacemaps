@@ -6623,6 +6623,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
 
 .reviews__loox svg{
   width: 60px;
+  transform: translateY(3px);
 }
 
 .reviews__score{
