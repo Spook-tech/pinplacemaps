@@ -6621,7 +6621,11 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   max-width: 180px;
 }
 
-.reviews {
+.reviews__loox svg{
+  width: 60px;
+}
+
+/* .reviews {
   margin-top: 60px;
 }
 
@@ -6894,7 +6898,7 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.22;
-}
+} */
 /* 
 .reviews__rating {
   position: relative;
