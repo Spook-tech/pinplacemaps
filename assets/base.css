@@ -6633,6 +6633,10 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   fill: #316A53;
 }
 
+#header {
+  margin-top: 12px !important;
+}
+
 /* .reviews {
   margin-top: 60px;
 }
