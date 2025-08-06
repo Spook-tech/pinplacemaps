@@ -6625,6 +6625,10 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   width: 60px;
 }
 
+.reviews__score{
+  font-weight: 700;
+}
+
 /* .reviews {
   margin-top: 60px;
 }
