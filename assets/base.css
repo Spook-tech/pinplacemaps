@@ -6629,6 +6629,10 @@ body:has(.featured_collection_section ~ .info_section .info) .customer {
   font-weight: 700;
 }
 
+.reviews__stars path{
+  fill: #316A53;
+}
+
 /* .reviews {
   margin-top: 60px;
 }
