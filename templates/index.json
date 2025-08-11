@@ -196,51 +196,7 @@
         "title": ""
       }
     },
-    "short_videos_ciDYUU": {
-      "type": "short-videos",
-      "blocks": {
-        "video_Mc67TB": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels.mp4"
-          }
-        },
-        "video_TUPRgh": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels2.mp4"
-          }
-        },
-        "video_i9iVAe": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels3.mp4"
-          }
-        },
-        "video_BzqRLm": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/Snapinsta.app_video_AQOrdOKKDEk2vKHgmsYEclWsjFM8qTHaTvX25PHqDtYkLPh6vfK1fdlYcZK1G5VAAqP1dFzJtlcn6rb9xmF960O6.mp4"
-          }
-        },
-        "video_ETtnGp": {
-          "type": "video",
-          "settings": {
-            "video_url": "shopify://files/videos/reels4.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "video_Mc67TB",
-        "video_TUPRgh",
-        "video_i9iVAe",
-        "video_BzqRLm",
-        "video_ETtnGp"
-      ],
-      "settings": {
-        "title": "Watch our maps in action"
-      }
-    },
+
     "multirow_a68Y7m": {
       "type": "multirow",
       "blocks": {
@@ -363,7 +319,6 @@
     "featured_collection_KrJFrU",
     "info_eGCXfy",
     "product_info_hAC8Uc",
-    "short_videos_ciDYUU",
     "multirow_a68Y7m",
     "image_with_text_BdjDEY",
     "reviews_A689Tf",
