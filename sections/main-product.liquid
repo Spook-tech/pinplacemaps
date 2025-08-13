@@ -116,6 +116,8 @@
                 </div>
               {%- when 'title' -%}
                 <h1>{{ product.title | escape }}</h1>
+              {%- when '@app' -%}
+                {% render block %}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'description' -%}
