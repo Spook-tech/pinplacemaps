@@ -79,24 +79,24 @@
         <div class="col">
           <div class="swiper swipper-gallery">
             <div class="swiper-wrapper">
-{% for image in product.images %}
-  <div class="swiper-slide">
-    <a href="{{ image | image_url }}" class="glightbox" data-gallery="product-gallery">
-      {{ image | image_url: width: image.width | image_tag }}
-    </a>
-  </div>
-{% endfor %}
+              {% for image in product.images %}
+                <div class="swiper-slide">
+                  <a href="{{ image | image_url }}" class="glightbox" data-gallery="product-gallery">
+                    {{ image | image_url: width: image.width | image_tag }}
+                  </a>
+                </div>
+              {% endfor %}
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
           <div thumbsSlider="" class="swiper swiper-thumb">
             <div class="swiper-wrapper">
-{% for image in product.images %}
-  <div class="swiper-slide">
-      {{ image | image_url: width: image.width | image_tag }}
-  </div>
-{% endfor %}
+              {% for image in product.images %}
+                <div class="swiper-slide">
+                  {{ image | image_url: width: image.width | image_tag }}
+                </div>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -116,6 +116,8 @@
                 </div>
               {%- when 'title' -%}
                 <h1>{{ product.title | escape }}</h1>
+              {%- when 'custom_liquid' -%}
+                {{ block.settings.custom_liquid }}
               {%- when 'description' -%}
                 {{ product.description }}
               {%- when 'variant_picker' -%}
@@ -298,12 +300,11 @@
     const lightbox = GLightbox({
       selector: '.glightbox',
       touchNavigation: true,
-      loop: true
+      loop: true,
     });
   });
 </script>
 
-                          
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -324,6 +325,18 @@
       "limit": 1
     },
     {
+      "type": "custom_liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+          "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
       "type": "variant_picker",
       "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
@@ -342,7 +355,7 @@
             }
           ],
           "default": "button",
-          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label",
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
         },
         {
           "id": "swatch_shape",
