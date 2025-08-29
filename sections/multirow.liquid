@@ -10,7 +10,22 @@
         <li>
           <div class="col">
             {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: height: block.settings.image.height | image_tag }}
+              {%- if block.settings.mobile_image != blank -%}
+                <picture>
+                  <source 
+                    media="(max-width: 767px)" 
+                    srcset="{{ block.settings.mobile_image | image_url: height: block.settings.mobile_image.height }}"
+                  >
+                  <img 
+                    src="{{ block.settings.image | image_url: height: block.settings.image.height }}" 
+                    alt="{{ block.settings.image.alt | escape }}"
+                    height="{{ block.settings.image.height }}"
+                    width="{{ block.settings.image.width }}"
+                  >
+                </picture>
+              {%- else -%}
+                {{ block.settings.image | image_url: height: block.settings.image.height | image_tag }}
+              {%- endif -%}
             {%- else -%}
               {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
@@ -28,11 +43,11 @@
 {
   "name": "t:sections.multirow.name",
   "settings": [
-        {
+    {
       "type": "image_picker",
       "id": "bg",
       "label": "Background image"
-    },
+    }
   ],
   "blocks": [
     {
@@ -43,6 +58,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multirow.blocks.block.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image (optional)",
+          "info": "Image shown on screens smaller than 767px. If not set, desktop image will be used."
         },
         {
           "type": "richtext",
